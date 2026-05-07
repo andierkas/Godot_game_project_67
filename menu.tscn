@@ -4,30 +4,3 @@
 
 [node name="Menu" type="Node2D" unique_id=1085488973]
 script = ExtResource("1_lti8b")
-
-[node name="Play" type="Button" parent="." unique_id=1566074346]
-offset_left = 176.0
-offset_top = 130.0
-offset_right = 516.0
-offset_bottom = 470.0
-theme_override_font_sizes/font_size = 50
-text = "Play"
-
-[node name="Quit" type="Button" parent="." unique_id=1898231857]
-offset_left = 664.0
-offset_top = 130.0
-offset_right = 1004.0
-offset_bottom = 470.0
-theme_override_font_sizes/font_size = 50
-text = "Quit"
-
-[node name="Label" type="Label" parent="." unique_id=1731623048]
-offset_left = 222.0
-offset_top = 378.0
-offset_right = 461.0
-offset_bottom = 447.0
-theme_override_font_sizes/font_size = 50
-text = "Черемша"
-
-[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
