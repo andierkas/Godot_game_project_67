@@ -14,7 +14,7 @@ class_name AgentStats
 
 #Спрайты
 @export var sprite: Texture2D
-@export var portrait_region: Rect2 = Rect2(64,0,16,32)
+@export var portrait_region: Rect2 = Rect2(113,0,85,85)
 var portrait: Texture2D
 
 func generate_portrait():

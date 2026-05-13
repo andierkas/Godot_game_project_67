@@ -2,9 +2,6 @@
 
 [ext_resource type="Script" uid="uid://drg7gbvifj1c8" path="res://creater.gd" id="1_4aseg"]
 [ext_resource type="Texture2D" uid="uid://7bc5ttoyyu55" path="res://materials/фон закрывашка.jpg" id="1_efagb"]
-[ext_resource type="Script" uid="uid://boo82xsnyadie" path="res://sprite_agent.gd" id="3_kbh1e"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e86q2"]
 
 [node name="Control" type="Control" unique_id=1719565061]
 layout_mode = 3
@@ -34,7 +31,5 @@ offset_bottom = 616.0
 color = Color(0, 0, 0, 0.6745098)
 
 [node name="SpriteAgent" type="Sprite2D" parent="TextureRect" unique_id=2098799151]
-position = Vector2(965, 133.00002)
-scale = Vector2(-163.14008, 136.52)
-texture = SubResource("AtlasTexture_e86q2")
-script = ExtResource("3_kbh1e")
+position = Vector2(964, 152)
+scale = Vector2(2, 2)
