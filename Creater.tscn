@@ -3,6 +3,14 @@
 [ext_resource type="Script" uid="uid://drg7gbvifj1c8" path="res://creater.gd" id="1_4aseg"]
 [ext_resource type="Texture2D" uid="uid://7bc5ttoyyu55" path="res://materials/фон закрывашка.jpg" id="1_efagb"]
 [ext_resource type="FontFile" uid="uid://cff2ia20fse41" path="res://fonts/Pixellari.ttf" id="3_4aseg"]
+[ext_resource type="Texture2D" uid="uid://ddyrwbstl1ex6" path="res://materials/Sprite_agent/1.png" id="3_e86q2"]
+[ext_resource type="Texture2D" path="res://materials/Sprite_agent/1.jpg" id="3_kbh1e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4aseg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kbh1e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e86q2"]
 
 [node name="Control" type="Control" unique_id=1719565061]
 layout_mode = 3
@@ -16,7 +24,8 @@ offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4aseg")
-metadata/_edit_vertical_guides_ = [1646.0, 1646.0]
+metadata/_edit_vertical_guides_ = [1646.0, 1646.0, 767.0, 867.0, 667.0, 705.0, 830.0]
+metadata/_edit_horizontal_guides_ = [429.0, 329.0, 529.0]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2101578231]
 layout_mode = 0
@@ -26,19 +35,30 @@ texture = ExtResource("1_efagb")
 
 [node name="ColorRect" type="ColorRect" parent="TextureRect" unique_id=126038645]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 31.0
-offset_right = 1107.0
-offset_bottom = 616.0
+offset_left = 464.0
+offset_top = 29.0
+offset_right = 1126.0
+offset_bottom = 614.0
 color = Color(0, 0, 0, 0.6745098)
 
-[node name="SpriteAgent" type="Sprite2D" parent="TextureRect" unique_id=2098799151]
-position = Vector2(964, 152)
-scale = Vector2(2, 2)
+[node name="ColorRect2" type="ColorRect" parent="TextureRect" unique_id=726943684]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 34.0
+offset_right = 262.0
+offset_bottom = 611.0
+color = Color(0, 0, 0, 0.48235294)
 
-[node name="Pentagon" type="Line2D" parent="TextureRect" unique_id=687906117]
+[node name="SpriteAgent" type="Sprite2D" parent="TextureRect" unique_id=2098799151]
+position = Vector2(1014.5, 145.75002)
+scale = Vector2(0.428, 0.5)
+texture = ExtResource("3_e86q2")
+region_enabled = true
+region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
+
+[node name="PentagonStats" type="Line2D" parent="TextureRect" unique_id=687906117]
 position = Vector2(34, 57)
-points = PackedVector2Array(827, 371, 798, 463, 670, 463, 637, 371, 698.13684, 311.79382, 732, 279)
+points = PackedVector2Array(832, 371, 795, 471, 670, 471, 632, 371, 732, 272)
 closed = true
 width = 2.5
 round_precision = 3
@@ -46,10 +66,183 @@ round_precision = 3
 [node name="NameAgent" type="TextEdit" parent="TextureRect" unique_id=1097117595]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 233.0
-offset_top = 85.0
-offset_right = 796.0
-offset_bottom = 141.0
+offset_left = 499.0
+offset_top = 73.0
+offset_right = 854.0
+offset_bottom = 129.0
 theme_override_fonts/font = ExtResource("3_4aseg")
 theme_override_font_sizes/font_size = 30
+text = "Anton Antonov Antonovich"
 editable = false
+
+[node name="Strenght" type="TextEdit" parent="TextureRect" unique_id=1482986073]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 402.0
+offset_right = 620.0
+offset_bottom = 447.0
+theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
+text = "Strenght"
+editable = false
+
+[node name="Strenght Stat" type="TextEdit" parent="TextureRect" unique_id=1760523920]
+layout_mode = 0
+offset_left = 635.0
+offset_top = 409.0
+offset_right = 730.0
+offset_bottom = 474.0
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
+text = "5"
+
+[node name="FillPentagonStats" type="Polygon2D" parent="TextureRect" unique_id=1382951312]
+position = Vector2(42, 8)
+color = Color(0.8898981, 0.8357617, 0.23110518, 1)
+polygon = PackedVector2Array(624, 420, 724, 320, 824, 420, 787, 520, 662, 520)
+
+[node name="Line2D" type="Line2D" parent="TextureRect" unique_id=975851884]
+points = PackedVector2Array(766, 427, 766, 328, 766, 427, 866, 428, 766, 427, 666, 428, 766, 427, 704, 528, 766, 427, 829, 528)
+width = 2.0
+default_color = Color(0.006672531, 0.013327992, 0.014829845, 1)
+
+[node name="Intellect" type="TextEdit" parent="TextureRect" unique_id=798196072]
+layout_mode = 0
+offset_left = 695.0
+offset_top = 250.0
+offset_right = 839.0
+offset_bottom = 295.0
+theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
+text = "Intellect"
+editable = false
+
+[node name="Harisma" type="TextEdit" parent="TextureRect" unique_id=1370520398]
+layout_mode = 0
+offset_left = 914.0
+offset_top = 407.0
+offset_right = 1058.0
+offset_bottom = 452.0
+theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
+text = "Harisma"
+editable = false
+
+[node name="Endurance" type="TextEdit" parent="TextureRect" unique_id=1568880551]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 546.0
+offset_right = 664.0
+offset_bottom = 591.0
+theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
+text = "Endurance"
+editable = false
+
+[node name="Agility" type="TextEdit" parent="TextureRect" unique_id=1564640790]
+layout_mode = 0
+offset_left = 910.0
+offset_top = 548.0
+offset_right = 1054.0
+offset_bottom = 593.0
+theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
+text = "Agility"
+editable = false
+
+[node name="Intellect Stat" type="TextEdit" parent="TextureRect" unique_id=1347428633]
+layout_mode = 0
+offset_left = 755.0
+offset_top = 290.0
+offset_right = 850.0
+offset_bottom = 355.0
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
+text = "5"
+
+[node name="Agility Stat" type="TextEdit" parent="TextureRect" unique_id=1250091076]
+layout_mode = 0
+offset_left = 870.0
+offset_top = 520.0
+offset_right = 965.0
+offset_bottom = 585.0
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
+text = "5"
+
+[node name="Harisma Stat" type="TextEdit" parent="TextureRect" unique_id=214152684]
+layout_mode = 0
+offset_left = 879.0
+offset_top = 410.0
+offset_right = 974.0
+offset_bottom = 475.0
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
+text = "5"
+
+[node name="Endurance Stat" type="TextEdit" parent="TextureRect" unique_id=787313422]
+layout_mode = 0
+offset_left = 661.0
+offset_top = 519.0
+offset_right = 756.0
+offset_bottom = 584.0
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
+text = "5"
+
+[node name="ColorRect3" type="ColorRect" parent="TextureRect" unique_id=1668322419]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 39.0
+offset_right = 240.0
+offset_bottom = 366.0
+
+[node name="SpriteAgent2" type="Sprite2D" parent="TextureRect" unique_id=556374967]
+position = Vector2(189, 99)
+texture = ExtResource("3_kbh1e")
+region_enabled = true
+region_rect = Rect2(115, 2, 79, 83)
+
+[node name="SpriteAgent3" type="Sprite2D" parent="TextureRect" unique_id=237041001]
+position = Vector2(189, 203)
+texture = ExtResource("3_kbh1e")
+region_enabled = true
+region_rect = Rect2(115, 2, 79, 83)
+
+[node name="SpriteAgent4" type="Sprite2D" parent="TextureRect" unique_id=99732599]
+position = Vector2(190, 305)
+texture = ExtResource("3_kbh1e")
+region_enabled = true
+region_rect = Rect2(115, 2, 79, 83)
+
+[node name="SpriteAgent5" type="Sprite2D" parent="TextureRect" unique_id=1336841626]
+position = Vector2(187, 537)
+texture = ExtResource("3_kbh1e")
+region_enabled = true
+region_rect = Rect2(115, 2, 79, 83)
+
+[node name="SpriteAgent6" type="Sprite2D" parent="TextureRect" unique_id=1327768782]
+position = Vector2(189, 428)
+texture = ExtResource("3_kbh1e")
+region_enabled = true
+region_rect = Rect2(115, 2, 79, 83)
