@@ -48,10 +48,10 @@ horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=599345666]
 layout_mode = 0
-offset_left = -184.0
-offset_top = 405.0
-offset_right = 968.0
-offset_bottom = 588.0
+offset_left = 276.0
+offset_top = 401.0
+offset_right = 632.0
+offset_bottom = 584.0
 theme_override_constants/separation = 100
 alignment = 1
 
@@ -105,10 +105,10 @@ horizontal_alignment = 1
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="." unique_id=773336539]
 layout_mode = 0
-offset_left = 176.0
-offset_top = 407.0
-offset_right = 1328.0
-offset_bottom = 590.0
+offset_left = 666.0
+offset_top = 405.0
+offset_right = 938.0
+offset_bottom = 588.0
 size_flags_vertical = 4
 
 [node name="PrefButton" type="TextureButton" parent="VBoxContainer3" unique_id=830261490]
