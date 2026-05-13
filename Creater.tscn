@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://demjex5os6jyt"]
+
+[ext_resource type="Script" uid="uid://drg7gbvifj1c8" path="res://creater.gd" id="1_4aseg"]
+[ext_resource type="Texture2D" uid="uid://7bc5ttoyyu55" path="res://materials/фон закрывашка.jpg" id="1_efagb"]
+[ext_resource type="FontFile" uid="uid://cff2ia20fse41" path="res://fonts/Pixellari.ttf" id="3_4aseg"]
+
+[node name="Control" type="Control" unique_id=1719565061]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4aseg")
+metadata/_edit_vertical_guides_ = [1646.0, 1646.0]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2101578231]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 645.0
+texture = ExtResource("1_efagb")
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect" unique_id=126038645]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 31.0
+offset_right = 1107.0
+offset_bottom = 616.0
+color = Color(0, 0, 0, 0.6745098)
+
+[node name="SpriteAgent" type="Sprite2D" parent="TextureRect" unique_id=2098799151]
+position = Vector2(964, 152)
+scale = Vector2(2, 2)
+
+[node name="Pentagon" type="Line2D" parent="TextureRect" unique_id=687906117]
+position = Vector2(34, 57)
+points = PackedVector2Array(827, 371, 798, 463, 670, 463, 637, 371, 698.13684, 311.79382, 732, 279)
+closed = true
+width = 2.5
+round_precision = 3
+
+[node name="NameAgent" type="TextEdit" parent="TextureRect" unique_id=1097117595]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 233.0
+offset_top = 85.0
+offset_right = 796.0
+offset_bottom = 141.0
+theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_font_sizes/font_size = 30
+editable = false
