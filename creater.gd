@@ -13,6 +13,7 @@ extends Control
 var sprites_folder = "res://materials/Sprite_agent/"
 var available_sprites: Array[Texture2D] = []
 var current_agent: AgentStats
+var name_folder: String
 
 func _ready():
 	load_sprites()
@@ -21,10 +22,13 @@ func _ready():
 	
 func create_agent():
 	var new_agent = AgentStats.new()
-	new_agent.agent_first_name = "Anton"
+	var rand_gender = randi_range(0,1)
+	if rand_gender == 1:
+		new_agent.gender = true
+	else:
+		new_agent.gender = false
 	pick_random_sprite(new_agent)
-	new_agent.agent_second_name = "Klichko"
-	new_agent.agent_last_name = "Ivanovich"
+	pick_random_name(new_agent)
 	var _max_stats = 0
 
 	var array_stats = [1,1,1,1,1]
@@ -76,3 +80,52 @@ func pick_random_sprite(agent: AgentStats):
 	var random_index = randi() % available_sprites.size()
 	agent.sprite = available_sprites[random_index]
 	return agent
+
+func pick_random_name(agent: AgentStats):
+	var _array_names: Array[String]
+	var _array_second_names: Array[String]
+	var _array_patronymics_names: Array[String]
+	if agent.gender:
+		var file_names = FileAccess.open("res://materials/names_agent/male_first_names.txt", FileAccess.READ)
+		var file_second = FileAccess.open("res://materials/names_agent/male_last_name.txt", FileAccess.READ)
+		var file_patronymics = FileAccess.open("res://materials/names_agent/male_patronymics.txt", FileAccess.READ)
+		while file_names.get_position() < file_names.get_length():
+			var line = file_names.get_line()
+			line = line.strip_edges()
+			if line != "":
+				_array_names.append(line)
+		while file_second.get_position() < file_second.get_length():
+			var line = file_second.get_line()
+			line = line.strip_edges()
+			if line != "":
+				_array_second_names.append(line)
+		while file_patronymics.get_position() < file_patronymics.get_length():
+			var line = file_patronymics.get_line()
+			line = line.strip_edges()
+			if line != "":
+				_array_patronymics_names.append(line)
+		agent.agent_first_name = _array_names.pick_random()
+		agent.agent_second_name = _array_second_names.pick_random()
+		agent.agent_last_name = _array_patronymics_names.pick_random()
+	else:
+		var file_names = FileAccess.open("res://materials/names_agent/female_first_names.txt", FileAccess.READ)
+		var file_second = FileAccess.open("res://materials/names_agent/female_last_name.txt", FileAccess.READ)
+		var file_patronymics = FileAccess.open("res://materials/names_agent/female_patronymics.txt", FileAccess.READ)
+		while file_names.get_position() < file_names.get_length():
+			var line = file_names.get_line()
+			line = line.strip_edges()
+			if line != "":
+				_array_names.append(line)
+		while file_second.get_position() < file_second.get_length():
+			var line = file_second.get_line()
+			line = line.strip_edges()
+			if line != "":
+				_array_second_names.append(line)
+		while file_patronymics.get_position() < file_patronymics.get_length():
+			var line = file_patronymics.get_line()
+			line = line.strip_edges()
+			if line != "":
+				_array_patronymics_names.append(line)
+		agent.agent_first_name = _array_names.pick_random()
+		agent.agent_second_name = _array_second_names.pick_random()
+		agent.agent_last_name = _array_patronymics_names.pick_random()

@@ -11,6 +11,7 @@ class_name AgentStats
 @export var agent_first_name: String
 @export var agent_second_name: String
 @export var agent_last_name: String
+@export var gender: bool #1 - мужчина, 0 - женщина
 
 #Спрайты
 @export var sprite: Texture2D

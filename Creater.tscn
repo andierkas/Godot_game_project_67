@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://7bc5ttoyyu55" path="res://materials/фон закрывашка.jpg" id="1_efagb"]
 [ext_resource type="FontFile" uid="uid://cff2ia20fse41" path="res://fonts/Pixellari.ttf" id="3_4aseg"]
 [ext_resource type="Texture2D" uid="uid://ddyrwbstl1ex6" path="res://materials/Sprite_agent/1.png" id="3_e86q2"]
-[ext_resource type="Texture2D" path="res://materials/Sprite_agent/1.jpg" id="3_kbh1e"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4aseg"]
 
@@ -35,7 +34,7 @@ texture = ExtResource("1_efagb")
 
 [node name="ColorRect" type="ColorRect" parent="TextureRect" unique_id=126038645]
 layout_mode = 0
-offset_left = 464.0
+offset_left = 285.0
 offset_top = 29.0
 offset_right = 1126.0
 offset_bottom = 614.0
@@ -66,9 +65,9 @@ round_precision = 3
 [node name="NameAgent" type="TextEdit" parent="TextureRect" unique_id=1097117595]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 499.0
+offset_left = 313.0
 offset_top = 73.0
-offset_right = 854.0
+offset_right = 891.0
 offset_bottom = 129.0
 theme_override_fonts/font = ExtResource("3_4aseg")
 theme_override_font_sizes/font_size = 30
@@ -219,30 +218,26 @@ offset_bottom = 366.0
 
 [node name="SpriteAgent2" type="Sprite2D" parent="TextureRect" unique_id=556374967]
 position = Vector2(189, 99)
-texture = ExtResource("3_kbh1e")
+texture = ExtResource("3_e86q2")
 region_enabled = true
 region_rect = Rect2(115, 2, 79, 83)
 
 [node name="SpriteAgent3" type="Sprite2D" parent="TextureRect" unique_id=237041001]
 position = Vector2(189, 203)
-texture = ExtResource("3_kbh1e")
 region_enabled = true
 region_rect = Rect2(115, 2, 79, 83)
 
 [node name="SpriteAgent4" type="Sprite2D" parent="TextureRect" unique_id=99732599]
 position = Vector2(190, 305)
-texture = ExtResource("3_kbh1e")
 region_enabled = true
 region_rect = Rect2(115, 2, 79, 83)
 
 [node name="SpriteAgent5" type="Sprite2D" parent="TextureRect" unique_id=1336841626]
 position = Vector2(187, 537)
-texture = ExtResource("3_kbh1e")
 region_enabled = true
 region_rect = Rect2(115, 2, 79, 83)
 
 [node name="SpriteAgent6" type="Sprite2D" parent="TextureRect" unique_id=1327768782]
 position = Vector2(189, 428)
-texture = ExtResource("3_kbh1e")
 region_enabled = true
 region_rect = Rect2(115, 2, 79, 83)
