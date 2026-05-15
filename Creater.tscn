@@ -3,8 +3,11 @@
 [ext_resource type="Script" uid="uid://drg7gbvifj1c8" path="res://creater.gd" id="1_4aseg"]
 [ext_resource type="Texture2D" uid="uid://7bc5ttoyyu55" path="res://materials/фон закрывашка.jpg" id="1_efagb"]
 [ext_resource type="FontFile" uid="uid://cff2ia20fse41" path="res://fonts/Pixellari.ttf" id="3_4aseg"]
-[ext_resource type="Texture2D" path="res://materials/Sprite_agent/1.png" id="3_e86q2"]
 [ext_resource type="Script" uid="uid://bdgw45o4xyplw" path="res://first_agent.gd" id="5_e86q2"]
+[ext_resource type="Script" uid="uid://ca3i8p8kpt2gr" path="res://second_agent.gd" id="5_qig3d"]
+[ext_resource type="Script" uid="uid://cv25k613mwi7a" path="res://third_agent.gd" id="6_kvvbg"]
+[ext_resource type="Script" uid="uid://qwrrfm7kimpj" path="res://four_agent.gd" id="7_gox10"]
+[ext_resource type="Script" uid="uid://de827w5146aov" path="res://fifth_agent.gd" id="8_5a2bs"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4aseg"]
 
@@ -139,7 +142,6 @@ editable = false
 [node name="SpriteAgent" type="Sprite2D" parent="Current_agent" unique_id=917593877]
 position = Vector2(1014.5, 145.75002)
 scale = Vector2(0.428, 0.5)
-texture = ExtResource("3_e86q2")
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
@@ -218,16 +220,17 @@ text = "5"
 
 [node name="Background" type="ColorRect" parent="Agentparty" unique_id=726943684]
 offset_left = 16.0
-offset_top = 34.0
-offset_right = 262.0
+offset_top = 24.0
+offset_right = 406.0
 offset_bottom = 611.0
 color = Color(0, 0, 0, 0.48235294)
 
 [node name="start_bg" type="ColorRect" parent="Agentparty" unique_id=1668322419]
+visible = false
 offset_left = 133.0
-offset_top = 39.0
+offset_top = 45.0
 offset_right = 240.0
-offset_bottom = 366.0
+offset_bottom = 372.0
 
 [node name="First_agent" type="Node2D" parent="Agentparty" unique_id=1733191761]
 script = ExtResource("5_e86q2")
@@ -241,7 +244,6 @@ polygon = PackedVector2Array(624, 420, 724, 320, 824, 420, 787, 520, 662, 520)
 [node name="SpriteAgent" type="Sprite2D" parent="Agentparty/First_agent" unique_id=2098799151]
 position = Vector2(188, 99.999985)
 scale = Vector2(0.2, 0.234)
-texture = ExtResource("3_e86q2")
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
@@ -249,111 +251,111 @@ region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 anchors_preset = -1
 offset_left = 239.0
 offset_top = 71.0
-offset_right = 329.0
+offset_right = 401.0
 offset_bottom = 127.0
 theme_override_fonts/font = ExtResource("3_4aseg")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
 
-[node name="First_agent2" type="Node2D" parent="Agentparty" unique_id=1985564474]
+[node name="Second_agent" type="Node2D" parent="Agentparty" unique_id=1985564474]
+script = ExtResource("5_qig3d")
 
-[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/First_agent2" unique_id=602779949]
+[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/Second_agent" unique_id=602779949]
 position = Vector2(-147, 86)
 scale = Vector2(0.3, 0.3)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
 polygon = PackedVector2Array(624, 420, 724, 320, 824, 420, 787, 520, 662, 520)
 
-[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/First_agent2" unique_id=246505085]
+[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/Second_agent" unique_id=246505085]
 position = Vector2(189, 215)
 scale = Vector2(0.2, 0.234)
-texture = ExtResource("3_e86q2")
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
-[node name="NameAgent" type="TextEdit" parent="Agentparty/First_agent2" unique_id=433523218]
+[node name="NameAgent" type="TextEdit" parent="Agentparty/Second_agent" unique_id=433523218]
 anchors_preset = -1
 offset_left = 235.0
 offset_top = 197.0
-offset_right = 329.0
+offset_right = 400.0
 offset_bottom = 253.0
 theme_override_fonts/font = ExtResource("3_4aseg")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
 
-[node name="First_agent3" type="Node2D" parent="Agentparty" unique_id=1737884082]
+[node name="Third_agent" type="Node2D" parent="Agentparty" unique_id=1737884082]
+script = ExtResource("6_kvvbg")
 
-[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/First_agent3" unique_id=362069213]
+[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/Third_agent" unique_id=362069213]
 position = Vector2(-148, 191)
 scale = Vector2(0.3, 0.3)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
 polygon = PackedVector2Array(624, 420, 724, 320, 824, 420, 787, 520, 662, 520)
 
-[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/First_agent3" unique_id=398701598]
+[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/Third_agent" unique_id=398701598]
 position = Vector2(188, 317)
 scale = Vector2(0.2, 0.234)
-texture = ExtResource("3_e86q2")
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
-[node name="NameAgent" type="TextEdit" parent="Agentparty/First_agent3" unique_id=762892933]
+[node name="NameAgent" type="TextEdit" parent="Agentparty/Third_agent" unique_id=762892933]
 anchors_preset = -1
 offset_left = 240.0
 offset_top = 301.0
-offset_right = 335.0
+offset_right = 406.0
 offset_bottom = 357.0
 theme_override_fonts/font = ExtResource("3_4aseg")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
 
-[node name="First_agent4" type="Node2D" parent="Agentparty" unique_id=1537385757]
+[node name="four_agent" type="Node2D" parent="Agentparty" unique_id=1537385757]
+script = ExtResource("7_gox10")
 
-[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/First_agent4" unique_id=657086225]
+[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/four_agent" unique_id=657086225]
 position = Vector2(-150, 313)
 scale = Vector2(0.3, 0.3)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
 polygon = PackedVector2Array(624, 420, 724, 320, 824, 420, 787, 520, 662, 520)
 
-[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/First_agent4" unique_id=678931764]
+[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/four_agent" unique_id=678931764]
 position = Vector2(184, 445)
 scale = Vector2(0.2, 0.234)
-texture = ExtResource("3_e86q2")
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
-[node name="NameAgent" type="TextEdit" parent="Agentparty/First_agent4" unique_id=550527503]
+[node name="NameAgent" type="TextEdit" parent="Agentparty/four_agent" unique_id=550527503]
 anchors_preset = -1
 offset_left = 242.0
 offset_top = 421.0
-offset_right = 333.0
+offset_right = 415.0
 offset_bottom = 477.0
 theme_override_fonts/font = ExtResource("3_4aseg")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
 
-[node name="First_agent5" type="Node2D" parent="Agentparty" unique_id=955970659]
+[node name="fifth_agent" type="Node2D" parent="Agentparty" unique_id=955970659]
+script = ExtResource("8_5a2bs")
 
-[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/First_agent5" unique_id=634296803]
+[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/fifth_agent" unique_id=634296803]
 position = Vector2(-151, 422)
 scale = Vector2(0.3, 0.3)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
 polygon = PackedVector2Array(624, 420, 724, 320, 824, 420, 787, 520, 662, 520)
 
-[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/First_agent5" unique_id=483329744]
+[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/fifth_agent" unique_id=483329744]
 position = Vector2(182, 550)
 scale = Vector2(0.2, 0.234)
-texture = ExtResource("3_e86q2")
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
-[node name="NameAgent" type="TextEdit" parent="Agentparty/First_agent5" unique_id=1873115548]
+[node name="NameAgent" type="TextEdit" parent="Agentparty/fifth_agent" unique_id=1873115548]
 anchors_preset = -1
 offset_left = 245.0
 offset_top = 533.0
-offset_right = 348.0
+offset_right = 418.0
 offset_bottom = 589.0
 theme_override_fonts/font = ExtResource("3_4aseg")
 theme_override_font_sizes/font_size = 30

@@ -18,6 +18,21 @@ var agent_5 = AgentStats.new()
 
 func _ready():
 	show_current_sprite(agent_1)
+	var first_agent = $Agentparty/First_agent
+	first_agent.agent = agent_1
+	first_agent.update_agent()
+	var second_agent = $Agentparty/Second_agent
+	second_agent.agent = agent_2
+	second_agent.update_agent()
+	var third_agent = $Agentparty/Third_agent
+	third_agent.agent = agent_3
+	third_agent.update_agent()
+	var four_agent = $Agentparty/four_agent
+	four_agent.agent = agent_4
+	four_agent.update_agent()
+	var fifth_agent = $Agentparty/fifth_agent
+	fifth_agent.agent = agent_5
+	fifth_agent.update_agent()
 
 func show_current_sprite(agent: AgentStats):
 	agent_sprite.texture = agent.sprite
