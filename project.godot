@@ -13,7 +13,6 @@ config_version=5
 config/name="new_game_proj"
 run/main_scene="uid://cmhcf8g738k3e"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
 
 [dotnet]
 

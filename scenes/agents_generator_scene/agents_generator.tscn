@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://demjex5os6jyt"]
 
-[ext_resource type="Script" uid="uid://drg7gbvifj1c8" path="res://creater.gd" id="1_4aseg"]
-[ext_resource type="Texture2D" uid="uid://7bc5ttoyyu55" path="res://materials/фон закрывашка.jpg" id="1_efagb"]
-[ext_resource type="FontFile" uid="uid://cff2ia20fse41" path="res://fonts/Pixellari.ttf" id="3_4aseg"]
-[ext_resource type="Script" uid="uid://bdgw45o4xyplw" path="res://first_agent.gd" id="5_e86q2"]
-[ext_resource type="Script" uid="uid://ca3i8p8kpt2gr" path="res://second_agent.gd" id="5_qig3d"]
-[ext_resource type="Script" uid="uid://cv25k613mwi7a" path="res://third_agent.gd" id="6_kvvbg"]
-[ext_resource type="Script" uid="uid://qwrrfm7kimpj" path="res://four_agent.gd" id="7_gox10"]
-[ext_resource type="Script" uid="uid://de827w5146aov" path="res://fifth_agent.gd" id="8_5a2bs"]
+[ext_resource type="Script" uid="uid://drg7gbvifj1c8" path="res://scenes/agents_generator_scene/agents_generator.gd" id="1_67err"]
+[ext_resource type="Texture2D" uid="uid://7bc5ttoyyu55" path="res://materials/фон закрывашка.jpg" id="2_b64gy"]
+[ext_resource type="FontFile" uid="uid://cff2ia20fse41" path="res://fonts/Pixellari.ttf" id="3_t01tc"]
+[ext_resource type="Script" uid="uid://bdgw45o4xyplw" path="res://scenes/agents_generator_scene/scripts/first_agent.gd" id="4_npx5s"]
+[ext_resource type="Script" uid="uid://ca3i8p8kpt2gr" path="res://scenes/agents_generator_scene/scripts/second_agent.gd" id="5_pf38g"]
+[ext_resource type="Script" uid="uid://cv25k613mwi7a" path="res://scenes/agents_generator_scene/scripts/third_agent.gd" id="6_x5emw"]
+[ext_resource type="Script" uid="uid://qwrrfm7kimpj" path="res://scenes/agents_generator_scene/scripts/four_agent.gd" id="7_5t0nt"]
+[ext_resource type="Script" uid="uid://de827w5146aov" path="res://scenes/agents_generator_scene/scripts/fifth_agent.gd" id="8_0ffvc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4aseg"]
 
@@ -26,14 +26,14 @@ offset_right = 1.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_4aseg")
+script = ExtResource("1_67err")
 metadata/_edit_vertical_guides_ = [1646.0, 1646.0]
 
 [node name="Background" type="TextureRect" parent="." unique_id=2101578231]
 layout_mode = 0
 offset_right = 1149.0
 offset_bottom = 645.0
-texture = ExtResource("1_efagb")
+texture = ExtResource("2_b64gy")
 
 [node name="PentagonStats" type="Line2D" parent="Background" unique_id=687906117]
 position = Vector2(34, 57)
@@ -69,7 +69,7 @@ offset_left = 476.0
 offset_top = 402.0
 offset_right = 620.0
 offset_bottom = 447.0
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
@@ -82,7 +82,7 @@ offset_left = 695.0
 offset_top = 250.0
 offset_right = 839.0
 offset_bottom = 295.0
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
@@ -95,7 +95,7 @@ offset_left = 914.0
 offset_top = 407.0
 offset_right = 1058.0
 offset_bottom = 452.0
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
@@ -108,7 +108,7 @@ offset_left = 488.0
 offset_top = 546.0
 offset_right = 664.0
 offset_bottom = 591.0
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
@@ -121,7 +121,7 @@ offset_left = 910.0
 offset_top = 548.0
 offset_right = 1054.0
 offset_bottom = 593.0
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
@@ -134,7 +134,7 @@ offset_left = 475.0
 offset_top = 73.0
 offset_right = 891.0
 offset_bottom = 129.0
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
@@ -163,7 +163,7 @@ offset_top = 409.0
 offset_right = 730.0
 offset_bottom = 474.0
 theme_override_constants/line_spacing = 2
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
 text = "5"
@@ -175,7 +175,7 @@ offset_top = 290.0
 offset_right = 850.0
 offset_bottom = 355.0
 theme_override_constants/line_spacing = 2
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
 text = "5"
@@ -187,7 +187,7 @@ offset_top = 520.0
 offset_right = 965.0
 offset_bottom = 585.0
 theme_override_constants/line_spacing = 2
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
 text = "5"
@@ -199,7 +199,7 @@ offset_top = 410.0
 offset_right = 974.0
 offset_bottom = 475.0
 theme_override_constants/line_spacing = 2
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
 text = "5"
@@ -211,7 +211,7 @@ offset_top = 519.0
 offset_right = 756.0
 offset_bottom = 584.0
 theme_override_constants/line_spacing = 2
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
 text = "5"
@@ -233,7 +233,7 @@ offset_right = 240.0
 offset_bottom = 372.0
 
 [node name="First_agent" type="Node2D" parent="Agentparty" unique_id=1733191761]
-script = ExtResource("5_e86q2")
+script = ExtResource("4_npx5s")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/First_agent" unique_id=1382951312]
 position = Vector2(-146, -24)
@@ -253,13 +253,13 @@ offset_left = 239.0
 offset_top = 71.0
 offset_right = 401.0
 offset_bottom = 127.0
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
 
 [node name="Second_agent" type="Node2D" parent="Agentparty" unique_id=1985564474]
-script = ExtResource("5_qig3d")
+script = ExtResource("5_pf38g")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/Second_agent" unique_id=602779949]
 position = Vector2(-147, 86)
@@ -279,13 +279,13 @@ offset_left = 235.0
 offset_top = 197.0
 offset_right = 400.0
 offset_bottom = 253.0
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
 
 [node name="Third_agent" type="Node2D" parent="Agentparty" unique_id=1737884082]
-script = ExtResource("6_kvvbg")
+script = ExtResource("6_x5emw")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/Third_agent" unique_id=362069213]
 position = Vector2(-148, 191)
@@ -305,13 +305,13 @@ offset_left = 240.0
 offset_top = 301.0
 offset_right = 406.0
 offset_bottom = 357.0
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
 
 [node name="four_agent" type="Node2D" parent="Agentparty" unique_id=1537385757]
-script = ExtResource("7_gox10")
+script = ExtResource("7_5t0nt")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/four_agent" unique_id=657086225]
 position = Vector2(-150, 313)
@@ -331,13 +331,13 @@ offset_left = 242.0
 offset_top = 421.0
 offset_right = 415.0
 offset_bottom = 477.0
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
 
 [node name="fifth_agent" type="Node2D" parent="Agentparty" unique_id=955970659]
-script = ExtResource("8_5a2bs")
+script = ExtResource("8_0ffvc")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/fifth_agent" unique_id=634296803]
 position = Vector2(-151, 422)
@@ -357,7 +357,7 @@ offset_left = 245.0
 offset_top = 533.0
 offset_right = 418.0
 offset_bottom = 589.0
-theme_override_fonts/font = ExtResource("3_4aseg")
+theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
