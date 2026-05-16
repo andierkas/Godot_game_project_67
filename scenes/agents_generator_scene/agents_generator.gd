@@ -41,13 +41,13 @@ func show_current_sprite(agent: AgentStats):
 
 
 func set_agent_stats(agent: AgentStats):
-	var y_3 = 420 + agent.agility * 10
-	var x_3 = 724 + (64 * float(agent.agility * 10) / 100)
+	var y_3 = 0 + agent.agility * 10
+	var x_3 = 0 + (64 * float(agent.agility * 10) / 100)
 	var third_point = Vector2(x_3, y_3)
-	var y_4 = 420 + agent.endurance * 10
-	var x_4 = 724 - (64 * float(agent.endurance * 10) / 100)
+	var y_4 = 0 + agent.endurance * 10
+	var x_4 = 0 - (64 * float(agent.endurance * 10) / 100)
 	var four_point = Vector2(x_4, y_4)
-	var vertices = PackedVector2Array([Vector2(724 - agent.strenght*10, 420),Vector2(724, 420 - agent.intellect * 10), Vector2(724 + agent.harisma * 10, 420), third_point, four_point])
+	var vertices = PackedVector2Array([Vector2(0 - agent.strenght*10, 0),Vector2(0, 0 - agent.intellect * 10), Vector2(0 + agent.harisma * 10, 0), third_point, four_point])
 	pentastats.polygon = vertices
 	print(pentastats.polygon)
 	str_stat.text = str(agent.strenght)

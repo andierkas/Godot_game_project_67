@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://7bc5ttoyyu55" path="res://materials/фон закрывашка.jpg" id="2_b64gy"]
 [ext_resource type="FontFile" uid="uid://cff2ia20fse41" path="res://fonts/Pixellari.ttf" id="3_t01tc"]
 [ext_resource type="Script" uid="uid://bdgw45o4xyplw" path="res://scenes/agents_generator_scene/scripts/first_agent.gd" id="4_npx5s"]
+[ext_resource type="Texture2D" uid="uid://c8yeb8febb6h2" path="res://materials/Sprite_agent/male/5.png" id="5_aw3uw"]
 [ext_resource type="Script" uid="uid://ca3i8p8kpt2gr" path="res://scenes/agents_generator_scene/scripts/second_agent.gd" id="5_pf38g"]
 [ext_resource type="Script" uid="uid://cv25k613mwi7a" path="res://scenes/agents_generator_scene/scripts/third_agent.gd" id="6_x5emw"]
 [ext_resource type="Script" uid="uid://qwrrfm7kimpj" path="res://scenes/agents_generator_scene/scripts/four_agent.gd" id="7_5t0nt"]
@@ -27,7 +28,7 @@ offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_67err")
-metadata/_edit_vertical_guides_ = [1646.0, 1646.0]
+metadata/_edit_vertical_guides_ = [1646.0]
 
 [node name="Background" type="TextureRect" parent="." unique_id=2101578231]
 layout_mode = 0
@@ -37,15 +38,50 @@ texture = ExtResource("2_b64gy")
 
 [node name="PentagonStats" type="Line2D" parent="Background" unique_id=687906117]
 position = Vector2(34, 57)
-points = PackedVector2Array(832, 371, 795, 471, 670, 471, 632, 371, 732, 272)
+points = PackedVector2Array(832, 370, 795, 471, 670, 471, 632, 370, 732, 272)
 closed = true
 width = 2.5
 round_precision = 3
 
-[node name="Line2D" type="Line2D" parent="Background" unique_id=975851884]
-points = PackedVector2Array(766, 427, 766, 328, 766, 427, 866, 428, 766, 427, 666, 428, 766, 427, 704, 528, 766, 427, 829, 528)
-width = 2.0
-default_color = Color(0.006672531, 0.013327992, 0.014829845, 1)
+[node name="PentagonStats2" type="Line2D" parent="Background" unique_id=1283828039]
+position = Vector2(71, 102)
+scale = Vector2(0.3, 0.307)
+points = PackedVector2Array(-100, 0, -60, 100, 60, 100, 100, 0, 0, -100)
+closed = true
+width = 2.5
+round_precision = 3
+
+[node name="PentagonStats3" type="Line2D" parent="Background" unique_id=1737280383]
+position = Vector2(71, 202)
+scale = Vector2(0.3, 0.307)
+points = PackedVector2Array(-100, 0, -60, 100, 60, 100, 100, 0, 0, -100)
+closed = true
+width = 2.5
+round_precision = 3
+
+[node name="PentagonStats4" type="Line2D" parent="Background" unique_id=7311998]
+position = Vector2(71, 302)
+scale = Vector2(0.3, 0.307)
+points = PackedVector2Array(-100, 0, -60, 100, 60, 100, 100, 0, 0, -100)
+closed = true
+width = 2.5
+round_precision = 3
+
+[node name="PentagonStats5" type="Line2D" parent="Background" unique_id=2075763687]
+position = Vector2(71, 402)
+scale = Vector2(0.3, 0.307)
+points = PackedVector2Array(-100, 0, -60, 100, 60, 100, 100, 0, 0, -100)
+closed = true
+width = 2.5
+round_precision = 3
+
+[node name="PentagonStats6" type="Line2D" parent="Background" unique_id=793987385]
+position = Vector2(71, 502)
+scale = Vector2(0.3, 0.307)
+points = PackedVector2Array(-100, 0, -60, 100, 60, 100, 100, 0, 0, -100)
+closed = true
+width = 2.5
+round_precision = 3
 
 [node name="Current_agent" type="Node2D" parent="." unique_id=216067582]
 
@@ -146,9 +182,10 @@ region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Current_agent" unique_id=1369337196]
-position = Vector2(42, 8)
+position = Vector2(766, 427)
+scale = Vector2(1.025, 1)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
-polygon = PackedVector2Array(624, 420, 724, 320, 824, 420, 787, 520, 662, 520)
+polygon = PackedVector2Array(-97.560974, 0, 0, -99, 97.560974, 0, 61.46338, 101, -60.487854, 101)
 
 [node name="Stats" type="Control" parent="Current_agent" unique_id=819175696]
 layout_mode = 3
@@ -236,16 +273,17 @@ offset_bottom = 372.0
 script = ExtResource("4_npx5s")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/First_agent" unique_id=1382951312]
-position = Vector2(-146, -24)
+position = Vector2(71, 102)
 scale = Vector2(0.3, 0.3)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
-polygon = PackedVector2Array(624, 420, 724, 320, 824, 420, 787, 520, 662, 520)
+polygon = PackedVector2Array(-103.33334, 3.3333435, -3.3333435, -103.33331, 100, -6.6666565, 63.333313, 106.66669, -56.66667, 103.33334)
 
 [node name="SpriteAgent" type="Sprite2D" parent="Agentparty/First_agent" unique_id=2098799151]
-position = Vector2(188, 99.999985)
-scale = Vector2(0.2, 0.234)
+position = Vector2(171, 102)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_aw3uw")
 region_enabled = true
-region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
+region_rect = Rect2(545.282, 11.641, 360, 360)
 
 [node name="NameAgent" type="TextEdit" parent="Agentparty/First_agent" unique_id=1097117595]
 anchors_preset = -1
@@ -262,14 +300,14 @@ editable = false
 script = ExtResource("5_pf38g")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/Second_agent" unique_id=602779949]
-position = Vector2(-147, 86)
+position = Vector2(71, 202)
 scale = Vector2(0.3, 0.3)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
 polygon = PackedVector2Array(624, 420, 724, 320, 824, 420, 787, 520, 662, 520)
 
 [node name="SpriteAgent" type="Sprite2D" parent="Agentparty/Second_agent" unique_id=246505085]
-position = Vector2(189, 215)
-scale = Vector2(0.2, 0.234)
+position = Vector2(171, 202)
+scale = Vector2(0.2, 0.2)
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
@@ -288,14 +326,14 @@ editable = false
 script = ExtResource("6_x5emw")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/Third_agent" unique_id=362069213]
-position = Vector2(-148, 191)
+position = Vector2(71, 302)
 scale = Vector2(0.3, 0.3)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
 polygon = PackedVector2Array(624, 420, 724, 320, 824, 420, 787, 520, 662, 520)
 
 [node name="SpriteAgent" type="Sprite2D" parent="Agentparty/Third_agent" unique_id=398701598]
-position = Vector2(188, 317)
-scale = Vector2(0.2, 0.234)
+position = Vector2(171, 302)
+scale = Vector2(0.2, 0.2)
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
@@ -314,14 +352,14 @@ editable = false
 script = ExtResource("7_5t0nt")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/four_agent" unique_id=657086225]
-position = Vector2(-150, 313)
+position = Vector2(71, 402)
 scale = Vector2(0.3, 0.3)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
 polygon = PackedVector2Array(624, 420, 724, 320, 824, 420, 787, 520, 662, 520)
 
 [node name="SpriteAgent" type="Sprite2D" parent="Agentparty/four_agent" unique_id=678931764]
-position = Vector2(184, 445)
-scale = Vector2(0.2, 0.234)
+position = Vector2(171, 402)
+scale = Vector2(0.2, 0.2)
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
@@ -340,14 +378,14 @@ editable = false
 script = ExtResource("8_0ffvc")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/fifth_agent" unique_id=634296803]
-position = Vector2(-151, 422)
+position = Vector2(71, 502)
 scale = Vector2(0.3, 0.3)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
 polygon = PackedVector2Array(624, 420, 724, 320, 824, 420, 787, 520, 662, 520)
 
 [node name="SpriteAgent" type="Sprite2D" parent="Agentparty/fifth_agent" unique_id=483329744]
-position = Vector2(182, 550)
-scale = Vector2(0.2, 0.234)
+position = Vector2(171, 502)
+scale = Vector2(0.2, 0.2)
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
@@ -361,3 +399,8 @@ theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
+
+[node name="Line2D" type="Line2D" parent="." unique_id=975851884]
+points = PackedVector2Array(766, 427, 766, 328, 766, 427, 866, 427, 766, 427, 666, 427, 766, 427, 704, 528, 766, 427, 829, 528)
+width = 2.0
+default_color = Color(0.006672531, 0.013327992, 0.014829845, 1)

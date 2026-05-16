@@ -52,7 +52,7 @@ func _init():
 	pick_random_name()
 	var _max_stats = 0
 	var array_stats = [1,1,1,1,1]
-	while _max_stats < 10:
+	while _max_stats < 8:
 		var index = randi_range(0,4)
 		array_stats[index] += randi_range(0,2)
 		_max_stats += 1
