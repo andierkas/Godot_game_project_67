@@ -12,12 +12,14 @@ class_name AgentStats
 @export var agent_second_name: String
 @export var agent_last_name: String
 @export var gender: bool #1 - мужчина, 0 - женщина
+@export var age: int
 
 #Спрайты
 @export var sprite: Texture2D
 
 func _init():
 	var rand_gender = randi_range(0,1)
+	age = randi_range(18,35)
 	if rand_gender == 1:
 		gender = true
 		var available_sprites : Array[Texture2D] = []

@@ -9,6 +9,8 @@ extends Control
 @onready var endur_stat = $"Current_agent/Stats/Endurance Stat"
 @onready var int_stat = $"Current_agent/Stats/Intellect Stat"
 @onready var har_stat = $"Current_agent/Stats/Harisma Stat"
+@onready var aspect = $Current_agent/Background/Aspect
+@onready var Gender_age = $Current_agent/Background/Gender_age
 
 var agent_1 = AgentStats.new()
 var agent_2 = AgentStats.new()
@@ -37,6 +39,10 @@ func _ready():
 func show_current_sprite(agent: AgentStats):
 	agent_sprite.texture = agent.sprite
 	agent_name.text = agent.agent_second_name + " " + agent.agent_first_name + " " + agent.agent_last_name
+	if agent.gender == true:
+		Gender_age.text = "Male," + " " + str(agent.age)
+	else:
+		Gender_age.text = "Female," + " " + str(agent.age)
 	set_agent_stats(agent)
 
 
