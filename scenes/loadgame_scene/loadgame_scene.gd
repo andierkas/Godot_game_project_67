@@ -8,10 +8,6 @@ func _ready():
 	$HBoxContainer/TextureButton4.pressed.connect(_second_save)
 	$HBoxContainer/TextureButton3.pressed.connect(_third_save)
 	
-	# ✅ ВОТ ЭТИ ДВЕ СТРОЧКИ НУЖНО РАСКОММЕНТИРОВАТЬ (они подключают кнопки):
-	$Button.pressed.connect(_on_confirm)
-	$Button2.pressed.connect(_on_confirm)
-	
 	# Блокируем кнопки подтверждения
 	$Button.disabled = true
 	$Button2.disabled = true
@@ -33,5 +29,5 @@ func activate_buttons():
 	$Button.modulate = Color(1, 1, 1)
 	$Button2.modulate = Color(1, 1, 1)
 
-func _on_confirm():
-	get_tree().change_scene_to_file("res://scenes/agents_generator_scene/agents_generator.tscn")
+func _on_button_pressed() -> void:
+	SceneLoader.load_scene("res://scenes/agents_generator_scene/agents_generator.tscn")
