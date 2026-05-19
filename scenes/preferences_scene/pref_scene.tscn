@@ -1,3 +1,26 @@
 [gd_scene format=3 uid="uid://bojv0f2siaoo7"]
 
-[node name="pref_scene" type="Node2D" unique_id=1736000511]
+[ext_resource type="Texture2D" uid="uid://cijcssdrhpxlh" path="res://materials/pref_button/Pref_button.png" id="1_ax03v"]
+[ext_resource type="Script" uid="uid://b01117fj5n2fk" path="res://scenes/preferences_scene/pref_scene.gd" id="1_kju8y"]
+[ext_resource type="Texture2D" uid="uid://4p3lost0ipqh" path="res://materials/pref_button/Pref_button_pressed.png" id="2_kju8y"]
+
+[node name="Control" type="Control" unique_id=326838186]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kju8y")
+
+[node name="PrefButton" type="TextureButton" parent="." unique_id=1534030466]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 502.0
+offset_right = 143.0
+offset_bottom = 630.0
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_ax03v")
+texture_hover = ExtResource("2_kju8y")
+
+[connection signal="pressed" from="PrefButton" to="." method="_on_pref_button_pressed"]
