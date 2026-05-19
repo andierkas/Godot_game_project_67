@@ -20,19 +20,19 @@ var agent_5 = AgentStats.new()
 
 func _ready():
 	show_current_sprite(agent_1)
-	var first_agent = $Agentparty/First_agent
+	var first_agent = $Agentparty/ForDrag/First_agent
 	first_agent.agent = agent_1
 	first_agent.update_agent()
-	var second_agent = $Agentparty/Second_agent
+	var second_agent = $Agentparty/ForDrag2/Second_agent
 	second_agent.agent = agent_2
 	second_agent.update_agent()
-	var third_agent = $Agentparty/Third_agent
+	var third_agent = $Agentparty/ForDrag3/Third_agent
 	third_agent.agent = agent_3
 	third_agent.update_agent()
-	var four_agent = $Agentparty/four_agent
+	var four_agent = $Agentparty/ForDrag4/four_agent
 	four_agent.agent = agent_4
 	four_agent.update_agent()
-	var fifth_agent = $Agentparty/fifth_agent
+	var fifth_agent = $Agentparty/ForDrag5/fifth_agent
 	fifth_agent.agent = agent_5
 	fifth_agent.update_agent()
 
@@ -61,4 +61,5 @@ func set_agent_stats(agent: AgentStats):
 	endur_stat.text = str(agent.endurance)
 	agi_stat.text = str(agent.agility)
 	har_stat.text = str(agent.harisma)
+	
 	

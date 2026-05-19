@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://iyx7fmtmvlhx"]
+
+[ext_resource type="Script" uid="uid://datuh7ioy7g25" path="res://control.gd" id="1_0fbet"]
+
+[node name="Control" type="Control" unique_id=1650859002]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 6
+script = ExtResource("1_0fbet")
+
+[node name="Control" type="Control" parent="." unique_id=513673306]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
