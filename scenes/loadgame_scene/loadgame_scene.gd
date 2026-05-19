@@ -31,3 +31,7 @@ func activate_buttons():
 
 func _on_button_pressed() -> void:
 	SceneLoader.load_scene("res://scenes/agents_generator_scene/agents_generator.tscn")
+
+
+func _on_play_button_pressed() -> void:
+	SceneLoader.load_scene("res://scenes/main_scene/main_scene.tscn")
