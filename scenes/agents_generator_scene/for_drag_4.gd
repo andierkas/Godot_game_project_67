@@ -9,6 +9,7 @@ func _get_drag_data(at_position):
 	if agent_node == null:
 		return null
 	set_drag_preview(preview)
+	self.visible = false
 	# Возвращаем САМ УЗЕЛ, который хотим перенести
 	return {
 		"dragged_control": self,
@@ -22,11 +23,19 @@ func _can_drop_data(at_position, data):
 	return typeof(data) == TYPE_DICTIONARY and data.has("dragged_control")
 
 func _drop_data(at_position, data):
+	self.visible = true
 	var dragged_control = data["dragged_control"]
 	var dragged_agent = data["dragged_agent"]
+	var dragged_z_index = data.get("original_z_index", 0)
 	
 	if dragged_control == self:
-		return  # На себя
+		return # На себя
+	
+	var my_z = self.z_index
+	var their_z = dragged_control.z_index
+	
+	self.z_index = their_z
+	dragged_control.z_index = my_z
 	
 	# Получаем родителя (контейнер с покемонами)
 	var container = get_parent()
@@ -50,7 +59,5 @@ func _create_drag_preview() -> Control:
 	# Настраиваем позицию клона
 	clone_agent.position = Vector2(-180, -100)
 	
-	# Делаем полупрозрачным
-	container.modulate = Color(1, 1, 1, 0.7)
 	
 	return container

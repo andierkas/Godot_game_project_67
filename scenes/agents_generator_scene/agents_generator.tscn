@@ -5,16 +5,13 @@
 [ext_resource type="FontFile" uid="uid://cff2ia20fse41" path="res://fonts/Pixellari.ttf" id="3_t01tc"]
 [ext_resource type="Script" uid="uid://bdgw45o4xyplw" path="res://scenes/agents_generator_scene/scripts/first_agent.gd" id="4_npx5s"]
 [ext_resource type="Texture2D" uid="uid://ddyrwbstl1ex6" path="res://materials/Sprite_agent/male/1.png" id="4_ye48f"]
+[ext_resource type="Script" uid="uid://xjh5uht2defm" path="res://scenes/agents_generator_scene/panel.gd" id="5_65pgp"]
 [ext_resource type="Texture2D" uid="uid://c8yeb8febb6h2" path="res://materials/Sprite_agent/male/5.png" id="5_aw3uw"]
 [ext_resource type="Script" uid="uid://cocuohd4fomcv" path="res://scenes/agents_generator_scene/control.gd" id="5_npaxp"]
 [ext_resource type="Script" uid="uid://ca3i8p8kpt2gr" path="res://scenes/agents_generator_scene/scripts/second_agent.gd" id="5_pf38g"]
 [ext_resource type="Script" uid="uid://cv25k613mwi7a" path="res://scenes/agents_generator_scene/scripts/third_agent.gd" id="6_x5emw"]
 [ext_resource type="Script" uid="uid://qwrrfm7kimpj" path="res://scenes/agents_generator_scene/scripts/four_agent.gd" id="7_5t0nt"]
 [ext_resource type="Script" uid="uid://de827w5146aov" path="res://scenes/agents_generator_scene/scripts/fifth_agent.gd" id="8_0ffvc"]
-[ext_resource type="Script" uid="uid://xob1yr3233s2" path="res://scenes/agents_generator_scene/for_drag_2.gd" id="8_rqoys"]
-[ext_resource type="Script" uid="uid://be0187pxn2gms" path="res://scenes/agents_generator_scene/for_drag_3.gd" id="10_jw7mo"]
-[ext_resource type="Script" uid="uid://dlmcipr81fipu" path="res://scenes/agents_generator_scene/for_drag_4.gd" id="12_c036g"]
-[ext_resource type="Script" uid="uid://cugbqbg37g60x" path="res://scenes/agents_generator_scene/for_drag_5.gd" id="14_0yjig"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4aseg"]
 
@@ -231,7 +228,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
 text = "Agility"
 
 [node name="NameAgent" type="TextEdit" parent="Current_agent" unique_id=95911649]
-anchors_preset = -1
 offset_left = 512.0
 offset_top = 66.0
 offset_right = 928.0
@@ -361,71 +357,111 @@ theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 60
 text = "START TEAM"
 
-[node name="ForDrag" type="Control" parent="Agentparty" unique_id=1843188363]
-anchors_preset = 0
-offset_left = 14.0
-offset_top = 73.0
-offset_right = 411.0
-offset_bottom = 155.0
-mouse_behavior_recursive = 2
-mouse_default_cursor_shape = 6
-script = ExtResource("5_npaxp")
+[node name="dragbox" type="VBoxContainer" parent="Agentparty" unique_id=2085150109]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 76.0
+offset_right = 410.0
+offset_bottom = 646.0
 
-[node name="First_agent" type="Node2D" parent="Agentparty/ForDrag" unique_id=1733191761]
-position = Vector2(-24, -54)
+[node name="Panel" type="Panel" parent="Agentparty/dragbox" unique_id=788594906]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+script = ExtResource("5_65pgp")
+
+[node name="Agent" type="Node2D" parent="Agentparty/dragbox/Panel" unique_id=1733191761]
+position = Vector2(-10, 19)
 script = ExtResource("4_npx5s")
 
-[node name="ColorRect" type="ColorRect" parent="Agentparty/ForDrag/First_agent" unique_id=243839606]
+[node name="ColorRect" type="ColorRect" parent="Agentparty/dragbox/Panel/Agent" unique_id=243839606]
 show_behind_parent = true
-offset_left = 22.0
-offset_top = 63.0
-offset_right = 421.0
-offset_bottom = 138.0
+custom_minimum_size = Vector2(400, 100)
+offset_left = 10.0
+offset_top = -19.0
+offset_right = 410.0
+offset_bottom = 81.0
 mouse_filter = 2
 
-[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/ForDrag/First_agent" unique_id=1382951312]
+[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel/Agent" unique_id=1382951312]
 show_behind_parent = true
-position = Vector2(71, 102)
+position = Vector2(55, 26)
 scale = Vector2(0.3, 0.3)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
 polygon = PackedVector2Array(-103.33334, 3.3333435, -3.3333435, -103.33331, 100, -6.6666565, 63.333313, 106.66669, -56.66667, 103.33334)
 
-[node name="NameAgent" type="TextEdit" parent="Agentparty/ForDrag/First_agent" unique_id=1097117595]
+[node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/Panel/Agent" unique_id=1097117595]
 show_behind_parent = true
-anchors_preset = -1
-offset_left = 239.0
-offset_top = 71.0
-offset_right = 401.0
-offset_bottom = 127.0
+offset_left = 229.0
+offset_top = 1.0
+offset_right = 391.0
+offset_bottom = 57.0
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
 
-[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/ForDrag/First_agent" unique_id=2098799151]
+[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/Panel/Agent" unique_id=2098799151]
 show_behind_parent = true
-position = Vector2(171, 102)
+position = Vector2(158, 30.000008)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_aw3uw")
 region_enabled = true
 region_rect = Rect2(545.282, 11.641, 360, 360)
 
-[node name="ForDrag2" type="Control" parent="Agentparty" unique_id=876719885]
-anchors_preset = 0
-offset_left = 8.0
-offset_top = 156.0
-offset_right = 413.0
-offset_bottom = 242.0
-mouse_default_cursor_shape = 6
-script = ExtResource("8_rqoys")
+[node name="Panel2" type="Panel" parent="Agentparty/dragbox" unique_id=10915453]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+script = ExtResource("5_65pgp")
 
-[node name="Second_agent" type="Node2D" parent="Agentparty/ForDrag2" unique_id=1985564474]
+[node name="Agent" type="Node2D" parent="Agentparty/dragbox/Panel2" unique_id=1339298976]
+position = Vector2(-10, 19)
+script = ExtResource("4_npx5s")
+
+[node name="ColorRect" type="ColorRect" parent="Agentparty/dragbox/Panel2/Agent" unique_id=543333689]
 show_behind_parent = true
-position = Vector2(-14, -156)
+custom_minimum_size = Vector2(400, 100)
+offset_left = 10.0
+offset_top = -19.0
+offset_right = 410.0
+offset_bottom = 81.0
+mouse_filter = 2
+
+[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel2/Agent" unique_id=2144582932]
+show_behind_parent = true
+position = Vector2(55, 26)
+scale = Vector2(0.3, 0.3)
+color = Color(0.8898981, 0.8357617, 0.23110518, 1)
+polygon = PackedVector2Array(-103.33334, 3.3333435, -3.3333435, -103.33331, 100, -6.6666565, 63.333313, 106.66669, -56.66667, 103.33334)
+
+[node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/Panel2/Agent" unique_id=692613165]
+show_behind_parent = true
+offset_left = 229.0
+offset_top = 1.0
+offset_right = 391.0
+offset_bottom = 57.0
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("3_t01tc")
+theme_override_font_sizes/font_size = 30
+text = "Anton Antonov Antonovich"
+editable = false
+
+[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/Panel2/Agent" unique_id=813121705]
+show_behind_parent = true
+position = Vector2(158, 30.000008)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_aw3uw")
+region_enabled = true
+region_rect = Rect2(545.282, 11.641, 360, 360)
+
+[node name="Second_agent" type="Node2D" parent="Agentparty/dragbox" unique_id=1985564474]
+visible = false
+show_behind_parent = true
+position = Vector2(-6, 0)
 script = ExtResource("5_pf38g")
 
-[node name="ColorRect" type="ColorRect" parent="Agentparty/ForDrag2/Second_agent" unique_id=108684406]
+[node name="ColorRect" type="ColorRect" parent="Agentparty/dragbox/Second_agent" unique_id=108684406]
 show_behind_parent = true
 offset_left = 19.0
 offset_top = 155.0
@@ -435,23 +471,22 @@ mouse_filter = 2
 color = Color(0.7363514, 0.6049765, 0.8753167, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/ForDrag2/Second_agent" unique_id=602779949]
+[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Second_agent" unique_id=602779949]
 show_behind_parent = true
 position = Vector2(71, 202)
 scale = Vector2(0.3, 0.3)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
 polygon = PackedVector2Array(-103.33334, -3.333313, 0, -100, 96.66666, -3.333313, 60, 103.333374, -60, 100)
 
-[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/ForDrag2/Second_agent" unique_id=246505085]
+[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/Second_agent" unique_id=246505085]
 show_behind_parent = true
 position = Vector2(171, 202)
 scale = Vector2(0.2, 0.2)
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
-[node name="NameAgent" type="TextEdit" parent="Agentparty/ForDrag2/Second_agent" unique_id=433523218]
+[node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/Second_agent" unique_id=433523218]
 show_behind_parent = true
-anchors_preset = -1
 offset_left = 239.0
 offset_top = 171.0
 offset_right = 404.0
@@ -461,22 +496,13 @@ theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
 
-[node name="ForDrag3" type="Control" parent="Agentparty" unique_id=1125159899]
-anchors_preset = 0
-offset_left = 12.0
-offset_top = 239.0
-offset_right = 419.0
-offset_bottom = 346.0
-mouse_behavior_recursive = 2
-mouse_default_cursor_shape = 6
-script = ExtResource("10_jw7mo")
-
-[node name="Third_agent" type="Node2D" parent="Agentparty/ForDrag3" unique_id=1737884082]
+[node name="Third_agent" type="Node2D" parent="Agentparty/dragbox" unique_id=1737884082]
+visible = false
 show_behind_parent = true
-position = Vector2(-16, -240)
+position = Vector2(-4, -1)
 script = ExtResource("6_x5emw")
 
-[node name="ColorRect" type="ColorRect" parent="Agentparty/ForDrag3/Third_agent" unique_id=1718162048]
+[node name="ColorRect" type="ColorRect" parent="Agentparty/dragbox/Third_agent" unique_id=1718162048]
 show_behind_parent = true
 offset_left = 17.0
 offset_top = 243.0
@@ -485,23 +511,22 @@ offset_bottom = 484.0
 mouse_filter = 2
 color = Color(0.92393774, 0.9258259, 0.9610905, 1)
 
-[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/ForDrag3/Third_agent" unique_id=362069213]
+[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Third_agent" unique_id=362069213]
 show_behind_parent = true
 position = Vector2(71, 302)
 scale = Vector2(0.3, 0.3)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
 polygon = PackedVector2Array(-103.33334, -3.333374, 0, -103.333374, 100, 0, 60, 100, -56.66667, 103.33325)
 
-[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/ForDrag3/Third_agent" unique_id=398701598]
+[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/Third_agent" unique_id=398701598]
 show_behind_parent = true
 position = Vector2(171, 302)
 scale = Vector2(0.2, 0.2)
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
-[node name="NameAgent" type="TextEdit" parent="Agentparty/ForDrag3/Third_agent" unique_id=762892933]
+[node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/Third_agent" unique_id=762892933]
 show_behind_parent = true
-anchors_preset = -1
 offset_left = 239.0
 offset_top = 271.0
 offset_right = 405.0
@@ -512,21 +537,13 @@ theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
 
-[node name="ForDrag4" type="Control" parent="Agentparty" unique_id=1489669843]
-anchors_preset = 0
-offset_left = 16.0
-offset_top = 340.0
-offset_right = 414.0
-offset_bottom = 447.0
-mouse_default_cursor_shape = 6
-script = ExtResource("12_c036g")
-
-[node name="four_agent" type="Node2D" parent="Agentparty/ForDrag4" unique_id=1537385757]
+[node name="four_agent" type="Node2D" parent="Agentparty/dragbox" unique_id=1537385757]
+visible = false
 show_behind_parent = true
-position = Vector2(-19, -337)
+position = Vector2(-3, 3)
 script = ExtResource("7_5t0nt")
 
-[node name="ColorRect" type="ColorRect" parent="Agentparty/ForDrag4/four_agent" unique_id=690512042]
+[node name="ColorRect" type="ColorRect" parent="Agentparty/dragbox/four_agent" unique_id=690512042]
 show_behind_parent = true
 offset_left = 18.0
 offset_top = 347.0
@@ -535,23 +552,22 @@ offset_bottom = 588.0
 mouse_filter = 2
 color = Color(0.8950573, 0.624895, 0.42465132, 1)
 
-[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/ForDrag4/four_agent" unique_id=657086225]
+[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/four_agent" unique_id=657086225]
 show_behind_parent = true
 position = Vector2(71, 402)
 scale = Vector2(0.3, 0.3)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
 polygon = PackedVector2Array(-100, -3.333252, 0, -103.33325, 96.66666, -3.333252, 53.333313, 90, -60, 90)
 
-[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/ForDrag4/four_agent" unique_id=678931764]
+[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/four_agent" unique_id=678931764]
 show_behind_parent = true
 position = Vector2(171, 402)
 scale = Vector2(0.2, 0.2)
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
-[node name="NameAgent" type="TextEdit" parent="Agentparty/ForDrag4/four_agent" unique_id=550527503]
+[node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/four_agent" unique_id=550527503]
 show_behind_parent = true
-anchors_preset = -1
 offset_left = 239.0
 offset_top = 371.0
 offset_right = 412.0
@@ -561,21 +577,13 @@ theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
 
-[node name="ForDrag5" type="Control" parent="Agentparty" unique_id=1280348901]
-anchors_preset = 0
-offset_left = 20.0
-offset_top = 452.0
-offset_right = 415.0
-offset_bottom = 558.0
-mouse_default_cursor_shape = 6
-script = ExtResource("14_0yjig")
-
-[node name="fifth_agent" type="Node2D" parent="Agentparty/ForDrag5" unique_id=955970659]
+[node name="fifth_agent" type="Node2D" parent="Agentparty/dragbox" unique_id=955970659]
+visible = false
 show_behind_parent = true
-position = Vector2(-20, -447)
+position = Vector2(0, 5)
 script = ExtResource("8_0ffvc")
 
-[node name="ColorRect" type="ColorRect" parent="Agentparty/ForDrag5/fifth_agent" unique_id=44844102]
+[node name="ColorRect" type="ColorRect" parent="Agentparty/dragbox/fifth_agent" unique_id=44844102]
 show_behind_parent = true
 offset_left = 16.0
 offset_top = 449.0
@@ -584,23 +592,22 @@ offset_bottom = 690.0
 mouse_filter = 2
 color = Color(0.8352941, 0.9411765, 0.52156866, 1)
 
-[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/ForDrag5/fifth_agent" unique_id=634296803]
+[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/fifth_agent" unique_id=634296803]
 show_behind_parent = true
 position = Vector2(71, 502)
 scale = Vector2(0.3, 0.3)
 color = Color(0.8898981, 0.8357617, 0.23110518, 1)
 polygon = PackedVector2Array(-100, 3.333374, -6.6666718, -100, 93.33331, -6.666626, 60, 103.333374, -63.333344, 103.333374)
 
-[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/ForDrag5/fifth_agent" unique_id=483329744]
+[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/fifth_agent" unique_id=483329744]
 show_behind_parent = true
 position = Vector2(171, 502)
 scale = Vector2(0.2, 0.2)
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
-[node name="NameAgent" type="TextEdit" parent="Agentparty/ForDrag5/fifth_agent" unique_id=1873115548]
+[node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/fifth_agent" unique_id=1873115548]
 show_behind_parent = true
-anchors_preset = -1
 offset_left = 239.0
 offset_top = 471.0
 offset_right = 412.0
@@ -609,6 +616,17 @@ theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
+
+[node name="ForDrag" type="Control" parent="Agentparty" unique_id=1843188363]
+visible = false
+anchors_preset = 0
+offset_left = 14.0
+offset_top = 73.0
+offset_right = 411.0
+offset_bottom = 155.0
+mouse_behavior_recursive = 2
+mouse_default_cursor_shape = 6
+script = ExtResource("5_npaxp")
 
 [node name="Line2D" type="Line2D" parent="." unique_id=975851884]
 position = Vector2(100, 0)

@@ -1,7 +1,10 @@
 extends Control
 
 @onready var agent_node = $First_agent
-
+@onready var colorsheet = $First_agent/ColorRect
+@onready var icon = $First_agent/SpriteAgent
+@onready var text_name = $First_agent/NameAgent
+@onready var penta = $First_agent/FillPentagonStats
 
 func _get_drag_data(at_position):
 	var preview = _create_drag_preview()
@@ -9,6 +12,10 @@ func _get_drag_data(at_position):
 	if agent_node == null:
 		return null
 	set_drag_preview(preview)
+	colorsheet.color = Color(0,0,0,0)
+	icon.texture = null
+	text_name.text = ""
+	penta.polygon = PackedVector2Array([Vector2(0,0)])
 	# Возвращаем САМ УЗЕЛ, который хотим перенести
 	return {
 		"dragged_control": self,
@@ -17,31 +24,32 @@ func _get_drag_data(at_position):
 		"original_index": get_index()
 	}
 
-func _can_drop_data(at_position, data):
+func _can_drop_data(_pos, data):
 	# Проверяем, что перетаскивают именно узел
-	return typeof(data) == TYPE_DICTIONARY and data.has("dragged_control")
+	return data is Control
 
-func _drop_data(at_position, data):
+func _drop_data(_pos, data):
 	var dragged_control = data["dragged_control"]
 	var dragged_agent = data["dragged_agent"]
 	var dragged_z_index = data.get("original_z_index", 0)
 	
 	if dragged_control == self:
-		return  # На себя
+		return 
 	
 	var my_z = self.z_index
-	var their_z = dragged_control.z_index
-	
-	self.z_index = their_z
+	self.z_index = dragged_z_index
 	dragged_control.z_index = my_z
 	
 	# Получаем родителя (контейнер с покемонами)
 	var container = get_parent()
 	var target_index = get_index()
 	var dragged_index = dragged_control.get_index()
-	container.move_child(dragged_control, target_index)
+	container.move_child(dragged_agent, target_index)
 	container.move_child(self, dragged_index)
-
+	
+	var temp_position = self.position
+	self.position = dragged_control.position
+	dragged_control.position = temp_position
 
 func _create_drag_preview() -> Control:
 	# Создаём контейнер
@@ -57,7 +65,5 @@ func _create_drag_preview() -> Control:
 	# Настраиваем позицию клона
 	clone_agent.position = Vector2(-180, -100)
 	
-	# Делаем полупрозрачным
-	container.modulate = Color(1, 1, 1, 0.7)
 	
 	return container
