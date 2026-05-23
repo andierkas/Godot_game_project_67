@@ -1,6 +1,32 @@
 [gd_scene format=3 uid="uid://iyx7fmtmvlhx"]
 
-[ext_resource type="Script" uid="uid://datuh7ioy7g25" path="res://control.gd" id="1_0fbet"]
+[sub_resource type="GDScript" id="GDScript_uchyk"]
+script/source = "extends Control
+
+func _ready():
+	# Делаем узел видимым и кликабельным
+	custom_minimum_size = Vector2(200, 200)
+	
+	# Добавляем фон для наглядности
+	var bg = ColorRect.new()
+	bg.color = Color.BLUE
+	bg.size = Vector2(200, 200)
+	add_child(bg)
+
+func _get_drag_data(at_position):
+	print(\"DRAG STARTED!\")  # Ключевое сообщение
+	var preview = ColorRect.new()
+	preview.color = Color.RED
+	preview.size = Vector2(50, 50)
+	set_drag_preview(preview)
+	return {\"data\": \"test\"}
+
+func _can_drop_data(at_position, data):
+	return true
+
+func _drop_data(at_position, data):
+	print(\"DROP!\")
+"
 
 [node name="Control" type="Control" unique_id=1650859002]
 layout_mode = 3
@@ -14,7 +40,7 @@ offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_default_cursor_shape = 6
-script = ExtResource("1_0fbet")
+script = SubResource("GDScript_uchyk")
 
 [node name="Control" type="Control" parent="." unique_id=513673306]
 anchors_preset = 0
