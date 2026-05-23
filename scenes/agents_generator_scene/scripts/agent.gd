@@ -1,6 +1,10 @@
 extends Node2D
 
-var agent: AgentStats
+@export var agent = AgentStats.new()
+
+func _ready() -> void:
+	update_agent()
+
 
 func update_agent():
 	if agent:
@@ -15,3 +19,15 @@ func update_agent():
 		var four_point = Vector2(x_4, y_4)
 		var vertices = PackedVector2Array([Vector2(0 - agent.strenght*10, 0),Vector2(0, 0 - agent.intellect * 10), Vector2(0 + agent.harisma * 10, 0), third_point, four_point])
 		$FillPentagonStats.polygon = vertices
+
+func hideagent():
+	$ColorRect.hide()
+	$FillPentagonStats.hide()
+	$NameAgent.hide()
+	$SpriteAgent.hide()
+	
+func showagent():
+	$ColorRect.show()
+	$FillPentagonStats.show()
+	$NameAgent.show()
+	$SpriteAgent.show()
