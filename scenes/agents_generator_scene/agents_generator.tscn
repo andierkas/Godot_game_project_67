@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://drg7gbvifj1c8" path="res://scenes/agents_generator_scene/scripts/agents_generator.gd" id="1_67err"]
 [ext_resource type="Texture2D" uid="uid://7bc5ttoyyu55" path="res://materials/фон закрывашка.jpg" id="2_b64gy"]
 [ext_resource type="Script" uid="uid://dnwab1wu74kp4" path="res://scenes/agents_generator_scene/scripts/current_agent.gd" id="3_aw3uw"]
-[ext_resource type="FontFile" uid="uid://cff2ia20fse41" path="res://fonts/Pixellari.ttf" id="3_t01tc"]
 [ext_resource type="Script" uid="uid://bdgw45o4xyplw" path="res://scenes/agents_generator_scene/scripts/agent.gd" id="4_npx5s"]
 [ext_resource type="Texture2D" uid="uid://ddyrwbstl1ex6" path="res://materials/Sprite_agent/male/1.png" id="4_ye48f"]
 [ext_resource type="Script" uid="uid://xjh5uht2defm" path="res://scenes/agents_generator_scene/scripts/panel.gd" id="5_65pgp"]
 [ext_resource type="Texture2D" uid="uid://c8yeb8febb6h2" path="res://materials/Sprite_agent/male/5.png" id="5_aw3uw"]
 [ext_resource type="Script" uid="uid://bmc657funj5y4" path="res://scenes/agents_generator_scene/scripts/fill_pentagon_stats.gd" id="5_pi0cj"]
+[ext_resource type="FontFile" uid="uid://bdactjus5on2j" path="res://fonts/uvKits.ttf" id="9_aw3uw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4aseg"]
 
@@ -90,7 +90,6 @@ offset_bottom = 452.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
@@ -105,7 +104,6 @@ offset_bottom = 279.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
@@ -120,7 +118,6 @@ offset_bottom = 455.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
@@ -135,7 +132,6 @@ offset_bottom = 575.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
@@ -150,7 +146,6 @@ offset_bottom = 580.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
@@ -165,7 +160,6 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/shadow_outline_size = 1
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 32
 text = "GENDER, AGE"
 
@@ -178,7 +172,6 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 32
 text = "ASPECT"
 
@@ -190,7 +183,6 @@ offset_bottom = 122.0
 theme_override_colors/font_color = Color(3.4255767, 3.4255767, 3.4255767, 1)
 theme_override_colors/font_readonly_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ye48f")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4b6ty")
@@ -218,7 +210,6 @@ offset_top = -18.0
 offset_right = -32.80487
 offset_bottom = 47.0
 theme_override_constants/line_spacing = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
 text = "5"
@@ -229,7 +220,6 @@ offset_top = -145.0
 offset_right = 85.2439
 offset_bottom = -80.0
 theme_override_constants/line_spacing = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
 text = "5"
@@ -240,7 +230,6 @@ offset_top = 105.0
 offset_right = 166.21948
 offset_bottom = 170.0
 theme_override_constants/line_spacing = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
 text = "5"
@@ -251,7 +240,6 @@ offset_top = -19.0
 offset_right = 210.12195
 offset_bottom = 46.0
 theme_override_constants/line_spacing = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
 text = "5"
@@ -262,7 +250,6 @@ offset_top = 103.0
 offset_right = 3.2926636
 offset_bottom = 168.0
 theme_override_constants/line_spacing = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
 text = "5"
@@ -291,7 +278,6 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7882353)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 4
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 60
 text = "START TEAM"
 
@@ -344,7 +330,6 @@ offset_top = 1.0
 offset_right = 391.0
 offset_bottom = 57.0
 mouse_filter = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
@@ -398,7 +383,6 @@ offset_top = 1.0
 offset_right = 391.0
 offset_bottom = 57.0
 mouse_filter = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
@@ -452,7 +436,6 @@ offset_top = 1.0
 offset_right = 391.0
 offset_bottom = 57.0
 mouse_filter = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
@@ -506,7 +489,6 @@ offset_top = 1.0
 offset_right = 391.0
 offset_bottom = 57.0
 mouse_filter = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
@@ -560,7 +542,6 @@ offset_top = 1.0
 offset_right = 391.0
 offset_bottom = 57.0
 mouse_filter = 2
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 30
 text = "Anton Antonov Antonovich"
 editable = false
@@ -585,7 +566,7 @@ offset_left = 23.0
 offset_top = 591.0
 offset_right = 165.0
 offset_bottom = 647.0
-theme_override_fonts/font = ExtResource("3_t01tc")
+theme_override_fonts/font = ExtResource("9_aw3uw")
 theme_override_font_sizes/font_size = 47
 action_mode = 0
 text = "PREV"
@@ -596,7 +577,6 @@ offset_left = 499.0
 offset_top = 594.0
 offset_right = 662.0
 offset_bottom = 645.0
-theme_override_fonts/font = ExtResource("3_t01tc")
 theme_override_font_sizes/font_size = 39
 action_mode = 0
 text = "REROLL"
@@ -607,7 +587,11 @@ offset_left = 914.0
 offset_top = 590.0
 offset_right = 1118.0
 offset_bottom = 641.0
+theme_override_font_sizes/font_size = 35
 action_mode = 0
+text = "NEXT
+"
 
 [connection signal="pressed" from="prev" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="reroll" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]

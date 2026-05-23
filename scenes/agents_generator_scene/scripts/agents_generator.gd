@@ -16,3 +16,10 @@ func _on_button_2_pressed() -> void:
 
 func _on_button_pressed() -> void:
 	SceneLoader.load_scene("res://scenes/loadgame_scene/loadgame_scene.tscn")
+
+
+func _on_next_pressed() -> void:
+	PartyBox.add_agent(agent_1.agent)
+	PartyBox.add_agent(agent_2.agent)
+	PartyBox.add_agent(agent_3.agent)
+	SceneLoader.load_scene("res://scenes/Gameplay_scene/day.tscn")

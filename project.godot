@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 [autoload]
 
 SceneLoader="*uid://6k4wrc15fpa5"
+PartyBox="*uid://34jbsmh5nbi7"
 
 [dotnet]
 
