@@ -5,11 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://k6e4jaeg1ktt" path="res://materials/image (2).jpeg" id="3_82jc6"]
 [ext_resource type="Script" uid="uid://4wgsk15dvste" path="res://grid_container.gd" id="3_llrwq"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_82jc6"]
-vertices = PackedVector2Array(1147.7891, 633, 27.953125, 633.9922, 25.039063, 6.96875, 1135.1875, 4.0234375)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(15, -3, 18, 644, 1158, 643, 1145, -6)])
-
 [node name="Node2D" type="Node2D" unique_id=536172153]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1462427698]
@@ -83,13 +78,5 @@ offset_right = 85.0
 offset_bottom = 635.0
 theme_override_font_sizes/font_size = 9
 text = "СВЕРНУТЬ(ШЕЮ)"
-
-[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="." unique_id=1994575365]
-position = Vector2(0, -3)
-vertices = PackedVector2Array(299, 134, 300, 240, 389, 242, 389, 135)
-
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="NavigationObstacle2D" unique_id=938621113]
-position = Vector2(-13, 17)
-navigation_polygon = SubResource("NavigationPolygon_82jc6")
 
 [connection signal="pressed" from="Button" to="Panel" method="_on_button_pressed"]

@@ -23,6 +23,12 @@ PartyBox="*uid://34jbsmh5nbi7"
 
 project/assembly_name="new_game_proj"
 
+[file_customization]
+
+folder_colors={
+"res://materials/quests/": "green"
+}
+
 [input_devices]
 
 pointing/emulate_mouse_from_touch=false
