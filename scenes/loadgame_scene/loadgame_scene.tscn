@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bel2nsmwwvdkv"]
 
 [ext_resource type="Script" uid="uid://d0lef2tsc6fql" path="res://scenes/loadgame_scene/loadgame_scene.gd" id="1_t0mkg"]
-[ext_resource type="FontFile" uid="uid://cff2ia20fse41" path="res://fonts/Pixellari.ttf" id="2_6hksg"]
+[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="2_6hksg"]
 [ext_resource type="Texture2D" uid="uid://ccwg3klc2au0w" path="res://materials/button menu/Airbrush-BG-CHANGER-1778845581928.jpg" id="3_elpcw"]
-[ext_resource type="Texture2D" uid="uid://kfyhwwngigej" path="res://materials/play_button/Play_button.png" id="3_k68l5"]
-[ext_resource type="Texture2D" uid="uid://b67xvbth18ukc" path="res://materials/play_button/Play_button_pressed.png" id="4_o66ih"]
+[ext_resource type="Texture2D" uid="uid://6xp8nftv21h" path="res://materials/button menu/16352ff505911f1ab322692503ad7e1_1.jpeg" id="3_k68l5"]
+[ext_resource type="Texture2D" uid="uid://6xp8nftv21h" path="res://materials/button menu/16352ff505911f1ab322692503ad7e1_1.jpeg" id="4_o66ih"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gyfs4"]
 
