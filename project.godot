@@ -11,12 +11,17 @@ config_version=5
 [application]
 
 config/name="new_game_proj"
-run/main_scene="uid://cmhcf8g738k3e"
+run/main_scene="uid://d0efh8ojrc5q6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
 SceneLoader="*uid://6k4wrc15fpa5"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [dotnet]
 
