@@ -1,11 +1,47 @@
 [gd_scene format=3 uid="uid://do3c5x0looprm"]
 
 [ext_resource type="Texture2D" uid="uid://blnovlcwgfplf" path="res://materials/1780274087.png" id="1_82jc6"]
+[ext_resource type="Script" uid="uid://8afxic637pb1" path="res://scenes/Gameplay_scene/day.gd" id="1_exbrp"]
 [ext_resource type="Script" uid="uid://bupxvywad85is" path="res://scenes/Gameplay_scene/panel.gd" id="2_68y1k"]
 [ext_resource type="Texture2D" uid="uid://k6e4jaeg1ktt" path="res://materials/image (2).jpeg" id="3_82jc6"]
 [ext_resource type="Script" uid="uid://4wgsk15dvste" path="res://grid_container.gd" id="3_llrwq"]
+[ext_resource type="Script" uid="uid://6vjil0ck5cl4" path="res://scenes/Gameplay_scene/area_2d.gd" id="6_cpas5"]
+[ext_resource type="Script" uid="uid://bmp6qlkmnlum1" path="res://scenes/Gameplay_scene/texture_drag.gd" id="6_gyagd"]
+[ext_resource type="Resource" uid="uid://dao144hv773j" path="res://materials/quests/zaglushka.tres" id="7_gyagd"]
+[ext_resource type="Resource" uid="uid://c5yrl2sr28vdk" path="res://materials/quests/test_quest.tres" id="7_lhnp0"]
+[ext_resource type="Texture2D" uid="uid://ducccriiae77t" path="res://materials/icons8-danger-50.png" id="8_cpas5"]
+[ext_resource type="Script" uid="uid://chulbp0u7dakx" path="res://scenes/Gameplay_scene/questdescript.gd" id="8_gyagd"]
+[ext_resource type="Texture2D" uid="uid://7abog8ajlb51" path="res://materials/image.jpeg" id="9_n8qpb"]
 
-[node name="Node2D" type="Node2D" unique_id=536172153]
+[sub_resource type="CircleShape2D" id="CircleShape2D_4tlo2"]
+radius = 17.029387
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cpas5"]
+bg_color = Color(0.8147868, 0.5272622, 0.19329205, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyagd"]
+size = Vector2(190, 155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8qpb"]
+size = Vector2(81, 102.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4tlo2"]
+size = Vector2(83.5, 58.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xd4o"]
+size = Vector2(80.25, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5q0e"]
+size = Vector2(160, 96)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_cytv4"]
+vertices = PackedVector2Array(1146.0078, 12.9375, 1146.9766, 642.96094, 13.8984375, 639.03125, 8.09375, 6.0625)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(4, 649, 1157, 653, 1156, 3, -2, -4)])
+parsed_geometry_type = 1
+
+[node name="Main" type="Node" unique_id=564995157]
+script = ExtResource("1_exbrp")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1462427698]
 offset_right = 1152.0
@@ -15,63 +51,80 @@ texture = ExtResource("1_82jc6")
 expand_mode = 2
 
 [node name="Panel" type="Panel" parent="." unique_id=2107047064]
-visible = false
-offset_left = 83.0
-offset_top = 474.0
-offset_right = 1076.0
-offset_bottom = 632.0
+anchors_preset = -1
+anchor_left = 0.078
+anchor_top = 0.8132716
+anchor_right = 0.6614583
+anchor_bottom = 0.84499997
+offset_left = 151.144
+offset_top = 23.0
+offset_right = 151.0
+offset_bottom = 102.44
 script = ExtResource("2_68y1k")
+metadata/_edit_use_anchors_ = true
 
 [node name="GridContainer" type="GridContainer" parent="Panel" unique_id=985532569]
+z_index = 16
 clip_contents = true
-custom_minimum_size = Vector2(200, 100)
-layout_mode = 0
-offset_left = 6.0
-offset_top = 3.0
-offset_right = 986.0
-offset_bottom = 153.0
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.3390001
+anchor_bottom = 1.0
+offset_right = -300.14807
 theme_override_constants/h_separation = 16
 columns = 6
 script = ExtResource("3_llrwq")
 
 [node name="TextureRect" type="TextureRect" parent="Panel/GridContainer" unique_id=58714291]
-custom_minimum_size = Vector2(150, 150)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture = ExtResource("3_82jc6")
-expand_mode = 3
+expand_mode = 2
+script = ExtResource("6_gyagd")
+container_type = "source"
 
 [node name="TextureRect2" type="TextureRect" parent="Panel/GridContainer" unique_id=828861232]
-custom_minimum_size = Vector2(150, 150)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture = ExtResource("3_82jc6")
-expand_mode = 4
+expand_mode = 2
+script = ExtResource("6_gyagd")
+container_type = "source"
 
 [node name="TextureRect3" type="TextureRect" parent="Panel/GridContainer" unique_id=2039864895]
-custom_minimum_size = Vector2(150, 150)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture = ExtResource("3_82jc6")
-expand_mode = 4
+expand_mode = 2
+script = ExtResource("6_gyagd")
+container_type = "source"
 
 [node name="TextureRect4" type="TextureRect" parent="Panel/GridContainer" unique_id=1820570581]
-custom_minimum_size = Vector2(150, 150)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture = ExtResource("3_82jc6")
-expand_mode = 4
+expand_mode = 2
+script = ExtResource("6_gyagd")
+agent = ExtResource("7_gyagd")
+container_type = "source"
 
 [node name="TextureRect5" type="TextureRect" parent="Panel/GridContainer" unique_id=1921087183]
-custom_minimum_size = Vector2(150, 150)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture = ExtResource("3_82jc6")
-expand_mode = 4
+expand_mode = 2
+script = ExtResource("6_gyagd")
+agent = ExtResource("7_gyagd")
+container_type = "source"
 
 [node name="TextureRect6" type="TextureRect" parent="Panel/GridContainer" unique_id=48114161]
-custom_minimum_size = Vector2(150, 150)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture = ExtResource("3_82jc6")
-expand_mode = 4
+expand_mode = 2
+script = ExtResource("6_gyagd")
+agent = ExtResource("7_gyagd")
+container_type = "source"
 
 [node name="Button" type="Button" parent="." unique_id=969793152]
-visible = false
 offset_left = 1.0
 offset_top = 604.0
 offset_right = 85.0
@@ -79,4 +132,138 @@ offset_bottom = 635.0
 theme_override_font_sizes/font_size = 9
 text = "СВЕРНУТЬ(ШЕЮ)"
 
+[node name="questmark" type="Area2D" parent="." unique_id=364757593]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("6_cpas5")
+quest_data = ExtResource("7_lhnp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="questmark" unique_id=1242869224]
+position = Vector2(165, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="questmark/CollisionShape2D" unique_id=92118572]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("8_cpas5")
+
+[node name="Questdescript" type="Panel" parent="." unique_id=2061387384]
+visible = false
+anchors_preset = -1
+anchor_left = 0.15885417
+anchor_top = 0.0061728396
+anchor_right = 0.5989583
+anchor_bottom = 0.7777778
+offset_left = 144.0
+offset_top = -3.0
+offset_right = 144.0
+offset_bottom = -3.0
+script = ExtResource("8_gyagd")
+metadata/_edit_use_anchors_ = true
+
+[node name="NameQuest" type="Label" parent="Questdescript" unique_id=1695617769]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 10.0
+offset_right = 712.0
+offset_bottom = 88.0
+text = "FDDSMFKMSDKMFSDKFS"
+
+[node name="descript" type="Label" parent="Questdescript" unique_id=1087098502]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 220.0
+offset_right = 503.0
+offset_bottom = 358.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_cpas5")
+
+[node name="spritequest" type="TextureRect" parent="Questdescript" unique_id=523226601]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 506.0
+offset_bottom = 220.0
+texture = ExtResource("9_n8qpb")
+expand_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Questdescript" unique_id=1750308088]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -402.0
+offset_top = 128.0
+offset_right = -102.0
+offset_bottom = 228.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/h_separation = 100
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="Questdescript/GridContainer" unique_id=752313566]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("3_82jc6")
+expand_mode = 2
+script = ExtResource("6_gyagd")
+container_type = "target"
+
+[node name="TextureRect3" type="TextureRect" parent="Questdescript/GridContainer" unique_id=1386630352]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("3_82jc6")
+expand_mode = 2
+script = ExtResource("6_gyagd")
+container_type = "target"
+
+[node name="Button" type="Button" parent="Questdescript" unique_id=246445040]
+layout_mode = 0
+offset_left = -141.0
+offset_top = 453.0
+offset_right = -8.0
+offset_bottom = 501.0
+text = "закрыть"
+
+[node name="Button2" type="Button" parent="Questdescript" unique_id=1514938363]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 450.0
+offset_right = 671.0
+offset_bottom = 498.0
+text = "далее"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1598359969]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=274597778]
+position = Vector2(182, 359)
+shape = SubResource("RectangleShape2D_gyagd")
+debug_color = Color(0.06592617, 0.19220915, 0.19461852, 0.41960785)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=961755572]
+position = Vector2(344, 300)
+shape = SubResource("RectangleShape2D_n8qpb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2119618363]
+position = Vector2(346, 95)
+shape = SubResource("RectangleShape2D_4tlo2")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=463606963]
+position = Vector2(346, 187)
+shape = SubResource("RectangleShape2D_2xd4o")
+
+[node name="CollisionShape2D5" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=610229037]
+polygon = PackedVector2Array(128, 142, 109, 154, 98, 172, 95, 199, 94, 236, 277, 235, 279, 139)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=841988065]
+position = Vector2(487, 185)
+shape = SubResource("RectangleShape2D_u5q0e")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1768893345]
+position = Vector2(-4, -6)
+navigation_polygon = SubResource("NavigationPolygon_cytv4")
+
 [connection signal="pressed" from="Button" to="Panel" method="_on_button_pressed"]
+[connection signal="input_event" from="questmark" to="questmark" method="_on_input_event"]
+[connection signal="pressed" from="Questdescript/Button" to="Questdescript" method="_on_button_pressed"]
