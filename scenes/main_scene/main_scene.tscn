@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://cmhcf8g738k3e"]
 
 [ext_resource type="Script" uid="uid://cg30awwhafg8g" path="res://scenes/main_scene/main_scene.gd" id="1_gyfs4"]
-[ext_resource type="Texture2D" uid="uid://cyk87n2jsl4bw" path="res://materials/sahdow_for_screen/Sprite-0001.png" id="2_bc27i"]
+[ext_resource type="Texture2D" uid="uid://cyk87n2jsl4bw" path="res://materials/shadow_for_screen/Sprite-0001.png" id="2_bc27i"]
 [ext_resource type="Texture2D" uid="uid://csi3qrr70ytxh" path="res://materials/main_menu_screen/screen/City.jpg" id="2_kbdpr"]
-[ext_resource type="Texture2D" uid="uid://cpup5tjcx5n8m" path="res://materials/main_menu_screen/screen/persons.png" id="4_17klg"]
-[ext_resource type="SpriteFrames" uid="uid://bolo6bhqnvvkd" path="res://materials/sahdow_for_screen/new_sprite_frames.tres" id="5_w0eu7"]
+[ext_resource type="Texture2D" uid="uid://cpup5tjcx5n8m" path="res://materials/main_menu_screen/screen/Persons.png" id="4_17klg"]
+[ext_resource type="SpriteFrames" uid="uid://bolo6bhqnvvkd" path="res://materials/shadow_for_screen/new_sprite_frames.tres" id="5_w0eu7"]
 [ext_resource type="Texture2D" uid="uid://c0gvoc5p0j4l1" path="res://materials/main_menu_screen/main_menu_buttons/off_button/Off_button1.png" id="7_nim2u"]
 [ext_resource type="Texture2D" uid="uid://eb8bfdk50iev" path="res://materials/main_menu_screen/main_menu_buttons/off_button/Off_button3.png" id="8_sro07"]
 [ext_resource type="Texture2D" uid="uid://dimyf46xnli76" path="res://materials/main_menu_screen/main_menu_buttons/off_button/Off_button2.png" id="9_3naof"]
 [ext_resource type="Texture2D" uid="uid://cboigidbnuefa" path="res://materials/main_menu_screen/main_menu_buttons/main_buttons/Sprite-0001.png" id="9_datfd"]
+[ext_resource type="Texture2D" uid="uid://dl5uefjv0rsw2" path="res://materials/main_menu_screen/screen/Sprite-0001.png" id="9_i0gdb"]
+[ext_resource type="Texture2D" uid="uid://dl1pcx6xf8xdx" path="res://materials/main_menu_screen/screen/screen2-export.png" id="10_i0gdb"]
 [ext_resource type="SpriteFrames" uid="uid://bpvbjsuve4rsn" path="res://materials/main_menu_screen/screen/screen_anim/new_sprite_frames.tres" id="11_ugojt"]
 [ext_resource type="Texture2D" uid="uid://pjwpe1ve4mf8" path="res://materials/main_menu_screen/main_menu_buttons/help_button/Help_button1.png" id="12_qgjuk"]
 [ext_resource type="Texture2D" uid="uid://b16u85g6jah5i" path="res://materials/main_menu_screen/main_menu_buttons/help_button/Help_button2.png" id="13_1jbir"]
@@ -21,12 +23,10 @@
 [ext_resource type="AudioStream" uid="uid://bdf3irdb83ox8" path="res://sounds/off_help_button_pressed.wav" id="23_i0gdb"]
 [ext_resource type="AudioStream" uid="uid://ccu0p2psvjcpd" path="res://sounds/off_help_button_hover.mp3" id="24_i0gdb"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="37_8dvv1"]
-[ext_resource type="Texture2D" uid="uid://7s2agc1lyxyt" path="res://materials/main_menu_screen/screen/screen1.png" id="38_fr7fn"]
-[ext_resource type="Texture2D" uid="uid://bvem1hhryv0nq" path="res://materials/main_menu_screen/screen/screen2.png" id="39_c3uee"]
 [ext_resource type="Texture2D" uid="uid://der5jus22enqp" path="res://materials/main_menu_screen/screen/screen3.png" id="40_rv7a5"]
 
 [sub_resource type="Animation" id="Animation_b7qf2"]
-length = 0.001
+length = 1.0333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -171,10 +171,58 @@ tracks/11/keys = {
 "update": 0,
 "values": [Vector2(1e-05, 1e-05)]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../AnimScreen:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.26666668)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Play_button/Play_label:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(42.5, 36.5)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Pref_button/Pref_label:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5.5, 36.5)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Exit_button/Exit_label:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(44.5, 36)]
+}
 
 [sub_resource type="Animation" id="Animation_1jbir"]
 resource_name = "text_and_button_animation"
-length = 1.2
+length = 1.3666667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -230,10 +278,10 @@ tracks/4/path = NodePath("Play_button:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(1.14),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(113, 100), Vector2(113, 100)]
+"values": [Vector2(113, 242)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -266,10 +314,10 @@ tracks/7/path = NodePath("Exit_button:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0.6, 0.9),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(1.14),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(113, 355), Vector2(113, 355)]
+"values": [Vector2(113, 497)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -302,10 +350,10 @@ tracks/10/path = NodePath("Pref_button:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0.3, 0.6),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(1.14),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(113, 227), Vector2(113, 227)]
+"values": [Vector2(113, 369)]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -318,6 +366,42 @@ tracks/11/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(1.00001, 1.00001)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Play_button/Play_label:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(1.14),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(42.5, 36.5)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Pref_button/Pref_label:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(1.14),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5.5, 36.5)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Exit_button/Exit_label:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(1.14),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(44.5, 36)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b7qf2"]
@@ -336,12 +420,12 @@ grow_vertical = 2
 script = ExtResource("1_gyfs4")
 
 [node name="Black" type="Sprite2D" parent="." unique_id=475682436]
-position = Vector2(229, 288.5)
+position = Vector2(226, 431.5)
 scale = Vector2(2.275, 2.341346)
 texture = ExtResource("2_bc27i")
 
 [node name="Animated_button_menu" type="AnimatedSprite2D" parent="." unique_id=1731200802]
-position = Vector2(228.236, 288.7545)
+position = Vector2(227.23598, 430.75452)
 scale = Vector2(3.385, 3.3822775)
 sprite_frames = ExtResource("21_b7qf2")
 animation = &"button_menu_off"
@@ -384,32 +468,34 @@ animation = &"shadow_screen_opened_animation"
 speed_scale = 0.7
 
 [node name="AnimScreen" type="AnimatedSprite2D" parent="." unique_id=281693924]
+modulate = Color(1, 1, 1, 0.26666668)
 position = Vector2(881, 359.49997)
+rotation = 9.424778
 scale = Vector2(3.8749998, 5.2777777)
 sprite_frames = ExtResource("11_ugojt")
 animation = &"screen_animation"
 
 [node name="Screen1" type="Sprite2D" parent="." unique_id=1905931575]
-position = Vector2(216.5, 360)
-scale = Vector2(3.3828125, 3.380282)
-texture = ExtResource("38_fr7fn")
+position = Vector2(217.50002, 360.00003)
+scale = Vector2(3.3720932, 3.380282)
+texture = ExtResource("9_i0gdb")
 
 [node name="Screen2" type="Sprite2D" parent="." unique_id=600549046]
 position = Vector2(892.95776, 359.99997)
 scale = Vector2(3.3802814, 3.3802817)
-texture = ExtResource("39_c3uee")
+texture = ExtResource("10_i0gdb")
 
 [node name="Screen3" type="Sprite2D" parent="." unique_id=2018937082]
-position = Vector2(469.5, 360)
-scale = Vector2(14.599997, 3.3802812)
+position = Vector2(470.5, 360)
+scale = Vector2(14.199993, 3.3802812)
 texture = ExtResource("40_rv7a5")
 
 [node name="Help_button" type="TextureButton" parent="." unique_id=900268737]
 layout_mode = 0
-offset_left = 435.0
-offset_top = 78.0
-offset_right = 504.0
-offset_bottom = 149.0
+offset_left = 434.0
+offset_top = 279.0
+offset_right = 503.0
+offset_bottom = 350.0
 texture_normal = ExtResource("12_qgjuk")
 texture_pressed = ExtResource("13_1jbir")
 texture_hover = ExtResource("14_b7qf2")
@@ -417,17 +503,16 @@ stretch_mode = 0
 
 [node name="Off_button" type="TextureButton" parent="." unique_id=525548742]
 layout_mode = 0
-offset_left = 435.0
-offset_top = 162.0
-offset_right = 504.0
-offset_bottom = 233.0
+offset_left = 434.0
+offset_top = 381.0
+offset_right = 503.0
+offset_bottom = 452.0
 texture_normal = ExtResource("7_nim2u")
 texture_pressed = ExtResource("8_sro07")
 texture_hover = ExtResource("9_3naof")
 stretch_mode = 0
 
 [node name="Show_text_and_buttons" type="CanvasLayer" parent="." unique_id=1342298701]
-layer = 9
 
 [node name="Animation" type="AnimationPlayer" parent="Show_text_and_buttons" unique_id=1637305233]
 libraries/ = SubResource("AnimationLibrary_b7qf2")
@@ -541,6 +626,27 @@ stream = ExtResource("23_i0gdb")
 
 [node name="OffHelpHoverSound" type="AudioStreamPlayer" parent="." unique_id=1082085094]
 stream = ExtResource("24_i0gdb")
+
+[node name="select_saves" type="Label" parent="." unique_id=1785753837]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -595.0
+offset_top = -309.0
+offset_right = -227.0
+offset_bottom = -245.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("37_8dvv1")
+theme_override_font_sizes/font_size = 37
+text = "главное меню"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Off_button" to="." method="_on_off_button_pressed"]
 [connection signal="button_up" from="Show_text_and_buttons/Play_button" to="." method="_on_play_button_button_up"]

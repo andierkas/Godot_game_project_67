@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpup5tjcx5n8m"
-path="res://.godot/imported/Persons.png-6fb8c0cfbc9f3bb4704ec106bbc296be.ctex"
+uid="uid://vgxl1p18em0c"
+path="res://.godot/imported/Sprite-0004.png-0bf2cc3ebfd34730877c6225c65ef785.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://materials/main_menu_screen/screen/Persons.png"
-dest_files=["res://.godot/imported/Persons.png-6fb8c0cfbc9f3bb4704ec106bbc296be.ctex"]
+source_file="res://materials/shadow_for_screen/Sprite-0004.png"
+dest_files=["res://.godot/imported/Sprite-0004.png-0bf2cc3ebfd34730877c6225c65ef785.ctex"]
 
 [params]
 
