@@ -1,6 +1,6 @@
 extends Control
 
-@onready var animMenu : AnimatedSprite2D = $Animated_button_menu  # Один спрайт для всех анимаций
+@onready var animMenu : AnimatedSprite2D = $Animated_button_menu
 @onready var animScreen : AnimatedSprite2D = $AnimScreen
 @onready var animShadowScreen : AnimatedSprite2D = $Shadow_screen
 @onready var animPlayer : AnimationPlayer = $Show_text_and_buttons/Animation
@@ -67,25 +67,25 @@ func setup_button_sounds() -> void:
 func _on_button_hover() -> void:
 	# Проигрываем звук при наведении на основные кнопки
 	if hoverSound and not hoverSound.playing:
-		hoverSound.pitch_scale = randf_range(0.9, 1.1)
+		hoverSound.pitch_scale = randf_range(0.9, 1.0)
 		hoverSound.play()
 
 func _on_button_press() -> void:
 	# Проигрываем звук при нажатии на основные кнопки
 	if pressSound:
-		pressSound.pitch_scale = randf_range(0.95, 1.05)
+		pressSound.pitch_scale = randf_range(0.9, 1.0)
 		pressSound.play()
 
 func _on_off_help_hover() -> void:
 	# Проигрываем звук при наведении на кнопки Off и Help
 	if hoverOffHelpSound and not hoverOffHelpSound.playing:
-		hoverOffHelpSound.pitch_scale = randf_range(0.9, 1.1)
+		hoverOffHelpSound.pitch_scale = randf_range(0.9, 1.0)
 		hoverOffHelpSound.play()
 
 func _on_off_help_press() -> void:
 	# Проигрываем звук при нажатии на кнопки Off и Help
 	if pressOffHelpSound:
-		pressOffHelpSound.pitch_scale = randf_range(0.95, 1.05)
+		pressOffHelpSound.pitch_scale = randf_range(0.9, 1.0)
 		pressOffHelpSound.play()
 
 func play_buttons_open_animation() -> void:

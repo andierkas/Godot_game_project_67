@@ -2,11 +2,52 @@
 
 [ext_resource type="Script" uid="uid://d0lef2tsc6fql" path="res://scenes/loadgame_scene/loadgame_scene.gd" id="1_t0mkg"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="2_6hksg"]
-[ext_resource type="Texture2D" uid="uid://ccwg3klc2au0w" path="res://materials/button menu/Airbrush-BG-CHANGER-1778845581928.jpg" id="3_elpcw"]
-[ext_resource type="Texture2D" uid="uid://6xp8nftv21h" path="res://materials/button menu/16352ff505911f1ab322692503ad7e1_1.jpeg" id="3_k68l5"]
-[ext_resource type="Texture2D" uid="uid://6xp8nftv21h" path="res://materials/button menu/16352ff505911f1ab322692503ad7e1_1.jpeg" id="4_o66ih"]
+[ext_resource type="SpriteFrames" uid="uid://cxay3qt6qkail" path="res://materials/main_menu_screen/menu_anim/new_sprite_frames.tres" id="2_q7tdb"]
+[ext_resource type="Texture2D" uid="uid://bm5pxnxe5pjq6" path="res://materials/load_game_menu/base_button/Sprite-0001.png" id="4_3moow"]
+[ext_resource type="Texture2D" uid="uid://1snsku15yyeg" path="res://materials/load_game_menu/Sprite-0012-export.png" id="4_j4jhl"]
+[ext_resource type="SpriteFrames" uid="uid://bpvbjsuve4rsn" path="res://materials/main_menu_screen/screen/screen_anim/new_sprite_frames.tres" id="4_ntmrx"]
+[ext_resource type="Texture2D" uid="uid://jm26r0snx3vh" path="res://materials/load_game_menu/back_button/Sprite-0015.png" id="6_ntmrx"]
+[ext_resource type="Texture2D" uid="uid://djxeugnnjpide" path="res://materials/load_game_menu/back_button/Sprite-0016.png" id="7_3moow"]
+[ext_resource type="Texture2D" uid="uid://b2qicmi8mikdt" path="res://materials/load_game_menu/back_button/Sprite-0014.png" id="7_rb0mk"]
+[ext_resource type="AudioStream" uid="uid://bdf3irdb83ox8" path="res://sounds/off_help_button_pressed.wav" id="8_rb0mk"]
+[ext_resource type="AudioStream" uid="uid://ccu0p2psvjcpd" path="res://sounds/off_help_button_hover.mp3" id="9_3moow"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gyfs4"]
+[sub_resource type="Animation" id="Animation_q7tdb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5882353)]
+}
+
+[sub_resource type="Animation" id="Animation_j4jhl"]
+resource_name = "new_animation"
+length = 0.13333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.12941177)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0p5en"]
+_data = {
+&"RESET": SubResource("Animation_q7tdb"),
+&"new_animation": SubResource("Animation_j4jhl")
+}
 
 [node name="Control" type="Control" unique_id=195617877]
 layout_mode = 3
@@ -17,122 +58,154 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t0mkg")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=172303897]
+[node name="Animated_button_menu" type="AnimatedSprite2D" parent="." unique_id=173334046]
+position = Vector2(240.53127, 396.87726)
+scale = Vector2(3.6391666, 3.716349)
+sprite_frames = ExtResource("2_q7tdb")
+animation = &"button_menu_off"
+speed_scale = 3.0
+
+[node name="Animated_button_menu2" type="AnimatedSprite2D" parent="." unique_id=1599936389]
+position = Vector2(640.53125, 396.87726)
+scale = Vector2(3.6391666, 3.716349)
+sprite_frames = ExtResource("2_q7tdb")
+animation = &"button_menu_off"
+speed_scale = 3.0
+
+[node name="Animated_button_menu3" type="AnimatedSprite2D" parent="." unique_id=241191056]
+position = Vector2(1040.5313, 396.87726)
+scale = Vector2(3.6391666, 3.716349)
+sprite_frames = ExtResource("2_q7tdb")
+animation = &"button_menu_off"
+speed_scale = 3.0
+
+[node name="Press_Sound" type="AudioStreamPlayer" parent="." unique_id=353952047]
+stream = ExtResource("8_rb0mk")
+
+[node name="Hover_Sound" type="AudioStreamPlayer" parent="." unique_id=875688072]
+stream = ExtResource("9_3moow")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1921277801]
+libraries/ = SubResource("AnimationLibrary_0p5en")
+autoplay = &"new_animation"
+
+[node name="Back_Button4" type="TextureButton" parent="." unique_id=1506866461]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 326.0
+offset_right = 760.0
+offset_bottom = 416.0
+rotation = -1.5707964
+pivot_offset = Vector2(120, 45)
+texture_normal = ExtResource("7_rb0mk")
+texture_pressed = ExtResource("7_3moow")
+texture_hover = ExtResource("6_ntmrx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Back_Button5" type="TextureButton" parent="." unique_id=756291788]
+layout_mode = 0
+offset_left = 919.0
+offset_top = 326.0
+offset_right = 1159.0
+offset_bottom = 416.0
+rotation = -1.5707964
+pivot_offset = Vector2(120, 45)
+texture_normal = ExtResource("7_rb0mk")
+texture_pressed = ExtResource("7_3moow")
+texture_hover = ExtResource("6_ntmrx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Back_Button3" type="TextureButton" parent="." unique_id=676723792]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 326.0
+offset_right = 357.0
+offset_bottom = 416.0
+rotation = -1.5707964
+pivot_offset = Vector2(120, 45)
+texture_normal = ExtResource("7_rb0mk")
+texture_pressed = ExtResource("7_3moow")
+texture_hover = ExtResource("6_ntmrx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AnimScreen" type="AnimatedSprite2D" parent="." unique_id=1926156085]
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(640, 359.49997)
+rotation = 3.1415925
+scale = Vector2(6.1249995, 5.2777777)
+sprite_frames = ExtResource("4_ntmrx")
+animation = &"screen_animation"
+
+[node name="Screen" type="Sprite2D" parent="." unique_id=256826375]
+position = Vector2(640.00006, 360)
+scale = Vector2(4.0000005, 4)
+texture = ExtResource("4_j4jhl")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1401981195]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 34.0
+offset_right = 960.9875
+offset_bottom = 117.0
+texture = ExtResource("4_3moow")
+
+[node name="select_saves" type="Label" parent="TextureRect" unique_id=1198363268]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -255.0
+offset_top = -35.0
+offset_right = 255.00003
+offset_bottom = 33.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 70
-alignment = 1
-
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=1198363268]
-layout_mode = 2
 size_flags_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_6hksg")
-theme_override_font_sizes/font_size = 50
-text = "FILE SELECT:"
+theme_override_font_sizes/font_size = 40
+text = "выбор сохранения"
 horizontal_alignment = 1
 
-[node name="PlayButton" type="TextureButton" parent="VBoxContainer" unique_id=1785590763]
-layout_mode = 2
-size_flags_horizontal = 4
-texture_normal = ExtResource("3_k68l5")
-texture_hover = ExtResource("4_o66ih")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2043163975]
+[node name="Back_Button" type="TextureButton" parent="." unique_id=1378876495]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 69.0
-offset_right = 1154.0
-offset_bottom = 453.0
-size_flags_vertical = 2
-theme_override_constants/separation = 80
-alignment = 1
+offset_left = 56.0
+offset_top = 31.0
+offset_right = 296.0
+offset_bottom = 121.0
+pivot_offset = Vector2(120, 45)
+texture_normal = ExtResource("7_rb0mk")
+texture_pressed = ExtResource("7_3moow")
+texture_hover = ExtResource("6_ntmrx")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer" unique_id=1300773629]
-layout_mode = 2
-texture_normal = ExtResource("3_elpcw")
-
-[node name="Label" type="Label" parent="HBoxContainer/TextureButton" unique_id=1800555091]
+[node name="Label" type="Label" parent="Back_Button" unique_id=1204880932]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -54.5
-offset_top = -36.0
-offset_right = 54.5
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 78.0
+offset_top = -34.5
+offset_right = -12.0
+offset_bottom = 34.5
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -7
 theme_override_fonts/font = ExtResource("2_6hksg")
-theme_override_font_sizes/font_size = 36
-text = "Save 1"
+theme_override_font_sizes/font_size = 22
+text = "главное
+меню"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="TextureButton4" type="TextureButton" parent="HBoxContainer" unique_id=752770893]
-layout_mode = 2
-texture_normal = ExtResource("3_elpcw")
-
-[node name="Label" type="Label" parent="HBoxContainer/TextureButton4" unique_id=392862405]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -53.0
-offset_top = -36.0
-offset_right = 53.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_6hksg")
-theme_override_font_sizes/font_size = 36
-text = "Save 2"
-
-[node name="TextureButton3" type="TextureButton" parent="HBoxContainer" unique_id=1549270477]
-layout_mode = 2
-texture_normal = ExtResource("3_elpcw")
-
-[node name="Label" type="Label" parent="HBoxContainer/TextureButton3" unique_id=1221189436]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -53.0
-offset_top = -36.0
-offset_right = 53.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_6hksg")
-theme_override_font_sizes/font_size = 36
-text = "Save 3"
-
-[node name="Button" type="Button" parent="." unique_id=1383023610]
-layout_mode = 0
-offset_left = 114.0
-offset_top = 515.0
-offset_right = 454.0
-offset_bottom = 607.0
-theme_override_fonts/font = ExtResource("2_6hksg")
-theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxFlat_gyfs4")
-text = "Select"
-
-[node name="Button2" type="Button" parent="." unique_id=1954182278]
-layout_mode = 0
-offset_left = 706.0
-offset_top = 515.0
-offset_right = 1046.0
-offset_bottom = 607.0
-theme_override_fonts/font = ExtResource("2_6hksg")
-theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxFlat_gyfs4")
-text = "Delete Save"
-
-[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_confirm"]
+[connection signal="pressed" from="Back_Button4" to="." method="_on_back_button_4_pressed"]
+[connection signal="pressed" from="Back_Button5" to="." method="_on_back_button_5_pressed"]
+[connection signal="pressed" from="Back_Button3" to="." method="_on_back_button_3_pressed"]
