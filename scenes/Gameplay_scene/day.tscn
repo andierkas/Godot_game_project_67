@@ -19,6 +19,14 @@ radius = 17.029387
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cpas5"]
 bg_color = Color(0.8147868, 0.5272622, 0.19329205, 1)
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_cytv4"]
+vertices = PackedVector2Array(3, 218.28125, 2, 3, 3, 3, 391.1328, 144, 308.8828, 144, 284.02344, 143.97656, 307.25, 131.13281, 392.75, 131.13281, 410, 142, 594.97656, 263.02344, 571, 262, 391.1328, 242, 410, 240, 572, 240, 682.03125, 260.97656, 248.02344, 6.0234375, 68.39844, 3.046875, 1155, 3.9921875, 409, 126, 571, 126, 572, 142, 571, 358, 597.02344, 359.0625, 1155.9922, 651.9922, 464, 359, 477, 358, 90, 443.5, 282, 443.5, 68.17969, 648.21875, 73.03125, 481.03125, 77.96094, 445.03125, 571, 76, 679.97656, 330.64844, 392.75, 70.88281, 409, 76, 307.25, 70.88281, 247, 61.796875, 261.29688, 95.50781, 464, 263, 477, 262, 409, 263, 389.5, 253.75, 409, 359, 389.5, 358.25, 308.8828, 242, 306.5, 253.75, 4.203125, 479.02344, 4.03125, 442.9922, 84.03906, 294.0078, 90, 286.5, 281.97656, 241.99219, 282, 286.5, 3.34375, 293, 3.2734375, 277.1172, 75.92969, 265.8672, 231.1875, 109.00781, 162.1875, 105.00781, 131.70313, 147.00781, 110.703125, 130.75781, 112.27344, 159.28125, 82.97656, 178.28125, 101.03125, 177.67188, 98, 204.92969, 96.96875, 243.00781, 306.5, 358.25, 616.1328, 357.9922, 630.28125, 354.96094, 649.3672, 347.9297, 661.5703, 342.85156, 668.59375, 335.8203)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6, 7, 8), PackedInt32Array(9, 10, 11, 12, 13, 14), PackedInt32Array(15, 16, 17), PackedInt32Array(8, 7, 18, 19, 20), PackedInt32Array(21, 22, 23, 24, 25), PackedInt32Array(26, 27, 23, 28, 29, 30), PackedInt32Array(19, 31, 17, 23, 14, 20), PackedInt32Array(32, 14, 23), PackedInt32Array(18, 7, 33, 34), PackedInt32Array(15, 17, 31, 34, 33), PackedInt32Array(15, 33, 35, 36), PackedInt32Array(37, 36, 35, 6, 5), PackedInt32Array(12, 11, 3, 8), PackedInt32Array(25, 24, 38, 39), PackedInt32Array(9, 22, 21, 10), PackedInt32Array(11, 10, 39), PackedInt32Array(11, 39, 38, 40, 41), PackedInt32Array(40, 42, 43, 41), PackedInt32Array(44, 11, 41, 45), PackedInt32Array(46, 47, 30, 29), PackedInt32Array(26, 30, 48, 49), PackedInt32Array(50, 5, 4, 44, 45, 51), PackedInt32Array(48, 52, 53, 54, 49), PackedInt32Array(14, 13, 20), PackedInt32Array(55, 37, 5), PackedInt32Array(56, 55, 5, 57, 58), PackedInt32Array(58, 57, 59), PackedInt32Array(60, 58, 59, 61), PackedInt32Array(60, 61, 62, 54), PackedInt32Array(54, 62, 63, 49), PackedInt32Array(51, 49, 63, 50), PackedInt32Array(51, 45, 64, 27), PackedInt32Array(23, 27, 64, 43, 42), PackedInt32Array(23, 42, 24), PackedInt32Array(23, 22, 65), PackedInt32Array(23, 65, 66), PackedInt32Array(23, 66, 67), PackedInt32Array(23, 67, 68), PackedInt32Array(32, 23, 68, 69)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(4, 649, 1157, 653, 1156, 3, 1, 2)])
+parsed_geometry_type = 1
+border_size = 1.0
+agent_radius = 1.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyagd"]
 size = Vector2(190, 155)
 
@@ -34,11 +42,14 @@ size = Vector2(80.25, 96)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u5q0e"]
 size = Vector2(160, 96)
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_cytv4"]
-vertices = PackedVector2Array(1146.0078, 12.9375, 1146.9766, 642.96094, 13.8984375, 639.03125, 8.09375, 6.0625)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(4, 649, 1157, 653, 1156, 3, -2, -4)])
-parsed_geometry_type = 1
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cytv4"]
+size = Vector2(53, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tmofk"]
+size = Vector2(92, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1dbwb"]
+size = Vector2(160, 48)
 
 [node name="Main" type="Node" unique_id=564995157]
 script = ExtResource("1_exbrp")
@@ -234,35 +245,61 @@ offset_right = 671.0
 offset_bottom = 498.0
 text = "далее"
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1598359969]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1768893345]
+position = Vector2(-4, -6)
+navigation_polygon = SubResource("NavigationPolygon_cytv4")
+navigation_layers = 65535
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=274597778]
+[node name="TownHouses" type="StaticBody2D" parent="NavigationRegion2D" unique_id=1598359969]
+position = Vector2(4, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=274597778]
 position = Vector2(182, 359)
 shape = SubResource("RectangleShape2D_gyagd")
 debug_color = Color(0.06592617, 0.19220915, 0.19461852, 0.41960785)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=961755572]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=961755572]
 position = Vector2(344, 300)
 shape = SubResource("RectangleShape2D_n8qpb")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2119618363]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=2119618363]
 position = Vector2(346, 95)
 shape = SubResource("RectangleShape2D_4tlo2")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=463606963]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=463606963]
 position = Vector2(346, 187)
 shape = SubResource("RectangleShape2D_2xd4o")
 
-[node name="CollisionShape2D5" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=610229037]
+[node name="CollisionShape2D5" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=610229037]
 polygon = PackedVector2Array(128, 142, 109, 154, 98, 172, 95, 199, 94, 236, 277, 235, 279, 139)
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=841988065]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=841988065]
 position = Vector2(487, 185)
 shape = SubResource("RectangleShape2D_u5q0e")
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1768893345]
-position = Vector2(-4, -6)
-navigation_polygon = SubResource("NavigationPolygon_cytv4")
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1142772742]
+position = Vector2(432.5, 305)
+shape = SubResource("RectangleShape2D_cytv4")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=269690223]
+position = Vector2(520, 304)
+shape = SubResource("RectangleShape2D_tmofk")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=266007220]
+position = Vector2(486, 95)
+shape = SubResource("RectangleShape2D_1dbwb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=152094889]
+polygon = PackedVector2Array(1, 649, 63, 649, 68, 476, -1, 474)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=940431686]
+polygon = PackedVector2Array(73, 438, 79, 289, -1, 288, 0, 436)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=83786454]
+polygon = PackedVector2Array(71, 259, 78, 172, 106, 124, 158, 98, 227, 102, 256, 89, 242, 56, 243, 1, 0, -3, 0, 270)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=814382750]
+polygon = PackedVector2Array(592, 258, 594, 352, 612, 351, 626, 348, 645, 341, 657, 336, 664, 329, 675, 324, 677, 256)
 
 [connection signal="pressed" from="Button" to="Panel" method="_on_button_pressed"]
 [connection signal="input_event" from="questmark" to="questmark" method="_on_input_event"]
