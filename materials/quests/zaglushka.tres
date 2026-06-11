@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_dpgm0")
+is_dummy = true
 strenght = 1
 harisma = 1
 endurance = 1

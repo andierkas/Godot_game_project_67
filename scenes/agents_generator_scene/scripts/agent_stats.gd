@@ -1,5 +1,17 @@
 extends Resource
 class_name AgentStats
+
+# Создаем перечисление
+enum Status {
+	AVAILABLE, # Свободен
+	ON_MISSION, # В пути
+	RESTING # Отдыхает
+}
+
+# Создаем переменную этого типа и задаем значение по умолчанию
+@export var current_status: Status = Status.AVAILABLE
+@export var is_dummy: bool = false #статус для заглушки
+
 # Статы
 @export var strenght: int 
 @export var harisma: int 

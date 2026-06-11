@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b1mewq61vtgu7"]
+
+[ext_resource type="Script" uid="uid://bketunnbh7vfg" path="res://scenes/squad.gd" id="1_6yqs4"]
+[ext_resource type="Shader" uid="uid://f1cn3d8pyo4i" path="res://new_shader.gdshader" id="1_8ywn5"]
+[ext_resource type="Texture2D" uid="uid://cv5h4wn4nruhe" path="res://materials/1781209134 1 (1).png" id="2_6yqs4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lolqr"]
+radius = 3.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hyeuf"]
+shader = ExtResource("1_8ywn5")
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1278575902]
+script = ExtResource("1_6yqs4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1022191965]
+shape = SubResource("CircleShape2D_lolqr")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=737032332]
+avoidance_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=888440895]
+material = SubResource("ShaderMaterial_hyeuf")
+texture = ExtResource("2_6yqs4")

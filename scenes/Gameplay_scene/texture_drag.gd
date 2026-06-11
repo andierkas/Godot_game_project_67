@@ -4,6 +4,9 @@ extends TextureRect
 @export var container_type: String
 
 func _get_drag_data(at_position: Vector2) -> Variant:
+		# Если агент занят, запрещаем перетаскивание
+	if agent.current_status == AgentStats.Status.ON_MISSION:
+		return null 
 	if container_type == "target":
 		print("target")
 		return null
