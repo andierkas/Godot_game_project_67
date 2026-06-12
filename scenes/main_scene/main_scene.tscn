@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://oed7ah48q3cu" path="res://materials/main_menu_screen/main_menu_buttons/main_buttons/Sprite.png" id="19_qgjuk"]
 [ext_resource type="SpriteFrames" uid="uid://cxay3qt6qkail" path="res://materials/main_menu_screen/menu_anim/new_sprite_frames.tres" id="21_b7qf2"]
 [ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://button_sounds/ButtonSoundController.gd" id="21_xtklx"]
-[ext_resource type="Script" uid="uid://dnosa7lir4ggx" path="res://scenes/main_scene/camera_2d.gd" id="25_4dwww"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="37_8dvv1"]
 [ext_resource type="Texture2D" uid="uid://der5jus22enqp" path="res://materials/main_menu_screen/screen/screen3.png" id="40_rv7a5"]
 
@@ -220,7 +219,7 @@ tracks/15/keys = {
 
 [sub_resource type="Animation" id="Animation_1jbir"]
 resource_name = "text_and_button_animation"
-length = 1.3666667
+length = 1.14
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -267,7 +266,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(230, 124), Vector2(230, 124)]
+"values": [Vector2(230, 124), Vector2(205, 109.999985)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -279,7 +278,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(1.14),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(113, 242)]
+"values": [Vector2(102, 218)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -303,7 +302,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0.6, 0.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(230, 123), Vector2(230, 123)]
+"values": [Vector2(230, 123), Vector2(205, 110)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -315,7 +314,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(1.14),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(113, 497)]
+"values": [Vector2(102, 447)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -339,7 +338,7 @@ tracks/9/keys = {
 "times": PackedFloat32Array(0.3, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(230, 124), Vector2(230, 124)]
+"values": [Vector2(230, 124), Vector2(205, 110)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -351,7 +350,7 @@ tracks/10/keys = {
 "times": PackedFloat32Array(1.14),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(113, 369)]
+"values": [Vector2(101.99999, 332)]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -375,7 +374,7 @@ tracks/12/keys = {
 "times": PackedFloat32Array(1.14),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(42.5, 36.5)]
+"values": [Vector2(28.5, 29.5)]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
@@ -387,7 +386,7 @@ tracks/13/keys = {
 "times": PackedFloat32Array(1.14),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(5.5, 36.5)]
+"values": [Vector2(11, 29.5)]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
@@ -399,7 +398,7 @@ tracks/14/keys = {
 "times": PackedFloat32Array(1.14),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(44.5, 36)]
+"values": [Vector2(32, 29.5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b7qf2"]
@@ -418,33 +417,33 @@ grow_vertical = 2
 script = ExtResource("1_gyfs4")
 
 [node name="Black" type="Sprite2D" parent="." unique_id=475682436]
-position = Vector2(226, 431.5)
-scale = Vector2(2.275, 2.341346)
+position = Vector2(205, 389)
+scale = Vector2(2.0375001, 2.0961537)
 texture = ExtResource("2_bc27i")
 
 [node name="Animated_button_menu" type="AnimatedSprite2D" parent="." unique_id=1731200802]
-position = Vector2(227.23598, 430.75452)
-scale = Vector2(3.385, 3.3822775)
+position = Vector2(204.53125, 387.5)
+scale = Vector2(3.0525002, 3.05042)
 sprite_frames = ExtResource("21_b7qf2")
 animation = &"button_menu_off"
 speed_scale = 3.0
 
 [node name="City" type="Sprite2D" parent="." unique_id=165651783]
-position = Vector2(889.9999, 360.99997)
-scale = Vector2(0.5523437, 0.8000001)
+position = Vector2(794.75, 326)
+scale = Vector2(0.49726567, 0.7861112)
 texture = ExtResource("2_kbdpr")
 
 [node name="Persons2" type="Sprite2D" parent="." unique_id=45817922]
-position = Vector2(724.00006, 403)
+position = Vector2(649.00006, 393)
 scale = Vector2(0.5694445, 0.5694444)
 texture = ExtResource("4_17klg")
 
 [node name="Game_name_label" type="Label" parent="." unique_id=1096893445]
 layout_mode = 0
-offset_left = 663.0
-offset_top = 107.0
-offset_right = 1094.0
-offset_bottom = 192.0
+offset_left = 577.0
+offset_top = 94.0
+offset_right = 1008.0
+offset_bottom = 179.0
 theme_override_colors/font_color = Color(1, 0.68235296, 0.039215688, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -459,41 +458,41 @@ vertical_alignment = 1
 paragraph_separator = "\\"
 
 [node name="Shadow_screen" type="AnimatedSprite2D" parent="." unique_id=1944072851]
-position = Vector2(881.5, 359.5)
-scale = Vector2(4.41875, 3.0240388)
+position = Vector2(792.75, 324.7493)
+scale = Vector2(3.965625, 2.7139359)
 sprite_frames = ExtResource("5_w0eu7")
 animation = &"shadow_screen_opened_animation"
 speed_scale = 0.7
 
 [node name="AnimScreen" type="AnimatedSprite2D" parent="." unique_id=281693924]
 modulate = Color(1, 1, 1, 0.26666668)
-position = Vector2(881, 359.49997)
+position = Vector2(793.7381, 326.19464)
 rotation = 9.424778
-scale = Vector2(3.8749998, 5.2777777)
+scale = Vector2(3.486854, 4.7491207)
 sprite_frames = ExtResource("11_ugojt")
 animation = &"screen_animation"
 
 [node name="Screen1" type="Sprite2D" parent="." unique_id=1905931575]
-position = Vector2(217.50002, 360.00003)
-scale = Vector2(3.3720932, 3.380282)
+position = Vector2(195.5, 324)
+scale = Vector2(3.0310078, 3.0422533)
 texture = ExtResource("9_i0gdb")
 
 [node name="Screen2" type="Sprite2D" parent="." unique_id=600549046]
-position = Vector2(892.95776, 359.99997)
-scale = Vector2(3.3802814, 3.3802817)
+position = Vector2(803.5, 323.99997)
+scale = Vector2(3.0436683, 3.0422535)
 texture = ExtResource("10_i0gdb")
 
 [node name="Screen3" type="Sprite2D" parent="." unique_id=2018937082]
-position = Vector2(470.5, 360)
-scale = Vector2(14.199993, 3.3802812)
+position = Vector2(423, 324.00003)
+scale = Vector2(12.7999935, 3.0422533)
 texture = ExtResource("40_rv7a5")
 
 [node name="Help_button" type="TextureButton" parent="." unique_id=900268737]
 layout_mode = 0
-offset_left = 434.0
-offset_top = 279.0
-offset_right = 503.0
-offset_bottom = 350.0
+offset_left = 391.0
+offset_top = 271.0
+offset_right = 452.0
+offset_bottom = 333.76813
 texture_normal = ExtResource("12_qgjuk")
 texture_pressed = ExtResource("13_1jbir")
 texture_hover = ExtResource("14_b7qf2")
@@ -506,10 +505,10 @@ press_profile = "pc_press"
 
 [node name="Off_button" type="TextureButton" parent="." unique_id=525548742]
 layout_mode = 0
-offset_left = 434.0
-offset_top = 381.0
-offset_right = 503.0
-offset_bottom = 452.0
+offset_left = 391.0
+offset_top = 351.0
+offset_right = 452.0
+offset_bottom = 413.7681
 texture_normal = ExtResource("7_nim2u")
 texture_pressed = ExtResource("8_sro07")
 texture_hover = ExtResource("9_3naof")
@@ -532,7 +531,7 @@ offset_top = 100.0
 offset_right = 343.0
 offset_bottom = 224.0
 scale = Vector2(1e-05, 1e-05)
-pivot_offset = Vector2(115, 62)
+pivot_offset = Vector2(102.5, 55.5)
 texture_normal = ExtResource("18_qgjuk")
 texture_pressed = ExtResource("19_qgjuk")
 texture_hover = ExtResource("9_datfd")
@@ -547,7 +546,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -72.5
 offset_top = -25.5
-offset_right = 74.5
+offset_right = 75.5
 offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -569,7 +568,7 @@ offset_top = 227.0
 offset_right = 343.0
 offset_bottom = 351.0
 scale = Vector2(1e-05, 1e-05)
-pivot_offset = Vector2(115, 62)
+pivot_offset = Vector2(102.5, 55)
 texture_normal = ExtResource("18_qgjuk")
 texture_pressed = ExtResource("19_qgjuk")
 texture_hover = ExtResource("9_datfd")
@@ -584,13 +583,13 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -109.5
 offset_top = -25.5
-offset_right = 109.5
+offset_right = 73.5
 offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("37_8dvv1")
-theme_override_font_sizes/font_size = 27
+theme_override_font_sizes/font_size = 25
 text = "Настройки"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -606,7 +605,7 @@ offset_top = 355.0
 offset_right = 343.0
 offset_bottom = 478.0
 scale = Vector2(1e-05, 1e-05)
-pivot_offset = Vector2(115, 62)
+pivot_offset = Vector2(105, 55)
 texture_normal = ExtResource("18_qgjuk")
 texture_pressed = ExtResource("19_qgjuk")
 texture_hover = ExtResource("9_datfd")
@@ -622,7 +621,7 @@ anchor_bottom = 0.5
 offset_left = -70.5
 offset_top = -25.5
 offset_right = 70.5
-offset_bottom = 25.5
+offset_bottom = 25.50003
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 0)
@@ -638,30 +637,26 @@ script = ExtResource("21_xtklx")
 hover_profile = "electro_hover"
 press_profile = "electro_press"
 
-[node name="select_saves" type="Label" parent="." unique_id=1785753837]
+[node name="main_menu" type="Label" parent="." unique_id=1785753837]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -595.0
-offset_top = -308.0
-offset_right = -227.0
-offset_bottom = -244.0
+offset_left = -535.0
+offset_top = -277.0
+offset_right = -207.0
+offset_bottom = -213.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("37_8dvv1")
-theme_override_font_sizes/font_size = 37
+theme_override_font_sizes/font_size = 33
 text = "главное меню"
 horizontal_alignment = 1
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1504387033]
-position = Vector2(640, 360)
-script = ExtResource("25_4dwww")
 
 [connection signal="pressed" from="Off_button" to="." method="_on_off_button_pressed"]
 [connection signal="button_up" from="Show_text_and_buttons/Play_button" to="." method="_on_play_button_button_up"]
