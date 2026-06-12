@@ -5,11 +5,11 @@
 [ext_resource type="Script" uid="uid://bupxvywad85is" path="res://scenes/Gameplay_scene/panel.gd" id="2_68y1k"]
 [ext_resource type="Texture2D" uid="uid://k6e4jaeg1ktt" path="res://materials/image (2).jpeg" id="3_82jc6"]
 [ext_resource type="Script" uid="uid://4wgsk15dvste" path="res://grid_container.gd" id="3_llrwq"]
-[ext_resource type="Script" uid="uid://6vjil0ck5cl4" path="res://scenes/Gameplay_scene/area_2d.gd" id="6_cpas5"]
+[ext_resource type="Script" uid="uid://6vjil0ck5cl4" path="res://scenes/Gameplay_scene/QuestMarker.gd" id="6_cpas5"]
 [ext_resource type="Script" uid="uid://bmp6qlkmnlum1" path="res://scenes/Gameplay_scene/texture_drag.gd" id="6_gyagd"]
 [ext_resource type="Resource" uid="uid://dao144hv773j" path="res://materials/quests/zaglushka.tres" id="7_gyagd"]
 [ext_resource type="Resource" uid="uid://c5yrl2sr28vdk" path="res://materials/quests/test_quest.tres" id="7_lhnp0"]
-[ext_resource type="Texture2D" uid="uid://ducccriiae77t" path="res://materials/icons8-danger-50.png" id="8_cpas5"]
+[ext_resource type="Texture2D" uid="uid://b5ypyqlghjhrl" path="res://QuestMark.png" id="10_cpas5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4tlo2"]
 radius = 17.0
@@ -208,7 +208,7 @@ shape = SubResource("CircleShape2D_4tlo2")
 [node name="Sprite2D" type="Sprite2D" parent="questmark/Mark/CollisionShape2D" unique_id=92118572]
 position = Vector2(-1.5646219e-06, 4.23193e-06)
 scale = Vector2(0.67, 0.6399999)
-texture = ExtResource("8_cpas5")
+texture = ExtResource("10_cpas5")
 
 [node name="Target" type="Area2D" parent="questmark" unique_id=1174478162]
 position = Vector2(176, 242)

@@ -1,11 +1,6 @@
 extends Resource
 class_name Quest
 
-@export var strenght: int 
-@export var harisma: int 
-@export var endurance: int 
-@export var intellect: int
-@export var agility: int 
 @export var target_position: Vector2
 
 @export var name: String
