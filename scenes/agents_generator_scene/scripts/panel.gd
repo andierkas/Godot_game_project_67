@@ -9,7 +9,6 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	var c = Control.new()
 	c.add_child(preview)
 	preview.position -= Vector2(25,25)
-	
 	set_drag_preview(c)
 	agent1.hideagent()
 	return self

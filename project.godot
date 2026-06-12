@@ -19,6 +19,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 [autoload]
 
 SceneLoader="*uid://6k4wrc15fpa5"
+PartyBox="*uid://34jbsmh5nbi7"
 ButtonSound="*uid://d20s52dnp6mfl"
 
 [display]
@@ -29,6 +30,12 @@ window/size/viewport_height=720
 [dotnet]
 
 project/assembly_name="new_game_proj"
+
+[file_customization]
+
+folder_colors={
+"res://materials/quests/": "green"
+}
 
 [input_devices]
 
