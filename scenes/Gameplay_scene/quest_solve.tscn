@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ce60qmxur7fn7"]
 
 [ext_resource type="Script" uid="uid://cqbfe4f6swgq0" path="res://QuestSolve.gd" id="1_dnlwg"]
-[ext_resource type="Resource" uid="uid://c5yrl2sr28vdk" path="res://materials/quests/test_quest.tres" id="2_1l2mg"]
+[ext_resource type="Texture2D" uid="uid://dvo75nuf616md" path="res://materials/Sprite_agent/1780586958.png" id="2_1l2mg"]
 
 [node name="Panel" type="Panel" unique_id=738869273]
 offset_left = 315.0
@@ -9,9 +9,6 @@ offset_top = 4.0
 offset_right = 903.0
 offset_bottom = 558.0
 script = ExtResource("1_dnlwg")
-quest = ExtResource("2_1l2mg")
-
-[node name="spritequest" type="Sprite2D" parent="." unique_id=1558785035]
 
 [node name="NameQuest" type="Label" parent="." unique_id=523338894]
 layout_mode = 0
@@ -24,26 +21,25 @@ offset_top = 204.0
 offset_right = 580.0
 offset_bottom = 433.0
 
-[node name="Solution1" type="Button" parent="." unique_id=475653650]
+[node name="OptionsContainer" type="VBoxContainer" parent="." unique_id=294098368]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 317.0
-offset_right = 587.0
-offset_bottom = 349.0
+offset_left = 6.0
+offset_top = 300.0
+offset_right = 582.0
+offset_bottom = 551.0
+alignment = 1
 
-[node name="Solution2" type="Button" parent="." unique_id=1613461840]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 379.0
-offset_right = 588.0
-offset_bottom = 416.0
+[node name="Solution1" type="Button" parent="OptionsContainer" unique_id=475653650]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
 
-[node name="Solution3" type="Button" parent="." unique_id=588164955]
-layout_mode = 0
-offset_left = -1.0
-offset_top = 450.0
-offset_right = 587.0
-offset_bottom = 503.0
+[node name="Solution2" type="Button" parent="OptionsContainer" unique_id=1613461840]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+
+[node name="Solution3" type="Button" parent="OptionsContainer" unique_id=588164955]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
 
 [node name="Close" type="Button" parent="." unique_id=708330815]
 layout_mode = 0
@@ -52,7 +48,23 @@ offset_top = 504.0
 offset_right = -22.0
 offset_bottom = 539.0
 
-[connection signal="pressed" from="Solution1" to="." method="_on_solution_1_pressed"]
-[connection signal="pressed" from="Solution2" to="." method="_on_solution_2_pressed"]
-[connection signal="pressed" from="Solution3" to="." method="_on_solution_3_pressed"]
+[node name="AgentPentagon" type="Polygon2D" parent="." unique_id=1497878613]
+polygon = PackedVector2Array(681, 177, 756, 224, 735, 298, 650, 297, 621, 226)
+
+[node name="VariantPentagon" type="Polygon2D" parent="." unique_id=862938285]
+polygon = PackedVector2Array(700, 323, 646, 368, 674, 428, 736, 430, 752, 369)
+
+[node name="spritequest" type="TextureRect" parent="." unique_id=1102659675]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 585.0
+offset_bottom = 269.53845
+texture = ExtResource("2_1l2mg")
+expand_mode = 1
+
+[connection signal="pressed" from="OptionsContainer/Solution1" to="." method="_on_solution_1_pressed"]
+[connection signal="pressed" from="OptionsContainer/Solution2" to="." method="_on_solution_2_pressed"]
+[connection signal="pressed" from="OptionsContainer/Solution3" to="." method="_on_solution_3_pressed"]
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

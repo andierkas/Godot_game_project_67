@@ -2,18 +2,15 @@
 
 [ext_resource type="Script" uid="uid://dd4awjxunja2o" path="res://Quest.gd" id="1_38guj"]
 [ext_resource type="Texture2D" uid="uid://dvo75nuf616md" path="res://materials/Sprite_agent/1780586958.png" id="2_bvn16"]
+[ext_resource type="Resource" uid="uid://dydbhtbh4pf01" path="res://materials/quests/var1.tres" id="3_88is0"]
+[ext_resource type="Resource" uid="uid://bbf1ikk1l4bsq" path="res://materials/quests/var2.tres" id="4_igk0s"]
+[ext_resource type="Script" uid="uid://cwob02fmvc3mt" path="res://QuestVariant.gd" id="5_igk0s"]
 
 [resource]
 script = ExtResource("1_38guj")
-strenght = 5
-harisma = 3
-endurance = 3
-intellect = 1
-agility = 3
 name = "Кошка на дереве"
 description = "Кошка залезла на дерево, помогите спасти ее"
 reward = null
-variant_1 = "Залезть на дерево"
-variant_2 = "Напугать ее чтобы сама слезла"
+variants = Array[ExtResource("5_igk0s")]([ExtResource("3_88is0"), ExtResource("4_igk0s")])
 slide = ExtResource("2_bvn16")
 metadata/_custom_type_script = "uid://dd4awjxunja2o"
