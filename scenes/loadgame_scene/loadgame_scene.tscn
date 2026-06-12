@@ -6,47 +6,98 @@
 [ext_resource type="Texture2D" uid="uid://bm5pxnxe5pjq6" path="res://materials/load_game_menu/base_button/Sprite-0001.png" id="4_3moow"]
 [ext_resource type="Texture2D" uid="uid://1snsku15yyeg" path="res://materials/load_game_menu/Sprite-0012-export.png" id="4_j4jhl"]
 [ext_resource type="SpriteFrames" uid="uid://bpvbjsuve4rsn" path="res://materials/main_menu_screen/screen/screen_anim/new_sprite_frames.tres" id="4_ntmrx"]
+[ext_resource type="Texture2D" uid="uid://us3del60ggdt" path="res://materials/load_game_menu/base_button/Sprite-0002.png" id="5_wra1n"]
+[ext_resource type="Texture2D" uid="uid://dlwudog143ltg" path="res://materials/load_game_menu/base_button/Sprite-0003.png" id="6_k74ch"]
+[ext_resource type="Texture2D" uid="uid://d2wwvbnn4ix0i" path="res://materials/load_game_menu/base_button/Sprite-0004.png" id="6_kt2el"]
 [ext_resource type="Texture2D" uid="uid://jm26r0snx3vh" path="res://materials/load_game_menu/back_button/Sprite-0015.png" id="6_ntmrx"]
 [ext_resource type="Texture2D" uid="uid://djxeugnnjpide" path="res://materials/load_game_menu/back_button/Sprite-0016.png" id="7_3moow"]
 [ext_resource type="Texture2D" uid="uid://b2qicmi8mikdt" path="res://materials/load_game_menu/back_button/Sprite-0014.png" id="7_rb0mk"]
-[ext_resource type="AudioStream" uid="uid://bdf3irdb83ox8" path="res://sounds/off_help_button_pressed.wav" id="8_rb0mk"]
-[ext_resource type="AudioStream" uid="uid://ccu0p2psvjcpd" path="res://sounds/off_help_button_hover.mp3" id="9_3moow"]
+[ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://button_sounds/ButtonSoundController.gd" id="9_kt2el"]
+[ext_resource type="Script" uid="uid://dnosa7lir4ggx" path="res://scenes/main_scene/camera_2d.gd" id="12_j4jhl"]
 
-[sub_resource type="Animation" id="Animation_q7tdb"]
+[sub_resource type="Animation" id="Animation_wra1n"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimScreen:modulate")
+tracks/0/path = NodePath("Save_Button1:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0.5882353)]
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Save_Button2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Save_Button3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_j4jhl"]
-resource_name = "new_animation"
-length = 0.13333334
+[sub_resource type="Animation" id="Animation_k74ch"]
+resource_name = "buttons_show"
+length = 1.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimScreen:modulate")
+tracks/0/path = NodePath("Save_Button1:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(1.2666667, 1.7666667),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0.12941177)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Save_Button2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.2666667, 1.7666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Save_Button3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.2666667, 1.7666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0p5en"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kt2el"]
 _data = {
-&"RESET": SubResource("Animation_q7tdb"),
-&"new_animation": SubResource("Animation_j4jhl")
+&"RESET": SubResource("Animation_wra1n"),
+&"buttons_show": SubResource("Animation_k74ch")
 }
 
 [node name="Control" type="Control" unique_id=195617877]
@@ -58,8 +109,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t0mkg")
 
-[node name="Animated_button_menu" type="AnimatedSprite2D" parent="." unique_id=173334046]
-position = Vector2(240.53127, 396.87726)
+[node name="Animated_button_menu1" type="AnimatedSprite2D" parent="." unique_id=173334046]
+position = Vector2(240.53125, 396.87726)
 scale = Vector2(3.6391666, 3.716349)
 sprite_frames = ExtResource("2_q7tdb")
 animation = &"button_menu_off"
@@ -79,60 +130,8 @@ sprite_frames = ExtResource("2_q7tdb")
 animation = &"button_menu_off"
 speed_scale = 3.0
 
-[node name="Press_Sound" type="AudioStreamPlayer" parent="." unique_id=353952047]
-stream = ExtResource("8_rb0mk")
-
-[node name="Hover_Sound" type="AudioStreamPlayer" parent="." unique_id=875688072]
-stream = ExtResource("9_3moow")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1921277801]
-libraries/ = SubResource("AnimationLibrary_0p5en")
-autoplay = &"new_animation"
-
-[node name="Back_Button4" type="TextureButton" parent="." unique_id=1506866461]
-layout_mode = 0
-offset_left = 520.0
-offset_top = 326.0
-offset_right = 760.0
-offset_bottom = 416.0
-rotation = -1.5707964
-pivot_offset = Vector2(120, 45)
-texture_normal = ExtResource("7_rb0mk")
-texture_pressed = ExtResource("7_3moow")
-texture_hover = ExtResource("6_ntmrx")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Back_Button5" type="TextureButton" parent="." unique_id=756291788]
-layout_mode = 0
-offset_left = 919.0
-offset_top = 326.0
-offset_right = 1159.0
-offset_bottom = 416.0
-rotation = -1.5707964
-pivot_offset = Vector2(120, 45)
-texture_normal = ExtResource("7_rb0mk")
-texture_pressed = ExtResource("7_3moow")
-texture_hover = ExtResource("6_ntmrx")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Back_Button3" type="TextureButton" parent="." unique_id=676723792]
-layout_mode = 0
-offset_left = 117.0
-offset_top = 326.0
-offset_right = 357.0
-offset_bottom = 416.0
-rotation = -1.5707964
-pivot_offset = Vector2(120, 45)
-texture_normal = ExtResource("7_rb0mk")
-texture_pressed = ExtResource("7_3moow")
-texture_hover = ExtResource("6_ntmrx")
-ignore_texture_size = true
-stretch_mode = 0
-
 [node name="AnimScreen" type="AnimatedSprite2D" parent="." unique_id=1926156085]
-modulate = Color(1, 1, 1, 0.5882353)
+modulate = Color(1, 1, 1, 0.12941177)
 position = Vector2(640, 359.49997)
 rotation = 3.1415925
 scale = Vector2(6.1249995, 5.2777777)
@@ -206,6 +205,79 @@ text = "главное
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="Back_Button4" to="." method="_on_back_button_4_pressed"]
-[connection signal="pressed" from="Back_Button5" to="." method="_on_back_button_5_pressed"]
-[connection signal="pressed" from="Back_Button3" to="." method="_on_back_button_3_pressed"]
+[node name="SoundBackController" type="Node" parent="Back_Button" unique_id=1255014931]
+script = ExtResource("9_kt2el")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=829059808]
+position = Vector2(640, 360)
+script = ExtResource("12_j4jhl")
+
+[node name="Show_buttons" type="CanvasLayer" parent="." unique_id=813359030]
+
+[node name="Animation" type="AnimationPlayer" parent="Show_buttons" unique_id=603472622]
+libraries/ = SubResource("AnimationLibrary_kt2el")
+autoplay = &"buttons_show"
+
+[node name="Save_Button1" type="TextureButton" parent="Show_buttons" unique_id=676723792]
+modulate = Color(1, 1, 1, 0)
+offset_left = 111.0
+offset_top = 290.0
+offset_right = 222.15201
+offset_bottom = 401.152
+rotation = -1.5707964
+pivot_offset = Vector2(120, 45)
+texture_normal = ExtResource("5_wra1n")
+texture_pressed = ExtResource("6_kt2el")
+texture_hover = ExtResource("6_k74ch")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SoundSaveController1" type="Node" parent="Show_buttons/Save_Button1" unique_id=793865152]
+script = ExtResource("9_kt2el")
+hover_profile = "electro_hover"
+press_profile = "electro_press"
+
+[node name="Save_Button2" type="TextureButton" parent="Show_buttons" unique_id=1066656865]
+modulate = Color(1, 1, 1, 0)
+offset_left = 510.0
+offset_top = 290.0
+offset_right = 621.152
+offset_bottom = 401.152
+rotation = -1.5707964
+pivot_offset = Vector2(120, 45)
+texture_normal = ExtResource("5_wra1n")
+texture_pressed = ExtResource("6_kt2el")
+texture_hover = ExtResource("6_k74ch")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SoundSaveController2" type="Node" parent="Show_buttons/Save_Button2" unique_id=641613078]
+script = ExtResource("9_kt2el")
+hover_profile = "electro_hover"
+press_profile = "electro_press"
+
+[node name="Save_Button3" type="TextureButton" parent="Show_buttons" unique_id=1726461269]
+modulate = Color(1, 1, 1, 0)
+offset_left = 910.0
+offset_top = 290.0
+offset_right = 1021.152
+offset_bottom = 401.152
+rotation = -1.5707964
+pivot_offset = Vector2(120, 45)
+texture_normal = ExtResource("5_wra1n")
+texture_pressed = ExtResource("6_kt2el")
+texture_hover = ExtResource("6_k74ch")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SoundSaveController3" type="Node" parent="Show_buttons/Save_Button3" unique_id=2043102997]
+script = ExtResource("9_kt2el")
+hover_profile = "electro_hover"
+press_profile = "electro_press"
+
+[connection signal="pressed" from="Back_Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Show_buttons/Save_Button1" to="." method="_on_save_button_1_pressed"]
+[connection signal="pressed" from="Show_buttons/Save_Button2" to="." method="_on_save_button_2_pressed"]
+[connection signal="pressed" from="Show_buttons/Save_Button3" to="." method="_on_save_button_3_pressed"]
