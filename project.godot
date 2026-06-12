@@ -12,12 +12,20 @@ config_version=5
 
 config/name="new_game_proj"
 run/main_scene="uid://cmhcf8g738k3e"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="aboba"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
 SceneLoader="*uid://6k4wrc15fpa5"
 PartyBox="*uid://34jbsmh5nbi7"
+ButtonSound="*uid://d20s52dnp6mfl"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [dotnet]
 

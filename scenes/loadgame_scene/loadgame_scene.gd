@@ -1,37 +1,30 @@
 extends Control
 
-var selected_mode = null
+@onready var animMenu1 : AnimatedSprite2D = $Animated_button_menu1
+@onready var animMenu2 : AnimatedSprite2D = $Animated_button_menu2
+@onready var animMenu3 : AnimatedSprite2D = $Animated_button_menu3
+@onready var animPlayer : AnimationPlayer = $Show_buttons/Animation
+@onready var animScreen : AnimatedSprite2D = $AnimScreen
 
 func _ready():
-	# Кнопки выбора режима
-	$HBoxContainer/TextureButton.pressed.connect(_first_save)
-	$HBoxContainer/TextureButton4.pressed.connect(_second_save)
-	$HBoxContainer/TextureButton3.pressed.connect(_third_save)
-	
-	# Блокируем кнопки подтверждения
-	$Button.disabled = true
-	$Button2.disabled = true
-	$Button.modulate = Color(0.5, 0.5, 0.5)
-	$Button2.modulate = Color(0.5, 0.5, 0.5)
+	animScreen.play("screen_animation")
+	animMenu1.play("button_menu_on")
+	animMenu2.play("button_menu_on")
+	animMenu3.play("button_menu_on")
+	animPlayer.play("buttons_show")
 
-func _first_save():
-	activate_buttons()
 
-func _second_save():
-	activate_buttons()
-
-func _third_save():
-	activate_buttons()
-
-func activate_buttons():
-	$Button.disabled = false
-	$Button2.disabled = false
-	$Button.modulate = Color(1, 1, 1)
-	$Button2.modulate = Color(1, 1, 1)
-
-func _on_button_pressed() -> void:
+func _on_save_button_1_pressed() -> void:
 	SceneLoader.load_scene("res://scenes/agents_generator_scene/agents_generator.tscn")
 
 
-func _on_play_button_pressed() -> void:
+func _on_save_button_2_pressed() -> void:
+	SceneLoader.load_scene("res://scenes/agents_generator_scene/agents_generator.tscn")
+
+
+func _on_save_button_3_pressed() -> void:
+	SceneLoader.load_scene("res://scenes/agents_generator_scene/agents_generator.tscn")
+
+
+func _on_back_button_pressed() -> void:
 	SceneLoader.load_scene("res://scenes/main_scene/main_scene.tscn")
