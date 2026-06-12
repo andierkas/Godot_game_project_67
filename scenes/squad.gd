@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const TEAM_SPRITE = preload("res://materials/1781209134 1 (1).png")
 
-@export var speed: float = 200.0
+@export var speed: float = 100.0
 
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var sprite: Sprite2D = $Sprite2D
