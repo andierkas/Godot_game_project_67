@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://jm26r0snx3vh" path="res://materials/load_game_menu/back_button/Sprite-0015.png" id="12_jw7mo"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="13_c036g"]
 [ext_resource type="Texture2D" uid="uid://cmhqf5asoldai" path="res://materials/generate_agent_scene/Sprite-0003.png" id="13_o8ix8"]
+[ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://button_sounds/ButtonSoundController.gd" id="15_npaxp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4aseg"]
 
@@ -629,20 +630,25 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 78.0
-offset_top = -34.5
-offset_right = -12.0
-offset_bottom = 34.5
+offset_left = 84.0
+offset_top = -34.0
+offset_right = -10.0
+offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = -7
+theme_override_constants/line_spacing = -2
 theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 22
-text = "главное
-меню"
+theme_override_font_sizes/font_size = 20
+text = "выбор
+сохранения"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Node" type="Node" parent="Back_Button" unique_id=1903819391]
+script = ExtResource("15_npaxp")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
 
 [node name="next" type="Button" parent="." unique_id=843432779]
 layout_mode = 0
@@ -655,6 +661,11 @@ theme_override_font_sizes/font_size = 35
 action_mode = 0
 text = "Играть"
 
+[node name="Node" type="Node" parent="next" unique_id=2105092212]
+script = ExtResource("15_npaxp")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
+
 [node name="reroll" type="Button" parent="." unique_id=1098214272]
 layout_mode = 0
 offset_left = 741.0
@@ -665,6 +676,11 @@ theme_override_fonts/font = ExtResource("13_c036g")
 theme_override_font_sizes/font_size = 35
 action_mode = 0
 text = "рерол"
+
+[node name="Node" type="Node" parent="reroll" unique_id=1488839496]
+script = ExtResource("15_npaxp")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
 
 [connection signal="pressed" from="Back_Button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="next" to="." method="_on_next_pressed"]

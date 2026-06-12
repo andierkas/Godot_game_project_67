@@ -18,10 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://2bad3a131wkt" path="res://materials/main_menu_screen/main_menu_buttons/main_buttons/Sprite-00.png" id="18_qgjuk"]
 [ext_resource type="Texture2D" uid="uid://oed7ah48q3cu" path="res://materials/main_menu_screen/main_menu_buttons/main_buttons/Sprite.png" id="19_qgjuk"]
 [ext_resource type="SpriteFrames" uid="uid://cxay3qt6qkail" path="res://materials/main_menu_screen/menu_anim/new_sprite_frames.tres" id="21_b7qf2"]
-[ext_resource type="AudioStream" uid="uid://dsd4ph65whylj" path="res://sounds/button_hover.mp3" id="21_i0gdb"]
-[ext_resource type="AudioStream" uid="uid://cj12rbogqrihl" path="res://sounds/button_pressed.wav" id="22_7633w"]
-[ext_resource type="AudioStream" uid="uid://bdf3irdb83ox8" path="res://sounds/off_help_button_pressed.wav" id="23_i0gdb"]
-[ext_resource type="AudioStream" uid="uid://ccu0p2psvjcpd" path="res://sounds/off_help_button_hover.mp3" id="24_i0gdb"]
+[ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://button_sounds/ButtonSoundController.gd" id="21_xtklx"]
+[ext_resource type="Script" uid="uid://dnosa7lir4ggx" path="res://scenes/main_scene/camera_2d.gd" id="25_4dwww"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="37_8dvv1"]
 [ext_resource type="Texture2D" uid="uid://der5jus22enqp" path="res://materials/main_menu_screen/screen/screen3.png" id="40_rv7a5"]
 
@@ -501,6 +499,11 @@ texture_pressed = ExtResource("13_1jbir")
 texture_hover = ExtResource("14_b7qf2")
 stretch_mode = 0
 
+[node name="SoundHelpController" type="Node" parent="Help_button" unique_id=158330848]
+script = ExtResource("21_xtklx")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
+
 [node name="Off_button" type="TextureButton" parent="." unique_id=525548742]
 layout_mode = 0
 offset_left = 434.0
@@ -511,6 +514,11 @@ texture_normal = ExtResource("7_nim2u")
 texture_pressed = ExtResource("8_sro07")
 texture_hover = ExtResource("9_3naof")
 stretch_mode = 0
+
+[node name="SoundOffController" type="Node" parent="Off_button" unique_id=559452148]
+script = ExtResource("21_xtklx")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
 
 [node name="Show_text_and_buttons" type="CanvasLayer" parent="." unique_id=1342298701]
 
@@ -550,6 +558,11 @@ text = "Играть"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="SoundPLayController" type="Node" parent="Show_text_and_buttons/Play_button" unique_id=828236547]
+script = ExtResource("21_xtklx")
+hover_profile = "electro_hover"
+press_profile = "electro_press"
+
 [node name="Pref_button" type="TextureButton" parent="Show_text_and_buttons" unique_id=50279162]
 offset_left = 113.0
 offset_top = 227.0
@@ -581,6 +594,11 @@ theme_override_font_sizes/font_size = 27
 text = "Настройки"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="SoundPrefController" type="Node" parent="Show_text_and_buttons/Pref_button" unique_id=1668172160]
+script = ExtResource("21_xtklx")
+hover_profile = "electro_hover"
+press_profile = "electro_press"
 
 [node name="Exit_button" type="TextureButton" parent="Show_text_and_buttons" unique_id=1733412059]
 offset_left = 113.0
@@ -615,17 +633,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 paragraph_separator = "\\"
 
-[node name="ButtonHoverSound" type="AudioStreamPlayer" parent="." unique_id=1461708383]
-stream = ExtResource("21_i0gdb")
-
-[node name="ButtonPressSound" type="AudioStreamPlayer" parent="." unique_id=1796527515]
-stream = ExtResource("22_7633w")
-
-[node name="OffHelpPressSound" type="AudioStreamPlayer" parent="." unique_id=1051051469]
-stream = ExtResource("23_i0gdb")
-
-[node name="OffHelpHoverSound" type="AudioStreamPlayer" parent="." unique_id=1082085094]
-stream = ExtResource("24_i0gdb")
+[node name="SoundExitController" type="Node" parent="Show_text_and_buttons/Exit_button" unique_id=1462253827]
+script = ExtResource("21_xtklx")
+hover_profile = "electro_hover"
+press_profile = "electro_press"
 
 [node name="select_saves" type="Label" parent="." unique_id=1785753837]
 layout_mode = 1
@@ -635,9 +646,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -595.0
-offset_top = -309.0
+offset_top = -308.0
 offset_right = -227.0
-offset_bottom = -245.0
+offset_bottom = -244.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 2
@@ -647,6 +658,10 @@ theme_override_fonts/font = ExtResource("37_8dvv1")
 theme_override_font_sizes/font_size = 37
 text = "главное меню"
 horizontal_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1504387033]
+position = Vector2(640, 360)
+script = ExtResource("25_4dwww")
 
 [connection signal="pressed" from="Off_button" to="." method="_on_off_button_pressed"]
 [connection signal="button_up" from="Show_text_and_buttons/Play_button" to="." method="_on_play_button_button_up"]
