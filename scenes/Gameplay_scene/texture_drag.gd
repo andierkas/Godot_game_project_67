@@ -4,9 +4,13 @@ extends TextureRect
 @export var container_type: String
 
 func _get_drag_data(at_position: Vector2) -> Variant:
-		# Если агент занят, запрещаем перетаскивание
+	# Если агент занят или отдыхает, запрещаем перетаскивание
 	if agent.current_status == AgentStats.Status.ON_MISSION:
-		return null 
+		print(" Агент ", agent.agent_second_name, " в пути, нельзя перетащить")
+		return null
+	if agent.current_status == AgentStats.Status.RESTING:
+		print("⛔ Агент ", agent.agent_second_name, " отдыхает, нельзя перетащить")
+		return null
 	if container_type == "target":
 		print("target")
 		return null
@@ -32,7 +36,6 @@ func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
 func _drop_data(at_position: Vector2, data: Variant) -> void:
 	agent = data.agent
 	update_texture()
-
 
 func _notification(what):
 	if what == NOTIFICATION_DRAG_END:
