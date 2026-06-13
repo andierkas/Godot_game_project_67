@@ -381,7 +381,7 @@ polygon = PackedVector2Array(731, 323, 735, 333, 736, 342, 747, 354, 762, 360, 8
 polygon = PackedVector2Array(973, 350, 970, 352, 971, 375, 993, 409, 1016, 399, 1045, 365, 1045, 352, 1042, 350)
 
 [node name="Base" type="Marker2D" parent="." unique_id=828348401]
-position = Vector2(960, 201)
+position = Vector2(955, 189)
 
 [connection signal="pressed" from="Button" to="Panel" method="_on_button_pressed"]
 [connection signal="input_event" from="questmark/Mark" to="questmark/Mark" method="_on_input_event"]

@@ -44,6 +44,7 @@ offset_right = 1.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.90031064, 0.899788)
 mouse_filter = 2
 script = ExtResource("1_67err")
 metadata/_edit_vertical_guides_ = [1646.0]
@@ -578,8 +579,8 @@ sprite_frames = ExtResource("9_npaxp")
 animation = &"screen_animation"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=729880096]
-position = Vector2(639.00006, 359.00003)
-scale = Vector2(4.0000005, 4.0000005)
+position = Vector2(638.7238, 359.00003)
+scale = Vector2(3.9982738, 4.0000005)
 texture = ExtResource("9_8v7vh")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=2032491643]
@@ -685,4 +686,3 @@ press_profile = "pc_press"
 [connection signal="pressed" from="Back_Button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="reroll" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="next" to="." method="_on_next_pressed"]
