@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="new_game_proj"
+config/name="City_in_crysis_proj"
 run/main_scene="uid://cmhcf8g738k3e"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="aboba"
@@ -26,6 +26,8 @@ ButtonSound="*uid://d20s52dnp6mfl"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [dotnet]
 
