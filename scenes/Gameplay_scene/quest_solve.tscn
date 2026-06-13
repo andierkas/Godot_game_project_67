@@ -60,19 +60,30 @@ offset_bottom = 539.0
 
 [node name="PentagonView" type="Panel" parent="." unique_id=205923365]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 301.0
+offset_left = 3.0
+offset_top = 288.0
 offset_right = 575.0
 offset_bottom = 541.0
 
-[node name="AgentPentagon" type="Polygon2D" parent="PentagonView" unique_id=1497878613]
-position = Vector2(-588, -121)
-polygon = PackedVector2Array(688, 175, 753, 237, 735, 298, 650, 297, 627, 237)
+[node name="Polygon2D" type="Polygon2D" parent="PentagonView" unique_id=387453115]
+position = Vector2(125, 138)
+color = Color(1, 1, 1, 0.6431373)
+polygon = PackedVector2Array(0, -100, -100, 0, -60, 100, 60, 100, 100, 0)
+
+[node name="Line2D" type="Line2D" parent="PentagonView/Polygon2D" unique_id=1870984227]
+z_index = 11
+points = PackedVector2Array(0, 0, 0, -100, 0, 0, -100, 0, 0, 0, 100, 0, 0, 0, 60, 100, 0, 0, -60, 100)
+width = 4.0
 
 [node name="VariantPentagon" type="Polygon2D" parent="PentagonView" unique_id=862938285]
-position = Vector2(-600, -265)
-color = Color(0.18039216, 0.25490198, 1, 1)
+position = Vector2(125, 138)
+color = Color(0.6117647, 0, 0.13725491, 0.29411766)
 polygon = PackedVector2Array(702, 319, 643, 376, 673, 435, 743, 434, 754, 378)
+
+[node name="AgentPentagon" type="Polygon2D" parent="PentagonView" unique_id=1497878613]
+position = Vector2(125, 138)
+color = Color(0.32156864, 0.6627451, 0.21568628, 0.8156863)
+polygon = PackedVector2Array(688, 175, 753, 237, 735, 298, 650, 297, 627, 237)
 
 [node name="SuccessLabel" type="Label" parent="PentagonView" unique_id=274896891]
 layout_mode = 0
@@ -80,6 +91,7 @@ offset_left = 229.0
 offset_top = 93.0
 offset_right = 543.0
 offset_bottom = 160.0
+text = "Шанс успеха"
 
 [node name="ConfirmButton" type="Button" parent="PentagonView" unique_id=1524177563]
 layout_mode = 0
@@ -93,3 +105,4 @@ text = "Confirm"
 [connection signal="pressed" from="OptionsContainer/Solution2" to="." method="_on_solution_2_pressed"]
 [connection signal="pressed" from="OptionsContainer/Solution3" to="." method="_on_solution_3_pressed"]
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="PentagonView/ConfirmButton" to="." method="_on_confirm_button_pressed"]

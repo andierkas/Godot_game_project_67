@@ -14,13 +14,13 @@ var quest_target_position: Vector2  # Куда идти отряду
 func _ready() -> void:
 	print("🟢 Панель квеста загружена")
 
-func show_quest(quest_data: Quest, target_pos: Vector2):  # ← Добавили параметр
+func show_quest(quest_data: Quest, target_pos: Vector2):
 	quest = quest_data
-	quest_target_position = target_pos  # ← Берём из узла, а не из ресурса
+	quest_target_position = target_pos
 	namequest.text = quest.name
 	quest_desc.text = quest.description
 	sprite.texture = quest.slide
-	print("📍 Цель из узла Target: ", quest_target_position)
+	print(" Цель из узла Target: ", quest_target_position)
 	show()
 
 func _on_button_pressed() -> void:
@@ -30,26 +30,38 @@ func _on_button_pressed() -> void:
 func _on_next_pressed() -> void:
 	print("🟡 Кнопка Next нажата!")
 	
-	# Собираем агентов из слотов типа "target"
 	var selected_agents = []
+	var unavailable_agents = []
 	
 	for slot in agents_grid.get_children():
-		print("   Проверяем слот: ", slot.name, " тип: ", slot.container_type, " агент: ", slot.agent)
+		# Пропускаем пустые слоты
+		if slot.agent == null:
+			continue
 		
-		# Проверяем что это слот назначения и там есть агент
-		if slot.container_type == "target" and slot.agent != null:
-			# Проверяем что это не заглушка
-			if not slot.agent.is_dummy:
-				selected_agents.append(slot.agent)
-				print("   ✅ Добавлен агент: ", slot.agent.agent_first_name)
-			else:
-				print("   ⚠️ Пропущена заглушка")
+		#  ГЛАВНАЯ ПРОВЕРКА: доступен ли агент?
+		if slot.agent.current_status != AgentStats.Status.AVAILABLE:
+			unavailable_agents.append(slot.agent.agent_second_name)
+			print("   ⛔ Пропущен агент (статус: ", slot.agent.current_status, "): ", slot.agent.agent_second_name)
+			continue
+		
+		# Проверяем что это не заглушка
+		if slot.agent.is_dummy:
+			print("   ⚠️ Пропущена заглушка")
+			continue
+		
+		selected_agents.append(slot.agent)
+		print("   ✅ Добавлен агент: ", slot.agent.agent_first_name)
 	
-	print("📦 Всего выбрано агентов: ", selected_agents.size())
+	# Предупреждение если пытались выбрать недоступных
+	if not unavailable_agents.is_empty():
+		print("⚠️ Агенты недоступны для выбора (отдыхают или в пути): ", unavailable_agents)
 	
-	# Проверяем что выбрали хотя бы одного агента
+	print("📦 Всего выбрано доступных агентов: ", selected_agents.size())
+	
+	# Проверяем что выбрали хотя бы одного ДОСТУПНОГО агента
 	if selected_agents.size() == 0:
-		print("⚠️ Нужно выбрать хотя бы одного агента!")
+		print("⚠️ Нужно выбрать хотя бы одного ДОСТУПНОГО агента!")
+		# Здесь можно добавить вывод сообщения на экран, если есть Label для ошибок
 		return
 	
 	# Отправляем сигнал с агентами и целью

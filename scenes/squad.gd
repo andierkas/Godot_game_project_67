@@ -8,13 +8,17 @@ const TEAM_SPRITE = preload("res://materials/1781209134 1 (1).png")
 @onready var sprite: Sprite2D = $Sprite2D
 
 var agents: Array
+var is_path_ready: bool = false  # ⬅️ Флаг, что путь построен
 
-# Сигнал для главной сцены - отряд прибыл
 signal squad_arrived(agents: Array)
 
 func setup(agents_array: Array, target_pos: Vector2) -> void:
 	agents = agents_array
 	var agents_count = agents.size()
+	
+	print("🔧 Squad.setup() вызван")
+	print("👥 Агентов: ", agents_count)
+	print("🎯 Цель: ", target_pos)
 	
 	if agents_count == 1:
 		sprite.texture = agents[0].sprite
@@ -22,8 +26,17 @@ func setup(agents_array: Array, target_pos: Vector2) -> void:
 		sprite.texture = TEAM_SPRITE
 	
 	navigation_agent.set_target_position(target_pos)
+	
+	# ⬇️ Ждем один кадр, чтобы навигация успела построить путь
+	await get_tree().process_frame
+	is_path_ready = true
+	print("✅ Навигация настроена, отряд должен двигаться")
 
 func _physics_process(delta: float) -> void:
+	# ️ Не даем сработать прибытию, пока путь не готов
+	if not is_path_ready:
+		return
+
 	if navigation_agent.is_target_reached():
 		velocity = Vector2.ZERO
 		_on_arrived()
@@ -37,8 +50,6 @@ func _physics_process(delta: float) -> void:
 func _on_arrived() -> void:
 	print("✅ Отряд прибыл! Агентов: ", agents.size())
 	
-	# Отправляем сигнал что отряд дошел
 	squad_arrived.emit(agents)
 	
-	# Удаляем отряд с карты
 	queue_free()

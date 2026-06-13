@@ -6,9 +6,9 @@ signal solution_chosen(variant: QuestVariant, success: bool)
 @onready var quest_desc = $descript
 @onready var sprite = $spritequest
 @onready var options_container = $OptionsContainer
-@onready var variant_pentagon: Polygon2D = $VariantPentagon
-@onready var agent_pentagon: Polygon2D = $AgentPentagon
-@onready var success_label: Label = $SuccessLabel
+@onready var variant_pentagon: Polygon2D = $PentagonView/VariantPentagon
+@onready var agent_pentagon: Polygon2D = $PentagonView/AgentPentagon
+@onready var success_label: Label = $PentagonView/SuccessLabel
 @onready var pentagon_view = $PentagonView
 
 @export var quest: Quest
@@ -47,24 +47,45 @@ func show_quest(quest_data: Quest):
 func _on_variant_pressed(variant: QuestVariant) -> void:
 	selected_variant = variant
 	
+	print("🔍 Выбран вариант: ", variant.text)
+	print("🔍 Статы варианта: сила=", variant.strenght, " харизма=", variant.harisma, " выносливость=", variant.endurance, " интеллект=", variant.intellect, " ловкость=", variant.agility)
+	print("🔍 Количество агентов: ", agents.size())
+	
+	if agents.is_empty():
+		print("⚠️ ВНИМАНИЕ: АГЕНТЫ ПУСТЫЕ! Шанс будет 0%, потому что некому выполнять квест.")
+	else:
+		for agent in agents:
+			print("🔍 Агент: ", agent.agent_second_name, " | сила=", agent.strenght, " харизма=", agent.harisma)
+	
 	options_container.visible = false
 	pentagon_view.visible = true
 	
 	_draw_pentagons()
 	_update_success_rate()
 
-func _on_confirm_pressed() -> void:
+# ⬇️ ЭТА ФУНКЦИЯ ВЫЗЫВАЕТСЯ ПРИ НАЖАТИИ КНОПКИ CONFIRM
+func _on_confirm_button_pressed() -> void:
 	if not selected_variant:
+		print("⚠️ Вариант не выбран!")
 		return
 		
 	var squad_stats = _calculate_squad_stats(agents)
-	var success = randf() <= _get_success_rate(squad_stats, selected_variant)
+	var rate = _get_success_rate(squad_stats, selected_variant)
+	var success = randf() <= rate
+	
+	print("✅ Решение подтверждено: ", selected_variant.text)
+	print("🎲 Шанс: ", int(rate * 100), "% | Результат: ", success)
 	
 	solution_chosen.emit(selected_variant, success)
 	queue_free()
 
 func _draw_pentagons():
 	if not quest or not selected_variant:
+		print("⚠️ Квест или вариант не выбран, пятиугольники не рисуем.")
+		return
+
+	if variant_pentagon == null or agent_pentagon == null:
+		print("️ ОШИБКА: Polygon2D не найдены! Проверь имена узлов в сцене quest_solve.tscn")
 		return
 
 	var variant_stats = {
@@ -78,6 +99,8 @@ func _draw_pentagons():
 
 	var squad_stats = _calculate_squad_stats(agents)
 	agent_pentagon.polygon = _generate_pentagon_vertices(squad_stats)
+	
+	print("✅ Пятиугольники нарисованы. Вершин: ", variant_pentagon.polygon.size())
 
 func _update_success_rate():
 	if not selected_variant:
@@ -85,6 +108,7 @@ func _update_success_rate():
 	var squad_stats = _calculate_squad_stats(agents)
 	var rate = _get_success_rate(squad_stats, selected_variant)
 	success_label.text = "Шанс успеха: %d%%" % int(rate * 100)
+	print("🎲 Итоговый шанс успеха: ", int(rate * 100), "%")
 
 func _calculate_squad_stats(agents_array: Array) -> Dictionary:
 	var stats = {"strenght": 0, "harisma": 0, "endurance": 0, "intellect": 0, "agility": 0}
@@ -96,7 +120,6 @@ func _calculate_squad_stats(agents_array: Array) -> Dictionary:
 		stats.intellect += agent.intellect
 		stats.agility += agent.agility
 		
-	# Обрезаем каждый стат до максимума 10
 	for key in stats:
 		stats[key] = mini(stats[key], 10)
 		
