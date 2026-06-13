@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cv5h4wn4nruhe" path="res://materials/1781209134 1 (1).png" id="2_6yqs4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lolqr"]
-radius = 3.0
+radius = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hyeuf"]
 shader = ExtResource("1_8ywn5")

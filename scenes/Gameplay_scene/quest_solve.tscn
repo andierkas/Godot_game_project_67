@@ -21,6 +21,16 @@ offset_top = 204.0
 offset_right = 580.0
 offset_bottom = 433.0
 
+[node name="spritequest" type="TextureRect" parent="." unique_id=1102659675]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 585.0
+offset_bottom = 269.53845
+texture = ExtResource("2_1l2mg")
+expand_mode = 1
+
 [node name="OptionsContainer" type="VBoxContainer" parent="." unique_id=294098368]
 layout_mode = 0
 offset_left = 6.0
@@ -48,21 +58,36 @@ offset_top = 504.0
 offset_right = -22.0
 offset_bottom = 539.0
 
-[node name="AgentPentagon" type="Polygon2D" parent="." unique_id=1497878613]
-polygon = PackedVector2Array(681, 177, 756, 224, 735, 298, 650, 297, 621, 226)
-
-[node name="VariantPentagon" type="Polygon2D" parent="." unique_id=862938285]
-polygon = PackedVector2Array(700, 323, 646, 368, 674, 428, 736, 430, 752, 369)
-
-[node name="spritequest" type="TextureRect" parent="." unique_id=1102659675]
-custom_minimum_size = Vector2(0, 200)
+[node name="PentagonView" type="Panel" parent="." unique_id=205923365]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 3.0
-offset_right = 585.0
-offset_bottom = 269.53845
-texture = ExtResource("2_1l2mg")
-expand_mode = 1
+offset_left = 13.0
+offset_top = 301.0
+offset_right = 575.0
+offset_bottom = 541.0
+
+[node name="AgentPentagon" type="Polygon2D" parent="PentagonView" unique_id=1497878613]
+position = Vector2(-588, -121)
+polygon = PackedVector2Array(688, 175, 753, 237, 735, 298, 650, 297, 627, 237)
+
+[node name="VariantPentagon" type="Polygon2D" parent="PentagonView" unique_id=862938285]
+position = Vector2(-600, -265)
+color = Color(0.18039216, 0.25490198, 1, 1)
+polygon = PackedVector2Array(702, 319, 643, 376, 673, 435, 743, 434, 754, 378)
+
+[node name="SuccessLabel" type="Label" parent="PentagonView" unique_id=274896891]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 93.0
+offset_right = 543.0
+offset_bottom = 160.0
+
+[node name="ConfirmButton" type="Button" parent="PentagonView" unique_id=1524177563]
+layout_mode = 0
+offset_left = 618.0
+offset_top = 127.0
+offset_right = 768.0
+offset_bottom = 179.0
+text = "Confirm"
 
 [connection signal="pressed" from="OptionsContainer/Solution1" to="." method="_on_solution_1_pressed"]
 [connection signal="pressed" from="OptionsContainer/Solution2" to="." method="_on_solution_2_pressed"]
