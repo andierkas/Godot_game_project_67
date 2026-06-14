@@ -223,7 +223,6 @@ navigation_polygon = SubResource("NavigationPolygon_cytv4")
 navigation_layers = 65535
 
 [node name="TownHouses" type="StaticBody2D" parent="NavigationRegion2D" unique_id=1598359969]
-visible = false
 position = Vector2(4, 6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=274597778]

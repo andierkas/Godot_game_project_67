@@ -11,4 +11,6 @@ endurance = 4
 intellect = 2
 agility = 2
 reward_xp = 10
+failure_damage = 15
+failure_text = "Город недоволен"
 metadata/_custom_type_script = "uid://cwob02fmvc3mt"

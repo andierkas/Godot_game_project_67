@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://mmemw0g772c"]
+
+[ext_resource type="Texture2D" uid="uid://ddyrwbstl1ex6" path="res://materials/Sprite_agent/male/1.png" id="1_jt747"]
+
+[node name="AgentProfile" type="Control" unique_id=749323441]
+clip_contents = true
+layout_mode = 3
+anchor_left = 0.105000004
+anchor_top = 0.097
+anchor_right = 0.89400005
+anchor_bottom = 0.77800006
+offset_left = -14.960007
+offset_top = -12.856003
+offset_right = 42.11194
+offset_bottom = 34.855957
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=848596857]
+layout_mode = 0
+offset_right = 1060.0
+offset_bottom = 607.0
+color = Color(0.40392157, 0, 0.9843137, 0.5058824)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=251263181]
+scale = Vector2(0.64843744, 0.67317706)
+texture = ExtResource("1_jt747")
+centered = false
+region_enabled = true
+region_rect = Rect2(378.44086, 0, 674.3732, 528.1917)
+
+[node name="AgentName" type="Label" parent="." unique_id=487885727]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 359.0
+offset_right = 459.0
+offset_bottom = 417.0
+theme_override_font_sizes/font_size = 43
+text = "Ivan Ivanov Ivanovich"
+
+[node name="XP" type="Label" parent="." unique_id=1753758476]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 439.0
+offset_right = 163.0
+offset_bottom = 490.0
+theme_override_font_sizes/font_size = 35
+text = "100/1000"
+
+[node name="max_xp" type="ColorRect" parent="." unique_id=1662730092]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 434.0
+offset_right = 514.0
+offset_bottom = 474.0
+
+[node name="xp_text" type="Label" parent="." unique_id=438582061]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 419.0
+offset_right = 155.0
+offset_bottom = 442.0
+text = "Уровень опыта"
+
+[node name="current_xp" type="ColorRect" parent="." unique_id=340734509]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 433.0
+offset_right = 290.0
+offset_bottom = 473.0
+color = Color(1, 1, 0.25882354, 1)
+
+[node name="max_polygon" type="Polygon2D" parent="." unique_id=1044253699]
+position = Vector2(815, 126)
+color = Color(0.9019608, 0.67058825, 0.4, 0.77254903)
+polygon = PackedVector2Array(0, -100, -100, 0, -60, 100, 60, 100, 100, 0)
+uv = PackedVector2Array(0, -100, 0, 0, 633, 204, 712, 205, 774, 125)
+
+[node name="polygon_agent" type="Polygon2D" parent="max_polygon" unique_id=993832283]
+color = Color(0.99999887, 0.9971724, 0.4893136, 1)
+polygon = PackedVector2Array(0, -100, -100, 0, -60, 100, 60, 100, 100, 0)
+
+[node name="bone_polygon" type="Line2D" parent="max_polygon" unique_id=20752861]
+points = PackedVector2Array(0, -100, 0, 0, -100, 0, 0, 0, -60, 100, 0, 0, 60, 100, 0, 0, 100, 0)
+width = 3.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1759334981]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 266.0
+offset_right = 835.0
+offset_bottom = 473.0
+
+[node name="strenght" type="Label" parent="VBoxContainer" unique_id=2041517140]
+layout_mode = 2
+
+[node name="harisma" type="Label" parent="VBoxContainer" unique_id=113988286]
+layout_mode = 2
+
+[node name="endurance" type="Label" parent="VBoxContainer" unique_id=1332774871]
+layout_mode = 2
+
+[node name="intellect" type="Label" parent="VBoxContainer" unique_id=552290968]
+layout_mode = 2
+
+[node name="agility" type="Label" parent="VBoxContainer" unique_id=1725871399]
+layout_mode = 2

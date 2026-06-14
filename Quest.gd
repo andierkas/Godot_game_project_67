@@ -5,7 +5,8 @@ class_name Quest
 
 @export var name: String
 @export var description: String
-@export var reward: Variant
+
+@export var player_reward_xp: int
 
 @export var variants: Array[QuestVariant]
 

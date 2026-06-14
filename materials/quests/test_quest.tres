@@ -10,7 +10,7 @@
 script = ExtResource("1_38guj")
 name = "Кошка на дереве"
 description = "Кошка залезла на дерево, помогите спасти ее"
-reward = null
+player_reward_xp = 100
 variants = Array[ExtResource("5_igk0s")]([ExtResource("3_88is0"), ExtResource("4_igk0s")])
 slide = ExtResource("2_bvn16")
 metadata/_custom_type_script = "uid://dd4awjxunja2o"

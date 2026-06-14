@@ -21,6 +21,8 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 SceneLoader="*uid://6k4wrc15fpa5"
 PartyBox="*uid://34jbsmh5nbi7"
 ButtonSound="*uid://d20s52dnp6mfl"
+PlayerStats="*uid://bjhtsno2egqhu"
+QuestRewardCalculator="*uid://djx300hyfk4l4"
 
 [display]
 
