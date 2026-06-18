@@ -10,5 +10,6 @@ harisma = 1
 endurance = 2
 intellect = 3
 agility = 6
-reward_xp = 10
+reward_xp = 100
+failure_damage = 10
 metadata/_custom_type_script = "uid://cwob02fmvc3mt"

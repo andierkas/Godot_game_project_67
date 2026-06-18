@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://mmemw0g772c"]
 
+[ext_resource type="Script" uid="uid://bcbiardwkyxa6" path="res://agent_profile.gd" id="1_11ji7"]
 [ext_resource type="Texture2D" uid="uid://ddyrwbstl1ex6" path="res://materials/Sprite_agent/male/1.png" id="1_jt747"]
 
 [node name="AgentProfile" type="Control" unique_id=749323441]
@@ -15,6 +16,7 @@ offset_right = 42.11194
 offset_bottom = 34.855957
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_11ji7")
 
 [node name="Background" type="ColorRect" parent="." unique_id=848596857]
 layout_mode = 0
@@ -94,15 +96,108 @@ offset_bottom = 473.0
 
 [node name="strenght" type="Label" parent="VBoxContainer" unique_id=2041517140]
 layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "strenght"
 
 [node name="harisma" type="Label" parent="VBoxContainer" unique_id=113988286]
 layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "harisma"
 
 [node name="endurance" type="Label" parent="VBoxContainer" unique_id=1332774871]
 layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "endurance"
 
 [node name="intellect" type="Label" parent="VBoxContainer" unique_id=552290968]
 layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "intellect"
 
 [node name="agility" type="Label" parent="VBoxContainer" unique_id=1725871399]
 layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "agility"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=2070085650]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 269.0
+offset_right = 962.0
+offset_bottom = 476.0
+
+[node name="strenght_value" type="Label" parent="VBoxContainer2" unique_id=1715814209]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "10"
+
+[node name="harisma_value" type="Label" parent="VBoxContainer2" unique_id=1173314071]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "10"
+
+[node name="endurance_value" type="Label" parent="VBoxContainer2" unique_id=527732694]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "10"
+
+[node name="intellect_value" type="Label" parent="VBoxContainer2" unique_id=1820693808]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "10"
+
+[node name="agility_value" type="Label" parent="VBoxContainer2" unique_id=2017853153]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "10"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="." unique_id=726810859]
+visible = false
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 0
+offset_left = 906.0
+offset_top = 280.0
+offset_right = 937.0
+offset_bottom = 485.0
+theme_override_constants/separation = 12
+
+[node name="Button" type="Button" parent="VBoxContainer3" unique_id=1513434726]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "+"
+
+[node name="Button2" type="Button" parent="VBoxContainer3" unique_id=884849528]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "+"
+
+[node name="Button3" type="Button" parent="VBoxContainer3" unique_id=1869784646]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "+"
+
+[node name="Button4" type="Button" parent="VBoxContainer3" unique_id=588559222]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "+"
+
+[node name="Button5" type="Button" parent="VBoxContainer3" unique_id=317536466]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "+"
+
+[node name="Button" type="Button" parent="." unique_id=58575290]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 931.0
+offset_top = 3.0
+offset_right = 963.0
+offset_bottom = 35.0
+text = "X"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

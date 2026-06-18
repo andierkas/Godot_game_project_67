@@ -3,19 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://blnovlcwgfplf" path="res://materials/1780274087.png" id="1_82jc6"]
 [ext_resource type="Script" uid="uid://8afxic637pb1" path="res://scenes/Gameplay_scene/day.gd" id="1_exbrp"]
 [ext_resource type="Script" uid="uid://bupxvywad85is" path="res://scenes/Gameplay_scene/panel.gd" id="2_68y1k"]
+[ext_resource type="Script" uid="uid://dd4awjxunja2o" path="res://Quest.gd" id="2_n8qpb"]
+[ext_resource type="Resource" uid="uid://dkhilhckim3y1" path="res://materials/quests/new_quest.tres" id="3_4tlo2"]
 [ext_resource type="Texture2D" uid="uid://k6e4jaeg1ktt" path="res://materials/image (2).jpeg" id="3_82jc6"]
 [ext_resource type="Script" uid="uid://4wgsk15dvste" path="res://grid_container.gd" id="3_llrwq"]
 [ext_resource type="Script" uid="uid://6vjil0ck5cl4" path="res://scenes/Gameplay_scene/QuestMarker.gd" id="6_cpas5"]
 [ext_resource type="Script" uid="uid://bmp6qlkmnlum1" path="res://scenes/Gameplay_scene/texture_drag.gd" id="6_gyagd"]
 [ext_resource type="Resource" uid="uid://dao144hv773j" path="res://materials/quests/zaglushka.tres" id="7_gyagd"]
 [ext_resource type="Resource" uid="uid://c5yrl2sr28vdk" path="res://materials/quests/test_quest.tres" id="7_lhnp0"]
+[ext_resource type="Script" uid="uid://bnmxgixe3xfb5" path="res://QuestSpawner.gd" id="9_4tlo2"]
 [ext_resource type="Texture2D" uid="uid://b5ypyqlghjhrl" path="res://QuestMark.png" id="10_cpas5"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_4tlo2"]
-radius = 17.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_gyagd"]
-radius = 3.0
+[ext_resource type="PackedScene" uid="uid://mmemw0g772c" path="res://agent_profile.tscn" id="11_lhnp0"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_cytv4"]
 vertices = PackedVector2Array(163.78906, 105.10156, 158.64844, 106.78125, 162.20313, 105.00781, 284.02344, 143.97656, 391.1328, 144, 308.8828, 144, 889, 620, 1066.2266, 623.0625, 803, 621, 410, 240, 572, 240, 391.1328, 242, 820, 620, 574, 619, 728, 621, 280, 621, 414, 619, 389, 619, 305, 619, 1058.1016, 654.96875, 1059.6563, 655.0078, 67.99219, 655, 778.03125, 255.03906, 824.3906, 254.99219, 785, 256.03125, 409, 126, 571, 126, 392.75, 131.13281, 571, 358, 597.02344, 359.0625, 464, 359, 477, 358, 1036.0234, 497.21094, 1038.1797, 547.9219, 1034.9609, 529.6797, 708, 617, 598, 617, 848.9922, 305.71875, 851.0078, 355.27344, 845.0078, 334.2578, 842.9922, 272.5625, 680, 180, 698.02344, 185.02344, 656.97656, 186, 599, 180, 597.02344, 186.97656, 598, 146.00781, 599, 143, 598, 128, 587.9922, 76, 571, 76, 590.02344, 244.32031, 1010.8594, 482.4922, 304, 381, 304, 481, 282, 443.5, 282, 286.5, 972.97656, 357.47656, 965.03125, 367, 962.9922, 304.5703, 974.0078, 381.3203, 1057.0313, 348, 1057.9766, 379.53906, 1050, 371.3672, 1050, 357.46094, 853.46875, 298.9922, 306.5, 253.75, 283, 278, 283, 256, 306.5, 358.25, 841.5625, 340.0078, 1029.0391, 459.32813, 970.9531, 284.9922, 962.03125, 293.0078, 958.9922, 181.64844, 1007.85156, 477.97656, 1008.5, 478.03906, 974.0469, 348, 713.02344, 468.03125, 712.03906, 423.0625, 723.03125, 431.5078, 726.0781, 466, 1015.53125, 121.02344, 1026.9219, 135.03125, 968.9297, 136.02344, 970.2031, 123.03906, 818, 58, 889.25, 58, 881.34375, 68.21094, 869.77344, 74, 701.03125, 74, 1009.14844, 477.07813, 1021.2969, 549.0469, 809.0781, 145.99219, 806.5781, 141.71875, 844, 135.00781, 881.6719, 141.00781, 864.1797, 137.02344, 885.3125, 126.953125, 896.71094, 130.99219, 911.1094, 120, 952.4219, 132.00781, 954, 122.046875, 392.75, 70.88281, 409, 76, 988.8672, 435.4922, 1009.7578, 419.72656, 680, 143, 227, 488, 227, 621, 208, 617, 208, 470, 728, 488, 708, 484, 973.03125, 277.0078, 1072.8125, 276.0078, 1071.1484, 285.9922, 969.96875, 179.03125, 776.97656, 212.45313, 823.0469, 170.38281, 823.46094, 171, 776.9922, 290.5078, 785, 291.5703, 762.5469, 313, 756.14844, 306.14063, 745.4531, 311.65625, 750, 303.6797, 743.8672, 308.52344, 741.96094, 254.9375, 750, 253.96094, 410, 142, 1055.8906, 633.96875, 932.0469, 473.8672, 932.9297, 487.95313, 909.1172, 486.96094, 911.89844, 470.85156, 1020.6094, 405.8203, 996.6172, 416.2578, 957.60156, 390.10938, 1093.0625, 621.0703, 1093.9297, 634.96875, 88, 617, 73.03125, 481.03125, 88, 470, 574, 494, 598, 484, 280, 488, 305, 493, 464, 263, 477, 262, 857.40625, 367, 935.1172, 385, 821.46875, 384, 628, 128, 628, 95.92969, 641, 95.07031, 641, 110, 687.03125, 110, 685.96875, 76, 594.97656, 263.04688, 571, 262, 803, 488, 820, 487, 409, 263, 409, 359, 389.5, 358.25, 389.5, 253.75, 5, 479.03906, 5, 443.02344, 77.96094, 445.03125, 910.9219, 470, 911.97656, 470.07813, 385.96875, 57, 385.96875, 7, 408, 7, 408, 57, 570, 57, 570, 7, 594, 7, 594, 57, 672, 57, 672, 7, 689, 7, 689, 57, 801, 57, 801, 7, 818, 7, 307.25, 70.88281, 310.28125, 57, 954, 107, 966.7969, 107, 959, 138.59375, 971.0625, 169, 959, 171, 1048, 169, 1048, 177.02344, 955.5, 177, 829.6172, 177, 787, 214.54688, 775.96875, 245.02344, 787, 245.92969, 414, 494, 389, 493, 286, 60, 286, 6.9921875, 310.28125, 6.9921875, 308.8828, 242, 281.97656, 241.99219, 845, 355.25, 845, 350.59375, 839.40625, 345, 789.59375, 338.9922, 786.3906, 345, 759.3906, 320, 752.78906, 320, 733.71094, 328.47656, 817, 390.70313, 817, 451.15625, 803.0078, 451.21875, 800.9922, 397.84375, 796.8203, 383.22656, 84.03906, 294.0078, 5, 293.02344, 5, 276.89844, 84.9375, 268.90625, 247, 61.796875, 247.03906, 60, 253.02344, 76, 282.6797, 76, 307.25, 131.13281, 285, 81.82031, 283.97656, 124.99219, 926, 546.09375, 926.97656, 502, 1005.28125, 502, 822.27344, 466.97656, 910.9219, 469.9922, 1046.2969, 355, 976.7031, 355, 923.8594, 558.9531, 906.03125, 560.0625, 889, 487, 905, 521.9531, 574.75, 481, 744.03125, 312.72656, 744, 312.02344, 668.53125, 335.8828, 958.4219, 300, 852.1328, 291.9922, 849.0469, 269.46875, 828.5469, 248.96875, 598.1172, 242, 572, 142, 146.17969, 125.99219, 131.70313, 147.00781, 117.63281, 137.8125, 112.27344, 159.28125, 91.96875, 171.35938, 101.03125, 177.67188, 98, 204.92969, 96.96875, 243.00781, 795.6172, 466, 838.59375, 367, 765.8125, 367, 785.21094, 379.0078, 758.2031, 377, 750.4219, 360.84375, 747.5625, 373.14063, 731.9297, 357.5078, 739.03906, 348.4297, 727.78125, 333.67188, 738.02344, 339.2578, 90, 443.5, 661.5703, 342.85156, 596.9922, 379.28906, 649.3672, 347.9297, 630.28125, 354.96094, 616.1328, 357.9922, 736.6406, 255.22656, 736.3125, 254.96875, 728.8594, 255.65625, 96, 256, 96, 278, 598.0078, 464.96875, 574.75, 381, 90, 286.5)
@@ -98,6 +96,12 @@ size = Vector2(185, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cmfwy"]
 size = Vector2(268.75, 98)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4tlo2"]
+radius = 17.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gyagd"]
+radius = 3.0
 
 [node name="Main" type="Node" unique_id=564995157]
 script = ExtResource("1_exbrp")
@@ -191,32 +195,6 @@ offset_bottom = 635.0
 theme_override_font_sizes/font_size = 9
 text = "СВЕРНУТЬ(ШЕЮ)"
 
-[node name="questmark" type="Node2D" parent="." unique_id=509196392]
-
-[node name="Mark" type="Area2D" parent="questmark" unique_id=369548905]
-light_mask = 3
-visibility_layer = 3
-collision_layer = 255
-collision_mask = 255
-script = ExtResource("6_cpas5")
-quest = ExtResource("7_lhnp0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="questmark/Mark" unique_id=1242869224]
-position = Vector2(165, 212)
-shape = SubResource("CircleShape2D_4tlo2")
-
-[node name="Sprite2D" type="Sprite2D" parent="questmark/Mark/CollisionShape2D" unique_id=92118572]
-position = Vector2(-1.5646219e-06, 4.23193e-06)
-scale = Vector2(0.67, 0.6399999)
-texture = ExtResource("10_cpas5")
-
-[node name="Target" type="Area2D" parent="questmark" unique_id=1174478162]
-position = Vector2(176, 242)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="questmark/Target" unique_id=1764713132]
-position = Vector2(0, 1)
-shape = SubResource("CircleShape2D_gyagd")
-
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1768893345]
 position = Vector2(-4, -6)
 navigation_polygon = SubResource("NavigationPolygon_cytv4")
@@ -226,162 +204,297 @@ navigation_layers = 65535
 position = Vector2(4, 6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=274597778]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(182, 359)
 shape = SubResource("RectangleShape2D_gyagd")
 debug_color = Color(0.06592617, 0.19220915, 0.19461852, 0.41960785)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=961755572]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(344, 300)
 shape = SubResource("RectangleShape2D_n8qpb")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=2119618363]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(346, 95)
 shape = SubResource("RectangleShape2D_4tlo2")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=463606963]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(346, 187)
 shape = SubResource("RectangleShape2D_2xd4o")
 
 [node name="CollisionShape2D5" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=610229037]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(128, 142, 109, 154, 98, 172, 95, 199, 94, 236, 277, 235, 279, 139)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=841988065]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(487, 185)
 shape = SubResource("RectangleShape2D_u5q0e")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1142772742]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(432.5, 305)
 shape = SubResource("RectangleShape2D_cytv4")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=269690223]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(520, 304)
 shape = SubResource("RectangleShape2D_tmofk")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=266007220]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(486, 95)
 shape = SubResource("RectangleShape2D_1dbwb")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=152094889]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(1, 649, 63, 649, 68, 476, -1, 474)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=940431686]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(73, 438, 79, 289, -1, 288, 0, 436)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=83786454]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(80, 262, 85, 167, 106, 124, 158, 98, 227, 102, 256, 89, 242, 56, 243, 1, 0, -3, 0, 270)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=814382750]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(592, 258, 594, 352, 612, 351, 626, 348, 645, 341, 657, 336, 664, 329, 739, 306, 737, 250)
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1093937868]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(144, 537.5)
 shape = SubResource("RectangleShape2D_737c4")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=656482562]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(649, 544.5)
 shape = SubResource("RectangleShape2D_pwknh")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=597967518]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(343, 550)
 shape = SubResource("RectangleShape2D_mmtr7")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=558262721]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(490, 550.5)
 shape = SubResource("RectangleShape2D_3dfw7")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=2044289479]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(249.5, 548.5)
 shape = SubResource("RectangleShape2D_sw758")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=693640181]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(761.5, 548.5)
 shape = SubResource("RectangleShape2D_m2vlg")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1523296341]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(850.5, 547.5)
 shape = SubResource("RectangleShape2D_3ipvn")
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=785428640]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(1055, 648, 1053, 629, 1091, 630, 1090, 614, 1063, 616, 1033, 491, 1026, 453, 1007, 414, 1055, 374, 1054, 341, 971, 341, 968, 280, 1068, 281, 1070, 269, 970, 270, 967, 174, 1045, 172, 1045, 162, 968, 162, 966, 131, 1025, 130, 1012, 114, 967, 116, 942, -2, 1151, -3, 1151, 651)
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=1021862344]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(0, 1)
 polygon = PackedVector2Array(594, 234, 771, 237, 772, 205, 818, 163, 801, 134, 840, 127, 860, 129, 881, 119, 907, 112, 949, 114, 949, 99, 964, 99, 943, -1, 926, 0, 878, 62, 866, 68, 698, 68, 695, 179, 653, 180, 592, 181, 593, 139, 593, 120, 623, 120, 623, 88, 638, 87, 638, 102, 682, 102, 681, 70, 585, 70, 587, 236)
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1676499100]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(635.5, 155.5)
 shape = SubResource("RectangleShape2D_gcj0p")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=262038264]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(485, 25)
 shape = SubResource("RectangleShape2D_emu6u")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=2004593426]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(344.125, 25)
 shape = SubResource("RectangleShape2D_mtau3")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=2090769033]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(262.5, 27)
 shape = SubResource("RectangleShape2D_262s2")
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1853566695]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(629, 25.5)
 shape = SubResource("RectangleShape2D_hyd4m")
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1014147261]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(741, 25)
 shape = SubResource("RectangleShape2D_g2smt")
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1940905747]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(873, 25)
 shape = SubResource("RectangleShape2D_ge5dr")
 
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=1427300985]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(249, 71, 278, 71, 280, 76, 279, 118, 142, 119, 113, 131, 87, 165, 80, 262, 73, 262, 78, 169, 109, 123, 145, 105)
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1106457505]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(185.5, 261)
 shape = SubResource("RectangleShape2D_73kqj")
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1978101571]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(435.375, 425)
 shape = SubResource("RectangleShape2D_cmfwy")
 
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=439410725]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(595, 458, 594, 374, 723, 329, 727, 352, 743, 368, 754, 372, 781, 374, 792, 378, 796, 392, 798, 445, 791, 459, 723, 459, 720, 425, 707, 415, 708, 461)
 
 [node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=555696489]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(819, 460, 814, 445, 814, 385, 818, 379, 931, 380, 953, 385, 984, 430, 1004, 471, 907, 463)
 
 [node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=616831890]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(909, 464, 929, 467, 930, 483, 906, 482, 902, 516, 903, 553, 919, 552, 921, 540, 922, 495, 1002, 495, 1018, 542, 1033, 541, 1030, 524, 1006, 477, 1002, 471)
 
 [node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=128675092]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(678, 321, 679, 255, 732, 250, 737, 254, 737, 299, 740, 305)
 
 [node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=634203620]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(747, 249, 747, 297, 752, 299, 772, 284, 773, 250)
 
 [node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=99490503]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(760, 307, 782, 286, 782, 251, 820, 250, 838, 267, 840, 328, 837, 333, 786, 332)
 
 [node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=489106338]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(784, 239, 784, 209, 826, 172, 951, 172, 954, 176, 957, 286, 849, 285, 846, 263, 825, 242)
 
 [node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=2114945053]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(893, 126, 948, 127, 954, 133, 954, 164, 944, 164, 820, 164, 805, 141, 878, 136)
 
 [node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=2001585837]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(850, 294, 846, 300, 848, 349, 854, 360, 960, 360, 958, 299, 954, 295)
 
 [node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=1683546652]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(731, 323, 735, 333, 736, 342, 747, 354, 762, 360, 834, 360, 840, 349, 840, 345, 835, 340, 782, 340, 755, 315, 749, 315)
 
 [node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=1971232266]
+modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(973, 350, 970, 352, 971, 375, 993, 409, 1016, 399, 1045, 365, 1045, 352, 1042, 350)
 
 [node name="Base" type="Marker2D" parent="." unique_id=828348401]
 position = Vector2(955, 189)
 
+[node name="AgentProfile" parent="." unique_id=749323441 instance=ExtResource("11_lhnp0")]
+visible = false
+
+[node name="QuestSpawner" type="Node" parent="." unique_id=1939854702]
+script = ExtResource("9_4tlo2")
+available_quests = Array[ExtResource("2_n8qpb")]([ExtResource("3_4tlo2"), ExtResource("7_lhnp0")])
+spawn_interval = 5.0
+
+[node name="QuestSpawns" type="Node2D" parent="QuestSpawner" unique_id=2045757676]
+
+[node name="questmark" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=138650843]
+
+[node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark" unique_id=60698908]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("6_cpas5")
+quest = ExtResource("7_lhnp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark/Mark" unique_id=1554819596]
+position = Vector2(165, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark/Mark/CollisionShape2D" unique_id=337048704]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("10_cpas5")
+
+[node name="Target" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark" unique_id=559766164]
+position = Vector2(176, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark/Target" unique_id=479108207]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gyagd")
+
+[node name="questmark2" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=1679217632]
+position = Vector2(112, 204)
+
+[node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark2" unique_id=1241600266]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("6_cpas5")
+quest = ExtResource("7_lhnp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark2/Mark" unique_id=514529396]
+position = Vector2(165, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark2/Mark/CollisionShape2D" unique_id=1298204334]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("10_cpas5")
+
+[node name="Target" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark2" unique_id=804170677]
+position = Vector2(176, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark2/Target" unique_id=747764444]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gyagd")
+
+[node name="questmark3" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=1797739722]
+position = Vector2(602, -27)
+
+[node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark3" unique_id=2145723962]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("6_cpas5")
+quest = ExtResource("7_lhnp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark3/Mark" unique_id=1408495170]
+position = Vector2(165, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark3/Mark/CollisionShape2D" unique_id=1395565202]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("10_cpas5")
+
+[node name="Target" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark3" unique_id=1428745378]
+position = Vector2(176, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark3/Target" unique_id=442405965]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gyagd")
+
 [connection signal="pressed" from="Button" to="Panel" method="_on_button_pressed"]
-[connection signal="input_event" from="questmark/Mark" to="questmark/Mark" method="_on_input_event"]
+[connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark/Mark" to="QuestSpawner/QuestSpawns/questmark/Mark" method="_on_input_event"]
+[connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark2/Mark" to="QuestSpawner/QuestSpawns/questmark2/Mark" method="_on_input_event"]
+[connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark3/Mark" to="QuestSpawner/QuestSpawns/questmark3/Mark" method="_on_input_event"]

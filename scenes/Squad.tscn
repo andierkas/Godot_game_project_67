@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bketunnbh7vfg" path="res://scenes/squad.gd" id="1_6yqs4"]
 [ext_resource type="Shader" uid="uid://f1cn3d8pyo4i" path="res://new_shader.gdshader" id="1_8ywn5"]
-[ext_resource type="Texture2D" uid="uid://cv5h4wn4nruhe" path="res://materials/1781209134 1 (1).png" id="2_6yqs4"]
+[ext_resource type="Texture2D" uid="uid://ddyrwbstl1ex6" path="res://materials/Sprite_agent/male/1.png" id="3_6yqs4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lolqr"]
 radius = 1.0
@@ -12,6 +12,8 @@ shader = ExtResource("1_8ywn5")
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1278575902]
 script = ExtResource("1_6yqs4")
+metadata/_edit_vertical_guides_ = [-32.0, 32.0]
+metadata/_edit_horizontal_guides_ = [-31.0, 31.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1022191965]
 shape = SubResource("CircleShape2D_lolqr")
@@ -20,4 +22,5 @@ shape = SubResource("CircleShape2D_lolqr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=888440895]
 material = SubResource("ShaderMaterial_hyeuf")
-texture = ExtResource("2_6yqs4")
+scale = Vector2(0.045, 0.08)
+texture = ExtResource("3_6yqs4")
