@@ -21,8 +21,10 @@ func setup(agents_array: Array, target_pos: Vector2) -> void:
 	print("🎯 Цель: ", target_pos)
 	
 	if agents_count == 1:
+		sprite.scale = Vector2(0.045, 0.08)
 		sprite.texture = agents[0].sprite
 	else:
+		sprite.scale = Vector2(1, 1)
 		sprite.texture = TEAM_SPRITE
 	
 	navigation_agent.set_target_position(target_pos)

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://dkhilhckim3y1"]
+
+[ext_resource type="Script" uid="uid://dd4awjxunja2o" path="res://Quest.gd" id="1_05oyi"]
+[ext_resource type="Texture2D" uid="uid://c4upj24uh6tnw" path="res://materials/Gemini_Generated_Image_ib8wmpib8wmpib8w.png" id="2_2ef6x"]
+[ext_resource type="Script" uid="uid://cwob02fmvc3mt" path="res://QuestVariant.gd" id="2_4qf4e"]
+[ext_resource type="Resource" uid="uid://dydbhtbh4pf01" path="res://materials/quests/var1.tres" id="4_rlyer"]
+[ext_resource type="Resource" uid="uid://bbf1ikk1l4bsq" path="res://materials/quests/var2.tres" id="5_4nalp"]
+
+[resource]
+script = ExtResource("1_05oyi")
+name = "123"
+description = "123123"
+player_reward_xp = 100
+variants = Array[ExtResource("2_4qf4e")]([ExtResource("4_rlyer"), ExtResource("5_4nalp")])
+slide = ExtResource("2_2ef6x")
+metadata/_custom_type_script = "uid://dd4awjxunja2o"

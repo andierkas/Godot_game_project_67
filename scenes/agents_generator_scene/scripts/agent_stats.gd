@@ -11,6 +11,7 @@ enum Status {
 # Создаем переменную этого типа и задаем значение по умолчанию
 @export var current_status: Status = Status.AVAILABLE
 @export var is_dummy: bool = false #статус для заглушки
+@export var is_wounded: bool = false # false = здоров, true = ранен
 
 # Статы
 @export var strenght: int 
@@ -28,6 +29,15 @@ enum Status {
 
 #Спрайты
 @export var sprite: Texture2D
+
+# ⬇️ НОВЫЕ ПОЛЯ: прогрессия и прокачка
+@export var xp: int = 0
+@export var level: int = 1
+@export var skill_points: int = 0
+
+# Сигнал для UI (чтобы показать иконку ⬆️)
+signal leveled_up
+signal skill_points_changed
 
 func _init():
 	var rand_gender = randi_range(0,1)
@@ -124,3 +134,79 @@ func pick_random_name():
 		agent_first_name = _array_names.pick_random()
 		agent_second_name = _array_second_names.pick_random()
 		agent_last_name = _array_patronymics_names.pick_random()
+
+# ⬇️ НОВЫЕ МЕТОДЫ: XP и прокачка
+
+# Получить сколько XP нужно для следующего уровня
+func get_xp_to_next_level() -> int:
+	return int(200 * pow(1.25, level - 1))
+
+# Добавить XP агенту
+func add_xp(amount: int) -> void:
+	if amount <= 0:
+		return
+	
+	xp += amount
+	print("📈 Агент ", agent_second_name, " получил ", amount, " XP (всего: ", xp, "/", get_xp_to_next_level(), ")")
+	
+	# Проверяем повышение уровня (может быть несколько уровней сразу)
+	while xp >= get_xp_to_next_level():
+		xp -= get_xp_to_next_level()
+		level += 1
+		_on_level_up()
+	
+	skill_points_changed.emit()
+
+# Что происходит при повышении уровня
+func _on_level_up() -> void:
+	print("️ Агент ", agent_second_name, " повысил уровень до ", level, "!")
+	
+	if level % 2 == 0:
+		# ЧЁТНЫЙ уровень (2, 4, 6...) — игрок сам выбирает
+		skill_points += 1
+		print(" Выдан 1 skillpoint для ручного распределения")
+	else:
+		# НЕЧЁТНЫЙ уровень (3, 5, 7...) — случайное распределение
+		_auto_distribute_skill_point()
+		print("🎲 Skillpoint распределён случайно")
+	
+	leveled_up.emit()
+	skill_points_changed.emit()
+
+# Случайное распределение skillpoint (нечётные уровни)
+func _auto_distribute_skill_point() -> void:
+	var stats_names = ["strenght", "harisma", "agility", "endurance", "intellect"]
+	var random_stat = stats_names[randi() % stats_names.size()]
+	
+	# Увеличиваем случайный стат на 1
+	match random_stat:
+		"strenght": strenght += 1
+		"harisma": harisma += 1
+		"agility": agility += 1
+		"endurance": endurance += 1
+		"intellect": intellect += 1
+	
+	print("🎲 Случайно повышен стат: ", random_stat, " (теперь: ", get(random_stat), ")")
+
+# Ручное распределение skillpoint (вызывается из UI профиля агента)
+func spend_skill_point(stat_name: String) -> bool:
+	if skill_points <= 0:
+		print("⚠️ Нет доступных skillpoints!")
+		return false
+	
+	# Проверяем что такой стат существует
+	if not ["strenght", "harisma", "agility", "endurance", "intellect"].has(stat_name):
+		print("⚠️ Неизвестный стат: ", stat_name)
+		return false
+	
+	# Тратим skillpoint и повышаем стат
+	skill_points -= 1
+	set(stat_name, get(stat_name) + 1)
+	
+	print("✅ Повышен стат ", stat_name, " до ", get(stat_name), ". Осталось skillpoints: ", skill_points)
+	skill_points_changed.emit()
+	return true
+
+# Получить полное имя агента
+func get_full_name() -> String:
+	return agent_first_name + " " + agent_last_name + " " + agent_second_name
