@@ -13,9 +13,9 @@ func _on_button_pressed() -> void:
 	if showed:
 		# Создаём новый твин и сохраняем ссылку
 		current_tween = create_tween()
-		current_tween.tween_property(self, "position", Vector2(90, 1100), 1.0)
+		current_tween.tween_property(self, "position", Vector2(241, 1100), 1.0)
 		showed = false
 	else:
 		current_tween = create_tween()
-		current_tween.tween_property(self, "position", Vector2(90, 490), 0.3)
+		current_tween.tween_property(self, "position", Vector2(241, 550), 0.3)
 		showed = true

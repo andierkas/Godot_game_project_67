@@ -192,8 +192,8 @@ offset_left = 1.0
 offset_top = 604.0
 offset_right = 85.0
 offset_bottom = 635.0
-theme_override_font_sizes/font_size = 9
-text = "СВЕРНУТЬ(ШЕЮ)"
+theme_override_font_sizes/font_size = 15
+text = "СВЕРНУТЬ"
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1768893345]
 position = Vector2(-4, -6)
@@ -250,7 +250,7 @@ shape = SubResource("RectangleShape2D_1dbwb")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=152094889]
 modulate = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(1, 649, 63, 649, 68, 476, -1, 474)
+polygon = PackedVector2Array(1, 649, 63, 649, 63.87036, 618.8856, 68, 476, -1, 474)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=940431686]
 modulate = Color(0, 0, 0, 1)
@@ -258,7 +258,7 @@ polygon = PackedVector2Array(73, 438, 79, 289, -1, 288, 0, 436)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=83786454]
 modulate = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(80, 262, 85, 167, 106, 124, 158, 98, 227, 102, 256, 89, 242, 56, 243, 1, 0, -3, 0, 270)
+polygon = PackedVector2Array(80, 262, 85, 167, 106, 124, 158, 98, 227, 102, 256, 89, 242, 56, 243, 1, 0, 0, 0, 270)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=814382750]
 modulate = Color(0, 0, 0, 1)
@@ -493,6 +493,28 @@ position = Vector2(176, 242)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark3/Target" unique_id=442405965]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_gyagd")
+
+[node name="FullHP" type="ColorRect" parent="." unique_id=1906183672]
+offset_right = 275.0
+offset_bottom = 40.0
+
+[node name="CurrentHP" type="ColorRect" parent="." unique_id=975642460]
+offset_right = 275.0
+offset_bottom = 40.0
+color = Color(1, 0, 0, 1)
+
+[node name="FullXP" type="ColorRect" parent="." unique_id=1623842065]
+offset_left = 1107.0
+offset_top = 2.0
+offset_right = 1147.0
+offset_bottom = 282.0
+
+[node name="CurrentXP" type="ColorRect" parent="." unique_id=2023304350]
+offset_left = 1107.0
+offset_top = 282.0
+offset_right = 1147.0
+offset_bottom = 282.0
+color = Color(1, 1, 0.34901962, 1)
 
 [connection signal="pressed" from="Button" to="Panel" method="_on_button_pressed"]
 [connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark/Mark" to="QuestSpawner/QuestSpawns/questmark/Mark" method="_on_input_event"]

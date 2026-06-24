@@ -6,6 +6,8 @@ const QuestSolveScene = preload("res://scenes/Gameplay_scene/quest_solve.tscn")
 
 @onready var base_spawn = $Base
 @onready var quest_spawner = $QuestSpawner
+@onready var currentHP = $CurrentHP
+@onready var currentXP = $CurrentXP
 
 # Массив активных квестов. Каждый словарь хранит свои данные, чтобы отряды не путались
 var _active_quests: Array[Dictionary] = []
@@ -226,4 +228,10 @@ func _refresh_ui() -> void:
 	var grid = get_node_or_null("Panel/GridContainer")
 	if grid and grid.has_method("refresh_all_slots"):
 		grid.refresh_all_slots()
-		print("🔄 UI обновлен")
+	var hp_percent = float(PlayerStats.health) / float(PlayerStats.max_health) * 100.0
+	var hp_width = hp_percent * 2.75
+	currentHP.size.x = clamp(hp_width, 0, 275)
+	var xp_percent = float(PlayerStats.xp) / float(PlayerStats.get_xp_to_next_level()) * 100.0
+	var xp_width = xp_percent * 2.8
+	currentXP.size.y = clamp(xp_width, 0, 280)
+	print("🔄 UI обновлен")
