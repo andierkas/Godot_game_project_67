@@ -510,10 +510,11 @@ offset_right = 1147.0
 offset_bottom = 282.0
 
 [node name="CurrentXP" type="ColorRect" parent="." unique_id=2023304350]
-offset_left = 1107.0
-offset_top = 282.0
-offset_right = 1147.0
-offset_bottom = 282.0
+offset_left = 1146.0
+offset_top = 285.0
+offset_right = 1186.0
+offset_bottom = 285.0
+rotation = 3.1415927
 color = Color(1, 1, 0.34901962, 1)
 
 [connection signal="pressed" from="Button" to="Panel" method="_on_button_pressed"]

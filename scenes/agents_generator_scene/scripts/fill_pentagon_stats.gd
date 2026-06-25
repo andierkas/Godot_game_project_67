@@ -1,10 +1,10 @@
 extends Polygon2D
 
 @onready var str = $StrenghtStat
-@onready var intel = $"Intellect Stat"
-@onready var agi = $"Agility Stat"
-@onready var har = $"Harisma Stat"
-@onready var endur = $"Endurance Stat"
+@onready var intel = $"IntellectStat"
+@onready var agi = $"AgilityStat"
+@onready var har = $"HarismaStat"
+@onready var endur = $"EnduranceStat"
 
 @export var agent: AgentStats
 	
