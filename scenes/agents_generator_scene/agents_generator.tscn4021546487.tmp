@@ -11,15 +11,12 @@
 [ext_resource type="SpriteFrames" uid="uid://bpvbjsuve4rsn" path="res://materials/main_menu_screen/screen/screen_anim/new_sprite_frames.tres" id="9_npaxp"]
 [ext_resource type="Texture2D" uid="uid://bobi82kophq4u" path="res://materials/generate_agent_scene/Sprite-0007.png" id="9_rqoys"]
 [ext_resource type="Texture2D" uid="uid://b2qicmi8mikdt" path="res://materials/load_game_menu/back_button/Sprite-0014.png" id="10_npaxp"]
+[ext_resource type="Texture2D" uid="uid://cbj5xqajasxtd" path="res://materials/generate_agent_scene/Sprite-0012-export.png" id="10_rqoys"]
 [ext_resource type="Texture2D" uid="uid://djxeugnnjpide" path="res://materials/load_game_menu/back_button/Sprite-0016.png" id="11_rqoys"]
-[ext_resource type="Texture2D" uid="uid://q2sc58aaydua" path="res://materials/generate_agent_scene/Sprite-0012-export-export.png" id="12_7pq6o"]
 [ext_resource type="Texture2D" uid="uid://jm26r0snx3vh" path="res://materials/load_game_menu/back_button/Sprite-0015.png" id="12_jw7mo"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="13_c036g"]
 [ext_resource type="Texture2D" uid="uid://cmhqf5asoldai" path="res://materials/generate_agent_scene/Sprite-0003.png" id="13_o8ix8"]
 [ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://button_sounds/ButtonSoundController.gd" id="15_npaxp"]
-[ext_resource type="Texture2D" uid="uid://c1digebjx32ek" path="res://materials/generate_agent_scene/Sprite-0001.png" id="18_c036g"]
-[ext_resource type="Texture2D" uid="uid://cxf7mkuuap8ro" path="res://materials/generate_agent_scene/Sprite-007-export.png" id="19_7pq6o"]
-[ext_resource type="Texture2D" uid="uid://duibdlwy1dsff" path="res://materials/generate_agent_scene/Sprite-0003-export.png" id="20_8d7rt"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4aseg"]
 
@@ -47,11 +44,274 @@ mouse_filter = 2
 script = ExtResource("1_67err")
 metadata/_edit_vertical_guides_ = [1646.0]
 
+[node name="Current_agent" type="Node2D" parent="." unique_id=216067582]
+script = ExtResource("3_aw3uw")
+
+[node name="SpriteAgent" type="Sprite2D" parent="Current_agent" unique_id=917593877]
+position = Vector2(605.56354, 290.06836)
+scale = Vector2(0.5572763, 0.6485821)
+texture = ExtResource("4_ye48f")
+region_enabled = true
+region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
+
+[node name="Background" type="TextureRect" parent="Current_agent" unique_id=1089347877]
+offset_left = 502.04895
+offset_top = 177.81966
+offset_right = 1175.15
+offset_bottom = 615.7007
+texture = ExtResource("9_rqoys")
+
+[node name="StringStats" type="Control" parent="Current_agent/Background" unique_id=1161092974]
+anchors_preset = 0
+offset_left = -285.0
+offset_top = -29.0
+offset_right = -245.0
+offset_bottom = 11.0
+
+[node name="Strenght" type="Label" parent="Current_agent/Background/StringStats" unique_id=1442726510]
+layout_mode = 0
+offset_left = 336.0936
+offset_top = 335.7389
+offset_right = 499.0941
+offset_bottom = 382.7389
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
+text = "Strenght"
+
+[node name="Intellect" type="Label" parent="Current_agent/Background/StringStats" unique_id=1979679467]
+layout_mode = 0
+offset_left = 336.09363
+offset_top = 375.74838
+offset_right = 501.09363
+offset_bottom = 422.74835
+mouse_filter = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
+text = "Intellect"
+
+[node name="Harisma" type="Label" parent="Current_agent/Background/StringStats" unique_id=633224456]
+layout_mode = 0
+offset_left = 318.32193
+offset_top = 295.72952
+offset_right = 462.32196
+offset_bottom = 342.72952
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
+text = "Harisma"
+
+[node name="Endurance" type="Label" parent="Current_agent/Background/StringStats" unique_id=1208742182]
+layout_mode = 0
+offset_left = 336.09363
+offset_top = 415.75775
+offset_right = 519.0938
+offset_bottom = 462.75775
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
+text = "Endurance"
+
+[node name="Agility" type="Label" parent="Current_agent/Background/StringStats" unique_id=958097414]
+layout_mode = 0
+offset_left = 318.32184
+offset_top = 256.83145
+offset_right = 462.32184
+offset_bottom = 303.83142
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.5056689, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
+text = "аgility"
+
+[node name="Gender_age" type="Label" parent="Current_agent" unique_id=1406729124]
+offset_left = 715.30853
+offset_top = 230.05424
+offset_right = 957.3087
+offset_bottom = 285.0542
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 30
+text = "GENDER, аGE"
+
+[node name="Aspect" type="Label" parent="Current_agent" unique_id=1834277032]
+offset_left = 996.3227
+offset_top = 230.05424
+offset_right = 1137.3228
+offset_bottom = 281.05432
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 30
+text = "аSPECT"
+
+[node name="NameAgent" type="Label" parent="Current_agent" unique_id=895202275]
+offset_left = 706.4226
+offset_top = 182.26505
+offset_right = 1074.4226
+offset_bottom = 216.26505
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ye48f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4b6ty")
+text = "аnton аntonov аntonovich"
+
+[node name="FillPentagonStats" type="Polygon2D" parent="Current_agent" unique_id=1369337196]
+position = Vector2(970.63025, 453.59692)
+scale = Vector2(1.025, 0.9997846)
+color = Color(0.0003155392, 0.36207384, 0, 1)
+polygon = PackedVector2Array(-97.560974, 0, 0, -99, 97.560974, 0, 61.46338, 101, -60.487854, 101)
+script = ExtResource("5_pi0cj")
+
+[node name="StrenghtStat" type="Label" parent="Current_agent/FillPentagonStats" unique_id=940462489]
+offset_left = -141.81436
+offset_top = -33.505108
+offset_right = -66.53012
+offset_bottom = 31.494892
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.6901961, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
+text = "5"
+metadata/_edit_use_anchors_ = true
+
+[node name="IntellectStat" type="Label" parent="Current_agent/FillPentagonStats" unique_id=1803243328]
+offset_left = -11.707275
+offset_top = -162.44644
+offset_right = 57.57483
+offset_bottom = -97.44644
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.6901961, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
+text = "5"
+metadata/_edit_use_anchors_ = true
+
+[node name="Agility Stat" type="Label" parent="Current_agent/FillPentagonStats" unique_id=1329110472]
+offset_left = 68.29266
+offset_top = 98.0
+offset_right = 163.29266
+offset_bottom = 164.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.6901961, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
+text = "5"
+
+[node name="Harisma Stat" type="Label" parent="Current_agent/FillPentagonStats" unique_id=1949133891]
+offset_left = 108.50574
+offset_top = -32.393486
+offset_right = 203.50574
+offset_bottom = 32.606514
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.6901961, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
+text = "5"
+
+[node name="Endurance Stat" type="Label" parent="Current_agent/FillPentagonStats" unique_id=191798574]
+offset_left = -82.92682
+offset_top = 98.0
+offset_right = 12.073181
+offset_bottom = 164.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.6901961, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
+text = "5"
+
 [node name="Agentparty" type="Control" parent="." unique_id=116628508]
 layout_direction = 4
+layout_mode = 1
 anchors_preset = 0
 offset_left = 22.0
-offset_top = 57.999996
+offset_top = 58.0
 offset_right = 464.0
 offset_bottom = 660.15546
 mouse_filter = 2
@@ -299,301 +559,15 @@ editable = false
 
 [node name="Line2D2" type="Line2D" parent="Agentparty/dragbox/Panel5/Agent" unique_id=996037024]
 
-[node name="Current_agent" type="Node2D" parent="." unique_id=216067582]
-script = ExtResource("3_aw3uw")
-
-[node name="SpriteAgent" type="Sprite2D" parent="Current_agent" unique_id=917593877]
-position = Vector2(605.56354, 290.06836)
-scale = Vector2(0.5572763, 0.6485821)
-texture = ExtResource("4_ye48f")
-region_enabled = true
-region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
-
-[node name="Background" type="TextureRect" parent="Current_agent" unique_id=1089347877]
-offset_left = 503.1596
-offset_top = 177.81967
-offset_right = 1176.2607
-offset_bottom = 615.7007
-texture = ExtResource("9_rqoys")
-
-[node name="AnimScreen" type="AnimatedSprite2D" parent="Current_agent" unique_id=586831948]
-modulate = Color(1, 1, 1, 0.18431373)
-position = Vector2(627.99493, 394.97433)
-rotation = 3.1415925
-scale = Vector2(6.1891017, 4.2137165)
-sprite_frames = ExtResource("9_npaxp")
-animation = &"screen_animation"
-
-[node name="StringStats" type="Control" parent="Current_agent" unique_id=1161092974]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 218.1596
-offset_top = 148.81967
-offset_right = 258.1596
-offset_bottom = 188.81967
-
-[node name="Strenght" type="Label" parent="Current_agent/StringStats" unique_id=1442726510]
-layout_mode = 0
-offset_left = 324.9863
-offset_top = 334.62756
-offset_right = 487.98676
-offset_bottom = 381.62756
-mouse_filter = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
-text = "Strenght"
-
-[node name="Intellect" type="Label" parent="Current_agent/StringStats" unique_id=1979679467]
-layout_mode = 0
-offset_left = 321.65375
-offset_top = 294.61816
-offset_right = 486.65375
-offset_bottom = 341.61813
-mouse_filter = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
-text = "Intellect"
-
-[node name="Harisma" type="Label" parent="Current_agent/StringStats" unique_id=633224456]
-layout_mode = 0
-offset_left = 350.53284
-offset_top = 373.5256
-offset_right = 494.53287
-offset_bottom = 420.5256
-mouse_filter = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
-text = "Harisma"
-
-[node name="Endurance" type="Label" parent="Current_agent/StringStats" unique_id=1208742182]
-layout_mode = 0
-offset_left = 304.99326
-offset_top = 255.72
-offset_right = 487.99344
-offset_bottom = 302.72
-mouse_filter = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
-text = "Endurance"
-
-[node name="Agility" type="Label" parent="Current_agent/StringStats" unique_id=958097414]
-layout_mode = 0
-offset_left = 370.52606
-offset_top = 413.53503
-offset_right = 514.52606
-offset_bottom = 460.535
-mouse_filter = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5056689, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4aseg")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
-text = "аgility"
-
-[node name="Gender_age" type="Label" parent="Current_agent" unique_id=1406729124]
-offset_left = 715.30853
-offset_top = 230.05424
-offset_right = 957.3087
-offset_bottom = 285.0542
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/shadow_offset_x = 3
-theme_override_constants/shadow_offset_y = 3
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 30
-text = "GENDER, аGE"
-
-[node name="Aspect" type="Label" parent="Current_agent" unique_id=1834277032]
-offset_left = 992.99084
-offset_top = 230.05424
-offset_right = 1133.9908
-offset_bottom = 281.05432
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/shadow_offset_x = 5
-theme_override_constants/shadow_offset_y = 3
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 30
-text = "аSPECT"
-
-[node name="NameAgent" type="Label" parent="Current_agent" unique_id=895202275]
-offset_left = 714.1976
-offset_top = 188.9334
-offset_right = 1082.1975
-offset_bottom = 222.9334
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/shadow_offset_x = 3
-theme_override_constants/shadow_offset_y = 3
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ye48f")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_4b6ty")
-text = "аnton аntonov аntonovich"
-
-[node name="FillPentagonStats" type="Polygon2D" parent="Current_agent" unique_id=1369337196]
-position = Vector2(945.0834, 453.59686)
-scale = Vector2(1.025, 0.9997846)
-color = Color(0.0003155392, 0.36207384, 0, 1)
-polygon = PackedVector2Array(-97.560974, 0, 0, -99, 97.560974, 0, 61.46338, 101, -60.487854, 101)
-script = ExtResource("5_pi0cj")
-
-[node name="StrenghtStat" type="Label" parent="Current_agent/FillPentagonStats" unique_id=940462489]
-offset_left = -141.81436
-offset_top = -33.505108
-offset_right = -66.53012
-offset_bottom = 31.494892
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/line_spacing = 2
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
-text = "5"
-metadata/_edit_use_anchors_ = true
-
-[node name="IntellectStat" type="Label" parent="Current_agent/FillPentagonStats" unique_id=1803243328]
-offset_left = -11.707275
-offset_top = -162.44644
-offset_right = 57.57483
-offset_bottom = -97.44644
-mouse_filter = 1
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/line_spacing = 2
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
-text = "5"
-metadata/_edit_use_anchors_ = true
-
-[node name="AgilityStat" type="Label" parent="Current_agent/FillPentagonStats" unique_id=1329110472]
-offset_left = 68.29266
-offset_top = 98.0
-offset_right = 163.29266
-offset_bottom = 164.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/line_spacing = 2
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
-text = "5"
-metadata/_edit_use_anchors_ = true
-
-[node name="HarismaStat" type="Label" parent="Current_agent/FillPentagonStats" unique_id=1949133891]
-offset_left = 108.50574
-offset_top = -32.393486
-offset_right = 203.50574
-offset_bottom = 32.606514
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/line_spacing = 2
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
-text = "5"
-metadata/_edit_use_anchors_ = true
-
-[node name="EnduranceStat" type="Label" parent="Current_agent/FillPentagonStats" unique_id=191798574]
-offset_left = -82.92682
-offset_top = 98.0
-offset_right = 12.073181
-offset_bottom = 164.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/line_spacing = 2
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxEmpty_e86q2")
-text = "5"
-metadata/_edit_use_anchors_ = true
-
 [node name="Line2D" type="Line2D" parent="." unique_id=975851884]
-position = Vector2(144.4596, 19.0784)
+position = Vector2(170.00629, 19.0784)
 scale = Vector2(1.0453913, 1.0187589)
 points = PackedVector2Array(766, 328, 765.99994, 368.41913, 766, 427, 866, 427, 766, 427, 666, 427, 766, 427, 704, 528, 766, 427, 829, 528)
 width = 2.0
 default_color = Color(0, 0.81960785, 0, 1)
 
 [node name="PentagonStats2" type="Line2D" parent="." unique_id=360619423]
-position = Vector2(213.27484, 82.80957)
+position = Vector2(238.8215, 82.809555)
 scale = Vector2(1, 0.9999998)
 points = PackedVector2Array(832, 370, 795, 471, 670, 471, 632, 370, 732, 272)
 closed = true
@@ -602,7 +576,7 @@ sharp_limit = 3.0
 round_precision = 3
 
 [node name="PentagonStats" type="Line2D" parent="." unique_id=687906117]
-position = Vector2(213.26733, 82.52557)
+position = Vector2(238.81398, 82.52557)
 scale = Vector2(1, 0.9999998)
 points = PackedVector2Array(832, 370, 795, 471, 670, 471, 632, 370, 732, 272)
 closed = true
@@ -610,10 +584,19 @@ width = 5.0
 default_color = Color(0, 0.81960785, 0, 1)
 round_precision = 3
 
+[node name="AnimScreen" type="AnimatedSprite2D" parent="." unique_id=586831948]
+visible = false
+modulate = Color(1, 1, 1, 0.18431373)
+position = Vector2(627.99493, 394.97437)
+rotation = -3.1415927
+scale = Vector2(6.1891017, 4.2137165)
+sprite_frames = ExtResource("9_npaxp")
+animation = &"screen_animation"
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=729880096]
 position = Vector2(638.7238, 359.00003)
 scale = Vector2(3.9982738, 4.0000005)
-texture = ExtResource("12_7pq6o")
+texture = ExtResource("10_rqoys")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=2032491643]
 layout_mode = 0
@@ -683,87 +666,40 @@ script = ExtResource("15_npaxp")
 hover_profile = "pc_hover"
 press_profile = "pc_press"
 
-[node name="next" type="TextureButton" parent="." unique_id=2044502870]
+[node name="next" type="Button" parent="." unique_id=843432779]
 layout_mode = 0
-offset_left = 1024.0913
-offset_top = 31.118435
-offset_right = 1221.974
-offset_bottom = 121.13965
-texture_normal = ExtResource("18_c036g")
-texture_pressed = ExtResource("20_8d7rt")
-texture_hover = ExtResource("19_7pq6o")
-ignore_texture_size = true
-stretch_mode = 0
+offset_left = 1004.0
+offset_top = 40.11137
+offset_right = 1230.0
+offset_bottom = 113.111374
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 35
+action_mode = 0
+text = "Играть"
 
 [node name="Node" type="Node" parent="next" unique_id=2105092212]
 script = ExtResource("15_npaxp")
 hover_profile = "pc_hover"
 press_profile = "pc_press"
 
-[node name="Label" type="Label" parent="next" unique_id=2115254582]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -72.38928
-offset_top = -25.5
-offset_right = 74.61072
-offset_bottom = 25.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 32
-text = "Играть"
-
-[node name="reroll" type="TextureButton" parent="." unique_id=55143456]
+[node name="reroll" type="Button" parent="." unique_id=1098214272]
 layout_mode = 0
-offset_left = 738.77856
-offset_top = 623.4802
-offset_right = 930.78986
-offset_bottom = 713.4455
+offset_left = 741.0
+offset_top = 639.0
+offset_right = 928.0
+offset_bottom = 709.0
+theme_override_fonts/font = ExtResource("13_c036g")
+theme_override_font_sizes/font_size = 35
 action_mode = 0
-texture_normal = ExtResource("18_c036g")
-texture_pressed = ExtResource("20_8d7rt")
-texture_hover = ExtResource("19_7pq6o")
-ignore_texture_size = true
-stretch_mode = 0
+text = "рерол"
 
 [node name="Node" type="Node" parent="reroll" unique_id=1488839496]
 script = ExtResource("15_npaxp")
 hover_profile = "pc_hover"
 press_profile = "pc_press"
 
-[node name="Label" type="Label" parent="reroll" unique_id=1141442879]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -61.5
-offset_top = -25.5
-offset_right = 61.5
-offset_bottom = 25.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 37
-text = "рерол"
-
-[connection signal="mouse_entered" from="Current_agent/StringStats/Strenght" to="." method="_on_strenght_mouse_entered"]
-[connection signal="mouse_exited" from="Current_agent/StringStats/Strenght" to="." method="_on_strenght_mouse_exited"]
-[connection signal="mouse_entered" from="Current_agent/StringStats/Intellect" to="." method="_on_intellect_mouse_entered"]
-[connection signal="mouse_exited" from="Current_agent/StringStats/Intellect" to="." method="_on_intellect_mouse_exited"]
-[connection signal="mouse_entered" from="Current_agent/StringStats/Harisma" to="." method="_on_harisma_mouse_entered"]
-[connection signal="mouse_exited" from="Current_agent/StringStats/Harisma" to="." method="_on_harisma_mouse_exited"]
-[connection signal="mouse_entered" from="Current_agent/StringStats/Endurance" to="." method="_on_endurance_mouse_entered"]
-[connection signal="mouse_exited" from="Current_agent/StringStats/Endurance" to="." method="_on_endurance_mouse_exited"]
-[connection signal="mouse_entered" from="Current_agent/StringStats/Agility" to="." method="_on_agility_mouse_entered"]
-[connection signal="mouse_exited" from="Current_agent/StringStats/Agility" to="." method="_on_agility_mouse_exited"]
+[connection signal="mouse_entered" from="Current_agent/Background/StringStats/Intellect" to="." method="_on_intellect_mouse_entered"]
+[connection signal="mouse_exited" from="Current_agent/Background/StringStats/Intellect" to="." method="_on_intellect_mouse_exited"]
 [connection signal="pressed" from="Back_Button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="reroll" to="." method="_on_button_2_pressed"]

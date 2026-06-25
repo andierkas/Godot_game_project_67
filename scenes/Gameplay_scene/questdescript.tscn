@@ -82,18 +82,18 @@ container_type = "target"
 
 [node name="Close" type="Button" parent="." unique_id=25685226]
 layout_mode = 0
-offset_left = -141.0
-offset_top = 453.0
-offset_right = -8.0
-offset_bottom = 501.0
+offset_left = -143.0
+offset_top = 452.0
+offset_right = -10.0
+offset_bottom = 500.0
 text = "закрыть"
 
 [node name="Next" type="Button" parent="." unique_id=507840730]
 layout_mode = 0
-offset_left = 538.0
-offset_top = 450.0
-offset_right = 671.0
-offset_bottom = 498.0
+offset_left = 517.0
+offset_top = 452.0
+offset_right = 650.0
+offset_bottom = 500.0
 text = "далее"
 
 [connection signal="pressed" from="Close" to="." method="_on_button_pressed"]

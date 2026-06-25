@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b4ojdd4ou2ks2"]
+
+[ext_resource type="Texture2D" uid="uid://onc6aeyghbpf" path="res://scenes/scene_guide/Sprite-0002.png" id="1_1aueq"]
+[ext_resource type="Script" uid="uid://cnvmsmppt1nvx" path="res://scenes/scene_guide/guide.gd" id="1_6qj87"]
+
+[node name="Guide" type="CanvasLayer" unique_id=873888821]
+script = ExtResource("1_6qj87")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2111654453]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = 22.0
+offset_right = -37.0
+offset_bottom = -19.737854
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1aueq")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1473529417]
+offset_left = 73.0
+offset_top = 50.0
+offset_right = 1085.0
+offset_bottom = 601.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1065546147]
+layout_mode = 2

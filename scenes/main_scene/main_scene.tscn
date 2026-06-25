@@ -490,9 +490,9 @@ texture = ExtResource("40_rv7a5")
 [node name="Help_button" type="TextureButton" parent="." unique_id=900268737]
 layout_mode = 0
 offset_left = 391.0
-offset_top = 271.0
+offset_top = 279.0
 offset_right = 452.0
-offset_bottom = 333.76813
+offset_bottom = 341.76813
 texture_normal = ExtResource("12_qgjuk")
 texture_pressed = ExtResource("13_1jbir")
 texture_hover = ExtResource("14_b7qf2")
@@ -658,6 +658,7 @@ theme_override_font_sizes/font_size = 33
 text = "главное меню"
 horizontal_alignment = 1
 
+[connection signal="pressed" from="Help_button" to="." method="_on_help_button_pressed"]
 [connection signal="pressed" from="Off_button" to="." method="_on_off_button_pressed"]
 [connection signal="button_up" from="Show_text_and_buttons/Play_button" to="." method="_on_play_button_button_up"]
 [connection signal="focus_entered" from="Show_text_and_buttons/Play_button" to="." method="_on_play_button_focus_entered"]
