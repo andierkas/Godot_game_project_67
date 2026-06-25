@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://onc6aeyghbpf" path="res://scenes/scene_guide/Sprite-0002.png" id="1_1aueq"]
 [ext_resource type="Script" uid="uid://cnvmsmppt1nvx" path="res://scenes/scene_guide/guide.gd" id="1_6qj87"]
+[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="3_fhtmy"]
 
 [node name="Guide" type="CanvasLayer" unique_id=873888821]
 script = ExtResource("1_6qj87")
@@ -10,20 +11,36 @@ script = ExtResource("1_6qj87")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 42.0
-offset_top = 22.0
-offset_right = -37.0
-offset_bottom = -19.737854
+offset_left = 85.0
+offset_top = 52.0
+offset_right = -63.0
+offset_bottom = -64.737854
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_1aueq")
 expand_mode = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1473529417]
-offset_left = 73.0
-offset_top = 50.0
-offset_right = 1085.0
-offset_bottom = 601.0
+offset_left = 116.0
+offset_top = 77.0
+offset_right = 1053.0
+offset_bottom = 556.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1065546147]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer" unique_id=1736752765]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fhtmy")
+theme_override_font_sizes/font_size = 60
+text = "Обучение игре"
+
+[node name="close_button" type="Button" parent="." unique_id=1136486594]
+offset_left = 1001.0
+offset_top = 97.0
+offset_right = 1039.0
+offset_bottom = 140.0
+text = "X
+"
+
+[connection signal="pressed" from="close_button" to="." method="_on_close_button_pressed"]
