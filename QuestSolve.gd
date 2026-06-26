@@ -1,4 +1,4 @@
-extends Panel
+extends TextureRect
 
 signal solution_chosen(variant: QuestVariant, success: bool)
 
@@ -10,14 +10,17 @@ signal solution_chosen(variant: QuestVariant, success: bool)
 @onready var agent_pentagon: Polygon2D = $PentagonView/AgentPentagon
 @onready var success_label: Label = $PentagonView/SuccessLabel
 @onready var pentagon_view = $PentagonView
+@onready var template_button = $ButtonPrev  # Шаблон кнопки
 
 @export var quest: Quest
 var agents: Array
 var selected_variant: QuestVariant
+var variant_buttons: Array = []
 
 func _ready() -> void:
 	print("🟢 Панель решения загружена")
 	pentagon_view.visible = false
+	template_button.visible = false  # Скрываем шаблон
 	if quest:
 		show_quest(quest)
 
@@ -33,16 +36,62 @@ func show_quest(quest_data: Quest):
 		quest_desc.text = quest.description
 		sprite.texture = quest.slide
 		
+		# Очищаем старые кнопки
 		for child in options_container.get_children():
 			child.queue_free()
 		
+		variant_buttons.clear()
+		
+		# Сохраняем размер шаблона
+		var template_size = template_button.size
+		print("🔍 Размер шаблона: ", template_size)
+		
 		for variant in quest.variants:
-			var button = Button.new()
-			button.text = variant.text
-			button.pressed.connect(_on_variant_pressed.bind(variant))
-			options_container.add_child(button)
-	
-	show()
+			var new_button = template_button.duplicate()
+			new_button.visible = true
+			
+			# Копируем текстуры
+			new_button.texture_normal = template_button.texture_normal
+			new_button.texture_pressed = template_button.texture_pressed
+			new_button.texture_hover = template_button.texture_hover
+			
+			# Устанавливаем размер
+			new_button.size = template_size
+			if new_button.size.x == 0 or new_button.size.y == 0:
+				new_button.size = Vector2(200, 50)
+			
+			new_button.custom_minimum_size = new_button.size
+			
+			# ✅ НАСТРАИВАЕМ ТЕКСТ ПРАВИЛЬНО
+			var label = new_button.get_node_or_null("Label")
+			if label:
+				label.text = variant.text
+				
+				# ✅ Центрируем текст
+				label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+				label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+				
+				# ✅ Растягиваем Label на всю кнопку
+				label.size = new_button.size
+				label.position = Vector2.ZERO
+				
+				# ✅ ИЛИ используем anchors для растягивания
+				label.anchor_left = 0.0
+				label.anchor_top = 0.0
+				label.anchor_right = 1.0
+				label.anchor_bottom = 1.0
+				label.offset_left = 0
+				label.offset_top = 0
+				label.offset_right = 0
+				label.offset_bottom = 0
+			
+			new_button.pressed.connect(_on_variant_pressed.bind(variant))
+			options_container.add_child(new_button)
+			variant_buttons.append(new_button)
+			
+			print("🔍 Кнопка создана, размер: ", new_button.size)
+		
+		show()
 
 func _on_variant_pressed(variant: QuestVariant) -> void:
 	selected_variant = variant
@@ -85,7 +134,7 @@ func _draw_pentagons():
 		return
 
 	if variant_pentagon == null or agent_pentagon == null:
-		print("️ ОШИБКА: Polygon2D не найдены! Проверь имена узлов в сцене quest_solve.tscn")
+		print("❌ ОШИБКА: Polygon2D не найдены! Проверь имена узлов в сцене quest_solve.tscn")
 		return
 
 	var variant_stats = {
@@ -147,18 +196,18 @@ func _get_success_rate(squad_stats: Dictionary, variant: QuestVariant) -> float:
 	return clamp(total_covered / float(total_required), 0.0, 1.0)
 
 func _generate_pentagon_vertices(stats: Dictionary) -> PackedVector2Array:
-	var y_3 = 0 + stats.agility * 10
-	var x_3 = 0 + (64 * float(stats.agility * 10) / 100)
+	var y_3 = 0 + stats.agility * 7
+	var x_3 = 0 + (64 * float(stats.agility * 7) / 100)
 	var third_point = Vector2(x_3, y_3)
 	
-	var y_4 = 0 + stats.endurance * 10
-	var x_4 = 0 - (64 * float(stats.endurance * 10) / 100)
+	var y_4 = 0 + stats.endurance * 7
+	var x_4 = 0 - (64 * float(stats.endurance * 7) / 100)
 	var four_point = Vector2(x_4, y_4)
 	
 	return PackedVector2Array([
-		Vector2(0 - stats.strenght * 10, 0),
-		Vector2(0, 0 - stats.intellect * 10),
-		Vector2(0 + stats.harisma * 10, 0),
+		Vector2(0 - stats.strenght * 7, 0),
+		Vector2(0, 0 - stats.intellect * 7),
+		Vector2(0 + stats.harisma * 7, 0),
 		third_point,
 		four_point
 	])

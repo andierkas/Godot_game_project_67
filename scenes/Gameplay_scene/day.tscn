@@ -198,6 +198,7 @@ theme_override_font_sizes/font_size = 15
 text = "СВЕРНУТЬ"
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1768893345]
+visible = false
 position = Vector2(-4, -6)
 navigation_polygon = SubResource("NavigationPolygon_cytv4")
 use_edge_connections = false

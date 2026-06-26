@@ -75,55 +75,55 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Play_button:position")
+tracks/4/path = NodePath("Play_button:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(113, 100)]
+"values": [Vector2(1e-05, 1e-05)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Play_button:scale")
+tracks/5/path = NodePath("Exit_button:size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1e-05, 1e-05)]
+"values": [Vector2(230, 123)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Exit_button:size")
+tracks/6/path = NodePath("Exit_button:scale")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(230, 123)]
+"values": [Vector2(1e-05, 1e-05)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Exit_button:position")
+tracks/7/path = NodePath("Pref_button:size")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(113, 355)]
+"values": [Vector2(230, 124)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Exit_button:scale")
+tracks/8/path = NodePath("Pref_button:scale")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -135,86 +135,14 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Pref_button:size")
+tracks/9/path = NodePath("../AnimScreen:modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(230, 124)]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Pref_button:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(113, 227)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("Pref_button:scale")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("../AnimScreen:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
 "values": [Color(1, 1, 1, 0.26666668)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("Play_button/Play_label:position")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(42.5, 36.5)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("Pref_button/Pref_label:position")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(5.5, 36.5)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("Exit_button/Exit_label:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(44.5, 36)]
 }
 
 [sub_resource type="Animation" id="Animation_1jbir"]
@@ -266,139 +194,67 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(230, 124), Vector2(205, 109.999985)]
+"values": [Vector2(230, 124), Vector2(223.63416, 119.99881)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Play_button:position")
+tracks/4/path = NodePath("Play_button:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(1.14),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(102, 218)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Play_button:scale")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(1.00001, 1.00001)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Exit_button:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(230, 123), Vector2(223.63522, 119.99939)]
+}
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Exit_button:size")
+tracks/6/path = NodePath("Exit_button:scale")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0.6, 0.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(230, 123), Vector2(205, 110)]
+"values": [Vector2(1e-05, 1e-05), Vector2(1.000009, 1.000009)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Exit_button:position")
+tracks/7/path = NodePath("Pref_button:size")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(1.14),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(102, 447)]
+"values": [Vector2(230, 124), Vector2(223.63406, 119.99878)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Exit_button:scale")
+tracks/8/path = NodePath("Pref_button:scale")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0.6, 0.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(1.000009, 1.000009)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Pref_button:size")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0.3, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(230, 124), Vector2(205, 110)]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Pref_button:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(1.14),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(101.99999, 332)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("Pref_button:scale")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
 "times": PackedFloat32Array(0.3, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(1.00001, 1.00001)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("Play_button/Play_label:position")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(1.14),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(28.5, 29.5)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("Pref_button/Pref_label:position")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(1.14),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(11, 29.5)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("Exit_button/Exit_label:position")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(1.14),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(32, 29.5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b7qf2"]
@@ -417,33 +273,33 @@ grow_vertical = 2
 script = ExtResource("1_gyfs4")
 
 [node name="Black" type="Sprite2D" parent="." unique_id=475682436]
-position = Vector2(205, 389)
-scale = Vector2(2.0375001, 2.0961537)
+position = Vector2(231.00002, 432.5)
+scale = Vector2(2.0375001, 2.1298075)
 texture = ExtResource("2_bc27i")
 
 [node name="Animated_button_menu" type="AnimatedSprite2D" parent="." unique_id=1731200802]
-position = Vector2(204.53125, 387.5)
-scale = Vector2(3.0525002, 3.05042)
+position = Vector2(227.26561, 430.69818)
+scale = Vector2(3.3795836, 3.3898852)
 sprite_frames = ExtResource("21_b7qf2")
 animation = &"button_menu_off"
 speed_scale = 3.0
 
 [node name="City" type="Sprite2D" parent="." unique_id=165651783]
-position = Vector2(794.75, 326)
-scale = Vector2(0.49726567, 0.7861112)
+position = Vector2(880.9493, 360.50003)
+scale = Vector2(0.5262581, 0.83194447)
 texture = ExtResource("2_kbdpr")
 
 [node name="Persons2" type="Sprite2D" parent="." unique_id=45817922]
-position = Vector2(649.00006, 393)
+position = Vector2(731, 440)
 scale = Vector2(0.5694445, 0.5694444)
 texture = ExtResource("4_17klg")
 
 [node name="Game_name_label" type="Label" parent="." unique_id=1096893445]
 layout_mode = 0
-offset_left = 577.0
-offset_top = 94.0
-offset_right = 1008.0
-offset_bottom = 179.0
+offset_left = 671.0
+offset_top = 119.0
+offset_right = 1102.0
+offset_bottom = 204.0
 theme_override_colors/font_color = Color(1, 0.68235296, 0.039215688, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -458,41 +314,41 @@ vertical_alignment = 1
 paragraph_separator = "\\"
 
 [node name="Shadow_screen" type="AnimatedSprite2D" parent="." unique_id=1944072851]
-position = Vector2(792.75, 324.7493)
-scale = Vector2(3.965625, 2.7139359)
+position = Vector2(881.62494, 362.451)
+scale = Vector2(4.070312, 2.7855797)
 sprite_frames = ExtResource("5_w0eu7")
 animation = &"shadow_screen_opened_animation"
-speed_scale = 0.7
 
 [node name="AnimScreen" type="AnimatedSprite2D" parent="." unique_id=281693924]
 modulate = Color(1, 1, 1, 0.26666668)
-position = Vector2(793.7381, 326.19464)
+position = Vector2(881.9017, 358.30353)
 rotation = 9.424778
-scale = Vector2(3.486854, 4.7491207)
+scale = Vector2(3.70273, 5.0206885)
 sprite_frames = ExtResource("11_ugojt")
 animation = &"screen_animation"
 
 [node name="Screen1" type="Sprite2D" parent="." unique_id=1905931575]
-position = Vector2(195.5, 324)
-scale = Vector2(3.0310078, 3.0422533)
+position = Vector2(217.00002, 360)
+scale = Vector2(3.3643413, 3.3802814)
 texture = ExtResource("9_i0gdb")
 
 [node name="Screen2" type="Sprite2D" parent="." unique_id=600549046]
-position = Vector2(803.5, 323.99997)
-scale = Vector2(3.0436683, 3.0422535)
+position = Vector2(892.7779, 359.99997)
+scale = Vector2(3.381853, 3.3802814)
 texture = ExtResource("10_i0gdb")
 
 [node name="Screen3" type="Sprite2D" parent="." unique_id=2018937082]
-position = Vector2(423, 324.00003)
-scale = Vector2(12.7999935, 3.0422533)
+position = Vector2(469.5, 360)
+scale = Vector2(14.600005, 3.3802812)
 texture = ExtResource("40_rv7a5")
 
 [node name="Help_button" type="TextureButton" parent="." unique_id=900268737]
 layout_mode = 0
-offset_left = 391.0
-offset_top = 279.0
-offset_right = 452.0
-offset_bottom = 341.76813
+offset_left = 434.0
+offset_top = 246.00002
+offset_right = 495.0
+offset_bottom = 308.76813
+scale = Vector2(1.1199988, 1.1199988)
 texture_normal = ExtResource("12_qgjuk")
 texture_pressed = ExtResource("13_1jbir")
 texture_hover = ExtResource("14_b7qf2")
@@ -505,10 +361,11 @@ press_profile = "pc_press"
 
 [node name="Off_button" type="TextureButton" parent="." unique_id=525548742]
 layout_mode = 0
-offset_left = 391.0
-offset_top = 351.0
-offset_right = 452.0
-offset_bottom = 413.7681
+offset_left = 433.99997
+offset_top = 327.00003
+offset_right = 494.99997
+offset_bottom = 389.76813
+scale = Vector2(1.1199988, 1.1199988)
 texture_normal = ExtResource("7_nim2u")
 texture_pressed = ExtResource("8_sro07")
 texture_hover = ExtResource("9_3naof")
@@ -526,10 +383,10 @@ libraries/ = SubResource("AnimationLibrary_b7qf2")
 speed_scale = 0.712
 
 [node name="Play_button" type="TextureButton" parent="Show_text_and_buttons" unique_id=1341505460]
-offset_left = 113.0
-offset_top = 100.0
-offset_right = 343.0
-offset_bottom = 224.0
+offset_left = 115.00104
+offset_top = 244.00055
+offset_right = 345.00104
+offset_bottom = 368.00055
 scale = Vector2(1e-05, 1e-05)
 pivot_offset = Vector2(102.5, 55.5)
 texture_normal = ExtResource("18_qgjuk")
@@ -544,9 +401,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -72.5
+offset_left = -74.0
 offset_top = -25.5
-offset_right = 75.5
+offset_right = 74.0
 offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -563,10 +420,10 @@ hover_profile = "electro_hover"
 press_profile = "electro_press"
 
 [node name="Pref_button" type="TextureButton" parent="Show_text_and_buttons" unique_id=50279162]
-offset_left = 113.0
-offset_top = 227.0
-offset_right = 343.0
-offset_bottom = 351.0
+offset_left = 115.00103
+offset_top = 371.00055
+offset_right = 345.00104
+offset_bottom = 495.00055
 scale = Vector2(1e-05, 1e-05)
 pivot_offset = Vector2(102.5, 55)
 texture_normal = ExtResource("18_qgjuk")
@@ -581,9 +438,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -109.5
+offset_left = -91.5
 offset_top = -25.5
-offset_right = 73.5
+offset_right = 91.5
 offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -600,10 +457,10 @@ hover_profile = "electro_hover"
 press_profile = "electro_press"
 
 [node name="Exit_button" type="TextureButton" parent="Show_text_and_buttons" unique_id=1733412059]
-offset_left = 113.0
-offset_top = 355.0
-offset_right = 343.0
-offset_bottom = 478.0
+offset_left = 115.0
+offset_top = 497.0
+offset_right = 345.0
+offset_bottom = 620.0
 scale = Vector2(1e-05, 1e-05)
 pivot_offset = Vector2(105, 55)
 texture_normal = ExtResource("18_qgjuk")
@@ -644,17 +501,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -535.0
-offset_top = -277.0
-offset_right = -207.0
-offset_bottom = -213.0
+offset_left = -592.0
+offset_top = -305.0
+offset_right = -234.0
+offset_bottom = -241.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("37_8dvv1")
-theme_override_font_sizes/font_size = 33
+theme_override_font_sizes/font_size = 36
 text = "главное меню"
 horizontal_alignment = 1
 
