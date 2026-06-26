@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cqbfe4f6swgq0" path="res://QuestSolve.gd" id="1_dnlwg"]
 [ext_resource type="Texture2D" uid="uid://gvxh1msgicj8" path="res://materials/Sprite-00203.png" id="1_kv63w"]
+[ext_resource type="Texture2D" uid="uid://dvo75nuf616md" path="res://materials/quests/quest images/1780586958.png" id="2_1l2mg"]
+[ext_resource type="Texture2D" uid="uid://gvxh1msgicj8" path="res://materials/Sprite-00203.png" id="1_kv63w"]
 [ext_resource type="Texture2D" uid="uid://dvo75nuf616md" path="res://materials/Sprite_agent/1780586958.png" id="2_1l2mg"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="4_7cy5k"]
 [ext_resource type="Texture2D" uid="uid://dcwyb51513aj6" path="res://materials/Sprite-0008.png" id="5_p6o40"]
