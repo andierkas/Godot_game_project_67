@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k6e4jaeg1ktt"
-path="res://.godot/imported/image (2).jpeg-c9c97728a50bf74975f3e9f337808cf2.ctex"
+path="res://.godot/imported/zaglushka.jpeg-7ba1d4130786f721f3ea24aebbe81880.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://materials/image (2).jpeg"
-dest_files=["res://.godot/imported/image (2).jpeg-c9c97728a50bf74975f3e9f337808cf2.ctex"]
+source_file="res://materials/zaglushka.jpeg"
+dest_files=["res://.godot/imported/zaglushka.jpeg-7ba1d4130786f721f3ea24aebbe81880.ctex"]
 
 [params]
 

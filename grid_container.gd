@@ -20,7 +20,7 @@ func refresh_slot(slot: TextureRect, agent: AgentStats) -> void:
 		return
 		
 	if not agent:
-		slot.texture = null
+		slot.texture = preload("res://materials/zaglushka.jpeg")
 		slot.agent = null
 		var overlay = slot.get_node_or_null("StatusOverlay")
 		if overlay:

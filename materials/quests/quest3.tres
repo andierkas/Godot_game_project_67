@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://bqpprx3ne63dv"]
+
+[ext_resource type="Script" uid="uid://dd4awjxunja2o" path="res://Quest.gd" id="1_dewmf"]
+[ext_resource type="Texture2D" uid="uid://20ruqj708nw" path="res://materials/quests/quest images/1782490786.png" id="2_jb2r4"]
+[ext_resource type="Script" uid="uid://cwob02fmvc3mt" path="res://QuestVariant.gd" id="2_kwws0"]
+[ext_resource type="Resource" uid="uid://cnumwbi2e8yh5" path="res://materials/quests/questvar/1varfor3.tres" id="4_3kh7q"]
+[ext_resource type="Resource" uid="uid://basbsa60dy61g" path="res://materials/quests/questvar/2varfor3.tres" id="5_ylc4k"]
+
+[resource]
+script = ExtResource("1_dewmf")
+name = "Пожилой человек в пожаре"
+description = "В соседнем подъезде короткое замыкание, квартира заполнилась дымом, внутри бабушка, которая не может сама выбраться из ловушки."
+player_reward_xp = 111
+variants = Array[ExtResource("2_kwws0")]([ExtResource("4_3kh7q"), ExtResource("5_ylc4k")])
+slide = ExtResource("2_jb2r4")
+metadata/_custom_type_script = "uid://dd4awjxunja2o"

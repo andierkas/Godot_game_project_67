@@ -49,13 +49,23 @@ func _activate_random_quest() -> void:
 
 	var target_mark = empty_marks.pick_random()
 	var quest_data = available_quests.pick_random()
-
-	if "quest" in target_mark:
-		target_mark.quest = quest_data
-
 	var mark_node = target_mark.get_node_or_null("Mark")
-	if mark_node and mark_node.has_method("set_state"):
-		mark_node.set_state(1)  # AVAILABLE
+	
+	if not mark_node:
+		print("⚠️ Mark не найден в ", target_mark.name)
+		return
+
+	# ⬇️ УСТАНОВКА КВЕСТА НА mark_node (дочерний узел Mark), а не на родителя!
+	if "quest" in mark_node:
+		mark_node.quest = quest_data
+		print("✅ Квест установлен на Mark: ", quest_data.name)
+	else:
+		print("⚠️ У узла Mark нет переменной 'quest'!")
+		return
+
+	# Меняем состояние на AVAILABLE (1)
+	if mark_node.has_method("set_state"):
+		mark_node.set_state(1)
 
 	print("✅ Квест '", quest_data.name, "' активирован на маркере: ", target_mark.name)
 	
@@ -65,7 +75,15 @@ func _activate_random_quest() -> void:
 		quest_spawned.emit(quest_data, target_node.global_position, mark_node)
 
 func _on_mark_quest_clicked(quest_data: Quest, target_pos: Vector2, source_node: Node) -> void:
+	print("📡 QuestSpawner получил quest_clicked: ", quest_data.name if quest_data else "NULL")
 	quest_clicked.emit(quest_data, target_pos, source_node)
 
 func _on_mark_quest_ready_clicked(quest_data: Quest, source_node: Node) -> void:
+	print("📡 QuestSpawner получил quest_ready_clicked: ", quest_data.name if quest_data else "NULL")
 	quest_ready_clicked.emit(quest_data, source_node)
+
+# ⬇️ Метод для очистки квеста у маркера (вызывается из day.gd при возврате отряда)
+func clear_quest_on_mark(mark_node: Node) -> void:
+	if mark_node and "quest" in mark_node:
+		mark_node.quest = null
+		print("🧹 Квест очищен на маркере")

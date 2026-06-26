@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuestVariant" format=3 uid="uid://bfmncjawkf7l"]
+
+[ext_resource type="Script" uid="uid://cwob02fmvc3mt" path="res://QuestVariant.gd" id="1_hopjm"]
+
+[resource]
+script = ExtResource("1_hopjm")
+text = "Проверить типичные места"
+strenght = 2
+harisma = 4
+endurance = 4
+intellect = 8
+agility = 6
+reward_xp = 100
+failure_damage = 13
+metadata/_custom_type_script = "uid://cwob02fmvc3mt"

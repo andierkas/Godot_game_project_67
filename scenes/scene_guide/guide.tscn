@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cnvmsmppt1nvx" path="res://scenes/scene_guide/guide.gd" id="1_6qj87"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="3_fhtmy"]
 
-[node name="Guide" type="CanvasLayer" unique_id=873888821]
+[node name="Guide" type="CanvasLayer" unique_id=1127359957]
 script = ExtResource("1_6qj87")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2111654453]

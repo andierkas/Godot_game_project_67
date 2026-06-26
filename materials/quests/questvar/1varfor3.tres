@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuestVariant" format=3 uid="uid://cnumwbi2e8yh5"]
+
+[ext_resource type="Script" uid="uid://cwob02fmvc3mt" path="res://QuestVariant.gd" id="1_obfpe"]
+
+[resource]
+script = ExtResource("1_obfpe")
+text = "Вынести на руках"
+strenght = 9
+harisma = 1
+endurance = 7
+intellect = 1
+agility = 4
+reward_xp = 150
+failure_damage = 18
+metadata/_custom_type_script = "uid://cwob02fmvc3mt"
