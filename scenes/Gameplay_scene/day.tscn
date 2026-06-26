@@ -410,10 +410,13 @@ position = Vector2(955, 189)
 
 [node name="AgentProfile" parent="." unique_id=749323441 instance=ExtResource("11_lhnp0")]
 visible = false
+top_level = true
+z_index = 10
 
 [node name="QuestSpawner" type="Node" parent="." unique_id=1939854702]
 script = ExtResource("9_4tlo2")
 available_quests = Array[ExtResource("2_n8qpb")]([ExtResource("11_2xd4o"), ExtResource("7_lhnp0"), ExtResource("13_u5q0e"), ExtResource("14_cytv4"), ExtResource("15_tmofk")])
+spawn_interval = 8.0
 
 [node name="QuestSpawns" type="Node2D" parent="QuestSpawner" unique_id=2045757676]
 

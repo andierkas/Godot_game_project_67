@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://cqbfe4f6swgq0" path="res://QuestSolve.gd" id="1_dnlwg"]
 [ext_resource type="Texture2D" uid="uid://gvxh1msgicj8" path="res://materials/Sprite-00203.png" id="1_kv63w"]
 [ext_resource type="Texture2D" uid="uid://dvo75nuf616md" path="res://materials/quests/quest images/1780586958.png" id="2_1l2mg"]
-[ext_resource type="Texture2D" uid="uid://gvxh1msgicj8" path="res://materials/Sprite-00203.png" id="1_kv63w"]
-[ext_resource type="Texture2D" uid="uid://dvo75nuf616md" path="res://materials/Sprite_agent/1780586958.png" id="2_1l2mg"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="4_7cy5k"]
 [ext_resource type="Texture2D" uid="uid://dcwyb51513aj6" path="res://materials/Sprite-0008.png" id="5_p6o40"]
 [ext_resource type="Texture2D" uid="uid://c0u1qixhgwgv2" path="res://materials/Sprite-06.png" id="6_d1uj0"]
@@ -24,6 +22,7 @@ load_path = "res://.godot/imported/Sprite-0003.png-87d0f94c1eae45a10d779443e1394
 load_path = "res://.godot/imported/Sprite-0002.png-ab6d00ad15d825696d528269eb6f313f.ctex"
 
 [node name="Panel" type="TextureRect" unique_id=1518291813]
+z_index = 2
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -112,7 +111,7 @@ color = Color(0.6117647, 0, 0.13725491, 0.29411766)
 polygon = PackedVector2Array(690, 364, 613, 440, 642, 518, 739, 518, 767, 440)
 
 [node name="AgentPentagon" type="Polygon2D" parent="PentagonView" unique_id=1497878613]
-z_index = 2
+z_index = 4
 position = Vector2(102, 141)
 color = Color(0, 0.47058824, 0.105882354, 0.49411765)
 polygon = PackedVector2Array(668, 196, 745, 272, 717, 350, 620, 350, 591, 272)

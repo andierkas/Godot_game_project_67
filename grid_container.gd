@@ -13,6 +13,7 @@ const ICON_LEVEL_UP = preload("res://materials/levelup.png")
 
 func _ready() -> void:
 	print("🟢 GridContainer загружен")
+	PlayerStats.leveled_up.connect(refresh_all_slots)
 	refresh_all_slots()
 
 func refresh_slot(slot: TextureRect, agent: AgentStats) -> void:
@@ -92,6 +93,13 @@ func refresh_all_slots() -> void:
 	var agents_count = PartyBox.get_agents_count()
 	
 	print("👥 Всего агентов в PartyBox: ", agents_count)
+		# ⬇️ ОТЛАДКА: Показываем что реально в массиве
+	for i in range(PartyBox.party.size()):
+		var agent = PartyBox.party[i]
+		if agent:
+			print("  [", i, "] ", agent.agent_second_name, " (", agent.current_status, ")")
+		else:
+			print("  [", i, "] NULL")
 	
 	for i in range(slots.size()):
 		var agent = PartyBox.get_agent(i)
