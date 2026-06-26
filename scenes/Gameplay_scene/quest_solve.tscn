@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c0u1qixhgwgv2" path="res://materials/Sprite-06.png" id="6_d1uj0"]
 [ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://button_sounds/ButtonSoundController.gd" id="7_gw6sm"]
 [ext_resource type="Texture2D" uid="uid://j1eqxjintl73" path="res://materials/Sprite-0004.png" id="8_8vahx"]
->>>>>>> Stashed changes
+
 
 [node name="Panel" type="Panel" unique_id=738869273]
 offset_left = 315.0
