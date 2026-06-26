@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="City_in_crysis_proj"
-run/main_scene="uid://cmhcf8g738k3e"
+run/main_scene="uid://demjex5os6jyt"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="aboba"
 config/features=PackedStringArray("4.6", "Forward Plus")
@@ -26,6 +26,8 @@ QuestRewardCalculator="*uid://djx300hyfk4l4"
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

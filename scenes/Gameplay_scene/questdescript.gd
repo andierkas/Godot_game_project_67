@@ -1,9 +1,10 @@
-extends Panel
+extends TextureRect
 
 @onready var sprite = $spritequest
 @onready var namequest = $NameQuest
 @onready var quest_desc = $descript
 @onready var target_grid = $GridContainer
+@onready var animScreen = $AnimScreen
 
 signal quest_accepted(agents: Array, target_pos: Vector2)
 
@@ -12,6 +13,7 @@ var quest_target_position: Vector2
 
 func _ready() -> void:
 	print("🟢 Панель квеста загружена")
+	animScreen.play("screen_animation")
 
 func show_quest(quest_data: Quest, target_pos: Vector2):
 	quest = quest_data
