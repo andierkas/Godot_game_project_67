@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://cj8q1l1etvlxk"]
 
 [ext_resource type="Script" uid="uid://chulbp0u7dakx" path="res://scenes/Gameplay_scene/questdescript.gd" id="1_gjbnm"]
-[ext_resource type="Resource" uid="uid://c5yrl2sr28vdk" path="res://materials/quests/test_quest.tres" id="2_7tg5y"]
 [ext_resource type="Texture2D" uid="uid://7abog8ajlb51" path="res://materials/image.jpeg" id="2_mrkqg"]
-[ext_resource type="Texture2D" uid="uid://k6e4jaeg1ktt" path="res://materials/image (2).jpeg" id="3_7tg5y"]
+[ext_resource type="Texture2D" uid="uid://k6e4jaeg1ktt" path="res://materials/zaglushka.jpeg" id="3_7tg5y"]
 [ext_resource type="Script" uid="uid://bmp6qlkmnlum1" path="res://scenes/Gameplay_scene/texture_drag.gd" id="4_8bdsa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cpas5"]
@@ -20,7 +19,6 @@ offset_top = -3.0
 offset_right = 144.0
 offset_bottom = -3.0
 script = ExtResource("1_gjbnm")
-quest = ExtResource("2_7tg5y")
 metadata/_edit_use_anchors_ = true
 
 [node name="NameQuest" type="Label" parent="." unique_id=1949124771]

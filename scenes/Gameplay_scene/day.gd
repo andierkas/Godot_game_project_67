@@ -168,15 +168,11 @@ func _apply_failure_consequences(variant: QuestVariant, agents: Array) -> void:
 	_refresh_ui()
 
 func _try_wound_random_agent(agents: Array) -> bool:
-	var healthy_agents = []
-	for agent in agents:
-		if not agent.is_wounded:
-			healthy_agents.append(agent)
-	
-	if healthy_agents.is_empty():
+	if agents.is_empty():
 		return false
 	
-	var victim = healthy_agents[randi() % healthy_agents.size()]
+	
+	var victim = agents[randi() % agents.size()]
 	
 	if victim.is_wounded:
 		print("💀 Агент ", victim.agent_second_name, " погиб!")

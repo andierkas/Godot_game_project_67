@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuestVariant" format=3 uid="uid://c5tm3se0nakr1"]
+
+[ext_resource type="Script" uid="uid://cwob02fmvc3mt" path="res://QuestVariant.gd" id="1_ybtjn"]
+
+[resource]
+script = ExtResource("1_ybtjn")
+text = "Починить через запорный узел"
+strenght = 3
+harisma = 1
+endurance = 5
+intellect = 9
+agility = 4
+reward_xp = 120
+failure_damage = 25
+metadata/_custom_type_script = "uid://cwob02fmvc3mt"
