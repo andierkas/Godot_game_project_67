@@ -7,7 +7,7 @@ var current_agent: AgentStats = null
 @onready var agent_name: Label = $AgentName
 @onready var xp_label: Label = $XP
 @onready var max_xp_bar: ColorRect = $max_xp
-@onready var current_xp_bar: ColorRect = $current_xp
+@onready var current_xp_bar: TextureRect = $current_xp
 @onready var polygon_agent: Polygon2D = $max_polygon/polygon_agent
 
 # Значения статов

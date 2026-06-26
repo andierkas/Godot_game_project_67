@@ -1,51 +1,69 @@
 [gd_scene format=3 uid="uid://cj8q1l1etvlxk"]
 
+[ext_resource type="Texture2D" uid="uid://mx0k1c7rufnu" path="res://materials/Sprite-00202.png" id="1_8bdsa"]
 [ext_resource type="Script" uid="uid://chulbp0u7dakx" path="res://scenes/Gameplay_scene/questdescript.gd" id="1_gjbnm"]
 [ext_resource type="Texture2D" uid="uid://7abog8ajlb51" path="res://materials/image.jpeg" id="2_mrkqg"]
 [ext_resource type="Texture2D" uid="uid://k6e4jaeg1ktt" path="res://materials/zaglushka.jpeg" id="3_7tg5y"]
 [ext_resource type="Script" uid="uid://bmp6qlkmnlum1" path="res://scenes/Gameplay_scene/texture_drag.gd" id="4_8bdsa"]
+[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="5_xvmmr"]
+[ext_resource type="Texture2D" uid="uid://7638oi7jqmlr" path="res://materials/Sprite-0033.png" id="8_crvjv"]
+[ext_resource type="SpriteFrames" uid="uid://bpvbjsuve4rsn" path="res://materials/main_menu_screen/screen/screen_anim/new_sprite_frames.tres" id="8_xvmmr"]
+[ext_resource type="Texture2D" uid="uid://cqffc4cej7lih" path="res://materials/Sprite-0035.png" id="9_o5cgd"]
+[ext_resource type="Texture2D" uid="uid://bqdbs8pbcyi4" path="res://materials/Sprite-0034.png" id="10_42jki"]
+[ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://button_sounds/ButtonSoundController.gd" id="11_42jki"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cpas5"]
-bg_color = Color(0.8147868, 0.5272622, 0.19329205, 1)
-
-[node name="Questdescript" type="Panel" unique_id=1179989478]
-anchors_preset = -1
-anchor_left = 0.15885417
-anchor_top = 0.0061728396
-anchor_right = 0.5989583
-anchor_bottom = 0.7777778
-offset_left = 144.0
-offset_top = -3.0
-offset_right = 144.0
-offset_bottom = -3.0
+[node name="Questdescript" type="TextureRect" unique_id=1923780225]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.86304
+offset_top = -331.0
+offset_right = 287.86304
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_8bdsa")
+expand_mode = 1
 script = ExtResource("1_gjbnm")
-metadata/_edit_use_anchors_ = true
+quest = ExtResource("3_7tg5y")
+
+[node name="spritequest" type="TextureRect" parent="." unique_id=1086614549]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 28.0
+offset_top = 28.0
+offset_right = 548.0
+offset_bottom = 243.0
+texture = ExtResource("2_mrkqg")
+expand_mode = 2
 
 [node name="NameQuest" type="Label" parent="." unique_id=1949124771]
 layout_mode = 0
-offset_left = 202.0
-offset_top = 10.0
-offset_right = 712.0
-offset_bottom = 88.0
+offset_left = 41.0
+offset_top = 28.0
+offset_right = 267.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_xvmmr")
+theme_override_font_sizes/font_size = 13
 text = "FDDSMFKMSDKMFSDKFS"
 
 [node name="descript" type="Label" parent="." unique_id=1826843881]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 220.0
-offset_right = 503.0
-offset_bottom = 358.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_cpas5")
-
-[node name="spritequest" type="TextureRect" parent="." unique_id=1086614549]
-layout_mode = 0
-offset_left = -1.0
-offset_right = 506.0
-offset_bottom = 220.0
-texture = ExtResource("2_mrkqg")
-expand_mode = 2
+offset_left = 18.0
+offset_top = 270.0
+offset_right = 558.0
+offset_bottom = 332.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_xvmmr")
+autowrap_trim_flags = 64
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=759287487]
+show_behind_parent = true
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 1
 anchors_preset = 6
@@ -53,13 +71,13 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -402.0
-offset_top = 128.0
-offset_right = -102.0
-offset_bottom = 228.0
+offset_left = -401.72607
+offset_top = 116.0
+offset_right = -144.72607
+offset_bottom = 216.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_constants/h_separation = 100
+theme_override_constants/h_separation = 28
 columns = 2
 
 [node name="TextureRect" type="TextureRect" parent="GridContainer" unique_id=648982885]
@@ -78,21 +96,74 @@ expand_mode = 2
 script = ExtResource("4_8bdsa")
 container_type = "target"
 
-[node name="Close" type="Button" parent="." unique_id=25685226]
+[node name="Close" type="TextureButton" parent="." unique_id=692693893]
 layout_mode = 0
-offset_left = -143.0
-offset_top = 452.0
-offset_right = -10.0
-offset_bottom = 500.0
-text = "закрыть"
+offset_left = 16.0
+offset_top = 373.0
+offset_right = 134.0
+offset_bottom = 491.0
+texture_normal = ExtResource("8_crvjv")
+texture_pressed = ExtResource("9_o5cgd")
+texture_hover = ExtResource("10_42jki")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Next" type="Button" parent="." unique_id=507840730]
+[node name="Label" type="Label" parent="Close" unique_id=1384071989]
 layout_mode = 0
-offset_left = 517.0
-offset_top = 452.0
-offset_right = 650.0
-offset_bottom = 500.0
-text = "далее"
+offset_left = 13.0
+offset_top = 23.0
+offset_right = 108.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_xvmmr")
+theme_override_font_sizes/font_size = 20
+text = "Назад"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node" type="Node" parent="Close" unique_id=1146496918]
+script = ExtResource("11_42jki")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
+
+[node name="Next" type="TextureButton" parent="." unique_id=1745801310]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 373.0
+offset_right = 558.0
+offset_bottom = 491.0
+texture_normal = ExtResource("8_crvjv")
+texture_pressed = ExtResource("9_o5cgd")
+texture_hover = ExtResource("10_42jki")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Next" unique_id=1979946091]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 33.0
+offset_right = 107.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_xvmmr")
+theme_override_font_sizes/font_size = 20
+text = "Далее"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node" type="Node" parent="Next" unique_id=885459942]
+script = ExtResource("11_42jki")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
+
+[node name="AnimScreen" type="AnimatedSprite2D" parent="." unique_id=60604154]
+modulate = Color(1, 1, 1, 0.18431373)
+show_behind_parent = true
+position = Vector2(288.06396, 266.11572)
+rotation = 3.1415925
+scale = Vector2(2.8111846, 3.9303644)
+sprite_frames = ExtResource("8_xvmmr")
+animation = &"screen_animation"
 
 [connection signal="pressed" from="Close" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

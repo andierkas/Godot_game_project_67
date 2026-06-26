@@ -38,8 +38,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 1.0
 offset_top = 1.0
-offset_right = 1.0
-offset_bottom = 1.0
+offset_right = 141.62085
+offset_bottom = 80.07703
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.90031064, 0.899788)
@@ -58,13 +58,14 @@ mouse_filter = 2
 
 [node name="dragbox" type="VBoxContainer" parent="Agentparty" unique_id=2036112806]
 layout_mode = 0
-offset_left = 16.66091
-offset_top = 81.13018
-offset_right = 416.66092
-offset_bottom = 597.1302
-theme_override_constants/separation = 4
+offset_left = 25.546747
+offset_top = 102.246315
+offset_right = 462.2773
+offset_bottom = 666.24634
+theme_override_constants/separation = 16
 
 [node name="Panel" type="Panel" parent="Agentparty/dragbox" unique_id=752354621]
+clip_contents = true
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 script = ExtResource("5_65pgp")
@@ -75,7 +76,7 @@ script = ExtResource("4_npx5s")
 
 [node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/Panel/Agent" unique_id=2098799151]
 show_behind_parent = true
-position = Vector2(54.286823, 50.011772)
+position = Vector2(57.619007, 50.01178)
 scale = Vector2(0.21674614, 0.21610023)
 texture = ExtResource("5_aw3uw")
 region_enabled = true
@@ -84,24 +85,26 @@ region_rect = Rect2(528.122, -4.629, 360, 360)
 [node name="ColorRect" type="TextureRect" parent="Agentparty/dragbox/Panel/Agent" unique_id=2031142893]
 show_behind_parent = true
 custom_minimum_size = Vector2(400, 100)
-offset_right = 400.0
-offset_bottom = 100.0
+offset_left = -2.221466
+offset_top = -2.2227783
+offset_right = 436.516
+offset_bottom = 102.24626
 mouse_filter = 2
 texture = ExtResource("8_rqoys")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel/Agent" unique_id=1382951312]
 show_behind_parent = true
-position = Vector2(142.17186, 50.01178)
+position = Vector2(154.39114, 50.01175)
 scale = Vector2(0.36655313, 0.35956192)
 color = Color(0, 0.38325927, 0, 1)
 polygon = PackedVector2Array(-100, 0, 0, -102, 100, 0, 60, 102, -60, 102)
 
 [node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/Panel/Agent" unique_id=1097117595]
 show_behind_parent = true
-offset_left = 199.93098
-offset_top = 22.227448
-offset_right = 375.426
-offset_bottom = 78.907455
+offset_left = 217.70264
+offset_top = 22.22743
+offset_right = 393.19763
+offset_bottom = 78.90744
 pivot_offset = Vector2(88, 28)
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("13_c036g")
@@ -111,216 +114,228 @@ editable = false
 
 [node name="Line2D2" type="Line2D" parent="Agentparty/dragbox/Panel/Agent" unique_id=2061948272]
 
-[node name="Panel2" type="Panel" parent="Agentparty/dragbox" unique_id=1861671379]
+[node name="Panel2" type="Panel" parent="Agentparty/dragbox" unique_id=1355523729]
+clip_contents = true
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 script = ExtResource("5_65pgp")
 
-[node name="Agent" type="Node2D" parent="Agentparty/dragbox/Panel2" unique_id=1234825341]
+[node name="Agent" type="Node2D" parent="Agentparty/dragbox/Panel2" unique_id=515327548]
 position = Vector2(0.21455765, -0.20857239)
 script = ExtResource("4_npx5s")
 
-[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/Panel2/Agent" unique_id=1787789511]
+[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/Panel2/Agent" unique_id=1665526574]
 show_behind_parent = true
-position = Vector2(54.286823, 50.011772)
+position = Vector2(57.619007, 50.01178)
 scale = Vector2(0.21674614, 0.21610023)
 texture = ExtResource("5_aw3uw")
 region_enabled = true
 region_rect = Rect2(528.122, -4.629, 360, 360)
 
-[node name="ColorRect" type="TextureRect" parent="Agentparty/dragbox/Panel2/Agent" unique_id=156756100]
+[node name="ColorRect" type="TextureRect" parent="Agentparty/dragbox/Panel2/Agent" unique_id=431922845]
 show_behind_parent = true
 custom_minimum_size = Vector2(400, 100)
-offset_right = 400.0
-offset_bottom = 100.0
+offset_left = -2.221466
+offset_top = -2.2227783
+offset_right = 436.516
+offset_bottom = 102.24626
 mouse_filter = 2
 texture = ExtResource("8_rqoys")
 
-[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel2/Agent" unique_id=1528019235]
+[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel2/Agent" unique_id=1082188216]
 show_behind_parent = true
-position = Vector2(142.17186, 50.01178)
+position = Vector2(154.39114, 50.01175)
 scale = Vector2(0.36655313, 0.35956192)
 color = Color(0, 0.38325927, 0, 1)
 polygon = PackedVector2Array(-100, 0, 0, -102, 100, 0, 60, 102, -60, 102)
 
-[node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/Panel2/Agent" unique_id=837341649]
+[node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/Panel2/Agent" unique_id=1550666319]
 show_behind_parent = true
-offset_left = 199.93098
-offset_top = 22.227448
-offset_right = 375.426
-offset_bottom = 78.907455
+offset_left = 217.70264
+offset_top = 22.22743
+offset_right = 393.19763
+offset_bottom = 78.90744
 pivot_offset = Vector2(88, 28)
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("13_c036g")
 theme_override_font_sizes/font_size = 25
-text = "Anton Antonov Antonovich"
+text = "аnton аntonov аntonovich"
 editable = false
 
-[node name="Line2D2" type="Line2D" parent="Agentparty/dragbox/Panel2/Agent" unique_id=701409586]
+[node name="Line2D2" type="Line2D" parent="Agentparty/dragbox/Panel2/Agent" unique_id=1005178543]
 
-[node name="Panel3" type="Panel" parent="Agentparty/dragbox" unique_id=2025427419]
+[node name="Panel3" type="Panel" parent="Agentparty/dragbox" unique_id=743555538]
+clip_contents = true
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 script = ExtResource("5_65pgp")
 
-[node name="Agent" type="Node2D" parent="Agentparty/dragbox/Panel3" unique_id=759387790]
+[node name="Agent" type="Node2D" parent="Agentparty/dragbox/Panel3" unique_id=1596610027]
 position = Vector2(0.21455765, -0.20857239)
 script = ExtResource("4_npx5s")
 
-[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/Panel3/Agent" unique_id=1861733772]
+[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/Panel3/Agent" unique_id=1396068100]
 show_behind_parent = true
-position = Vector2(54.286823, 50.011772)
+position = Vector2(57.619007, 50.01178)
 scale = Vector2(0.21674614, 0.21610023)
 texture = ExtResource("5_aw3uw")
 region_enabled = true
 region_rect = Rect2(528.122, -4.629, 360, 360)
 
-[node name="ColorRect" type="TextureRect" parent="Agentparty/dragbox/Panel3/Agent" unique_id=180955677]
+[node name="ColorRect" type="TextureRect" parent="Agentparty/dragbox/Panel3/Agent" unique_id=474044840]
 show_behind_parent = true
 custom_minimum_size = Vector2(400, 100)
-offset_right = 400.0
-offset_bottom = 100.0
+offset_left = -2.221466
+offset_top = -2.2227783
+offset_right = 436.516
+offset_bottom = 102.24626
 mouse_filter = 2
 texture = ExtResource("8_rqoys")
 
-[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel3/Agent" unique_id=332001029]
+[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel3/Agent" unique_id=550790733]
 show_behind_parent = true
-position = Vector2(142.17186, 50.01178)
+position = Vector2(154.39114, 50.01175)
 scale = Vector2(0.36655313, 0.35956192)
 color = Color(0, 0.38325927, 0, 1)
 polygon = PackedVector2Array(-100, 0, 0, -102, 100, 0, 60, 102, -60, 102)
 
-[node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/Panel3/Agent" unique_id=1735355721]
+[node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/Panel3/Agent" unique_id=1376241412]
 show_behind_parent = true
-offset_left = 199.93098
-offset_top = 22.227448
-offset_right = 375.426
-offset_bottom = 78.907455
+offset_left = 217.70264
+offset_top = 22.22743
+offset_right = 393.19763
+offset_bottom = 78.90744
 pivot_offset = Vector2(88, 28)
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("13_c036g")
 theme_override_font_sizes/font_size = 25
-text = "Anton Antonov Antonovich"
+text = "аnton аntonov аntonovich"
 editable = false
 
-[node name="Line2D2" type="Line2D" parent="Agentparty/dragbox/Panel3/Agent" unique_id=447500712]
+[node name="Line2D2" type="Line2D" parent="Agentparty/dragbox/Panel3/Agent" unique_id=405128080]
 
-[node name="Panel4" type="Panel" parent="Agentparty/dragbox" unique_id=252657147]
+[node name="Panel4" type="Panel" parent="Agentparty/dragbox" unique_id=1731144651]
+clip_contents = true
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 script = ExtResource("5_65pgp")
 
-[node name="Agent" type="Node2D" parent="Agentparty/dragbox/Panel4" unique_id=1259976974]
+[node name="Agent" type="Node2D" parent="Agentparty/dragbox/Panel4" unique_id=2131605184]
 position = Vector2(0.21455765, -0.20857239)
 script = ExtResource("4_npx5s")
 
-[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/Panel4/Agent" unique_id=943405549]
+[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/Panel4/Agent" unique_id=914908784]
 show_behind_parent = true
-position = Vector2(54.286823, 50.011772)
+position = Vector2(57.619007, 50.01178)
 scale = Vector2(0.21674614, 0.21610023)
 texture = ExtResource("5_aw3uw")
 region_enabled = true
 region_rect = Rect2(528.122, -4.629, 360, 360)
 
-[node name="ColorRect" type="TextureRect" parent="Agentparty/dragbox/Panel4/Agent" unique_id=420361657]
+[node name="ColorRect" type="TextureRect" parent="Agentparty/dragbox/Panel4/Agent" unique_id=569624801]
 show_behind_parent = true
 custom_minimum_size = Vector2(400, 100)
-offset_right = 400.0
-offset_bottom = 100.0
+offset_left = -2.221466
+offset_top = -2.2227783
+offset_right = 436.516
+offset_bottom = 102.24626
 mouse_filter = 2
 texture = ExtResource("8_rqoys")
 
-[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel4/Agent" unique_id=404722775]
+[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel4/Agent" unique_id=1159964133]
 show_behind_parent = true
-position = Vector2(142.17186, 50.01178)
+position = Vector2(154.39114, 50.01175)
 scale = Vector2(0.36655313, 0.35956192)
 color = Color(0, 0.38325927, 0, 1)
 polygon = PackedVector2Array(-100, 0, 0, -102, 100, 0, 60, 102, -60, 102)
 
-[node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/Panel4/Agent" unique_id=1063833359]
+[node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/Panel4/Agent" unique_id=760743499]
 show_behind_parent = true
-offset_left = 199.93098
-offset_top = 22.227448
-offset_right = 375.426
-offset_bottom = 78.907455
+offset_left = 217.70264
+offset_top = 22.22743
+offset_right = 393.19763
+offset_bottom = 78.90744
 pivot_offset = Vector2(88, 28)
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("13_c036g")
 theme_override_font_sizes/font_size = 25
-text = "Anton Antonov Antonovich"
+text = "аnton аntonov аntonovich"
 editable = false
 
-[node name="Line2D2" type="Line2D" parent="Agentparty/dragbox/Panel4/Agent" unique_id=1611332787]
+[node name="Line2D2" type="Line2D" parent="Agentparty/dragbox/Panel4/Agent" unique_id=1705570863]
 
-[node name="Panel5" type="Panel" parent="Agentparty/dragbox" unique_id=628953015]
+[node name="Panel5" type="Panel" parent="Agentparty/dragbox" unique_id=792599067]
+clip_contents = true
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 script = ExtResource("5_65pgp")
 
-[node name="Agent" type="Node2D" parent="Agentparty/dragbox/Panel5" unique_id=1217097589]
+[node name="Agent" type="Node2D" parent="Agentparty/dragbox/Panel5" unique_id=1399374030]
 position = Vector2(0.21455765, -0.20857239)
 script = ExtResource("4_npx5s")
 
-[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/Panel5/Agent" unique_id=1522948062]
+[node name="SpriteAgent" type="Sprite2D" parent="Agentparty/dragbox/Panel5/Agent" unique_id=768584814]
 show_behind_parent = true
-position = Vector2(54.286823, 50.011772)
+position = Vector2(57.619007, 50.01178)
 scale = Vector2(0.21674614, 0.21610023)
 texture = ExtResource("5_aw3uw")
 region_enabled = true
 region_rect = Rect2(528.122, -4.629, 360, 360)
 
-[node name="ColorRect" type="TextureRect" parent="Agentparty/dragbox/Panel5/Agent" unique_id=743406808]
+[node name="ColorRect" type="TextureRect" parent="Agentparty/dragbox/Panel5/Agent" unique_id=2096625667]
 show_behind_parent = true
 custom_minimum_size = Vector2(400, 100)
-offset_right = 400.0
-offset_bottom = 100.0
+offset_left = -2.221466
+offset_top = -2.2227783
+offset_right = 436.516
+offset_bottom = 102.24626
 mouse_filter = 2
 texture = ExtResource("8_rqoys")
 
-[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel5/Agent" unique_id=291599002]
+[node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel5/Agent" unique_id=1424567346]
 show_behind_parent = true
-position = Vector2(142.17186, 50.01178)
+position = Vector2(154.39114, 50.01175)
 scale = Vector2(0.36655313, 0.35956192)
 color = Color(0, 0.38325927, 0, 1)
 polygon = PackedVector2Array(-100, 0, 0, -102, 100, 0, 60, 102, -60, 102)
 
-[node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/Panel5/Agent" unique_id=281654514]
+[node name="NameAgent" type="TextEdit" parent="Agentparty/dragbox/Panel5/Agent" unique_id=1264533430]
 show_behind_parent = true
-offset_left = 199.93098
-offset_top = 22.227448
-offset_right = 375.426
-offset_bottom = 78.907455
+offset_left = 217.70264
+offset_top = 22.22743
+offset_right = 393.19763
+offset_bottom = 78.90744
 pivot_offset = Vector2(88, 28)
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("13_c036g")
 theme_override_font_sizes/font_size = 25
-text = "Anton Antonov Antonovich"
+text = "аnton аntonov аntonovich"
 editable = false
 
-[node name="Line2D2" type="Line2D" parent="Agentparty/dragbox/Panel5/Agent" unique_id=996037024]
+[node name="Line2D2" type="Line2D" parent="Agentparty/dragbox/Panel5/Agent" unique_id=1079718469]
 
 [node name="Current_agent" type="Node2D" parent="." unique_id=216067582]
 script = ExtResource("3_aw3uw")
 
 [node name="SpriteAgent" type="Sprite2D" parent="Current_agent" unique_id=917593877]
-position = Vector2(605.56354, 290.06836)
-scale = Vector2(0.5572763, 0.6485821)
+position = Vector2(669.98584, 323.40964)
+scale = Vector2(0.6012028, 0.7228989)
 texture = ExtResource("4_ye48f")
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
 [node name="Background" type="TextureRect" parent="Current_agent" unique_id=1089347877]
-offset_left = 503.1596
-offset_top = 177.81967
-offset_right = 1176.2607
-offset_bottom = 615.7007
+offset_left = 557.5853
+offset_top = 198.93585
+offset_right = 1305.105
+offset_bottom = 683.49426
 texture = ExtResource("9_rqoys")
 
 [node name="AnimScreen" type="AnimatedSprite2D" parent="Current_agent" unique_id=586831948]
 modulate = Color(1, 1, 1, 0.18431373)
-position = Vector2(627.99493, 394.97433)
+position = Vector2(698.64264, 440.05826)
 rotation = 3.1415925
-scale = Vector2(6.1891017, 4.2137165)
+scale = Vector2(6.9250164, 4.770567)
 sprite_frames = ExtResource("9_npaxp")
 animation = &"screen_animation"
 
@@ -334,10 +349,11 @@ offset_bottom = 188.81967
 
 [node name="Strenght" type="Label" parent="Current_agent/StringStats" unique_id=1442726510]
 layout_mode = 0
-offset_left = 324.9863
-offset_top = 334.62756
-offset_right = 487.98676
-offset_bottom = 381.62756
+offset_left = 377.1904
+offset_top = 386.862
+offset_right = 540.1909
+offset_bottom = 433.86206
+scale = Vector2(1.150258, 1.1453121)
 mouse_filter = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
@@ -354,10 +370,11 @@ text = "Strenght"
 
 [node name="Intellect" type="Label" parent="Current_agent/StringStats" unique_id=1979679467]
 layout_mode = 0
-offset_left = 321.65375
-offset_top = 294.61816
-offset_right = 486.65375
-offset_bottom = 341.61813
+offset_left = 372.7472
+offset_top = 343.51874
+offset_right = 537.7472
+offset_bottom = 390.51868
+scale = Vector2(1.150258, 1.1453121)
 mouse_filter = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
@@ -374,10 +391,11 @@ text = "Intellect"
 
 [node name="Harisma" type="Label" parent="Current_agent/StringStats" unique_id=633224456]
 layout_mode = 0
-offset_left = 350.53284
-offset_top = 373.5256
-offset_right = 494.53287
-offset_bottom = 420.5256
+offset_left = 404.95862
+offset_top = 430.20572
+offset_right = 548.9585
+offset_bottom = 477.20572
+scale = Vector2(1.150258, 1.1453121)
 mouse_filter = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
@@ -394,10 +412,11 @@ text = "Harisma"
 
 [node name="Endurance" type="Label" parent="Current_agent/StringStats" unique_id=1208742182]
 layout_mode = 0
-offset_left = 304.99326
-offset_top = 255.72
-offset_right = 487.99344
-offset_bottom = 302.72
+offset_left = 353.86523
+offset_top = 301.2864
+offset_right = 536.8655
+offset_bottom = 348.2864
+scale = Vector2(1.150258, 1.1453121)
 mouse_filter = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
@@ -414,10 +433,11 @@ text = "Endurance"
 
 [node name="Agility" type="Label" parent="Current_agent/StringStats" unique_id=958097414]
 layout_mode = 0
-offset_left = 370.52606
-offset_top = 413.53503
-offset_right = 514.52606
-offset_bottom = 460.535
+offset_left = 429.39456
+offset_top = 473.54962
+offset_right = 573.3948
+offset_bottom = 520.5496
+scale = Vector2(1.150258, 1.1453121)
 mouse_filter = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.5056689, 0, 1)
@@ -433,10 +453,10 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_kbh1e")
 text = "аgility"
 
 [node name="Gender_age" type="Label" parent="Current_agent" unique_id=1406729124]
-offset_left = 715.30853
-offset_top = 230.05424
-offset_right = 957.3087
-offset_bottom = 285.0542
+offset_left = 785.2846
+offset_top = 277.84344
+offset_right = 995.2846
+offset_bottom = 322.84344
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
@@ -445,45 +465,31 @@ theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 7
 theme_override_constants/shadow_outline_size = 8
 theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 23
 text = "GENDER, аGE"
 
-[node name="Aspect" type="Label" parent="Current_agent" unique_id=1834277032]
-offset_left = 992.99084
-offset_top = 230.05424
-offset_right = 1133.9908
-offset_bottom = 281.05432
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/shadow_offset_x = 5
-theme_override_constants/shadow_offset_y = 3
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 30
-text = "аSPECT"
-
 [node name="NameAgent" type="Label" parent="Current_agent" unique_id=895202275]
-offset_left = 714.1976
-offset_top = 188.9334
-offset_right = 1082.1975
-offset_bottom = 222.9334
+offset_left = 785.2846
+offset_top = 204.4926
+offset_right = 1254.0117
+offset_bottom = 287.4926
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
+theme_override_constants/line_spacing = -6
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 7
 theme_override_constants/shadow_outline_size = 8
 theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ye48f")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4b6ty")
 text = "аnton аntonov аntonovich"
+autowrap_mode = 2
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Current_agent" unique_id=1369337196]
-position = Vector2(945.0834, 453.59686)
+position = Vector2(1043.9294, 505.5474)
 scale = Vector2(1.025, 0.9997846)
 color = Color(0.0003155392, 0.36207384, 0, 1)
 polygon = PackedVector2Array(-97.560974, 0, 0, -99, 97.560974, 0, 61.46338, 101, -60.487854, 101)
@@ -586,14 +592,14 @@ text = "5"
 metadata/_edit_use_anchors_ = true
 
 [node name="Line2D" type="Line2D" parent="." unique_id=975851884]
-position = Vector2(144.4596, 19.0784)
+position = Vector2(243.30688, 71.02899)
 scale = Vector2(1.0453913, 1.0187589)
 points = PackedVector2Array(766, 328, 765.99994, 368.41913, 766, 427, 866, 427, 766, 427, 666, 427, 766, 427, 704, 528, 766, 427, 829, 528)
 width = 2.0
 default_color = Color(0, 0.81960785, 0, 1)
 
 [node name="PentagonStats2" type="Line2D" parent="." unique_id=360619423]
-position = Vector2(213.27484, 82.80957)
+position = Vector2(312.12207, 134.7602)
 scale = Vector2(1, 0.9999998)
 points = PackedVector2Array(832, 370, 795, 471, 670, 471, 632, 370, 732, 272)
 closed = true
@@ -602,7 +608,7 @@ sharp_limit = 3.0
 round_precision = 3
 
 [node name="PentagonStats" type="Line2D" parent="." unique_id=687906117]
-position = Vector2(213.26733, 82.52557)
+position = Vector2(312.11456, 134.47607)
 scale = Vector2(1, 0.9999998)
 points = PackedVector2Array(832, 370, 795, 471, 670, 471, 632, 370, 732, 272)
 closed = true
@@ -611,16 +617,20 @@ default_color = Color(0, 0.81960785, 0, 1)
 round_precision = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=729880096]
-position = Vector2(638.7238, 359.00003)
-scale = Vector2(3.9982738, 4.0000005)
+position = Vector2(709.87274, 399.03854)
+scale = Vector2(4.4429545, 4.444873)
 texture = ExtResource("12_7pq6o")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=2032491643]
-layout_mode = 0
-offset_left = 332.99997
-offset_top = 31.111374
-offset_right = 993.0
-offset_bottom = 121.111374
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -354.5539
+offset_top = 37.78668
+offset_right = 354.55383
+offset_bottom = 134.48317
+grow_horizontal = 2
 texture = ExtResource("13_o8ix8")
 expand_mode = 1
 
@@ -640,16 +650,16 @@ grow_vertical = 2
 size_flags_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 41
 text = "стартовая команда"
 horizontal_alignment = 1
 
 [node name="Back_Button" type="TextureButton" parent="." unique_id=1629776871]
 layout_mode = 0
-offset_left = 35.0
-offset_top = 32.111378
-offset_right = 289.0
-offset_bottom = 122.111374
+offset_left = 40.553635
+offset_top = 37.668236
+offset_right = 313.76697
+offset_bottom = 134.4761
 pivot_offset = Vector2(120, 45)
 texture_normal = ExtResource("10_npaxp")
 texture_pressed = ExtResource("11_rqoys")
@@ -672,7 +682,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = -3
 theme_override_fonts/font = ExtResource("13_c036g")
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 20
 text = "выбор
 сохранения"
 horizontal_alignment = 1
@@ -685,20 +695,15 @@ press_profile = "pc_press"
 
 [node name="next" type="TextureButton" parent="." unique_id=2044502870]
 layout_mode = 0
-offset_left = 1024.0913
-offset_top = 31.118435
-offset_right = 1221.974
-offset_bottom = 121.13965
+offset_left = 1139.6067
+offset_top = 37.786674
+offset_right = 1352.1473
+offset_bottom = 134.4761
 texture_normal = ExtResource("18_c036g")
 texture_pressed = ExtResource("20_8d7rt")
 texture_hover = ExtResource("19_7pq6o")
 ignore_texture_size = true
 stretch_mode = 0
-
-[node name="Node" type="Node" parent="next" unique_id=2105092212]
-script = ExtResource("15_npaxp")
-hover_profile = "pc_hover"
-press_profile = "pc_press"
 
 [node name="Label" type="Label" parent="next" unique_id=2115254582]
 layout_mode = 1
@@ -718,23 +723,23 @@ theme_override_fonts/font = ExtResource("13_c036g")
 theme_override_font_sizes/font_size = 32
 text = "Играть"
 
+[node name="Node" type="Node" parent="next" unique_id=2105092212]
+script = ExtResource("15_npaxp")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
+
 [node name="reroll" type="TextureButton" parent="." unique_id=55143456]
 layout_mode = 0
-offset_left = 738.77856
-offset_top = 623.4802
-offset_right = 930.78986
-offset_bottom = 713.4455
+offset_left = 824.16003
+offset_top = 696.8312
+offset_right = 1016.17126
+offset_bottom = 786.79645
 action_mode = 0
 texture_normal = ExtResource("18_c036g")
 texture_pressed = ExtResource("20_8d7rt")
 texture_hover = ExtResource("19_7pq6o")
 ignore_texture_size = true
 stretch_mode = 0
-
-[node name="Node" type="Node" parent="reroll" unique_id=1488839496]
-script = ExtResource("15_npaxp")
-hover_profile = "pc_hover"
-press_profile = "pc_press"
 
 [node name="Label" type="Label" parent="reroll" unique_id=1141442879]
 layout_mode = 1
@@ -753,6 +758,11 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_c036g")
 theme_override_font_sizes/font_size = 37
 text = "рерол"
+
+[node name="Node" type="Node" parent="reroll" unique_id=1488839496]
+script = ExtResource("15_npaxp")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
 
 [connection signal="mouse_entered" from="Current_agent/StringStats/Strenght" to="." method="_on_strenght_mouse_entered"]
 [connection signal="mouse_exited" from="Current_agent/StringStats/Strenght" to="." method="_on_strenght_mouse_exited"]

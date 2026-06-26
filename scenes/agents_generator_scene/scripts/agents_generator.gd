@@ -16,7 +16,7 @@ extends Control
 @onready var agent_3 = $Agentparty/dragbox/Panel3/Agent
 @onready var agent_4 = $Agentparty/dragbox/Panel4/Agent
 @onready var agent_5 = $Agentparty/dragbox/Panel5/Agent
-@onready var animScreen : AnimatedSprite2D = $Current_agent/AnimScreen
+@onready var animScreen = $Current_agent/AnimScreen
 
 
 @export var current_agent: AgentStats

@@ -3,103 +3,197 @@
 [ext_resource type="Script" uid="uid://cqbfe4f6swgq0" path="res://QuestSolve.gd" id="1_dnlwg"]
 [ext_resource type="Texture2D" uid="uid://gvxh1msgicj8" path="res://materials/Sprite-00203.png" id="1_kv63w"]
 [ext_resource type="Texture2D" uid="uid://dvo75nuf616md" path="res://materials/quests/quest images/1780586958.png" id="2_1l2mg"]
+[ext_resource type="Texture2D" uid="uid://gvxh1msgicj8" path="res://materials/Sprite-00203.png" id="1_kv63w"]
+[ext_resource type="Texture2D" uid="uid://dvo75nuf616md" path="res://materials/Sprite_agent/1780586958.png" id="2_1l2mg"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="4_7cy5k"]
 [ext_resource type="Texture2D" uid="uid://dcwyb51513aj6" path="res://materials/Sprite-0008.png" id="5_p6o40"]
 [ext_resource type="Texture2D" uid="uid://c0u1qixhgwgv2" path="res://materials/Sprite-06.png" id="6_d1uj0"]
 [ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://button_sounds/ButtonSoundController.gd" id="7_gw6sm"]
 [ext_resource type="Texture2D" uid="uid://j1eqxjintl73" path="res://materials/Sprite-0004.png" id="8_8vahx"]
 
-[node name="Panel" type="Panel" unique_id=738869273]
-offset_left = 315.0
-offset_top = 4.0
-offset_right = 903.0
-offset_bottom = 558.0
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d1uj0"]
+load_path = "res://.godot/imported/Sprite-05.png-d42d1e9a00f6291d7b968b0faf707a2a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gw6sm"]
+load_path = "res://.godot/imported/Sprite-0004.png-7b8beee9d071d5fa157d128e075f0f6e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p6o40"]
+load_path = "res://.godot/imported/Sprite-0003.png-87d0f94c1eae45a10d779443e13942d5.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jfwaw"]
+load_path = "res://.godot/imported/Sprite-0002.png-ab6d00ad15d825696d528269eb6f313f.ctex"
+
+[node name="Panel" type="TextureRect" unique_id=1518291813]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -284.0
+offset_top = -330.0
+offset_right = 284.0
+offset_bottom = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_kv63w")
 script = ExtResource("1_dnlwg")
 
-[node name="NameQuest" type="Label" parent="." unique_id=523338894]
+[node name="NameQuest" type="Label" parent="." unique_id=1893600585]
 layout_mode = 0
-offset_right = 585.0
-offset_bottom = 48.0
+offset_left = 41.0
+offset_top = 30.0
+offset_right = 267.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_7cy5k")
+theme_override_font_sizes/font_size = 13
+text = "FDDSMFKMSDKMFSDKFS"
 
-[node name="descript" type="Label" parent="." unique_id=1224285648]
+[node name="descript" type="Label" parent="." unique_id=1063049652]
 layout_mode = 0
-offset_top = 204.0
-offset_right = 580.0
-offset_bottom = 433.0
+offset_left = 19.0
+offset_top = 248.0
+offset_right = 550.0
+offset_bottom = 310.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_7cy5k")
+autowrap_trim_flags = 64
 
 [node name="spritequest" type="TextureRect" parent="." unique_id=1102659675]
+show_behind_parent = true
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 0
-offset_left = 1.0
-offset_top = 3.0
-offset_right = 585.0
-offset_bottom = 269.53845
+offset_left = 27.0
+offset_top = 27.0
+offset_right = 542.0
+offset_bottom = 255.0
 texture = ExtResource("2_1l2mg")
 expand_mode = 1
 
-[node name="OptionsContainer" type="VBoxContainer" parent="." unique_id=294098368]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 300.0
-offset_right = 582.0
-offset_bottom = 551.0
-alignment = 1
-
-[node name="Solution1" type="Button" parent="OptionsContainer" unique_id=475653650]
-custom_minimum_size = Vector2(0, 70)
-layout_mode = 2
-
-[node name="Solution2" type="Button" parent="OptionsContainer" unique_id=1613461840]
-custom_minimum_size = Vector2(0, 70)
-layout_mode = 2
-
-[node name="Solution3" type="Button" parent="OptionsContainer" unique_id=588164955]
-custom_minimum_size = Vector2(0, 70)
-layout_mode = 2
-
 [node name="Close" type="Button" parent="." unique_id=708330815]
+visible = false
 layout_mode = 0
 offset_left = -102.0
 offset_top = 504.0
 offset_right = -22.0
 offset_bottom = 539.0
 
-[node name="PentagonView" type="Panel" parent="." unique_id=205923365]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1127265137]
+show_behind_parent = true
 layout_mode = 0
-offset_left = 3.0
-offset_top = 288.0
-offset_right = 575.0
-offset_bottom = 541.0
+offset_left = 32.0
+offset_top = 330.0
+offset_right = 536.0
+offset_bottom = 520.0
+texture = ExtResource("5_p6o40")
+
+[node name="PentagonView" type="TextureRect" parent="." unique_id=569710737]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 286.0
+offset_right = 536.0
+offset_bottom = 522.0
 
 [node name="Polygon2D" type="Polygon2D" parent="PentagonView" unique_id=387453115]
-position = Vector2(125, 138)
+position = Vector2(102, 141)
+scale = Vector2(0.77, 0.77)
 color = Color(1, 1, 1, 0.6431373)
 polygon = PackedVector2Array(0, -100, -100, 0, -60, 100, 60, 100, 100, 0)
 
 [node name="Line2D" type="Line2D" parent="PentagonView/Polygon2D" unique_id=1870984227]
-z_index = 11
+z_index = 1
 points = PackedVector2Array(0, 0, 0, -100, 0, 0, -100, 0, 0, 0, 100, 0, 0, 0, 60, 100, 0, 0, -60, 100)
 width = 4.0
 
 [node name="VariantPentagon" type="Polygon2D" parent="PentagonView" unique_id=862938285]
-position = Vector2(125, 138)
+z_index = 9
+position = Vector2(102, 141)
 color = Color(0.6117647, 0, 0.13725491, 0.29411766)
-polygon = PackedVector2Array(702, 319, 643, 376, 673, 435, 743, 434, 754, 378)
+polygon = PackedVector2Array(690, 364, 613, 440, 642, 518, 739, 518, 767, 440)
 
 [node name="AgentPentagon" type="Polygon2D" parent="PentagonView" unique_id=1497878613]
-position = Vector2(125, 138)
-color = Color(0.32156864, 0.6627451, 0.21568628, 0.8156863)
-polygon = PackedVector2Array(688, 175, 753, 237, 735, 298, 650, 297, 627, 237)
+z_index = 2
+position = Vector2(102, 141)
+color = Color(0, 0.47058824, 0.105882354, 0.49411765)
+polygon = PackedVector2Array(668, 196, 745, 272, 717, 350, 620, 350, 591, 272)
+
+[node name="PentagonStats2" type="Line2D" parent="PentagonView" unique_id=1751995585]
+z_index = 6
+position = Vector2(-463.63586, -148.37903)
+scale = Vector2(0.77272666, 0.77625585)
+points = PackedVector2Array(832, 370, 795, 471, 670, 471, 632, 370, 732, 272)
+closed = true
+default_color = Color(0, 0.6901961, 0, 1)
+sharp_limit = 3.0
+round_precision = 3
+
+[node name="PentagonStats" type="Line2D" parent="PentagonView" unique_id=749407630]
+z_index = 10
+position = Vector2(-462.68582, -147.80432)
+scale = Vector2(0.7714287, 0.7747991)
+points = PackedVector2Array(832, 370, 795, 471, 670, 471, 632, 370, 732, 272)
+closed = true
+width = 5.0
+default_color = Color(0, 0.81960785, 0, 1)
+round_precision = 3
 
 [node name="SuccessLabel" type="Label" parent="PentagonView" unique_id=274896891]
 layout_mode = 0
-offset_left = 229.0
-offset_top = 93.0
-offset_right = 543.0
-offset_bottom = 160.0
+offset_left = 194.0
+offset_top = 62.0
+offset_right = 459.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("4_7cy5k")
+theme_override_font_sizes/font_size = 23
 text = "Шанс успеха"
 
-[node name="ConfirmButton" type="Button" parent="PentagonView" unique_id=1524177563]
+[node name="ConfirmButton" type="TextureButton" parent="PentagonView" unique_id=2004410209]
+layout_mode = 0
+offset_left = 341.0
+offset_top = 187.0
+offset_right = 521.0
+offset_bottom = 253.0
+texture_normal = ExtResource("6_d1uj0")
+texture_pressed = SubResource("CompressedTexture2D_d1uj0")
+texture_hover = SubResource("CompressedTexture2D_gw6sm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="PentagonView/ConfirmButton" unique_id=2088568568]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.5
+offset_top = -15.0
+offset_right = 80.5
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_7cy5k")
+theme_override_font_sizes/font_size = 17
+text = "Подтвердить"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node" type="Node" parent="PentagonView/ConfirmButton" unique_id=256236789]
+script = ExtResource("7_gw6sm")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
+
+[node name="ButtonPrev" type="TextureButton" parent="." unique_id=1726110755]
+visible = false
+z_index = 11
 layout_mode = 0
 offset_left = 618.0
 offset_top = 127.0
