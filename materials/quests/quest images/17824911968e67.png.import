@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvo75nuf616md"
-path="res://.godot/imported/1780586958.png-6a081529bd7ae105bc7bfc1db0c73c23.ctex"
+uid="uid://856pgkbekuxs"
+path="res://.godot/imported/17824911968e67.png-9f306569eb8783cbbce584d5e06e9f6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://materials/Sprite_agent/1780586958.png"
-dest_files=["res://.godot/imported/1780586958.png-6a081529bd7ae105bc7bfc1db0c73c23.ctex"]
+source_file="res://materials/quests/quest images/17824911968e67.png"
+dest_files=["res://.godot/imported/17824911968e67.png-9f306569eb8783cbbce584d5e06e9f6e.ctex"]
 
 [params]
 

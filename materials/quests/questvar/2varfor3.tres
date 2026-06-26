@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuestVariant" format=3 uid="uid://basbsa60dy61g"]
+
+[ext_resource type="Script" uid="uid://cwob02fmvc3mt" path="res://QuestVariant.gd" id="1_ucjw3"]
+
+[resource]
+script = ExtResource("1_ucjw3")
+text = "Пробраться через окно"
+strenght = 3
+harisma = 4
+endurance = 4
+intellect = 7
+agility = 5
+reward_xp = 136
+failure_damage = 33
+metadata/_custom_type_script = "uid://cwob02fmvc3mt"

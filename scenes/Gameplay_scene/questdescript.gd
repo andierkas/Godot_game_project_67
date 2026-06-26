@@ -8,7 +8,8 @@ extends TextureRect
 
 signal quest_accepted(agents: Array, target_pos: Vector2)
 
-@export var quest: Quest
+# ⬇️ ВАЖНО: Нет @export, нет дефолтного значения
+var quest: Quest
 var quest_target_position: Vector2
 
 func _ready() -> void:
@@ -16,15 +17,27 @@ func _ready() -> void:
 	animScreen.play("screen_animation")
 
 func show_quest(quest_data: Quest, target_pos: Vector2):
+	print("🔍 show_quest вызван с квестом: ", quest_data.name if quest_data else "NULL")
+	
 	quest = quest_data
 	quest_target_position = target_pos
+	
+	if not quest:
+		print("⚠️ Квест не передан!")
+		return
+	
+	# Обновляем UI
 	namequest.text = quest.name
 	quest_desc.text = quest.description
 	sprite.texture = quest.slide
+	
+	visible = true
 	show()
+	
+	print("✅ Панель показана: ", quest.name)
 
 func _on_button_pressed() -> void:
-	print("❌ Кнопка Close нажата")
+	print(" Кнопка Close нажата")
 	queue_free()
 
 func _on_next_pressed() -> void:

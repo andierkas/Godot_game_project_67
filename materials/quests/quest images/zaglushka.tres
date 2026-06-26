@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="AgentStats" format=3 uid="uid://dao144hv773j"]
 
 [ext_resource type="Script" uid="uid://7yko554h6sb4" path="res://scenes/agents_generator_scene/scripts/agent_stats.gd" id="1_dpgm0"]
-[ext_resource type="Texture2D" uid="uid://k6e4jaeg1ktt" path="res://materials/image (2).jpeg" id="2_51ihx"]
+[ext_resource type="Texture2D" uid="uid://k6e4jaeg1ktt" path="res://materials/zaglushka.jpeg" id="2_51ihx"]
 
 [resource]
 script = ExtResource("1_dpgm0")

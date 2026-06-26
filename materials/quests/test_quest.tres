@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Quest" format=3 uid="uid://c5yrl2sr28vdk"]
 
 [ext_resource type="Script" uid="uid://dd4awjxunja2o" path="res://Quest.gd" id="1_38guj"]
-[ext_resource type="Texture2D" uid="uid://dvo75nuf616md" path="res://materials/Sprite_agent/1780586958.png" id="2_bvn16"]
-[ext_resource type="Resource" uid="uid://dydbhtbh4pf01" path="res://materials/quests/var1.tres" id="3_88is0"]
-[ext_resource type="Resource" uid="uid://bbf1ikk1l4bsq" path="res://materials/quests/var2.tres" id="4_igk0s"]
+[ext_resource type="Texture2D" uid="uid://dvo75nuf616md" path="res://materials/quests/quest images/1780586958.png" id="2_bvn16"]
+[ext_resource type="Resource" uid="uid://dydbhtbh4pf01" path="res://materials/quests/questvar/var1.tres" id="3_88is0"]
+[ext_resource type="Resource" uid="uid://bbf1ikk1l4bsq" path="res://materials/quests/questvar/var2.tres" id="4_igk0s"]
 [ext_resource type="Script" uid="uid://cwob02fmvc3mt" path="res://QuestVariant.gd" id="5_igk0s"]
 
 [resource]
