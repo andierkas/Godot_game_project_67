@@ -11,7 +11,7 @@ extends Control
 var is_menu_open = false
 var is_animating = false
 var is_opening = false
-var help_layer = null  # Ссылка на слой помощи
+var help_layer = null
 
 func _ready() -> void:
 	animScreen.play("screen_animation")

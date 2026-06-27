@@ -15,6 +15,7 @@ const QuestSolveScene = preload("res://scenes/Gameplay_scene/quest_solve.tscn")
 var _active_quests: Array[Dictionary] = []
 var _current_quest_variant: QuestVariant = null
 var _is_agents_menu_visible: bool = false  # Переменная для отслеживания состояния меню
+var help_layer = null
 
 func _ready() -> void:
 	print(" Главная сцена загружена")
@@ -246,3 +247,25 @@ func _on_button_pressed() -> void:
 		# Если меню скрыто, проигрываем анимацию вперед
 		animPlayer.play("ahow_agents_menu")
 		_is_agents_menu_visible = true
+
+
+func _on_help_button_pressed() -> void:
+	# Проверяем, открыт ли уже слой помощи
+	if help_layer != null:
+		return
+	
+	# Создаём экземпляр сцены помощи
+	var help_scene = load("res://scenes/scene_guide/guide.tscn")
+	if help_scene:
+		help_layer = help_scene.instantiate()
+		add_child(help_layer)
+		
+		# Подключаем сигнал закрытия
+		if help_layer.has_signal("close_requested"):
+			help_layer.close_requested.connect(_on_help_closed)
+		else:
+			# Если нет сигнала, проверяем по таймеру или через анимацию
+			pass
+
+func _on_help_closed() -> void:
+	help_layer = null

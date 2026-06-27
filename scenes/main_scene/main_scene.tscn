@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://oed7ah48q3cu" path="res://materials/main_menu_screen/main_menu_buttons/main_buttons/Sprite.png" id="19_qgjuk"]
 [ext_resource type="SpriteFrames" uid="uid://cxay3qt6qkail" path="res://materials/main_menu_screen/menu_anim/new_sprite_frames.tres" id="21_b7qf2"]
 [ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://button_sounds/ButtonSoundController.gd" id="21_xtklx"]
-[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="37_8dvv1"]
+[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/main_shrift.otf" id="37_8dvv1"]
 [ext_resource type="Texture2D" uid="uid://der5jus22enqp" path="res://materials/main_menu_screen/screen/screen3.png" id="40_rv7a5"]
 
 [sub_resource type="Animation" id="Animation_b7qf2"]
@@ -362,9 +362,9 @@ press_profile = "pc_press"
 [node name="Off_button" type="TextureButton" parent="." unique_id=525548742]
 layout_mode = 0
 offset_left = 433.99997
-offset_top = 327.00003
+offset_top = 331.00003
 offset_right = 494.99997
-offset_bottom = 389.76813
+offset_bottom = 393.76813
 scale = Vector2(1.1199988, 1.1199988)
 texture_normal = ExtResource("7_nim2u")
 texture_pressed = ExtResource("8_sro07")
@@ -501,17 +501,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -592.0
-offset_top = -305.0
-offset_right = -234.0
-offset_bottom = -241.0
+offset_left = -597.0
+offset_top = -308.0
+offset_right = -229.0
+offset_bottom = -244.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("37_8dvv1")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 37
 text = "главное меню"
 horizontal_alignment = 1
 

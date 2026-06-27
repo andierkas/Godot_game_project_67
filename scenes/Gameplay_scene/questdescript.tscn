@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://7abog8ajlb51" path="res://materials/image.jpeg" id="2_mrkqg"]
 [ext_resource type="Texture2D" uid="uid://k6e4jaeg1ktt" path="res://materials/zaglushka.jpeg" id="3_7tg5y"]
 [ext_resource type="Script" uid="uid://bmp6qlkmnlum1" path="res://scenes/Gameplay_scene/texture_drag.gd" id="4_8bdsa"]
-[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="5_xvmmr"]
+[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/main_shrift.otf" id="5_xvmmr"]
 [ext_resource type="Texture2D" uid="uid://7638oi7jqmlr" path="res://materials/Sprite-0033.png" id="8_crvjv"]
 [ext_resource type="SpriteFrames" uid="uid://bpvbjsuve4rsn" path="res://materials/main_menu_screen/screen/screen_anim/new_sprite_frames.tres" id="8_xvmmr"]
 [ext_resource type="Texture2D" uid="uid://cqffc4cej7lih" path="res://materials/Sprite-0035.png" id="9_o5cgd"]

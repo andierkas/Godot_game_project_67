@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bel2nsmwwvdkv"]
 
 [ext_resource type="Script" uid="uid://d0lef2tsc6fql" path="res://scenes/loadgame_scene/loadgame_scene.gd" id="1_t0mkg"]
-[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="2_6hksg"]
+[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/main_shrift.otf" id="2_6hksg"]
 [ext_resource type="SpriteFrames" uid="uid://cxay3qt6qkail" path="res://materials/main_menu_screen/menu_anim/new_sprite_frames.tres" id="2_q7tdb"]
 [ext_resource type="SpriteFrames" uid="uid://bolo6bhqnvvkd" path="res://materials/shadow_for_screen/new_sprite_frames.tres" id="2_wra1n"]
 [ext_resource type="Texture2D" uid="uid://bm5pxnxe5pjq6" path="res://materials/load_game_menu/base_button/Sprite-0001.png" id="4_3moow"]

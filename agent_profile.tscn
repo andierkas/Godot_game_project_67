@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bcbiardwkyxa6" path="res://agent_profile.gd" id="1_11ji7"]
 [ext_resource type="Texture2D" uid="uid://ddyrwbstl1ex6" path="res://materials/Sprite_agent/male/1.png" id="1_jt747"]
 [ext_resource type="Texture2D" uid="uid://s5jc12b5m0lx" path="res://materials/new folder/Sprite-0008.png" id="3_ynlka"]
-[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="4_4khr3"]
+[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/main_shrift.otf" id="4_4khr3"]
 [ext_resource type="Texture2D" uid="uid://cv2y6e7uthr26" path="res://materials/new folder/Sprite-0023405.png" id="5_5desf"]
 [ext_resource type="Texture2D" uid="uid://qmcf4lxrddni" path="res://materials/new folder/Sprite-0009.png" id="6_6dwpp"]
 [ext_resource type="Texture2D" uid="uid://cbaq7tq0m76s5" path="res://materials/new folder/Sprite-0010.png" id="7_22f2u"]

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cyk87n2jsl4bw" path="res://materials/shadow_for_screen/Sprite-0001.png" id="1_b7537"]
 [ext_resource type="Script" uid="uid://c2ovnkwvbd1jp" path="res://start_scene_animation/start_scene_animation.gd" id="1_lkns6"]
 [ext_resource type="Texture2D" uid="uid://dh8oraxp1j8ln" path="res://start_scene_animation/HSE.png" id="2_2ye7c"]
-[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="5_krq8a"]
+[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/main_shrift.otf" id="5_krq8a"]
 
 [sub_resource type="Animation" id="Animation_3qo6a"]
 length = 3.3

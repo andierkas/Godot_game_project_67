@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://djxeugnnjpide" path="res://materials/load_game_menu/back_button/Sprite-0016.png" id="11_rqoys"]
 [ext_resource type="Texture2D" uid="uid://q2sc58aaydua" path="res://materials/generate_agent_scene/Sprite-0012-export-export.png" id="12_7pq6o"]
 [ext_resource type="Texture2D" uid="uid://jm26r0snx3vh" path="res://materials/load_game_menu/back_button/Sprite-0015.png" id="12_jw7mo"]
-[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="13_c036g"]
+[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/main_shrift.otf" id="13_c036g"]
 [ext_resource type="Texture2D" uid="uid://cmhqf5asoldai" path="res://materials/generate_agent_scene/Sprite-0003.png" id="13_o8ix8"]
 [ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://button_sounds/ButtonSoundController.gd" id="15_npaxp"]
 [ext_resource type="Texture2D" uid="uid://c1digebjx32ek" path="res://materials/generate_agent_scene/Sprite-0001.png" id="18_c036g"]

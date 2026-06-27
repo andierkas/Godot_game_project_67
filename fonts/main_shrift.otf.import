@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://day1htobyvwad"
-path="res://.godot/imported/minecraft-ten.otf-2c3d65a09c21cb068dc7cad488e53f83.fontdata"
+path="res://.godot/imported/main_shrift.otf-73d8aa07b429ec7ca1b4a47fa59cdfce.fontdata"
 
 [deps]
 
-source_file="res://fonts/minecraft-ten.otf"
-dest_files=["res://.godot/imported/minecraft-ten.otf-2c3d65a09c21cb068dc7cad488e53f83.fontdata"]
+source_file="res://fonts/main_shrift.otf"
+dest_files=["res://.godot/imported/main_shrift.otf-73d8aa07b429ec7ca1b4a47fa59cdfce.fontdata"]
 
 [params]
 

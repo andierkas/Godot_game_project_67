@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://onc6aeyghbpf" path="res://scenes/scene_guide/Sprite-0002.png" id="1_1aueq"]
 [ext_resource type="Script" uid="uid://cnvmsmppt1nvx" path="res://scenes/scene_guide/guide.gd" id="1_6qj87"]
-[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="3_fhtmy"]
+[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/main_shrift.otf" id="3_fhtmy"]
 [ext_resource type="Texture2D" uid="uid://bayk0jgvtgjp7" path="res://materials/photo_2026-06-26_23-32-52 1.png" id="4_eg7o0"]
 [ext_resource type="Texture2D" uid="uid://0huw3txwyt5m" path="res://image 29 (1).png" id="5_ha8v5"]
 [ext_resource type="Texture2D" uid="uid://ddliewxslqh1o" path="res://image 30.png" id="6_3iwgr"]
@@ -44,6 +44,11 @@ size_flags_stretch_ratio = 1.79
 
 [node name="Label" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1736752765]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
 theme_override_fonts/font = ExtResource("3_fhtmy")
 theme_override_font_sizes/font_size = 60
 text = "Обучение игре"
