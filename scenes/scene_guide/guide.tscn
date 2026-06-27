@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://0huw3txwyt5m" path="res://image 29 (1).png" id="5_ha8v5"]
 [ext_resource type="Texture2D" uid="uid://ddliewxslqh1o" path="res://image 30.png" id="6_3iwgr"]
 [ext_resource type="Texture2D" uid="uid://bftk67qknftsv" path="res://image 31.png" id="7_6prud"]
+[ext_resource type="Texture2D" uid="uid://cp0pvt00u212" path="res://image 32 (1).png" id="8_6prud"]
+[ext_resource type="Texture2D" uid="uid://bcfhb0prerals" path="res://image 33.png" id="9_euk1g"]
 
 [node name="Guide" type="CanvasLayer" unique_id=1127359957]
 script = ExtResource("1_6qj87")
@@ -37,7 +39,7 @@ offset_right = 1172.0
 offset_bottom = 574.0
 follow_focus = true
 draw_focus_border = true
-scroll_vertical = 100
+scroll_vertical = 1900
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1065546147]
 z_index = 13
@@ -152,7 +154,7 @@ texture = ExtResource("7_6prud")
 stretch_mode = 2
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=189651954]
-custom_minimum_size = Vector2(0, 400)
+custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 
 [node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer4" unique_id=928391259]
@@ -161,14 +163,25 @@ layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.101960786, 0.10980392, 0.18039216, 1)
 theme_override_fonts/font = ExtResource("3_fhtmy")
-text = "Задание проходит так, вам предложат 2-3 варианта решения задания, основывясь на характеристиках своего отряда выберите тот что считаете лучшим. Вы не будете знать заранее что вам больше необходимо сила или ловкость, лишь прочитав вариант и подумав логически вы поймете какой вариант для вас успешней. Но не забывайте пока вы думаете проблемы и жалобы поступают. 
-Шанс успеха зависит от разницы площадь которую необходимо покрывать характеристиками и площади ваших характеристик."
+text = "Также у вас имеется параметр здоровья и параметр опыта.
+Здоровьем является уровень доверия города к вам. Если вы будете проваливать задания здоровье будет падать, а если вы будете повышать свой уровень оно будет расти.
+Желтая полоса справа это ваш опыт, при заполнении ваш уровень повышается, вы восполняете немного здоровья, а также если у вас меньше 6 агентов, вам добавиться 1 новый."
 autowrap_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer4" unique_id=1905338288]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer4" unique_id=1193986722]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer" unique_id=1905338288]
 layout_mode = 2
 size_flags_horizontal = 10
-texture = ExtResource("7_6prud")
+texture = ExtResource("8_6prud")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer" unique_id=1066742530]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("9_euk1g")
 stretch_mode = 2
 
 [node name="close_button" type="Button" parent="." unique_id=1136486594]

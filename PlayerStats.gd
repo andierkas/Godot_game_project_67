@@ -37,6 +37,7 @@ func get_xp_to_next_level() -> int:
 
 # Что происходит при повышении уровня игрока
 func _on_level_up() -> void:
+	heal(25)
 	if PartyBox.get_agents_count() < 6:
 		var new_agent = AgentStats.new()
 		PartyBox.add_agent(new_agent)

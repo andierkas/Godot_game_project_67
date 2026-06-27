@@ -15,7 +15,9 @@ atlas = ExtResource("3_6yqs4")
 region = Rect2(584, 43, 256, 256)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1278575902]
+floor_constant_speed = true
 script = ExtResource("1_6yqs4")
+speed = 200.0
 metadata/_edit_vertical_guides_ = [-32.0, 32.0]
 metadata/_edit_horizontal_guides_ = [-31.0, 31.0]
 
@@ -26,6 +28,10 @@ shape = SubResource("CircleShape2D_lolqr")
 target_desired_distance = 5.0
 path_max_distance = 50.0
 path_postprocessing = 1
+avoidance_enabled = true
+time_horizon_agents = 2.08
+time_horizon_obstacles = 0.41
+max_speed = 200.0
 debug_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=888440895]
