@@ -1,7 +1,7 @@
-Abramov
-Andreev
-Anisimov
-Afanasyev
+abramov
+andreev
+anisimov
+afanasyev
 Baranov
 Belov
 Belyaev

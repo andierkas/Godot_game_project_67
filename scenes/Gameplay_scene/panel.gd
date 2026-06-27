@@ -1,4 +1,4 @@
-extends Panel
+extends TextureRect
 
 var current_tween: Tween = null
 var showed: bool = true
@@ -13,7 +13,7 @@ func _on_button_pressed() -> void:
 	if showed:
 		# Создаём новый твин и сохраняем ссылку
 		current_tween = create_tween()
-		current_tween.tween_property(self, "position", Vector2(241, 1100), 1.0)
+		current_tween.tween_property(self, "position", Vector2(1100, 1100), 1.0)
 		showed = false
 	else:
 		current_tween = create_tween()

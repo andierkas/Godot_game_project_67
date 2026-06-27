@@ -29,33 +29,37 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -284.0
-offset_top = -330.0
+offset_top = -324.0
 offset_right = 284.0
-offset_bottom = 224.0
+offset_bottom = 230.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_kv63w")
 script = ExtResource("1_dnlwg")
 
-[node name="NameQuest" type="Label" parent="." unique_id=1893600585]
+[node name="NameQuest" type="Label" parent="." unique_id=1799081382]
 layout_mode = 0
-offset_left = 41.0
-offset_top = 30.0
-offset_right = 267.0
-offset_bottom = 62.0
+offset_left = 33.0
+offset_top = 192.0
+offset_right = 539.86304
+offset_bottom = 231.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -7
 theme_override_fonts/font = ExtResource("4_7cy5k")
 theme_override_font_sizes/font_size = 13
 text = "FDDSMFKMSDKMFSDKFS"
+autowrap_mode = 2
 
-[node name="descript" type="Label" parent="." unique_id=1063049652]
+[node name="descript" type="RichTextLabel" parent="." unique_id=271308652]
 layout_mode = 0
-offset_left = 19.0
-offset_top = 248.0
-offset_right = 550.0
-offset_bottom = 310.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_7cy5k")
+offset_left = 18.863037
+offset_top = 241.0
+offset_right = 556.86304
+offset_bottom = 312.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -7
+theme_override_fonts/normal_font = ExtResource("4_7cy5k")
+autowrap_mode = 2
 autowrap_trim_flags = 64
 
 [node name="spritequest" type="TextureRect" parent="." unique_id=1102659675]

@@ -20,9 +20,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -287.86304
-offset_top = -331.0
+offset_top = -321.0
 offset_right = 287.86304
-offset_bottom = 201.0
+offset_bottom = 211.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -43,23 +43,27 @@ expand_mode = 2
 
 [node name="NameQuest" type="Label" parent="." unique_id=1949124771]
 layout_mode = 0
-offset_left = 41.0
-offset_top = 28.0
-offset_right = 267.0
-offset_bottom = 60.0
+offset_left = 34.0
+offset_top = 217.0
+offset_right = 540.86304
+offset_bottom = 256.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -7
 theme_override_fonts/font = ExtResource("5_xvmmr")
 theme_override_font_sizes/font_size = 13
 text = "FDDSMFKMSDKMFSDKFS"
+autowrap_mode = 2
 
-[node name="descript" type="Label" parent="." unique_id=1826843881]
+[node name="descript" type="RichTextLabel" parent="." unique_id=1373611772]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 270.0
-offset_right = 558.0
+offset_left = 18.863037
+offset_top = 265.0
+offset_right = 556.86304
 offset_bottom = 332.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_xvmmr")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -7
+theme_override_fonts/normal_font = ExtResource("5_xvmmr")
+autowrap_mode = 2
 autowrap_trim_flags = 64
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=759287487]

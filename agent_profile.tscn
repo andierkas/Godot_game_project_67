@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ddyrwbstl1ex6" path="res://materials/Sprite_agent/male/1.png" id="1_jt747"]
 [ext_resource type="Texture2D" uid="uid://s5jc12b5m0lx" path="res://materials/new folder/Sprite-0008.png" id="3_ynlka"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="4_4khr3"]
-[ext_resource type="Texture2D" uid="uid://dctiur1p1kgli" path="res://materials/new folder/Sprite-00234207.png" id="5_5desf"]
+[ext_resource type="Texture2D" uid="uid://cv2y6e7uthr26" path="res://materials/new folder/Sprite-0023405.png" id="5_5desf"]
 [ext_resource type="Texture2D" uid="uid://qmcf4lxrddni" path="res://materials/new folder/Sprite-0009.png" id="6_6dwpp"]
 [ext_resource type="Texture2D" uid="uid://cbaq7tq0m76s5" path="res://materials/new folder/Sprite-0010.png" id="7_22f2u"]
 [ext_resource type="Texture2D" uid="uid://b5ies0wv4fgb1" path="res://materials/new folder/Sprite-0011.png" id="8_xvue3"]
@@ -28,7 +28,7 @@ mouse_filter = 2
 script = ExtResource("1_11ji7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=251263181]
-position = Vector2(195.00003, 69)
+position = Vector2(195.00002, 59.999996)
 scale = Vector2(0.6483679, 0.6628788)
 texture = ExtResource("1_jt747")
 centered = false
@@ -43,9 +43,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -446.91965
-offset_top = -294.25
+offset_top = -303.25
 offset_right = 446.91968
-offset_bottom = 238.25
+offset_bottom = 229.25
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_ynlka")
@@ -54,10 +54,11 @@ expand_mode = 1
 [node name="AgentName" type="Label" parent="." unique_id=487885727]
 layout_mode = 0
 offset_left = 215.56
-offset_top = 434.016
-offset_right = 522.56
-offset_bottom = 471.016
+offset_top = 425.016
+offset_right = 692.56
+offset_bottom = 462.016
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -9
 theme_override_fonts/font = ExtResource("4_4khr3")
 theme_override_font_sizes/font_size = 21
 text = "Ivan Ivanov Ivanovich"
@@ -66,9 +67,9 @@ autowrap_mode = 2
 [node name="XP" type="Label" parent="." unique_id=1753758476]
 layout_mode = 0
 offset_left = 224.56
-offset_top = 514.016
+offset_top = 505.016
 offset_right = 441.56
-offset_bottom = 574.016
+offset_bottom = 565.016
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_4khr3")
 theme_override_font_sizes/font_size = 25
@@ -76,33 +77,33 @@ text = "100/1000"
 
 [node name="max_xp" type="ColorRect" parent="." unique_id=1662730092]
 layout_mode = 0
-offset_left = 396.56003
-offset_top = 510.016
+offset_left = 396.5601
+offset_top = 501.016
 offset_right = 740.56006
-offset_bottom = 550.016
+offset_bottom = 541.016
 scale = Vector2(0.88000244, 0.88000244)
 
 [node name="xp_text" type="Label" parent="." unique_id=438582061]
 layout_mode = 0
 offset_left = 219.56
-offset_top = 494.016
+offset_top = 485.016
 offset_right = 385.56
-offset_bottom = 522.016
+offset_bottom = 513.016
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_4khr3")
 text = "Уровень опыта"
 
 [node name="current_xp" type="TextureRect" parent="." unique_id=579407749]
 layout_mode = 0
-offset_left = 397.56
-offset_top = 509.016
-offset_right = 401.56
-offset_bottom = 545.016
+offset_left = 397.56003
+offset_top = 500.016
+offset_right = 401.56003
+offset_bottom = 536.016
 texture = ExtResource("5_5desf")
 expand_mode = 1
 
 [node name="max_polygon" type="Polygon2D" parent="." unique_id=1044253699]
-position = Vector2(891, 207)
+position = Vector2(891, 198)
 color = Color(1, 1, 1, 0.79607844)
 polygon = PackedVector2Array(0, -100, -100, 0, -60, 100, 60, 100, 100, 0)
 uv = PackedVector2Array(0, -100, 0, 0, 633, 204, 712, 205, 774, 125)
@@ -129,9 +130,9 @@ round_precision = 3
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1759334981]
 layout_mode = 0
 offset_left = 763.0
-offset_top = 326.0
+offset_top = 317.0
 offset_right = 1005.0
-offset_bottom = 545.0
+offset_bottom = 536.0
 
 [node name="strenght" type="Label" parent="VBoxContainer" unique_id=2041517140]
 layout_mode = 2
@@ -170,10 +171,10 @@ text = "agility"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=2070085650]
 layout_mode = 0
-offset_left = 978.0
-offset_top = 326.0
-offset_right = 1074.0
-offset_bottom = 542.0
+offset_left = 966.0
+offset_top = 317.0
+offset_right = 1062.0
+offset_bottom = 533.0
 
 [node name="strenght_value" type="Label" parent="VBoxContainer2" unique_id=1715814209]
 layout_mode = 2
@@ -211,14 +212,13 @@ theme_override_font_sizes/font_size = 23
 text = "10"
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="." unique_id=726810859]
-visible = false
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 0
-offset_left = 906.0
-offset_top = 280.0
-offset_right = 937.0
-offset_bottom = 485.0
-theme_override_constants/separation = 12
+offset_left = 1004.0
+offset_top = 324.0
+offset_right = 1035.0
+offset_bottom = 530.0
+theme_override_constants/separation = 14
 
 [node name="Button" type="Button" parent="VBoxContainer3" unique_id=1513434726]
 custom_minimum_size = Vector2(30, 30)
@@ -253,10 +253,10 @@ text = "+"
 [node name="Button" type="TextureButton" parent="." unique_id=1097518963]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 1005.56
-offset_top = 73.016
+offset_left = 1005.56006
+offset_top = 64.016
 offset_right = 1054.56
-offset_bottom = 122.016
+offset_bottom = 113.016
 texture_normal = ExtResource("6_6dwpp")
 texture_pressed = ExtResource("7_22f2u")
 texture_hover = ExtResource("8_xvue3")
@@ -288,10 +288,10 @@ press_profile = "pc_press"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=91682327]
 layout_mode = 0
-offset_left = 394.56
-offset_top = 506.016
-offset_right = 702.56
-offset_bottom = 548.016
+offset_left = 394.56003
+offset_top = 497.016
+offset_right = 702.56006
+offset_bottom = 539.016
 mouse_filter = 2
 texture = ExtResource("9_osmq7")
 expand_mode = 1

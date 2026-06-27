@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="City_in_crysis_proj"
-run/main_scene="uid://demjex5os6jyt"
+run/main_scene="uid://d0efh8ojrc5q6"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="aboba"
 config/features=PackedStringArray("4.6", "Forward Plus")

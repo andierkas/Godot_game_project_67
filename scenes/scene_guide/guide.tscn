@@ -12,7 +12,7 @@
 script = ExtResource("1_6qj87")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2111654453]
-self_modulate = Color(1.3262677, 1.3262677, 1.3262677, 0.72156864)
+self_modulate = Color(1.3262677, 1.3262677, 1.3262677, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -33,7 +33,7 @@ offset_right = 1181.0
 offset_bottom = 574.0
 follow_focus = true
 draw_focus_border = true
-scroll_vertical = 1836
+scroll_vertical = 100
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1065546147]
 z_index = 13
@@ -54,8 +54,8 @@ custom_minimum_size = Vector2(700, 250)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.10223927, 0.11010014, 0.17997457, 1)
 theme_override_fonts/font = ExtResource("3_fhtmy")
-text = "[СИСТЕМА ЗАПУЩЕНА]
-[ЦЕНТР УПРАВЛЕНИЯ ГОРОДОМ — ONLINE]
+text = "[СИСТЕМа ЗаПУЩЕНа]
+[ЦЕНТР УПРаВЛЕНИЯ ГОРОДОМ — ONLINE]
 Приветствуем, Диспетчер.
 Ваша задача защищать город, для этого вам выдается спецотряд людей кто не хочет стоять в трудную минуту. У них есть свои таланты, каждый индивидуален, ваша задача правильно распределять кто и какие задачи будет выполнять в данный момент времени"
 autowrap_mode = 2

@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://blnovlcwgfplf" path="res://materials/1780274087.png" id="1_82jc6"]
 [ext_resource type="Script" uid="uid://8afxic637pb1" path="res://scenes/Gameplay_scene/day.gd" id="1_exbrp"]
-[ext_resource type="Script" uid="uid://bupxvywad85is" path="res://scenes/Gameplay_scene/panel.gd" id="2_68y1k"]
 [ext_resource type="Script" uid="uid://dd4awjxunja2o" path="res://Quest.gd" id="2_n8qpb"]
 [ext_resource type="Texture2D" uid="uid://k6e4jaeg1ktt" path="res://materials/zaglushka.jpeg" id="3_82jc6"]
 [ext_resource type="Script" uid="uid://4wgsk15dvste" path="res://grid_container.gd" id="3_llrwq"]
@@ -14,9 +13,18 @@
 [ext_resource type="Texture2D" uid="uid://b5ypyqlghjhrl" path="res://QuestMark.png" id="10_cpas5"]
 [ext_resource type="Resource" uid="uid://jo20ajr46hhc" path="res://materials/quests/quest4.tres" id="11_2xd4o"]
 [ext_resource type="PackedScene" uid="uid://mmemw0g772c" path="res://agent_profile.tscn" id="11_lhnp0"]
+[ext_resource type="SpriteFrames" uid="uid://bpvbjsuve4rsn" path="res://materials/main_menu_screen/screen/screen_anim/new_sprite_frames.tres" id="13_m2vlg"]
+[ext_resource type="Texture2D" uid="uid://df3g8k5gwpxmt" path="res://materials/new folder/Sprite-0006.png" id="13_tmofk"]
 [ext_resource type="Resource" uid="uid://bqpprx3ne63dv" path="res://materials/quests/quest3.tres" id="13_u5q0e"]
+[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/minecraft-ten.otf" id="14_1dbwb"]
+[ext_resource type="Texture2D" uid="uid://4xnq6p0tx5gl" path="res://materials/show_hide/Sprite-000114234.png" id="14_3dfw7"]
 [ext_resource type="Resource" uid="uid://se7gbvsfyxfl" path="res://materials/quests/quest5.tres" id="14_cytv4"]
+[ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://button_sounds/ButtonSoundController.gd" id="15_737c4"]
+[ext_resource type="Texture2D" uid="uid://bcswkawi86s4e" path="res://materials/show_hide/Sprite-000114236.png" id="15_sw758"]
 [ext_resource type="Resource" uid="uid://cvkqmwutwertg" path="res://materials/quests/quest6.tres" id="15_tmofk"]
+[ext_resource type="Texture2D" uid="uid://c8128a742th6h" path="res://materials/show_hide/Sprite-000114235.png" id="16_m2vlg"]
+[ext_resource type="Texture2D" uid="uid://d1yh5ninobhg5" path="res://materials/new folder/Sprite-003454302-export.png" id="18_tmofk"]
+[ext_resource type="Texture2D" uid="uid://crqsa52jx1nue" path="res://materials/new folder/Sprite-0021301.png" id="23_sw758"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_cytv4"]
 vertices = PackedVector2Array(163.78906, 105.10156, 158.64844, 106.78125, 162.20313, 105.00781, 284.02344, 143.97656, 391.1328, 144, 308.8828, 144, 889, 620, 1066.2266, 623.0625, 803, 621, 820, 620, 574, 619, 728, 621, 280, 621, 414, 619, 389, 619, 305, 619, 1058.1016, 654.96875, 1059.6563, 655.0078, 67.99219, 655, 409, 126, 571, 126, 392.75, 131.13281, 571, 358, 597.02344, 359.0625, 464, 359, 477, 358, 1036.0234, 497.21094, 1038.1797, 547.9219, 1034.9609, 529.6797, 708, 617, 598, 617, 592.02344, 240.82031, 597.89844, 242, 391.1328, 242, 572, 240, 410, 240, 848.9922, 305.71875, 851.0078, 355.27344, 845.0078, 334.2578, 842.9922, 272.5625, 680, 180, 698.02344, 185.02344, 656.97656, 186, 599, 180, 597.02344, 186.97656, 598, 146.00781, 599, 143, 598, 128, 587.97656, 76, 571, 76, 1010.8594, 482.4922, 304, 381, 304, 481, 282, 443.5, 282, 286.5, 965.0469, 367, 972.97656, 357.47656, 974.0078, 381.3203, 1057.0313, 348, 1057.9766, 379.53906, 1050, 371.3672, 1050, 357.46094, 961.97656, 306.6328, 853.46875, 298.9922, 306.5, 253.75, 283, 278, 283, 256, 306.5, 358.25, 841.5625, 340.0078, 1029.0391, 459.32813, 1007.85156, 477.97656, 1008.5, 478.03906, 713.02344, 468.03125, 712.03906, 423.0625, 723.03125, 431.5078, 726.0781, 466, 777, 290.5, 785.0078, 291.5625, 762.5469, 313, 756.14844, 306.14063, 745.4531, 311.65625, 750, 303.6797, 1015.53125, 121.02344, 1026.9219, 135.03125, 968.9297, 136.02344, 970.2031, 123.03906, 818, 58, 889.25, 58, 881.34375, 68.21094, 869.77344, 74, 701.03125, 74, 743.8672, 308.52344, 741.96094, 254.95313, 750, 253.86719, 962.03125, 293.0078, 972.97656, 286, 974.02344, 348, 958.9922, 181.64844, 1009.14844, 477.07813, 1021.2969, 549.0469, 809.0781, 145.99219, 806.5781, 141.71875, 844, 135.00781, 881.6719, 141.00781, 864.1797, 137.02344, 885.3125, 126.953125, 896.71094, 130.99219, 911.1094, 120, 952.4219, 132.00781, 954, 122.046875, 392.75, 70.88281, 409, 76, 988.8672, 435.4922, 1009.7578, 419.72656, 680, 143, 227, 488, 227, 621, 208, 617, 208, 470, 728, 488, 708, 484, 973.03125, 277.0078, 1072.8125, 276.0078, 1071.1484, 286, 969.96875, 179.03125, 775.96094, 212.47656, 823.0625, 170.39063, 823.46094, 171, 410, 142, 1055.8906, 633.96875, 932.0469, 473.8672, 932.9297, 487.95313, 909.1172, 486.96094, 911.89844, 470.85156, 786.03125, 257.04688, 777, 257.10938, 1020.6094, 405.8203, 996.6172, 416.2578, 957.60156, 390.10938, 1093.0625, 621.0703, 1093.9297, 634.96875, 88, 617, 68.86719, 624.90625, 73.03125, 481.03125, 88, 470, 574, 494, 598, 484, 280, 488, 305, 493, 464, 263, 477, 262, 857.40625, 367, 935.1172, 385, 821.46875, 384, 628, 128, 628, 95.92969, 641, 95.07031, 641, 110, 687.03125, 110, 685.96875, 76, 594.97656, 263.04688, 571, 262, 803, 488, 820, 487, 409, 263, 409, 359, 389.5, 358.25, 389.5, 253.75, 5, 479.03906, 5, 443.02344, 77.96094, 445.03125, 910.9219, 470, 911.97656, 470.07813, 385.96875, 57, 385.96875, 7, 408, 7, 408, 57, 570, 57, 570, 7, 594, 7, 594, 57, 672, 57, 672, 7, 689, 7, 689, 57, 801, 57, 801, 7, 818, 7, 307.25, 70.88281, 310.28125, 57, 954, 107, 966.7969, 107, 959, 138.59375, 971.0625, 169, 959, 171, 1048, 169, 1048, 177.02344, 955.5, 177, 829.6172, 177, 786.9531, 214.59375, 772.90625, 244.00781, 790.09375, 244.90625, 414, 494, 389, 493, 286, 60, 286, 7, 310.28125, 7, 308.8828, 242, 281.97656, 241.99219, 845, 355.25, 845, 350.59375, 839.40625, 345, 789.59375, 338.9922, 786.3906, 345, 759.3906, 320, 752.78906, 320, 733.71094, 328.47656, 817, 390.70313, 817, 451.15625, 803.0078, 451.21875, 800.9922, 397.84375, 796.8203, 383.22656, 84.03906, 294.0078, 5, 293.02344, 5, 276.89844, 84.9375, 268.90625, 247, 61.796875, 247.03906, 60, 253.02344, 76, 282.6797, 76, 307.25, 131.13281, 285, 81.82031, 283.97656, 124.99219, 926, 546.09375, 926.97656, 502, 1005.28125, 502, 822.27344, 466.97656, 910.9219, 469.9922, 572, 142, 146.17969, 125.99219, 131.70313, 147.00781, 117.63281, 137.8125, 112.27344, 159.28125, 91.96875, 171.35938, 101.03125, 177.67188, 98, 204.92969, 96.96875, 243.00781, 1046.2969, 355, 976.7031, 355, 923.8594, 558.9531, 906.03125, 560.0625, 889, 487, 905, 521.9531, 574.75, 481, 744.03125, 312.72656, 744, 312.02344, 668.53125, 335.8828, 957.4922, 301.0078, 852.1328, 291.9922, 849.0469, 269.46875, 828.53125, 248.95313, 824.3672, 254.97656, 96, 256, 96, 278, 795.6172, 466, 838.59375, 367, 765.8125, 367, 785.21094, 379.0078, 758.2031, 377, 750.4219, 360.84375, 747.5625, 373.14063, 731.9297, 357.5078, 739.03906, 348.4297, 727.78125, 333.67188, 738.02344, 339.2578, 90, 443.5, 661.5703, 342.85156, 596.9922, 379.28906, 649.3672, 347.9297, 630.28125, 354.96094, 616.1328, 357.9922, 598.0078, 464.96875, 574.75, 381, 90, 286.5)
@@ -105,101 +113,106 @@ radius = 19.026299
 [sub_resource type="CircleShape2D" id="CircleShape2D_gyagd"]
 radius = 3.0
 
+[sub_resource type="Animation" id="Animation_737c4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(295, 594)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(295, 552)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Button/Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Свернуть"]
+}
+
+[sub_resource type="Animation" id="Animation_3dfw7"]
+resource_name = "ahow_agents_menu"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(295, 594), Vector2(295, 720)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(295, 552), Vector2(295, 678)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Button/Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["Свернуть", "Развернуть"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sw758"]
+_data = {
+&"RESET": SubResource("Animation_737c4"),
+&"ahow_agents_menu": SubResource("Animation_3dfw7")
+}
+
 [node name="Main" type="Node" unique_id=564995157]
 script = ExtResource("1_exbrp")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1462427698]
-offset_right = 1152.0
-offset_bottom = 650.0
+offset_left = 65.0
+offset_top = 30.0
+offset_right = 1217.0
+offset_bottom = 680.0
 mouse_filter = 2
 texture = ExtResource("1_82jc6")
 expand_mode = 2
 
-[node name="Panel" type="Panel" parent="." unique_id=2107047064]
-anchors_preset = -1
-anchor_left = 0.078
-anchor_top = 0.8132716
-anchor_right = 0.6614583
-anchor_bottom = 0.84499997
-offset_left = 151.144
-offset_top = 23.0
-offset_right = 151.0
-offset_bottom = 102.44
-script = ExtResource("2_68y1k")
-metadata/_edit_use_anchors_ = true
-
-[node name="GridContainer" type="GridContainer" parent="Panel" unique_id=985532569]
-z_index = 16
-clip_contents = true
-custom_minimum_size = Vector2(75, 75)
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.3390001
-anchor_bottom = 1.0
-offset_right = -219.80804
-theme_override_constants/h_separation = 16
-columns = 6
-script = ExtResource("3_llrwq")
-
-[node name="TextureRect" type="TextureRect" parent="Panel/GridContainer" unique_id=58714291]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-texture = ExtResource("3_82jc6")
-expand_mode = 2
-script = ExtResource("6_gyagd")
-container_type = "source"
-
-[node name="TextureRect2" type="TextureRect" parent="Panel/GridContainer" unique_id=828861232]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-texture = ExtResource("3_82jc6")
-expand_mode = 2
-script = ExtResource("6_gyagd")
-container_type = "source"
-
-[node name="TextureRect3" type="TextureRect" parent="Panel/GridContainer" unique_id=2039864895]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-texture = ExtResource("3_82jc6")
-expand_mode = 2
-script = ExtResource("6_gyagd")
-container_type = "source"
-
-[node name="TextureRect4" type="TextureRect" parent="Panel/GridContainer" unique_id=1820570581]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-expand_mode = 2
-script = ExtResource("6_gyagd")
-agent = ExtResource("7_gyagd")
-container_type = "source"
-
-[node name="TextureRect5" type="TextureRect" parent="Panel/GridContainer" unique_id=1921087183]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-expand_mode = 2
-script = ExtResource("6_gyagd")
-agent = ExtResource("7_gyagd")
-container_type = "source"
-
-[node name="TextureRect6" type="TextureRect" parent="Panel/GridContainer" unique_id=48114161]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-expand_mode = 2
-script = ExtResource("6_gyagd")
-agent = ExtResource("7_gyagd")
-container_type = "source"
-
-[node name="Button" type="Button" parent="." unique_id=969793152]
-offset_left = 1.0
-offset_top = 604.0
-offset_right = 85.0
-offset_bottom = 635.0
-theme_override_font_sizes/font_size = 15
-text = "СВЕРНУТЬ"
-
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1768893345]
 visible = false
-position = Vector2(-4, -6)
+position = Vector2(61, 23)
 navigation_polygon = SubResource("NavigationPolygon_cytv4")
 use_edge_connections = false
 navigation_layers = 65535
@@ -406,12 +419,7 @@ modulate = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(973, 350, 970, 352, 971, 375, 993, 409, 1016, 399, 1045, 365, 1045, 352, 1042, 350)
 
 [node name="Base" type="Marker2D" parent="." unique_id=828348401]
-position = Vector2(955, 189)
-
-[node name="AgentProfile" parent="." unique_id=749323441 instance=ExtResource("11_lhnp0")]
-visible = false
-top_level = true
-z_index = 10
+position = Vector2(1020, 219)
 
 [node name="QuestSpawner" type="Node" parent="." unique_id=1939854702]
 script = ExtResource("9_4tlo2")
@@ -419,6 +427,7 @@ available_quests = Array[ExtResource("2_n8qpb")]([ExtResource("11_2xd4o"), ExtRe
 spawn_interval = 8.0
 
 [node name="QuestSpawns" type="Node2D" parent="QuestSpawner" unique_id=2045757676]
+position = Vector2(66, 30)
 
 [node name="questmark" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=138650843]
 
@@ -446,7 +455,7 @@ position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_gyagd")
 
 [node name="questmark2" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=1679217632]
-position = Vector2(112, 204)
+position = Vector2(112, 209)
 
 [node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark2" unique_id=1241600266]
 light_mask = 3
@@ -458,7 +467,7 @@ script = ExtResource("6_cpas5")
 quest = ExtResource("7_lhnp0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark2/Mark" unique_id=514529396]
-position = Vector2(165, 212)
+position = Vector2(149, 212)
 shape = SubResource("CircleShape2D_4tlo2")
 
 [node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark2/Mark/CollisionShape2D" unique_id=1298204334]
@@ -719,30 +728,231 @@ position = Vector2(176, 242)
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_gyagd")
 
+[node name="AgentProfile" parent="." unique_id=749323441 instance=ExtResource("11_lhnp0")]
+visible = false
+top_level = true
+z_index = 10
+
 [node name="FullHP" type="ColorRect" parent="." unique_id=1906183672]
-offset_right = 275.0
-offset_bottom = 40.0
+offset_left = 72.0
+offset_top = 32.0
+offset_right = 347.0
+offset_bottom = 80.0
+color = Color(0.95686275, 0.9372549, 0.9098039, 1)
 
 [node name="CurrentHP" type="ColorRect" parent="." unique_id=975642460]
-offset_right = 275.0
-offset_bottom = 40.0
+offset_left = 72.0
+offset_top = 32.0
+offset_right = 347.0
+offset_bottom = 80.0
 color = Color(1, 0, 0, 1)
 
 [node name="FullXP" type="ColorRect" parent="." unique_id=1623842065]
-offset_left = 1107.0
-offset_top = 2.0
-offset_right = 1147.0
-offset_bottom = 282.0
+offset_left = 1224.0
+offset_top = 219.0
+offset_right = 1272.0
+offset_bottom = 499.0
+color = Color(0.9587607, 0.9371081, 0.9098919, 1)
 
 [node name="CurrentXP" type="ColorRect" parent="." unique_id=2023304350]
-offset_left = 1146.0
-offset_top = 285.0
-offset_right = 1186.0
-offset_bottom = 285.0
+offset_left = 1272.2303
+offset_top = 499.0
+offset_right = 1320.4607
+offset_bottom = 499.0
 rotation = 3.1415927
-color = Color(1, 1, 0.34901962, 1)
+color = Color(0.9606282, 0.7545289, 0.15948167, 1)
 
-[connection signal="pressed" from="Button" to="Panel" method="_on_button_pressed"]
+[node name="AnimScreen" type="AnimatedSprite2D" parent="." unique_id=2078756711]
+visible = false
+modulate = Color(1, 1, 1, 0.26666668)
+position = Vector2(668.0497, 353.3623)
+rotation = 3.1415925
+scale = Vector2(6.3323393, 5.3019567)
+sprite_frames = ExtResource("13_m2vlg")
+animation = &"screen_animation"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1404806790]
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+texture = ExtResource("18_tmofk")
+
+[node name="Show_agents" type="CanvasLayer" parent="." unique_id=2079265685]
+
+[node name="Animation" type="AnimationPlayer" parent="Show_agents" unique_id=1434186638]
+libraries/ = SubResource("AnimationLibrary_sw758")
+
+[node name="Button" type="TextureButton" parent="Show_agents" unique_id=1053224842]
+z_index = -15
+offset_left = 295.0
+offset_top = 552.0
+offset_right = 460.0
+offset_bottom = 594.0
+texture_normal = ExtResource("14_3dfw7")
+texture_pressed = ExtResource("15_sw758")
+texture_hover = ExtResource("16_m2vlg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Show_agents/Button" unique_id=1502325058]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 6.0
+offset_right = 64.0
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_1dbwb")
+text = "Свернуть"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node" type="Node" parent="Show_agents/Button" unique_id=174226782]
+script = ExtResource("15_737c4")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
+
+[node name="Panel" type="TextureRect" parent="Show_agents" unique_id=466419581]
+z_index = -15
+anchors_preset = -1
+anchor_left = 0.21100001
+anchor_top = 0.675
+anchor_right = 0.76000005
+anchor_bottom = 0.85
+offset_left = 24.919983
+offset_top = 108.0
+offset_right = 25.199951
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("13_tmofk")
+
+[node name="GridContainer" type="GridContainer" parent="Show_agents/Panel" unique_id=985532569]
+clip_contents = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.3390001
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 13.0
+offset_right = -253.65094
+offset_bottom = -13.0
+theme_override_constants/h_separation = 15
+columns = 6
+script = ExtResource("3_llrwq")
+
+[node name="TextureRect" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=58714291]
+z_index = -5
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("3_82jc6")
+expand_mode = 2
+script = ExtResource("6_gyagd")
+container_type = "source"
+
+[node name="TextureRect" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect" unique_id=1081301219]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 101.0
+offset_bottom = 102.0
+texture = ExtResource("23_sw758")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=828861232]
+z_index = -5
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("3_82jc6")
+expand_mode = 2
+script = ExtResource("6_gyagd")
+container_type = "source"
+
+[node name="TextureRect2" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect2" unique_id=436483798]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 101.0
+offset_bottom = 102.0
+texture = ExtResource("23_sw758")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=2039864895]
+z_index = -5
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("3_82jc6")
+expand_mode = 2
+script = ExtResource("6_gyagd")
+container_type = "source"
+
+[node name="TextureRect3" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect3" unique_id=653085099]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 102.0
+offset_bottom = 102.0
+texture = ExtResource("23_sw758")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=1820570581]
+z_index = -5
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+expand_mode = 2
+script = ExtResource("6_gyagd")
+agent = ExtResource("7_gyagd")
+container_type = "source"
+
+[node name="TextureRect4" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect4" unique_id=1276295409]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 102.0
+offset_bottom = 102.0
+texture = ExtResource("23_sw758")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=1921087183]
+z_index = -5
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+expand_mode = 2
+script = ExtResource("6_gyagd")
+agent = ExtResource("7_gyagd")
+container_type = "source"
+
+[node name="TextureRect5" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect5" unique_id=1092527054]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 102.0
+offset_bottom = 102.0
+texture = ExtResource("23_sw758")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=48114161]
+z_index = -5
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+expand_mode = 2
+script = ExtResource("6_gyagd")
+agent = ExtResource("7_gyagd")
+container_type = "source"
+
+[node name="TextureRect6" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect6" unique_id=1257991550]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -2.0
+offset_right = 102.0
+offset_bottom = 102.0
+texture = ExtResource("23_sw758")
+expand_mode = 1
+
 [connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark/Mark" to="QuestSpawner/QuestSpawns/questmark/Mark" method="_on_input_event"]
 [connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark2/Mark" to="QuestSpawner/QuestSpawns/questmark2/Mark" method="_on_input_event"]
 [connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark3/Mark" to="QuestSpawner/QuestSpawns/questmark3/Mark" method="_on_input_event"]
@@ -754,3 +964,4 @@ color = Color(1, 1, 0.34901962, 1)
 [connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark9/Mark" to="QuestSpawner/QuestSpawns/questmark9/Mark" method="_on_input_event"]
 [connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark10/Mark" to="QuestSpawner/QuestSpawns/questmark10/Mark" method="_on_input_event"]
 [connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark11/Mark" to="QuestSpawner/QuestSpawns/questmark11/Mark" method="_on_input_event"]
+[connection signal="pressed" from="Show_agents/Button" to="." method="_on_button_pressed"]

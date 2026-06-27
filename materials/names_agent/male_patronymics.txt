@@ -1,8 +1,8 @@
-Alexandrovich
-Alexeyevich
-Andreyevich
-Antonovich
-Arsenyevich
+alexandrovich
+alexeyevich
+andreyevich
+antonovich
+arsenyevich
 Borisovich
 Vadimovich
 Valentinovich
