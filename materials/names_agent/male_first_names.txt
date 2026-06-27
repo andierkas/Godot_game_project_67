@@ -1,9 +1,9 @@
-Alexander
-Alexey
-Andrey
-Anton
-Arseny
-Artyom
+alexander
+alexey
+andrey
+anton
+arseny
+artyom
 Boris
 Vadim
 Valentin

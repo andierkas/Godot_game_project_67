@@ -1,7 +1,7 @@
-Abramova
-Andreeva
-Anisimova
-Afanasyeva
+abramova
+andreeva
+anisimova
+afanasyeva
 Baranova
 Belova
 Belyaeva

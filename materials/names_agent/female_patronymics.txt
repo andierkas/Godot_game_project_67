@@ -1,8 +1,8 @@
-Alexandrovna
-Alexeyevna
-Andreyevna
-Antonovna
-Arsenyevna
+alexandrovna
+alexeyevna
+andreyevna
+antonovna
+arsenyevna
 Borisovna
 Vadimovna
 Valentinovna

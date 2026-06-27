@@ -8,13 +8,17 @@ const QuestSolveScene = preload("res://scenes/Gameplay_scene/quest_solve.tscn")
 @onready var quest_spawner = $QuestSpawner
 @onready var currentHP = $CurrentHP
 @onready var currentXP = $CurrentXP
+@onready var animPlayer = $Show_agents/Animation
+@onready var animScreen = $AnimScreen
 
 # Массив активных квестов. Каждый словарь хранит свои данные, чтобы отряды не путались
 var _active_quests: Array[Dictionary] = []
 var _current_quest_variant: QuestVariant = null
+var _is_agents_menu_visible: bool = false  # Переменная для отслеживания состояния меню
 
 func _ready() -> void:
 	print(" Главная сцена загружена")
+	animScreen.play("screen_animation")
 	
 	quest_spawner.quest_spawned.connect(_on_quest_spawned)
 	quest_spawner.quest_clicked.connect(_on_quest_clicked)
@@ -221,7 +225,7 @@ func _find_quest_by_mark(mark_node: Node) -> Dictionary:
 	return {}
 
 func _refresh_ui() -> void:
-	var grid = get_node_or_null("Panel/GridContainer")
+	var grid = get_node_or_null("Show_agents/Panel/GridContainer")
 	if grid and grid.has_method("refresh_all_slots"):
 		grid.refresh_all_slots()
 	var hp_percent = float(PlayerStats.health) / float(PlayerStats.max_health) * 100.0
@@ -231,3 +235,14 @@ func _refresh_ui() -> void:
 	var xp_width = xp_percent * 2.8
 	currentXP.size.y = clamp(xp_width, 0, 280)
 	print("🔄 UI обновлен")
+
+# Исправленная функция для переключения анимации
+func _on_button_pressed() -> void:
+	if _is_agents_menu_visible:
+		# Если меню видимо, проигрываем анимацию в обратную сторону
+		animPlayer.play_backwards("ahow_agents_menu")
+		_is_agents_menu_visible = false
+	else:
+		# Если меню скрыто, проигрываем анимацию вперед
+		animPlayer.play("ahow_agents_menu")
+		_is_agents_menu_visible = true
