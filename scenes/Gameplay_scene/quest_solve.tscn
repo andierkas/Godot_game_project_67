@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ce60qmxur7fn7"]
+[gd_scene load_steps=9 format=3 uid="uid://ce60qmxur7fn7"]
 
 [ext_resource type="Script" uid="uid://cqbfe4f6swgq0" path="res://QuestSolve.gd" id="1_dnlwg"]
 [ext_resource type="Texture2D" uid="uid://gvxh1msgicj8" path="res://materials/Sprite-00203.png" id="1_kv63w"]
@@ -198,53 +198,14 @@ press_profile = "pc_press"
 visible = false
 z_index = 11
 layout_mode = 0
-offset_left = -42.0
-offset_top = 677.0
-offset_right = 440.40002
-offset_bottom = 731.0
-texture_normal = ExtResource("8_8vahx")
-texture_pressed = SubResource("CompressedTexture2D_p6o40")
-texture_hover = SubResource("CompressedTexture2D_jfwaw")
-ignore_texture_size = true
-stretch_mode = 0
+offset_left = 618.0
+offset_top = 127.0
+offset_right = 768.0
+offset_bottom = 179.0
+text = "Confirm"
 
-[node name="Label" type="Label" parent="ButtonPrev" unique_id=1068023677]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -68.0
-offset_top = -20.5
-offset_right = 68.0
-offset_bottom = 16.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.5058824, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.81960785, 0, 1)
-theme_override_constants/shadow_offset_x = 3
-theme_override_constants/shadow_offset_y = 3
-theme_override_constants/outline_size = 7
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("4_7cy5k")
-theme_override_font_sizes/font_size = 21
-text = "вивавпав"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Node" type="Node" parent="ButtonPrev" unique_id=942361310]
-script = ExtResource("7_gw6sm")
-hover_profile = "electro_hover"
-press_profile = "electro_press"
-
-[node name="OptionsContainer" type="VBoxContainer" parent="." unique_id=294098368]
-layout_mode = 0
-offset_left = 44.0
-offset_top = 342.0
-offset_right = 524.0
-offset_bottom = 516.0
-theme_override_constants/separation = 2
-
+[connection signal="pressed" from="OptionsContainer/Solution1" to="." method="_on_solution_1_pressed"]
+[connection signal="pressed" from="OptionsContainer/Solution2" to="." method="_on_solution_2_pressed"]
+[connection signal="pressed" from="OptionsContainer/Solution3" to="." method="_on_solution_3_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="PentagonView/ConfirmButton" to="." method="_on_confirm_button_pressed"]
