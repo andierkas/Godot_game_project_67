@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuestVariant" format=3 uid="uid://bbf1ikk1l4bsq"]
+
+[ext_resource type="Script" uid="uid://cwob02fmvc3mt" path="res://scripts/another_scripts/QuestVariant.gd" id="1_olkn1"]
+
+[resource]
+script = ExtResource("1_olkn1")
+text = "Залезть на дерево"
+strenght = 3
+harisma = 1
+endurance = 2
+intellect = 3
+agility = 6
+reward_xp = 100
+failure_damage = 10
+metadata/_custom_type_script = "uid://cwob02fmvc3mt"

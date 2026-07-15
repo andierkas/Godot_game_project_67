@@ -1,0 +1,987 @@
+[gd_scene format=3 uid="uid://do3c5x0looprm"]
+
+[ext_resource type="Texture2D" uid="uid://blnovlcwgfplf" path="res://materials/base_scenes/gameplay_scene/1780274087.png" id="1_82jc6"]
+[ext_resource type="Script" uid="uid://8afxic637pb1" path="res://scripts/base_scenes/gameplay_scene/day.gd" id="1_exbrp"]
+[ext_resource type="Script" uid="uid://dd4awjxunja2o" path="res://scripts/another_scripts/Quest.gd" id="2_n8qpb"]
+[ext_resource type="Texture2D" uid="uid://k6e4jaeg1ktt" path="res://materials/base_scenes/gameplay_scene/show_hide_menu/agent_icons/zaglushka.jpeg" id="3_82jc6"]
+[ext_resource type="Script" uid="uid://4wgsk15dvste" path="res://scripts/base_scenes/gameplay_scene/grid_container.gd" id="3_llrwq"]
+[ext_resource type="Script" uid="uid://6vjil0ck5cl4" path="res://scripts/base_scenes/gameplay_scene/QuestMarker.gd" id="6_cpas5"]
+[ext_resource type="Script" uid="uid://bmp6qlkmnlum1" path="res://scripts/base_scenes/gameplay_scene/texture_drag.gd" id="6_gyagd"]
+[ext_resource type="Resource" uid="uid://dao144hv773j" path="res://something/quests/quest images/zaglushka.tres" id="7_gyagd"]
+[ext_resource type="Resource" uid="uid://c5yrl2sr28vdk" path="res://something/quests/test_quest.tres" id="7_lhnp0"]
+[ext_resource type="Script" uid="uid://bnmxgixe3xfb5" path="res://scripts/base_scenes/gameplay_scene/QuestSpawner.gd" id="9_4tlo2"]
+[ext_resource type="Texture2D" uid="uid://b5ypyqlghjhrl" path="res://materials/base_scenes/gameplay_scene/quest_marks/QuestMark.png" id="10_cpas5"]
+[ext_resource type="Resource" uid="uid://jo20ajr46hhc" path="res://something/quests/quest4.tres" id="11_2xd4o"]
+[ext_resource type="PackedScene" uid="uid://mmemw0g772c" path="res://all_scenes/ui_scenes/agent_profile.tscn" id="11_lhnp0"]
+[ext_resource type="SpriteFrames" uid="uid://bpvbjsuve4rsn" path="res://materials/base_scenes/main_scene/screen/screen_anim/new_sprite_frames.tres" id="13_m2vlg"]
+[ext_resource type="Texture2D" uid="uid://df3g8k5gwpxmt" path="res://materials/base_scenes/gameplay_scene/show_hide_menu/Sprite-0006.png" id="13_tmofk"]
+[ext_resource type="Resource" uid="uid://bqpprx3ne63dv" path="res://something/quests/quest3.tres" id="13_u5q0e"]
+[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://something/fonts/minecraft-ten.otf" id="14_1dbwb"]
+[ext_resource type="Texture2D" uid="uid://4xnq6p0tx5gl" path="res://materials/base_scenes/gameplay_scene/show_hide_menu/Sprite-000114234.png" id="14_3dfw7"]
+[ext_resource type="Resource" uid="uid://se7gbvsfyxfl" path="res://something/quests/quest5.tres" id="14_cytv4"]
+[ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://something/sounds/buttons_sounds/ButtonSoundController.gd" id="15_737c4"]
+[ext_resource type="Texture2D" uid="uid://bcswkawi86s4e" path="res://materials/base_scenes/gameplay_scene/show_hide_menu/Sprite-000114236.png" id="15_sw758"]
+[ext_resource type="Resource" uid="uid://cvkqmwutwertg" path="res://something/quests/quest6.tres" id="15_tmofk"]
+[ext_resource type="Texture2D" uid="uid://c8128a742th6h" path="res://materials/base_scenes/gameplay_scene/show_hide_menu/Sprite-000114235.png" id="16_m2vlg"]
+[ext_resource type="Texture2D" uid="uid://d1yh5ninobhg5" path="res://materials/base_scenes/gameplay_scene/Sprite-003454302-export.png" id="18_tmofk"]
+[ext_resource type="Texture2D" uid="uid://crqsa52jx1nue" path="res://materials/base_scenes/gameplay_scene/show_hide_menu/Sprite-0021301.png" id="23_sw758"]
+[ext_resource type="Texture2D" uid="uid://pjwpe1ve4mf8" path="res://materials/base_scenes/main_scene/main_menu_buttons/help_button/Help_button1.png" id="26_8mpvm"]
+[ext_resource type="Texture2D" uid="uid://b16u85g6jah5i" path="res://materials/base_scenes/main_scene/main_menu_buttons/help_button/Help_button2.png" id="27_n18tt"]
+[ext_resource type="Texture2D" uid="uid://84o06wpmou8m" path="res://materials/base_scenes/main_scene/main_menu_buttons/help_button/Help_button3.png" id="28_coxcq"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_cytv4"]
+vertices = PackedVector2Array(163.78906, 105.10156, 158.64844, 106.78125, 162.20313, 105.00781, 284.02344, 143.97656, 391.1328, 144, 308.8828, 144, 889, 620, 1066.2266, 623.0625, 803, 621, 820, 620, 574, 619, 728, 621, 280, 621, 414, 619, 389, 619, 305, 619, 1058.1016, 654.96875, 1059.6563, 655.0078, 67.99219, 655, 409, 126, 571, 126, 392.75, 131.13281, 571, 358, 597.02344, 359.0625, 464, 359, 477, 358, 1036.0234, 497.21094, 1038.1797, 547.9219, 1034.9609, 529.6797, 708, 617, 598, 617, 592.02344, 240.82031, 597.89844, 242, 391.1328, 242, 572, 240, 410, 240, 848.9922, 305.71875, 851.0078, 355.27344, 845.0078, 334.2578, 842.9922, 272.5625, 680, 180, 698.02344, 185.02344, 656.97656, 186, 599, 180, 597.02344, 186.97656, 598, 146.00781, 599, 143, 598, 128, 587.97656, 76, 571, 76, 1010.8594, 482.4922, 304, 381, 304, 481, 282, 443.5, 282, 286.5, 965.0469, 367, 972.97656, 357.47656, 974.0078, 381.3203, 1057.0313, 348, 1057.9766, 379.53906, 1050, 371.3672, 1050, 357.46094, 961.97656, 306.6328, 853.46875, 298.9922, 306.5, 253.75, 283, 278, 283, 256, 306.5, 358.25, 841.5625, 340.0078, 1029.0391, 459.32813, 1007.85156, 477.97656, 1008.5, 478.03906, 713.02344, 468.03125, 712.03906, 423.0625, 723.03125, 431.5078, 726.0781, 466, 777, 290.5, 785.0078, 291.5625, 762.5469, 313, 756.14844, 306.14063, 745.4531, 311.65625, 750, 303.6797, 1015.53125, 121.02344, 1026.9219, 135.03125, 968.9297, 136.02344, 970.2031, 123.03906, 818, 58, 889.25, 58, 881.34375, 68.21094, 869.77344, 74, 701.03125, 74, 743.8672, 308.52344, 741.96094, 254.95313, 750, 253.86719, 962.03125, 293.0078, 972.97656, 286, 974.02344, 348, 958.9922, 181.64844, 1009.14844, 477.07813, 1021.2969, 549.0469, 809.0781, 145.99219, 806.5781, 141.71875, 844, 135.00781, 881.6719, 141.00781, 864.1797, 137.02344, 885.3125, 126.953125, 896.71094, 130.99219, 911.1094, 120, 952.4219, 132.00781, 954, 122.046875, 392.75, 70.88281, 409, 76, 988.8672, 435.4922, 1009.7578, 419.72656, 680, 143, 227, 488, 227, 621, 208, 617, 208, 470, 728, 488, 708, 484, 973.03125, 277.0078, 1072.8125, 276.0078, 1071.1484, 286, 969.96875, 179.03125, 775.96094, 212.47656, 823.0625, 170.39063, 823.46094, 171, 410, 142, 1055.8906, 633.96875, 932.0469, 473.8672, 932.9297, 487.95313, 909.1172, 486.96094, 911.89844, 470.85156, 786.03125, 257.04688, 777, 257.10938, 1020.6094, 405.8203, 996.6172, 416.2578, 957.60156, 390.10938, 1093.0625, 621.0703, 1093.9297, 634.96875, 88, 617, 68.86719, 624.90625, 73.03125, 481.03125, 88, 470, 574, 494, 598, 484, 280, 488, 305, 493, 464, 263, 477, 262, 857.40625, 367, 935.1172, 385, 821.46875, 384, 628, 128, 628, 95.92969, 641, 95.07031, 641, 110, 687.03125, 110, 685.96875, 76, 594.97656, 263.04688, 571, 262, 803, 488, 820, 487, 409, 263, 409, 359, 389.5, 358.25, 389.5, 253.75, 5, 479.03906, 5, 443.02344, 77.96094, 445.03125, 910.9219, 470, 911.97656, 470.07813, 385.96875, 57, 385.96875, 7, 408, 7, 408, 57, 570, 57, 570, 7, 594, 7, 594, 57, 672, 57, 672, 7, 689, 7, 689, 57, 801, 57, 801, 7, 818, 7, 307.25, 70.88281, 310.28125, 57, 954, 107, 966.7969, 107, 959, 138.59375, 971.0625, 169, 959, 171, 1048, 169, 1048, 177.02344, 955.5, 177, 829.6172, 177, 786.9531, 214.59375, 772.90625, 244.00781, 790.09375, 244.90625, 414, 494, 389, 493, 286, 60, 286, 7, 310.28125, 7, 308.8828, 242, 281.97656, 241.99219, 845, 355.25, 845, 350.59375, 839.40625, 345, 789.59375, 338.9922, 786.3906, 345, 759.3906, 320, 752.78906, 320, 733.71094, 328.47656, 817, 390.70313, 817, 451.15625, 803.0078, 451.21875, 800.9922, 397.84375, 796.8203, 383.22656, 84.03906, 294.0078, 5, 293.02344, 5, 276.89844, 84.9375, 268.90625, 247, 61.796875, 247.03906, 60, 253.02344, 76, 282.6797, 76, 307.25, 131.13281, 285, 81.82031, 283.97656, 124.99219, 926, 546.09375, 926.97656, 502, 1005.28125, 502, 822.27344, 466.97656, 910.9219, 469.9922, 572, 142, 146.17969, 125.99219, 131.70313, 147.00781, 117.63281, 137.8125, 112.27344, 159.28125, 91.96875, 171.35938, 101.03125, 177.67188, 98, 204.92969, 96.96875, 243.00781, 1046.2969, 355, 976.7031, 355, 923.8594, 558.9531, 906.03125, 560.0625, 889, 487, 905, 521.9531, 574.75, 481, 744.03125, 312.72656, 744, 312.02344, 668.53125, 335.8828, 957.4922, 301.0078, 852.1328, 291.9922, 849.0469, 269.46875, 828.53125, 248.95313, 824.3672, 254.97656, 96, 256, 96, 278, 795.6172, 466, 838.59375, 367, 765.8125, 367, 785.21094, 379.0078, 758.2031, 377, 750.4219, 360.84375, 747.5625, 373.14063, 731.9297, 357.5078, 739.03906, 348.4297, 727.78125, 333.67188, 738.02344, 339.2578, 90, 443.5, 661.5703, 342.85156, 596.9922, 379.28906, 649.3672, 347.9297, 630.28125, 354.96094, 616.1328, 357.9922, 598.0078, 464.96875, 574.75, 381, 90, 286.5)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5), PackedInt32Array(6, 7, 8), PackedInt32Array(9, 6, 8), PackedInt32Array(10, 11, 12), PackedInt32Array(13, 10, 12), PackedInt32Array(14, 13, 12), PackedInt32Array(15, 14, 12), PackedInt32Array(16, 17, 18), PackedInt32Array(19, 20, 21), PackedInt32Array(22, 23, 24), PackedInt32Array(25, 22, 24), PackedInt32Array(26, 7, 27), PackedInt32Array(26, 27, 28), PackedInt32Array(29, 11, 10), PackedInt32Array(30, 29, 10), PackedInt32Array(31, 32, 33), PackedInt32Array(34, 31, 33), PackedInt32Array(35, 34, 33), PackedInt32Array(36, 37, 38), PackedInt32Array(36, 38, 39), PackedInt32Array(40, 41, 42), PackedInt32Array(43, 40, 42), PackedInt32Array(43, 42, 44), PackedInt32Array(43, 44, 45), PackedInt32Array(46, 43, 45), PackedInt32Array(46, 45, 47), PackedInt32Array(48, 20, 49), PackedInt32Array(20, 48, 31), PackedInt32Array(26, 28, 50), PackedInt32Array(51, 52, 53), PackedInt32Array(51, 53, 54), PackedInt32Array(55, 56, 57), PackedInt32Array(58, 59, 60), PackedInt32Array(58, 60, 61), PackedInt32Array(56, 55, 62), PackedInt32Array(63, 36, 39), PackedInt32Array(64, 65, 66), PackedInt32Array(65, 64, 67), PackedInt32Array(68, 38, 37), PackedInt32Array(69, 26, 50), PackedInt32Array(50, 70, 71), PackedInt32Array(72, 73, 74), PackedInt32Array(72, 74, 75), PackedInt32Array(76, 77, 78), PackedInt32Array(79, 76, 78), PackedInt32Array(79, 78, 80), PackedInt32Array(81, 79, 80), PackedInt32Array(82, 83, 84), PackedInt32Array(85, 82, 84), PackedInt32Array(86, 87, 88), PackedInt32Array(86, 88, 89), PackedInt32Array(86, 89, 90), PackedInt32Array(81, 80, 91), PackedInt32Array(81, 91, 92), PackedInt32Array(93, 81, 92), PackedInt32Array(94, 95, 96), PackedInt32Array(95, 94, 97), PackedInt32Array(69, 50, 71), PackedInt32Array(69, 71, 98), PackedInt32Array(27, 7, 6), PackedInt32Array(99, 27, 6), PackedInt32Array(100, 101, 102), PackedInt32Array(103, 100, 102), PackedInt32Array(103, 102, 104), PackedInt32Array(103, 104, 105), PackedInt32Array(106, 103, 105), PackedInt32Array(106, 105, 107), PackedInt32Array(108, 106, 107), PackedInt32Array(108, 107, 109), PackedInt32Array(19, 21, 110), PackedInt32Array(111, 19, 110), PackedInt32Array(69, 98, 112), PackedInt32Array(113, 69, 112), PackedInt32Array(90, 41, 40), PackedInt32Array(90, 40, 114), PackedInt32Array(115, 116, 117), PackedInt32Array(115, 117, 118), PackedInt32Array(119, 11, 29), PackedInt32Array(119, 29, 120), PackedInt32Array(121, 122, 123), PackedInt32Array(121, 123, 95), PackedInt32Array(121, 95, 97), PackedInt32Array(124, 121, 97), PackedInt32Array(125, 126, 127), PackedInt32Array(35, 33, 4), PackedInt32Array(128, 35, 4), PackedInt32Array(129, 16, 18), PackedInt32Array(130, 131, 132), PackedInt32Array(133, 130, 132), PackedInt32Array(134, 77, 76), PackedInt32Array(134, 76, 135), PackedInt32Array(136, 60, 59), PackedInt32Array(136, 59, 113), PackedInt32Array(137, 136, 113), PackedInt32Array(137, 113, 112), PackedInt32Array(137, 112, 138), PackedInt32Array(57, 137, 138), PackedInt32Array(139, 140, 129), PackedInt32Array(7, 139, 129), PackedInt32Array(8, 7, 129), PackedInt32Array(8, 129, 18), PackedInt32Array(11, 8, 18), PackedInt32Array(12, 11, 18), PackedInt32Array(116, 12, 18), PackedInt32Array(117, 116, 18), PackedInt32Array(141, 117, 18), PackedInt32Array(141, 18, 142), PackedInt32Array(141, 142, 143), PackedInt32Array(144, 141, 143), PackedInt32Array(30, 10, 145), PackedInt32Array(146, 30, 145), PackedInt32Array(15, 12, 147), PackedInt32Array(148, 15, 147), PackedInt32Array(25, 24, 149), PackedInt32Array(150, 25, 149), PackedInt32Array(55, 57, 138), PackedInt32Array(151, 55, 138), PackedInt32Array(151, 138, 152), PackedInt32Array(151, 152, 153), PackedInt32Array(46, 47, 154), PackedInt32Array(114, 46, 154), PackedInt32Array(155, 156, 157), PackedInt32Array(154, 155, 157), PackedInt32Array(114, 154, 157), PackedInt32Array(114, 157, 158), PackedInt32Array(90, 114, 158), PackedInt32Array(90, 158, 159), PackedInt32Array(160, 23, 22), PackedInt32Array(160, 22, 161), PackedInt32Array(9, 8, 162), PackedInt32Array(163, 9, 162), PackedInt32Array(37, 151, 153), PackedInt32Array(164, 165, 166), PackedInt32Array(164, 166, 167), PackedInt32Array(168, 169, 170), PackedInt32Array(143, 168, 170), PackedInt32Array(144, 143, 170), PackedInt32Array(171, 172, 133), PackedInt32Array(173, 174, 175), PackedInt32Array(173, 175, 176), PackedInt32Array(177, 178, 179), PackedInt32Array(177, 179, 180), PackedInt32Array(181, 182, 183), PackedInt32Array(181, 183, 184), PackedInt32Array(185, 186, 187), PackedInt32Array(185, 187, 86), PackedInt32Array(185, 86, 90), PackedInt32Array(184, 185, 90), PackedInt32Array(184, 90, 159), PackedInt32Array(181, 184, 159), PackedInt32Array(181, 159, 48), PackedInt32Array(180, 181, 48), PackedInt32Array(177, 180, 48), PackedInt32Array(177, 48, 49), PackedInt32Array(177, 49, 111), PackedInt32Array(176, 177, 111), PackedInt32Array(176, 111, 110), PackedInt32Array(173, 176, 110), PackedInt32Array(173, 110, 188), PackedInt32Array(189, 173, 188), PackedInt32Array(109, 190, 191), PackedInt32Array(109, 191, 85), PackedInt32Array(109, 85, 84), PackedInt32Array(108, 109, 84), PackedInt32Array(192, 108, 84), PackedInt32Array(192, 84, 193), PackedInt32Array(194, 192, 193), PackedInt32Array(193, 195, 196), PackedInt32Array(193, 196, 124), PackedInt32Array(194, 193, 124), PackedInt32Array(194, 124, 97), PackedInt32Array(194, 97, 197), PackedInt32Array(127, 194, 197), PackedInt32Array(127, 197, 198), PackedInt32Array(127, 198, 199), PackedInt32Array(125, 127, 199), PackedInt32Array(200, 125, 199), PackedInt32Array(200, 199, 201), PackedInt32Array(202, 13, 14), PackedInt32Array(202, 14, 203), PackedInt32Array(204, 205, 206), PackedInt32Array(204, 206, 189), PackedInt32Array(204, 189, 188), PackedInt32Array(3, 5, 207), PackedInt32Array(208, 3, 207), PackedInt32Array(37, 209, 210), PackedInt32Array(68, 37, 210), PackedInt32Array(68, 210, 211), PackedInt32Array(212, 68, 211), PackedInt32Array(212, 211, 213), PackedInt32Array(212, 213, 214), PackedInt32Array(78, 212, 214), PackedInt32Array(80, 78, 214), PackedInt32Array(80, 214, 215), PackedInt32Array(80, 215, 216), PackedInt32Array(217, 218, 219), PackedInt32Array(217, 219, 220), PackedInt32Array(217, 220, 221), PackedInt32Array(222, 223, 224), PackedInt32Array(222, 224, 225), PackedInt32Array(226, 227, 204), PackedInt32Array(228, 226, 204), PackedInt32Array(229, 228, 204), PackedInt32Array(229, 204, 188), PackedInt32Array(229, 188, 230), PackedInt32Array(231, 229, 230), PackedInt32Array(232, 231, 230), PackedInt32Array(233, 234, 235), PackedInt32Array(233, 235, 99), PackedInt32Array(236, 237, 171), PackedInt32Array(31, 34, 238), PackedInt32Array(20, 31, 238), PackedInt32Array(20, 238, 128), PackedInt32Array(21, 20, 128), PackedInt32Array(21, 128, 4), PackedInt32Array(230, 21, 4), PackedInt32Array(230, 4, 3), PackedInt32Array(232, 230, 3), PackedInt32Array(239, 232, 3), PackedInt32Array(239, 3, 240), PackedInt32Array(241, 239, 240), PackedInt32Array(241, 240, 242), PackedInt32Array(243, 241, 242), PackedInt32Array(243, 242, 244), PackedInt32Array(225, 243, 244), PackedInt32Array(225, 244, 245), PackedInt32Array(225, 245, 246), PackedInt32Array(58, 61, 247), PackedInt32Array(96, 58, 247), PackedInt32Array(96, 247, 248), PackedInt32Array(249, 233, 99), PackedInt32Array(249, 99, 6), PackedInt32Array(250, 249, 6), PackedInt32Array(250, 6, 251), PackedInt32Array(252, 250, 251), PackedInt32Array(132, 252, 251), PackedInt32Array(253, 132, 251), PackedInt32Array(133, 132, 253), PackedInt32Array(171, 133, 253), PackedInt32Array(236, 171, 253), PackedInt32Array(254, 255, 80), PackedInt32Array(254, 80, 216), PackedInt32Array(256, 254, 216), PackedInt32Array(96, 248, 56), PackedInt32Array(96, 56, 62), PackedInt32Array(94, 96, 62), PackedInt32Array(94, 62, 257), PackedInt32Array(258, 94, 257), PackedInt32Array(258, 257, 63), PackedInt32Array(258, 63, 39), PackedInt32Array(259, 258, 39), PackedInt32Array(260, 259, 39), PackedInt32Array(260, 39, 261), PackedInt32Array(201, 260, 261), PackedInt32Array(201, 261, 134), PackedInt32Array(200, 201, 134), PackedInt32Array(200, 134, 135), PackedInt32Array(200, 135, 93), PackedInt32Array(32, 200, 93), PackedInt32Array(32, 93, 92), PackedInt32Array(32, 92, 160), PackedInt32Array(33, 32, 160), PackedInt32Array(33, 160, 161), PackedInt32Array(33, 161, 150), PackedInt32Array(33, 150, 149), PackedInt32Array(33, 149, 164), PackedInt32Array(33, 164, 167), PackedInt32Array(207, 33, 167), PackedInt32Array(207, 167, 64), PackedInt32Array(208, 207, 64), PackedInt32Array(208, 64, 66), PackedInt32Array(208, 66, 262), PackedInt32Array(246, 208, 262), PackedInt32Array(225, 246, 262), PackedInt32Array(225, 262, 263), PackedInt32Array(222, 225, 263), PackedInt32Array(153, 217, 221), PackedInt32Array(219, 218, 236), PackedInt32Array(264, 219, 236), PackedInt32Array(264, 236, 253), PackedInt32Array(118, 144, 170), PackedInt32Array(265, 209, 37), PackedInt32Array(265, 37, 153), PackedInt32Array(266, 265, 153), PackedInt32Array(266, 153, 221), PackedInt32Array(266, 221, 267), PackedInt32Array(266, 267, 268), PackedInt32Array(269, 266, 268), PackedInt32Array(269, 268, 270), PackedInt32Array(269, 270, 271), PackedInt32Array(272, 269, 271), PackedInt32Array(272, 271, 273), PackedInt32Array(274, 272, 273), PackedInt32Array(216, 274, 273), PackedInt32Array(256, 216, 273), PackedInt32Array(275, 53, 52), PackedInt32Array(147, 115, 118), PackedInt32Array(276, 256, 273), PackedInt32Array(276, 273, 277), PackedInt32Array(278, 276, 277), PackedInt32Array(279, 278, 277), PackedInt32Array(280, 279, 277), PackedInt32Array(23, 280, 277), PackedInt32Array(24, 23, 277), PackedInt32Array(146, 145, 202), PackedInt32Array(203, 148, 147), PackedInt32Array(203, 147, 118), PackedInt32Array(162, 119, 120), PackedInt32Array(72, 75, 264), PackedInt32Array(72, 264, 253), PackedInt32Array(281, 72, 253), PackedInt32Array(281, 253, 282), PackedInt32Array(277, 281, 282), PackedInt32Array(24, 277, 282), PackedInt32Array(24, 282, 51), PackedInt32Array(165, 24, 51), PackedInt32Array(166, 165, 51), PackedInt32Array(67, 166, 51), PackedInt32Array(67, 51, 54), PackedInt32Array(65, 67, 54), PackedInt32Array(263, 65, 54), PackedInt32Array(263, 54, 283), PackedInt32Array(222, 263, 283), PackedInt32Array(222, 283, 275), PackedInt32Array(170, 222, 275), PackedInt32Array(118, 170, 275), PackedInt32Array(118, 275, 52), PackedInt32Array(203, 118, 52), PackedInt32Array(203, 52, 253), PackedInt32Array(202, 203, 253), PackedInt32Array(146, 202, 253), PackedInt32Array(120, 146, 253), PackedInt32Array(120, 253, 251), PackedInt32Array(120, 251, 163), PackedInt32Array(120, 163, 162)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(4, 656, 1157, 656, 1156, 6, 4, 6)])
+sample_partition_type = 1
+parsed_geometry_type = 1
+border_size = 245.0
+agent_radius = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyagd"]
+size = Vector2(190, 155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8qpb"]
+size = Vector2(81, 102.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4tlo2"]
+size = Vector2(83.5, 58.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xd4o"]
+size = Vector2(80.25, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5q0e"]
+size = Vector2(160, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cytv4"]
+size = Vector2(53, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tmofk"]
+size = Vector2(92, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1dbwb"]
+size = Vector2(160, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_737c4"]
+size = Vector2(118, 145)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pwknh"]
+size = Vector2(108, 131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmtr7"]
+size = Vector2(82, 124)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dfw7"]
+size = Vector2(158, 123)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sw758"]
+size = Vector2(51, 131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2vlg"]
+size = Vector2(73, 131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ipvn"]
+size = Vector2(67, 131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcj0p"]
+size = Vector2(79, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_emu6u"]
+size = Vector2(160, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtau3"]
+size = Vector2(73.6875, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_262s2"]
+size = Vector2(37, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hyd4m"]
+size = Vector2(76, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2smt"]
+size = Vector2(110, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ge5dr"]
+size = Vector2(116, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73kqj"]
+size = Vector2(185, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmfwy"]
+size = Vector2(268.75, 98)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4tlo2"]
+radius = 19.026299
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gyagd"]
+radius = 3.0
+
+[sub_resource type="Animation" id="Animation_737c4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(295, 594)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(295, 552)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Button/Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Свернуть"]
+}
+
+[sub_resource type="Animation" id="Animation_3dfw7"]
+resource_name = "ahow_agents_menu"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(295, 594), Vector2(295, 720)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(295, 552), Vector2(295, 678)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Button/Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["Свернуть", "Развернуть"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sw758"]
+_data = {
+&"RESET": SubResource("Animation_737c4"),
+&"ahow_agents_menu": SubResource("Animation_3dfw7")
+}
+
+[node name="Main" type="Node" unique_id=564995157]
+script = ExtResource("1_exbrp")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1462427698]
+offset_left = 65.0
+offset_top = 30.0
+offset_right = 1217.0
+offset_bottom = 680.0
+mouse_filter = 2
+texture = ExtResource("1_82jc6")
+expand_mode = 2
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1768893345]
+visible = false
+position = Vector2(61, 23)
+navigation_polygon = SubResource("NavigationPolygon_cytv4")
+use_edge_connections = false
+navigation_layers = 65535
+
+[node name="TownHouses" type="StaticBody2D" parent="NavigationRegion2D" unique_id=1598359969]
+position = Vector2(4, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=274597778]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(182, 359)
+shape = SubResource("RectangleShape2D_gyagd")
+debug_color = Color(0.06592617, 0.19220915, 0.19461852, 0.41960785)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=961755572]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(344, 300)
+shape = SubResource("RectangleShape2D_n8qpb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=2119618363]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(346, 95)
+shape = SubResource("RectangleShape2D_4tlo2")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=463606963]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(346, 187)
+shape = SubResource("RectangleShape2D_2xd4o")
+
+[node name="CollisionShape2D5" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=610229037]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(128, 142, 109, 154, 98, 172, 95, 199, 94, 236, 277, 235, 279, 139)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=841988065]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(487, 185)
+shape = SubResource("RectangleShape2D_u5q0e")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1142772742]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(432.5, 305)
+shape = SubResource("RectangleShape2D_cytv4")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=269690223]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(520, 304)
+shape = SubResource("RectangleShape2D_tmofk")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=266007220]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(486, 95)
+shape = SubResource("RectangleShape2D_1dbwb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=152094889]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(1, 649, 63, 649, 63.87036, 618.8856, 68, 476, -1, 474)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=940431686]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(73, 438, 79, 289, -1, 288, 0, 436)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=83786454]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(80, 262, 85, 167, 106, 124, 158, 98, 227, 102, 256, 89, 242, 56, 243, 1, 0, 0, 0, 270)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=814382750]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(592, 258, 594, 352, 612, 351, 626, 348, 645, 341, 657, 336, 664, 329, 739, 306, 737, 250)
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1093937868]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(144, 537.5)
+shape = SubResource("RectangleShape2D_737c4")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=656482562]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(649, 544.5)
+shape = SubResource("RectangleShape2D_pwknh")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=597967518]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(343, 550)
+shape = SubResource("RectangleShape2D_mmtr7")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=558262721]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(490, 550.5)
+shape = SubResource("RectangleShape2D_3dfw7")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=2044289479]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(249.5, 548.5)
+shape = SubResource("RectangleShape2D_sw758")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=693640181]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(761.5, 548.5)
+shape = SubResource("RectangleShape2D_m2vlg")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1523296341]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(850.5, 547.5)
+shape = SubResource("RectangleShape2D_3ipvn")
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=785428640]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(1055, 648, 1053, 629, 1091, 630, 1090, 614, 1063, 616, 1033, 491, 1026, 453, 1007, 414, 1055, 374, 1054, 341, 971, 341, 970, 281, 1068, 281, 1070, 269, 970, 270, 967, 174, 1045, 172, 1045, 162, 968, 162, 966, 131, 1025, 130, 1012, 114, 967, 116, 942, -2, 1151, -3, 1151, 651)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=1021862344]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 1)
+polygon = PackedVector2Array(594, 234, 768, 236, 771, 205, 818, 163, 801, 134, 840, 127, 860, 129, 881, 119, 907, 112, 949, 114, 949, 99, 964, 99, 943, -1, 926, 0, 878, 62, 866, 68, 698, 68, 695, 179, 653, 180, 592, 181, 593, 139, 593, 120, 623, 120, 623, 88, 638, 87, 638, 102, 682, 102, 681, 70, 585, 70, 589, 233)
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1676499100]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(635.5, 155.5)
+shape = SubResource("RectangleShape2D_gcj0p")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=262038264]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(485, 25)
+shape = SubResource("RectangleShape2D_emu6u")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=2004593426]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(344.125, 25)
+shape = SubResource("RectangleShape2D_mtau3")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=2090769033]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(262.5, 27)
+shape = SubResource("RectangleShape2D_262s2")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1853566695]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(629, 25.5)
+shape = SubResource("RectangleShape2D_hyd4m")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1014147261]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(741, 25)
+shape = SubResource("RectangleShape2D_g2smt")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1940905747]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(873, 25)
+shape = SubResource("RectangleShape2D_ge5dr")
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=1427300985]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(249, 71, 278, 71, 280, 76, 279, 118, 142, 119, 113, 131, 87, 165, 80, 262, 73, 262, 78, 169, 109, 123, 145, 105)
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1106457505]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(185.5, 261)
+shape = SubResource("RectangleShape2D_73kqj")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="NavigationRegion2D/TownHouses" unique_id=1978101571]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(435.375, 425)
+shape = SubResource("RectangleShape2D_cmfwy")
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=439410725]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(595, 458, 594, 374, 723, 329, 727, 352, 743, 368, 754, 372, 781, 374, 792, 378, 796, 392, 798, 445, 791, 459, 723, 459, 720, 425, 707, 415, 708, 461)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=555696489]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(819, 460, 814, 445, 814, 385, 818, 379, 931, 380, 953, 385, 984, 430, 1004, 471, 907, 463)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=616831890]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(909, 464, 929, 467, 930, 483, 906, 482, 902, 516, 903, 553, 919, 552, 921, 540, 922, 495, 1002, 495, 1018, 542, 1033, 541, 1030, 524, 1006, 477, 1002, 471)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=128675092]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(678, 321, 679, 255, 732, 253, 737, 254, 737, 299, 740, 305)
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=634203620]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(747, 249, 747, 297, 752, 299, 772, 284, 772, 252)
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=99490503]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(760, 307, 782, 286, 783, 252, 820, 250, 838, 267, 840, 328, 837, 333, 786, 332)
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=489106338]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(787, 238, 784, 209, 826, 172, 951, 172, 954, 176, 957, 286, 849, 285, 846, 263, 825, 242)
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=2114945053]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(893, 126, 948, 127, 954, 133, 954, 164, 944, 164, 820, 164, 805, 141, 878, 136)
+
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=2001585837]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(850, 294, 846, 300, 848, 349, 854, 360, 960, 360, 957, 301, 953, 296)
+
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=1683546652]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(731, 323, 735, 333, 736, 342, 747, 354, 762, 360, 834, 360, 840, 349, 840, 345, 835, 340, 782, 340, 755, 315, 749, 315)
+
+[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="NavigationRegion2D/TownHouses" unique_id=1971232266]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(973, 350, 970, 352, 971, 375, 993, 409, 1016, 399, 1045, 365, 1045, 352, 1042, 350)
+
+[node name="Base" type="Marker2D" parent="." unique_id=828348401]
+position = Vector2(1020, 219)
+
+[node name="QuestSpawner" type="Node" parent="." unique_id=1939854702]
+script = ExtResource("9_4tlo2")
+available_quests = Array[ExtResource("2_n8qpb")]([ExtResource("11_2xd4o"), ExtResource("7_lhnp0"), ExtResource("13_u5q0e"), ExtResource("14_cytv4"), ExtResource("15_tmofk")])
+spawn_interval = 8.0
+
+[node name="QuestSpawns" type="Node2D" parent="QuestSpawner" unique_id=2045757676]
+position = Vector2(66, 30)
+
+[node name="questmark" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=138650843]
+
+[node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark" unique_id=60698908]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("6_cpas5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark/Mark" unique_id=1554819596]
+position = Vector2(165, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark/Mark/CollisionShape2D" unique_id=337048704]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("10_cpas5")
+
+[node name="Target" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark" unique_id=559766164]
+position = Vector2(176, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark/Target" unique_id=479108207]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gyagd")
+
+[node name="questmark2" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=1679217632]
+position = Vector2(112, 209)
+
+[node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark2" unique_id=1241600266]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(53, 3)
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("6_cpas5")
+quest = ExtResource("7_lhnp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark2/Mark" unique_id=514529396]
+position = Vector2(149, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark2/Mark/CollisionShape2D" unique_id=1298204334]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("10_cpas5")
+
+[node name="Target" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark2" unique_id=804170677]
+position = Vector2(176, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark2/Target" unique_id=747764444]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gyagd")
+
+[node name="questmark3" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=1797739722]
+position = Vector2(602, -27)
+
+[node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark3" unique_id=2145723962]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("6_cpas5")
+quest = ExtResource("7_lhnp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark3/Mark" unique_id=1408495170]
+position = Vector2(165, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark3/Mark/CollisionShape2D" unique_id=1395565202]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("10_cpas5")
+
+[node name="Target" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark3" unique_id=1428745378]
+position = Vector2(176, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark3/Target" unique_id=442405965]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gyagd")
+
+[node name="questmark4" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=1240498319]
+position = Vector2(75, -115)
+
+[node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark4" unique_id=1866348550]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("6_cpas5")
+quest = ExtResource("7_lhnp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark4/Mark" unique_id=173796864]
+position = Vector2(165, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark4/Mark/CollisionShape2D" unique_id=1552242957]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("10_cpas5")
+
+[node name="Target" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark4" unique_id=1165953212]
+position = Vector2(176, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark4/Target" unique_id=824594803]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gyagd")
+
+[node name="questmark5" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=1406495544]
+position = Vector2(453, 112)
+
+[node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark5" unique_id=103870234]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("6_cpas5")
+quest = ExtResource("7_lhnp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark5/Mark" unique_id=794631567]
+position = Vector2(165, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark5/Mark/CollisionShape2D" unique_id=916470985]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("10_cpas5")
+
+[node name="Target" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark5" unique_id=1212037479]
+position = Vector2(176, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark5/Target" unique_id=793622027]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gyagd")
+
+[node name="questmark6" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=220010511]
+position = Vector2(191, -112)
+
+[node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark6" unique_id=1638251628]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1, 66)
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("6_cpas5")
+quest = ExtResource("7_lhnp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark6/Mark" unique_id=1553241224]
+position = Vector2(165, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark6/Mark/CollisionShape2D" unique_id=542047139]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("10_cpas5")
+
+[node name="Target" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark6" unique_id=172920015]
+position = Vector2(176, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark6/Target" unique_id=327183747]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gyagd")
+
+[node name="questmark7" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=27736015]
+position = Vector2(5, 203)
+
+[node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark7" unique_id=1215704805]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1, 71)
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("6_cpas5")
+quest = ExtResource("7_lhnp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark7/Mark" unique_id=1307830651]
+position = Vector2(165, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark7/Mark/CollisionShape2D" unique_id=962723648]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("10_cpas5")
+
+[node name="Target" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark7" unique_id=1789091195]
+position = Vector2(176, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark7/Target" unique_id=1838247493]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gyagd")
+
+[node name="questmark8" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=2084726792]
+position = Vector2(348, 1)
+
+[node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark8" unique_id=478769332]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("6_cpas5")
+quest = ExtResource("7_lhnp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark8/Mark" unique_id=203832730]
+position = Vector2(165, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark8/Mark/CollisionShape2D" unique_id=1629633989]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("10_cpas5")
+
+[node name="Target" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark8" unique_id=1086086006]
+position = Vector2(176, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark8/Target" unique_id=311765506]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gyagd")
+
+[node name="questmark9" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=626738993]
+position = Vector2(257, 120)
+
+[node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark9" unique_id=930561736]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("6_cpas5")
+quest = ExtResource("7_lhnp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark9/Mark" unique_id=1245158026]
+position = Vector2(165, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark9/Mark/CollisionShape2D" unique_id=1357386951]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("10_cpas5")
+
+[node name="Target" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark9" unique_id=5648006]
+position = Vector2(176, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark9/Target" unique_id=112994672]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gyagd")
+
+[node name="questmark10" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=1587464288]
+position = Vector2(571, 225)
+
+[node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark10" unique_id=725906530]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(8, -27)
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("6_cpas5")
+quest = ExtResource("7_lhnp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark10/Mark" unique_id=1020016596]
+position = Vector2(165, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark10/Mark/CollisionShape2D" unique_id=1735915306]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("10_cpas5")
+
+[node name="Target" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark10" unique_id=579378197]
+position = Vector2(176, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark10/Target" unique_id=426675759]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gyagd")
+
+[node name="questmark11" type="Node2D" parent="QuestSpawner/QuestSpawns" unique_id=1167971547]
+position = Vector2(289, -183)
+
+[node name="Mark" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark11" unique_id=233163534]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("6_cpas5")
+quest = ExtResource("7_lhnp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark11/Mark" unique_id=1094530698]
+position = Vector2(165, 212)
+shape = SubResource("CircleShape2D_4tlo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="QuestSpawner/QuestSpawns/questmark11/Mark/CollisionShape2D" unique_id=2025883657]
+position = Vector2(-1.5646219e-06, 4.23193e-06)
+scale = Vector2(0.67, 0.6399999)
+texture = ExtResource("10_cpas5")
+
+[node name="Target" type="Area2D" parent="QuestSpawner/QuestSpawns/questmark11" unique_id=771191578]
+position = Vector2(176, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestSpawner/QuestSpawns/questmark11/Target" unique_id=438148192]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gyagd")
+
+[node name="AgentProfile" parent="." unique_id=749323441 instance=ExtResource("11_lhnp0")]
+visible = false
+top_level = true
+z_index = 10
+
+[node name="FullHP" type="ColorRect" parent="." unique_id=1906183672]
+offset_left = 72.0
+offset_top = 32.0
+offset_right = 347.0
+offset_bottom = 80.0
+color = Color(0.95686275, 0.9372549, 0.9098039, 1)
+
+[node name="CurrentHP" type="ColorRect" parent="." unique_id=975642460]
+offset_left = 72.0
+offset_top = 32.0
+offset_right = 347.0
+offset_bottom = 80.0
+color = Color(1, 0, 0, 1)
+
+[node name="FullXP" type="ColorRect" parent="." unique_id=1623842065]
+offset_left = 1224.0
+offset_top = 219.0
+offset_right = 1272.0
+offset_bottom = 499.0
+color = Color(0.9587607, 0.9371081, 0.9098919, 1)
+
+[node name="CurrentXP" type="ColorRect" parent="." unique_id=2023304350]
+offset_left = 1272.2303
+offset_top = 499.0
+offset_right = 1320.4607
+offset_bottom = 499.0
+rotation = 3.1415927
+color = Color(0.9606282, 0.7545289, 0.15948167, 1)
+
+[node name="AnimScreen" type="AnimatedSprite2D" parent="." unique_id=2078756711]
+visible = false
+modulate = Color(1, 1, 1, 0.26666668)
+position = Vector2(668.0497, 353.3623)
+rotation = 3.1415925
+scale = Vector2(6.3323393, 5.3019567)
+sprite_frames = ExtResource("13_m2vlg")
+animation = &"screen_animation"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1404806790]
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+texture = ExtResource("18_tmofk")
+
+[node name="Show_agents" type="CanvasLayer" parent="." unique_id=2079265685]
+
+[node name="Animation" type="AnimationPlayer" parent="Show_agents" unique_id=1434186638]
+libraries/ = SubResource("AnimationLibrary_sw758")
+
+[node name="Button" type="TextureButton" parent="Show_agents" unique_id=1053224842]
+z_index = -15
+offset_left = 295.0
+offset_top = 552.0
+offset_right = 460.0
+offset_bottom = 594.0
+texture_normal = ExtResource("14_3dfw7")
+texture_pressed = ExtResource("15_sw758")
+texture_hover = ExtResource("16_m2vlg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Show_agents/Button" unique_id=1502325058]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 6.0
+offset_right = 64.0
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_1dbwb")
+text = "Свернуть"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node" type="Node" parent="Show_agents/Button" unique_id=174226782]
+script = ExtResource("15_737c4")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
+
+[node name="Panel" type="TextureRect" parent="Show_agents" unique_id=466419581]
+z_index = -15
+anchors_preset = -1
+anchor_left = 0.21100001
+anchor_top = 0.675
+anchor_right = 0.76000005
+anchor_bottom = 0.85
+offset_left = 24.919983
+offset_top = 108.0
+offset_right = 25.199951
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("13_tmofk")
+
+[node name="GridContainer" type="GridContainer" parent="Show_agents/Panel" unique_id=985532569]
+clip_contents = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.3390001
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 13.0
+offset_right = -253.65094
+offset_bottom = -13.0
+theme_override_constants/h_separation = 15
+columns = 6
+script = ExtResource("3_llrwq")
+
+[node name="TextureRect" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=58714291]
+z_index = -5
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("3_82jc6")
+expand_mode = 2
+script = ExtResource("6_gyagd")
+container_type = "source"
+
+[node name="TextureRect" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect" unique_id=1081301219]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 101.0
+offset_bottom = 102.0
+texture = ExtResource("23_sw758")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=828861232]
+z_index = -5
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("3_82jc6")
+expand_mode = 2
+script = ExtResource("6_gyagd")
+container_type = "source"
+
+[node name="TextureRect2" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect2" unique_id=436483798]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 101.0
+offset_bottom = 102.0
+texture = ExtResource("23_sw758")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=2039864895]
+z_index = -5
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("3_82jc6")
+expand_mode = 2
+script = ExtResource("6_gyagd")
+container_type = "source"
+
+[node name="TextureRect3" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect3" unique_id=653085099]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 102.0
+offset_bottom = 102.0
+texture = ExtResource("23_sw758")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=1820570581]
+z_index = -5
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+expand_mode = 2
+script = ExtResource("6_gyagd")
+agent = ExtResource("7_gyagd")
+container_type = "source"
+
+[node name="TextureRect4" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect4" unique_id=1276295409]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 102.0
+offset_bottom = 102.0
+texture = ExtResource("23_sw758")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=1921087183]
+z_index = -5
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+expand_mode = 2
+script = ExtResource("6_gyagd")
+agent = ExtResource("7_gyagd")
+container_type = "source"
+
+[node name="TextureRect5" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect5" unique_id=1092527054]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 102.0
+offset_bottom = 102.0
+texture = ExtResource("23_sw758")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=48114161]
+z_index = -5
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+expand_mode = 2
+script = ExtResource("6_gyagd")
+agent = ExtResource("7_gyagd")
+container_type = "source"
+
+[node name="TextureRect6" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect6" unique_id=1257991550]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -2.0
+offset_right = 102.0
+offset_bottom = 102.0
+texture = ExtResource("23_sw758")
+expand_mode = 1
+
+[node name="Help_button" type="TextureButton" parent="." unique_id=215100066]
+offset_left = 1224.0
+offset_top = 509.0
+offset_right = 1266.8572
+offset_bottom = 553.0995
+scale = Vector2(1.1199988, 1.1199988)
+texture_normal = ExtResource("26_8mpvm")
+texture_pressed = ExtResource("27_n18tt")
+texture_hover = ExtResource("28_coxcq")
+stretch_mode = 0
+
+[node name="SoundHelpController" type="Node" parent="Help_button" unique_id=1750567805]
+script = ExtResource("15_737c4")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
+
+[connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark/Mark" to="QuestSpawner/QuestSpawns/questmark/Mark" method="_on_input_event"]
+[connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark2/Mark" to="QuestSpawner/QuestSpawns/questmark2/Mark" method="_on_input_event"]
+[connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark3/Mark" to="QuestSpawner/QuestSpawns/questmark3/Mark" method="_on_input_event"]
+[connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark4/Mark" to="QuestSpawner/QuestSpawns/questmark4/Mark" method="_on_input_event"]
+[connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark5/Mark" to="QuestSpawner/QuestSpawns/questmark5/Mark" method="_on_input_event"]
+[connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark6/Mark" to="QuestSpawner/QuestSpawns/questmark6/Mark" method="_on_input_event"]
+[connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark7/Mark" to="QuestSpawner/QuestSpawns/questmark7/Mark" method="_on_input_event"]
+[connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark8/Mark" to="QuestSpawner/QuestSpawns/questmark8/Mark" method="_on_input_event"]
+[connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark9/Mark" to="QuestSpawner/QuestSpawns/questmark9/Mark" method="_on_input_event"]
+[connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark10/Mark" to="QuestSpawner/QuestSpawns/questmark10/Mark" method="_on_input_event"]
+[connection signal="input_event" from="QuestSpawner/QuestSpawns/questmark11/Mark" to="QuestSpawner/QuestSpawns/questmark11/Mark" method="_on_input_event"]
+[connection signal="pressed" from="Show_agents/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Help_button" to="." method="_on_help_button_pressed"]

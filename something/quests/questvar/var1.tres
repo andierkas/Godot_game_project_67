@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuestVariant" format=3 uid="uid://dydbhtbh4pf01"]
+
+[ext_resource type="Script" uid="uid://cwob02fmvc3mt" path="res://scripts/another_scripts/QuestVariant.gd" id="1_1jvva"]
+
+[resource]
+script = ExtResource("1_1jvva")
+text = "Сломать дерево"
+strenght = 6
+harisma = 1
+endurance = 4
+intellect = 2
+agility = 2
+reward_xp = 100
+failure_damage = 15
+failure_text = "Город недоволен"
+metadata/_custom_type_script = "uid://cwob02fmvc3mt"

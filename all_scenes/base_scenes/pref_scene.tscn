@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bojv0f2siaoo7"]
+
+[ext_resource type="Script" uid="uid://b01117fj5n2fk" path="res://scripts/base_scenes/pref_scene/pref_scene.gd" id="1_kju8y"]
+
+[node name="Control" type="Control" unique_id=326838186]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kju8y")
+
+[node name="PrefButton" type="TextureButton" parent="." unique_id=1534030466]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 191.0
+offset_right = 701.21875
+offset_bottom = 298.0
+size_flags_horizontal = 4
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="PrefButton" to="." method="_on_pref_button_pressed"]
