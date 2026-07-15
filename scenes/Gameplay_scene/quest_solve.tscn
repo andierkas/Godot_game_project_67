@@ -1,6 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://ce60qmxur7fn7"]
+[gd_scene format=3 uid="uid://ce60qmxur7fn7"]
 
 [ext_resource type="Script" uid="uid://cqbfe4f6swgq0" path="res://QuestSolve.gd" id="1_dnlwg"]
+<<<<<<< Updated upstream
+[ext_resource type="Texture2D" uid="uid://dvo75nuf616md" path="res://materials/quests/quest images/1780586958.png" id="2_1l2mg"]
+=======
 [ext_resource type="Texture2D" uid="uid://gvxh1msgicj8" path="res://materials/Sprite-00203.png" id="1_kv63w"]
 [ext_resource type="Texture2D" uid="uid://dvo75nuf616md" path="res://materials/quests/quest images/1780586958.png" id="2_1l2mg"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://fonts/main_shrift.otf" id="4_7cy5k"]
@@ -8,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c0u1qixhgwgv2" path="res://materials/Sprite-06.png" id="6_d1uj0"]
 [ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://button_sounds/ButtonSoundController.gd" id="7_gw6sm"]
 [ext_resource type="Texture2D" uid="uid://j1eqxjintl73" path="res://materials/Sprite-0004.png" id="8_8vahx"]
+>>>>>>> Stashed changes
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d1uj0"]
 load_path = "res://.godot/imported/Sprite-05.png-d42d1e9a00f6291d7b968b0faf707a2a.ctex"
