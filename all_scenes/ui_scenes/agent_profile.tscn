@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dqbpk4hglrdu" path="res://materials/base_scenes/gameplay_scene/hp_xp_bars/Sprite-00213235.png" id="9_osmq7"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lcqnn"]
-load_path = "res://.godot/imported/Sprite-0008.png-eeb22960c168521673f841469d567ebc.ctex"
+load_path = "res://.godot/imported/Sprite-0008.png-2f871f26ad5d46c7ef6429e55d9a11ff.ctex"
 
 [node name="AgentProfile" type="Control" unique_id=749323441]
 clip_contents = true

@@ -4,24 +4,22 @@
 [ext_resource type="Script" uid="uid://cqbfe4f6swgq0" path="res://scripts/ui_scene/quest_solve/QuestSolve.gd" id="1_dnlwg"]
 [ext_resource type="Texture2D" uid="uid://dvo75nuf616md" path="res://something/quests/quest images/1780586958.png" id="2_1l2mg"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://something/fonts/minecraft-ten.otf" id="4_7cy5k"]
-[ext_resource type="Texture2D" uid="uid://dqx1646ord5rv" path="res://materials/ui_scenes/quest_solve/Sprite-0008.png" id="4_k7ap7"]
 [ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://something/sounds/buttons_sounds/ButtonSoundController.gd" id="7_gw6sm"]
 [ext_resource type="Texture2D" uid="uid://j1eqxjintl73" path="res://materials/ui_scenes/quest_solve/Sprite-0004.png" id="8_8vahx"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ad2oh"]
+load_path = "res://.godot/imported/Sprite-0008.png-130a5c9a2892f353d9eb11b5eb3b070f.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k7ap7"]
 load_path = "res://.godot/imported/Sprite-06.png-e21e48fb69b496d315d33231e205b9bd.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d1uj0"]
-load_path = "res://.godot/imported/Sprite-05.png-d42d1e9a00f6291d7b968b0faf707a2a.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gw6sm"]
-load_path = "res://.godot/imported/Sprite-04.png-8141bedda991f125fbab0e69ee16deda.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p6o40"]
-load_path = "res://.godot/imported/Sprite-0003.png-87d0f94c1eae45a10d779443e13942d5.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jfwaw"]
-load_path = "res://.godot/imported/Sprite-0002.png-ab6d00ad15d825696d528269eb6f313f.ctex"
 
 [node name="Panel" type="TextureRect" unique_id=1518291813]
 z_index = 2
@@ -90,7 +88,7 @@ offset_left = 32.0
 offset_top = 330.0
 offset_right = 536.0
 offset_bottom = 520.0
-texture = ExtResource("4_k7ap7")
+texture = SubResource("CompressedTexture2D_ad2oh")
 
 [node name="PentagonView" type="TextureRect" parent="." unique_id=569710737]
 layout_mode = 0
