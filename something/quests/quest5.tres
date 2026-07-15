@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://se7gbvsfyxfl"]
+
+[ext_resource type="Script" uid="uid://dd4awjxunja2o" path="res://scripts/another_scripts/Quest.gd" id="1_nm2y8"]
+[ext_resource type="Texture2D" uid="uid://cbakrs5ovwk2c" path="res://something/quests/quest images/1782492946aa41.png" id="2_h3kcd"]
+[ext_resource type="Script" uid="uid://cwob02fmvc3mt" path="res://scripts/another_scripts/QuestVariant.gd" id="2_ush5b"]
+[ext_resource type="Resource" uid="uid://cmp11wkp5icio" path="res://something/quests/questvar/1varfor5.tres" id="4_a70xl"]
+[ext_resource type="Resource" uid="uid://bfmncjawkf7l" path="res://something/quests/questvar/2varfor5.tres" id="5_mg6r1"]
+
+[resource]
+script = ExtResource("1_nm2y8")
+name = "Найти потерявшегося ребенка в большом супермаркете"
+description = "Мама в панике, ребенок отстал и где-то прячется в огромном ТЦ."
+variants = Array[ExtResource("2_ush5b")]([ExtResource("4_a70xl"), ExtResource("5_mg6r1")])
+slide = ExtResource("2_h3kcd")
+metadata/_custom_type_script = "uid://dd4awjxunja2o"

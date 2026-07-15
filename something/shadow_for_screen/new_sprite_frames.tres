@@ -1,0 +1,71 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bolo6bhqnvvkd"]
+
+[ext_resource type="Texture2D" uid="uid://cyk87n2jsl4bw" path="res://something/shadow_for_screen/Sprite-0001.png" id="1_3xiri"]
+[ext_resource type="Texture2D" uid="uid://b48hf6r38srav" path="res://something/shadow_for_screen/Sprite-0002.png" id="2_h4sb6"]
+[ext_resource type="Texture2D" uid="uid://c68221b65lyci" path="res://something/shadow_for_screen/Sprite-0003.png" id="3_xbm22"]
+[ext_resource type="Texture2D" uid="uid://vgxl1p18em0c" path="res://something/shadow_for_screen/Sprite-0004.png" id="4_jnxb0"]
+[ext_resource type="Texture2D" uid="uid://ew4y7t4jkcrf" path="res://something/shadow_for_screen/Sprite-0005.png" id="5_4q5cg"]
+[ext_resource type="Texture2D" uid="uid://fdqq0up7a01l" path="res://something/shadow_for_screen/Sprite-0006.png" id="6_skg0i"]
+[ext_resource type="Texture2D" uid="uid://dayjvib4cgpvq" path="res://something/shadow_for_screen/Sprite-0007.png" id="7_hf5t3"]
+[ext_resource type="Texture2D" uid="uid://bv8l4fsw56v1s" path="res://something/shadow_for_screen/Sprite-0008.png" id="8_e7f2c"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_e7f2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hf5t3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_skg0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4q5cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jnxb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xbm22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h4sb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_3xiri")
+}],
+"loop": false,
+"name": &"shadow_screen_closed_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3xiri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h4sb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xbm22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jnxb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4q5cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_skg0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hf5t3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_e7f2c")
+}],
+"loop": false,
+"name": &"shadow_screen_opened_animation",
+"speed": 5.0
+}]

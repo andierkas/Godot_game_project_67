@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuestVariant" format=3 uid="uid://ccf2bdmrg8mbe"]
+
+[ext_resource type="Script" uid="uid://cwob02fmvc3mt" path="res://scripts/another_scripts/QuestVariant.gd" id="1_sdmqw"]
+
+[resource]
+script = ExtResource("1_sdmqw")
+text = "Опросить свидетелей"
+strenght = 1
+harisma = 7
+endurance = 2
+intellect = 4
+agility = 3
+reward_xp = 130
+failure_damage = 24
+metadata/_custom_type_script = "uid://cwob02fmvc3mt"

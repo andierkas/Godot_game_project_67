@@ -1,0 +1,304 @@
+[gd_scene format=3 uid="uid://bel2nsmwwvdkv"]
+
+[ext_resource type="Script" uid="uid://d0lef2tsc6fql" path="res://scripts/base_scenes/loadgame_scene/loadgame_scene.gd" id="1_t0mkg"]
+[ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://something/fonts/minecraft-ten.otf" id="2_6hksg"]
+[ext_resource type="SpriteFrames" uid="uid://cxay3qt6qkail" path="res://materials/base_scenes/main_scene/menu_anim/new_sprite_frames.tres" id="2_q7tdb"]
+[ext_resource type="SpriteFrames" uid="uid://bolo6bhqnvvkd" path="res://something/shadow_for_screen/new_sprite_frames.tres" id="2_wra1n"]
+[ext_resource type="Texture2D" uid="uid://bm5pxnxe5pjq6" path="res://materials/base_scenes/loadgame_scene/Sprite-0001.png" id="4_3moow"]
+[ext_resource type="Texture2D" uid="uid://1snsku15yyeg" path="res://materials/base_scenes/loadgame_scene/Sprite-0012-export.png" id="4_j4jhl"]
+[ext_resource type="SpriteFrames" uid="uid://bpvbjsuve4rsn" path="res://materials/base_scenes/main_scene/screen/screen_anim/new_sprite_frames.tres" id="4_ntmrx"]
+[ext_resource type="Texture2D" uid="uid://us3del60ggdt" path="res://materials/base_scenes/main_scene/base_button/Sprite-0002.png" id="5_wra1n"]
+[ext_resource type="Texture2D" uid="uid://dlwudog143ltg" path="res://materials/base_scenes/main_scene/base_button/Sprite-0003.png" id="6_k74ch"]
+[ext_resource type="Texture2D" uid="uid://d2wwvbnn4ix0i" path="res://materials/base_scenes/main_scene/base_button/Sprite-0004.png" id="6_kt2el"]
+[ext_resource type="Texture2D" uid="uid://jm26r0snx3vh" path="res://materials/base_scenes/main_scene/back_button/Sprite-0015.png" id="6_ntmrx"]
+[ext_resource type="Texture2D" uid="uid://djxeugnnjpide" path="res://materials/base_scenes/main_scene/back_button/Sprite-0016.png" id="7_3moow"]
+[ext_resource type="Texture2D" uid="uid://b2qicmi8mikdt" path="res://materials/base_scenes/main_scene/back_button/Sprite-0014.png" id="7_rb0mk"]
+[ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://something/sounds/buttons_sounds/ButtonSoundController.gd" id="9_kt2el"]
+
+[sub_resource type="Animation" id="Animation_wra1n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Save_Button1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Save_Button2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Save_Button3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k74ch"]
+resource_name = "buttons_show"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Save_Button1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.2666667, 1.7666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Save_Button2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.2666667, 1.7666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Save_Button3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.2666667, 1.7666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kt2el"]
+_data = {
+&"RESET": SubResource("Animation_wra1n"),
+&"buttons_show": SubResource("Animation_k74ch")
+}
+
+[node name="Control" type="Control" unique_id=195617877]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t0mkg")
+
+[node name="Shadow_screen" type="AnimatedSprite2D" parent="." unique_id=1139105441]
+position = Vector2(639.49994, 397)
+scale = Vector2(7.393751, 2.6249998)
+sprite_frames = ExtResource("2_wra1n")
+animation = &"shadow_screen_opened_animation"
+speed_scale = 0.7
+
+[node name="Animated_button_menu1" type="AnimatedSprite2D" parent="." unique_id=1561651103]
+position = Vector2(239.63292, 395.7435)
+scale = Vector2(3.636456, 3.7026026)
+sprite_frames = ExtResource("2_q7tdb")
+animation = &"button_menu_off"
+speed_scale = 3.0
+
+[node name="Animated_button_menu2" type="AnimatedSprite2D" parent="." unique_id=892105809]
+position = Vector2(639.6329, 395.74353)
+scale = Vector2(3.6364565, 3.7026038)
+sprite_frames = ExtResource("2_q7tdb")
+animation = &"button_menu_off"
+speed_scale = 3.0
+
+[node name="Animated_button_menu3" type="AnimatedSprite2D" parent="." unique_id=241191056]
+position = Vector2(1039.6328, 395.71933)
+scale = Vector2(3.6364584, 3.7021961)
+sprite_frames = ExtResource("2_q7tdb")
+animation = &"button_menu_off"
+speed_scale = 3.0
+
+[node name="AnimScreen" type="AnimatedSprite2D" parent="." unique_id=1926156085]
+modulate = Color(1, 1, 1, 0.12941177)
+position = Vector2(641.804, 395.71335)
+rotation = 3.1415925
+scale = Vector2(5.7604566, 3.856476)
+sprite_frames = ExtResource("4_ntmrx")
+animation = &"screen_animation"
+
+[node name="Screen" type="Sprite2D" parent="." unique_id=256826375]
+position = Vector2(640.00006, 360.00003)
+scale = Vector2(4, 4.0000005)
+texture = ExtResource("4_j4jhl")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1401981195]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -325.65625
+offset_top = 33.0
+offset_right = 325.65625
+offset_bottom = 118.0
+grow_horizontal = 2
+texture = ExtResource("4_3moow")
+
+[node name="select_saves" type="Label" parent="TextureRect" unique_id=1198363268]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = -37.0
+offset_right = 268.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6hksg")
+theme_override_font_sizes/font_size = 42
+text = "выбор сохранения"
+horizontal_alignment = 1
+
+[node name="Back_Button" type="TextureButton" parent="." unique_id=1378876495]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 34.0
+offset_right = 283.0
+offset_bottom = 118.0
+pivot_offset = Vector2(120, 45)
+texture_normal = ExtResource("7_rb0mk")
+texture_pressed = ExtResource("7_3moow")
+texture_hover = ExtResource("6_ntmrx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Back_Button" unique_id=1204880932]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 78.0
+offset_top = -34.5
+offset_right = -12.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -7
+theme_override_fonts/font = ExtResource("2_6hksg")
+theme_override_font_sizes/font_size = 22
+text = "главное
+меню"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundBackController" type="Node" parent="Back_Button" unique_id=1255014931]
+script = ExtResource("9_kt2el")
+hover_profile = "pc_hover"
+press_profile = "pc_press"
+
+[node name="Show_buttons" type="CanvasLayer" parent="." unique_id=813359030]
+
+[node name="Animation" type="AnimationPlayer" parent="Show_buttons" unique_id=603472622]
+libraries/ = SubResource("AnimationLibrary_kt2el")
+autoplay = &"buttons_show"
+
+[node name="Save_Button1" type="TextureButton" parent="Show_buttons" unique_id=676723792]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -530.0
+offset_top = -72.57599
+offset_right = -418.84802
+offset_bottom = 38.57599
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5707964
+pivot_offset = Vector2(120, 45)
+texture_normal = ExtResource("5_wra1n")
+texture_pressed = ExtResource("6_kt2el")
+texture_hover = ExtResource("6_k74ch")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SoundSaveController1" type="Node" parent="Show_buttons/Save_Button1" unique_id=793865152]
+script = ExtResource("9_kt2el")
+hover_profile = "electro_hover"
+press_profile = "electro_press"
+
+[node name="Save_Button2" type="TextureButton" parent="Show_buttons" unique_id=1066656865]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -18.0
+offset_right = 55.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5707964
+pivot_offset = Vector2(55, 55)
+texture_normal = ExtResource("5_wra1n")
+texture_pressed = ExtResource("6_kt2el")
+texture_hover = ExtResource("6_k74ch")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SoundSaveController2" type="Node" parent="Show_buttons/Save_Button2" unique_id=641613078]
+script = ExtResource("9_kt2el")
+hover_profile = "electro_hover"
+press_profile = "electro_press"
+
+[node name="Save_Button3" type="TextureButton" parent="Show_buttons" unique_id=1726461269]
+modulate = Color(1, 1, 1, 0)
+offset_left = 908.0
+offset_top = 288.0
+offset_right = 1019.152
+offset_bottom = 399.152
+rotation = -1.5707964
+pivot_offset = Vector2(120, 45)
+texture_normal = ExtResource("5_wra1n")
+texture_pressed = ExtResource("6_kt2el")
+texture_hover = ExtResource("6_k74ch")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SoundSaveController3" type="Node" parent="Show_buttons/Save_Button3" unique_id=2043102997]
+script = ExtResource("9_kt2el")
+hover_profile = "electro_hover"
+press_profile = "electro_press"
+
+[connection signal="pressed" from="Back_Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Show_buttons/Save_Button1" to="." method="_on_save_button_1_pressed"]
+[connection signal="pressed" from="Show_buttons/Save_Button2" to="." method="_on_save_button_2_pressed"]
+[connection signal="pressed" from="Show_buttons/Save_Button3" to="." method="_on_save_button_3_pressed"]
