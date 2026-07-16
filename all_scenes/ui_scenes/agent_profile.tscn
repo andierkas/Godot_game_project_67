@@ -3,15 +3,25 @@
 [ext_resource type="Script" uid="uid://bcbiardwkyxa6" path="res://scripts/ui_scene/agent_profile/agent_profile.gd" id="1_11ji7"]
 [ext_resource type="Texture2D" uid="uid://ddyrwbstl1ex6" path="res://materials/base_scenes/agents_generator/sprite_agent/male/1.png" id="1_jt747"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://something/fonts/minecraft-ten.otf" id="4_4khr3"]
-[ext_resource type="Texture2D" uid="uid://cv2y6e7uthr26" path="res://materials/base_scenes/gameplay_scene/hp_xp_bars/Sprite-0023405.png" id="5_5desf"]
-[ext_resource type="Texture2D" uid="uid://qmcf4lxrddni" path="res://materials/ui_scenes/agent_profile/Sprite-0009.png" id="6_6dwpp"]
-[ext_resource type="Texture2D" uid="uid://cbaq7tq0m76s5" path="res://materials/ui_scenes/agent_profile/Sprite-0010.png" id="7_22f2u"]
-[ext_resource type="Texture2D" uid="uid://b5ies0wv4fgb1" path="res://materials/ui_scenes/agent_profile/Sprite-0011.png" id="8_xvue3"]
 [ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://something/sounds/buttons_sounds/ButtonSoundController.gd" id="9_4khr3"]
-[ext_resource type="Texture2D" uid="uid://dqbpk4hglrdu" path="res://materials/base_scenes/gameplay_scene/hp_xp_bars/Sprite-00213235.png" id="9_osmq7"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lcqnn"]
 load_path = "res://.godot/imported/Sprite-0008.png-2f871f26ad5d46c7ef6429e55d9a11ff.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_06u27"]
+load_path = "res://.godot/imported/Sprite-0023405.png-b217df025093c66be56320f2bc4a3da1.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k3pcn"]
+load_path = "res://.godot/imported/Sprite-0009.png-b38bf1b26a90391cfff813b2bdec59ec.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b68st"]
+load_path = "res://.godot/imported/Sprite-0010.png-ee11745d6227f50ca1ac32591d2d4e0d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yk31k"]
+load_path = "res://.godot/imported/Sprite-0011.png-742326810e21895fbab0c58ef67618f8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1vavy"]
+load_path = "res://.godot/imported/Sprite-00213235.png-03dcd8ea259660861c5dc7cefa716777.ctex"
 
 [node name="AgentProfile" type="Control" unique_id=749323441]
 clip_contents = true
@@ -101,7 +111,7 @@ offset_left = 397.56003
 offset_top = 500.016
 offset_right = 401.56003
 offset_bottom = 536.016
-texture = ExtResource("5_5desf")
+texture = SubResource("CompressedTexture2D_06u27")
 expand_mode = 1
 
 [node name="max_polygon" type="Polygon2D" parent="." unique_id=1044253699]
@@ -259,9 +269,9 @@ offset_left = 1005.56006
 offset_top = 64.016
 offset_right = 1054.56
 offset_bottom = 113.016
-texture_normal = ExtResource("6_6dwpp")
-texture_pressed = ExtResource("7_22f2u")
-texture_hover = ExtResource("8_xvue3")
+texture_normal = SubResource("CompressedTexture2D_k3pcn")
+texture_pressed = SubResource("CompressedTexture2D_b68st")
+texture_hover = SubResource("CompressedTexture2D_yk31k")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -295,7 +305,7 @@ offset_top = 497.016
 offset_right = 702.56006
 offset_bottom = 539.016
 mouse_filter = 2
-texture = ExtResource("9_osmq7")
+texture = SubResource("CompressedTexture2D_1vavy")
 expand_mode = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

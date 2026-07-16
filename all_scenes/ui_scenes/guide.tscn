@@ -1,12 +1,22 @@
 [gd_scene format=3 uid="uid://b4ojdd4ou2ks2"]
 
-[ext_resource type="Texture2D" uid="uid://onc6aeyghbpf" path="res://materials/ui_scenes/guide/Sprite-001202.png" id="1_1aueq"]
 [ext_resource type="Script" uid="uid://cnvmsmppt1nvx" path="res://scripts/ui_scene/guide/guide.gd" id="1_6qj87"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://something/fonts/minecraft-ten.otf" id="3_fhtmy"]
-[ext_resource type="Texture2D" uid="uid://bayk0jgvtgjp7" path="res://materials/ui_scenes/guide/photo_2026-06-26_23-32-52 1.png" id="4_eg7o0"]
-[ext_resource type="Texture2D" uid="uid://0huw3txwyt5m" path="res://materials/ui_scenes/guide/image 29 (1).png" id="5_ha8v5"]
-[ext_resource type="Texture2D" uid="uid://ddliewxslqh1o" path="res://materials/ui_scenes/guide/image 30.png" id="6_3iwgr"]
-[ext_resource type="Texture2D" uid="uid://bftk67qknftsv" path="res://materials/ui_scenes/guide/image 31.png" id="7_6prud"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xwho3"]
+load_path = "res://.godot/imported/Sprite-001202.png-d4bd1c83d0a2ec2adbe5013c44ad47db.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5fhwr"]
+load_path = "res://.godot/imported/photo_2026-06-26_23-32-52 1.png-cca4ec9733c7d4465c202f4b56957978.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_74f1n"]
+load_path = "res://.godot/imported/image 29 (1).png-acfa1372d2b8b916a1070b87c1f5cc70.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xlh7l"]
+load_path = "res://.godot/imported/image 30.png-b2f8b5b0251e769ed853b779b982df6a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o4of3"]
+load_path = "res://.godot/imported/image 31.png-b3c9b7a05c668328afeb0e03843f5705.ctex"
 
 [node name="Guide" type="CanvasLayer" unique_id=1127359957]
 script = ExtResource("1_6qj87")
@@ -26,7 +36,7 @@ offset_right = -72.0
 offset_bottom = -64.737854
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_1aueq")
+texture = SubResource("CompressedTexture2D_xwho3")
 expand_mode = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1473529417]
@@ -86,7 +96,7 @@ autowrap_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/VBoxContainer" unique_id=971635467]
 layout_mode = 2
-texture = ExtResource("4_eg7o0")
+texture = SubResource("CompressedTexture2D_5fhwr")
 stretch_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1082849644]
@@ -106,7 +116,7 @@ autowrap_mode = 2
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer" unique_id=1295277454]
 layout_mode = 2
 size_flags_horizontal = 10
-texture = ExtResource("5_ha8v5")
+texture = SubResource("CompressedTexture2D_74f1n")
 stretch_mode = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=659821527]
@@ -128,7 +138,7 @@ autowrap_mode = 2
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer2" unique_id=347523763]
 layout_mode = 2
 size_flags_horizontal = 10
-texture = ExtResource("6_3iwgr")
+texture = SubResource("CompressedTexture2D_xlh7l")
 stretch_mode = 2
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1986731179]
@@ -148,7 +158,7 @@ autowrap_mode = 2
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer3" unique_id=795021417]
 layout_mode = 2
 size_flags_horizontal = 10
-texture = ExtResource("7_6prud")
+texture = SubResource("CompressedTexture2D_o4of3")
 stretch_mode = 2
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=189651954]

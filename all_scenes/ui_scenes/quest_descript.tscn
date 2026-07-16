@@ -1,16 +1,40 @@
 [gd_scene format=3 uid="uid://cj8q1l1etvlxk"]
 
-[ext_resource type="Texture2D" uid="uid://mx0k1c7rufnu" path="res://materials/ui_scenes/quest_description/Sprite-00202.png" id="1_4s5ag"]
 [ext_resource type="Script" uid="uid://chulbp0u7dakx" path="res://scripts/ui_scene/quest_descript/quest_descript.gd" id="2_1771o"]
-[ext_resource type="Texture2D" uid="uid://7abog8ajlb51" path="res://materials/ui_scenes/quest_description/image.jpeg" id="3_4rdof"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://something/fonts/minecraft-ten.otf" id="4_s0ary"]
-[ext_resource type="Texture2D" uid="uid://k6e4jaeg1ktt" path="res://materials/base_scenes/gameplay_scene/show_hide_menu/agent_icons/zaglushka.jpeg" id="5_3phot"]
 [ext_resource type="Script" uid="uid://bmp6qlkmnlum1" path="res://scripts/base_scenes/gameplay_scene/texture_drag.gd" id="6_0uswp"]
-[ext_resource type="Texture2D" uid="uid://7638oi7jqmlr" path="res://materials/ui_scenes/quest_description/Sprite-0033.png" id="7_q2q7n"]
-[ext_resource type="Texture2D" uid="uid://cqffc4cej7lih" path="res://materials/ui_scenes/quest_description/Sprite-0035.png" id="8_ssiy7"]
-[ext_resource type="Texture2D" uid="uid://bqdbs8pbcyi4" path="res://materials/ui_scenes/quest_description/Sprite-0034.png" id="9_rexi3"]
 [ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://something/sounds/buttons_sounds/ButtonSoundController.gd" id="10_ncj21"]
 [ext_resource type="SpriteFrames" uid="uid://bpvbjsuve4rsn" path="res://materials/base_scenes/main_scene/screen/screen_anim/new_sprite_frames.tres" id="11_348qu"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qwbud"]
+load_path = "res://.godot/imported/Sprite-00202.png-45d396a5025759e6acd3c219bafb619e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hmf13"]
+load_path = "res://.godot/imported/image.jpeg-66eda5b29da81337a299215f41391057.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o1noj"]
+load_path = "res://.godot/imported/zaglushka.jpeg-efa58cc603eb9445ab717f401c543b43.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kcvr0"]
+load_path = "res://.godot/imported/zaglushka.jpeg-efa58cc603eb9445ab717f401c543b43.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mt8kg"]
+load_path = "res://.godot/imported/Sprite-0033.png-d75982b22d3d0e7d326cf1ee91dfe7bc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_20rqs"]
+load_path = "res://.godot/imported/Sprite-0035.png-74d8490e679cd933bca71dfc715d0742.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4s5ag"]
+load_path = "res://.godot/imported/Sprite-0034.png-fd002f84bddb833e7d177ed70dce5102.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1771o"]
+load_path = "res://.godot/imported/Sprite-0033.png-d75982b22d3d0e7d326cf1ee91dfe7bc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4rdof"]
+load_path = "res://.godot/imported/Sprite-0035.png-74d8490e679cd933bca71dfc715d0742.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s0ary"]
+load_path = "res://.godot/imported/Sprite-0034.png-fd002f84bddb833e7d177ed70dce5102.ctex"
 
 [node name="Questdescript" type="TextureRect" unique_id=1923780225]
 z_index = 12
@@ -27,7 +51,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("1_4s5ag")
+texture = SubResource("CompressedTexture2D_qwbud")
 expand_mode = 1
 script = ExtResource("2_1771o")
 
@@ -38,7 +62,7 @@ offset_left = 28.0
 offset_top = 28.0
 offset_right = 548.0
 offset_bottom = 243.0
-texture = ExtResource("3_4rdof")
+texture = SubResource("CompressedTexture2D_hmf13")
 expand_mode = 2
 
 [node name="NameQuest" type="Label" parent="." unique_id=1949124771]
@@ -87,7 +111,7 @@ columns = 2
 [node name="TextureRect" type="TextureRect" parent="GridContainer" unique_id=648982885]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture = ExtResource("5_3phot")
+texture = SubResource("CompressedTexture2D_o1noj")
 expand_mode = 2
 script = ExtResource("6_0uswp")
 container_type = "target"
@@ -95,7 +119,7 @@ container_type = "target"
 [node name="TextureRect3" type="TextureRect" parent="GridContainer" unique_id=950055010]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture = ExtResource("5_3phot")
+texture = SubResource("CompressedTexture2D_kcvr0")
 expand_mode = 2
 script = ExtResource("6_0uswp")
 container_type = "target"
@@ -106,9 +130,9 @@ offset_left = 16.0
 offset_top = 373.0
 offset_right = 134.0
 offset_bottom = 491.0
-texture_normal = ExtResource("7_q2q7n")
-texture_pressed = ExtResource("8_ssiy7")
-texture_hover = ExtResource("9_rexi3")
+texture_normal = SubResource("CompressedTexture2D_mt8kg")
+texture_pressed = SubResource("CompressedTexture2D_20rqs")
+texture_hover = SubResource("CompressedTexture2D_4s5ag")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -136,9 +160,9 @@ offset_left = 440.0
 offset_top = 373.0
 offset_right = 558.0
 offset_bottom = 491.0
-texture_normal = ExtResource("7_q2q7n")
-texture_pressed = ExtResource("8_ssiy7")
-texture_hover = ExtResource("9_rexi3")
+texture_normal = SubResource("CompressedTexture2D_1771o")
+texture_pressed = SubResource("CompressedTexture2D_4rdof")
+texture_hover = SubResource("CompressedTexture2D_s0ary")
 ignore_texture_size = true
 stretch_mode = 0
 

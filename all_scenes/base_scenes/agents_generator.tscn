@@ -3,23 +3,70 @@
 [ext_resource type="Script" uid="uid://drg7gbvifj1c8" path="res://scripts/base_scenes/agents_generator/agents_generator.gd" id="1_67err"]
 [ext_resource type="Script" uid="uid://dnwab1wu74kp4" path="res://scripts/base_scenes/agents_generator/current_agent.gd" id="3_aw3uw"]
 [ext_resource type="Script" uid="uid://bdgw45o4xyplw" path="res://scripts/base_scenes/agents_generator/agent.gd" id="4_npx5s"]
-[ext_resource type="Texture2D" uid="uid://ddyrwbstl1ex6" path="res://materials/base_scenes/agents_generator/sprite_agent/male/1.png" id="4_ye48f"]
 [ext_resource type="Script" uid="uid://xjh5uht2defm" path="res://scripts/base_scenes/agents_generator/panel.gd" id="5_65pgp"]
-[ext_resource type="Texture2D" uid="uid://c8yeb8febb6h2" path="res://materials/base_scenes/agents_generator/sprite_agent/male/5.png" id="5_aw3uw"]
 [ext_resource type="Script" uid="uid://bmc657funj5y4" path="res://scripts/base_scenes/agents_generator/fill_pentagon_stats.gd" id="5_pi0cj"]
-[ext_resource type="Texture2D" uid="uid://bbvcqpcor64id" path="res://materials/base_scenes/agents_generator/Sprite-0006.png" id="8_rqoys"]
-[ext_resource type="SpriteFrames" uid="uid://bpvbjsuve4rsn" path="res://materials/base_scenes/main_scene/screen/screen_anim/new_sprite_frames.tres" id="9_npaxp"]
-[ext_resource type="Texture2D" uid="uid://bobi82kophq4u" path="res://materials/base_scenes/agents_generator/Sprite-0007.png" id="9_rqoys"]
-[ext_resource type="Texture2D" uid="uid://b2qicmi8mikdt" path="res://materials/base_scenes/main_scene/back_button/Sprite-0014.png" id="10_npaxp"]
-[ext_resource type="Texture2D" uid="uid://djxeugnnjpide" path="res://materials/base_scenes/main_scene/back_button/Sprite-0016.png" id="11_rqoys"]
-[ext_resource type="Texture2D" uid="uid://q2sc58aaydua" path="res://materials/base_scenes/agents_generator/Sprite-0012-export-export.png" id="12_7pq6o"]
-[ext_resource type="Texture2D" uid="uid://jm26r0snx3vh" path="res://materials/base_scenes/main_scene/back_button/Sprite-0015.png" id="12_jw7mo"]
+[ext_resource type="Texture2D" uid="uid://craja0wxjpwkk" path="res://materials/base_scenes/main_scene/screen/screen_anim/screen_anim1.png" id="6_je3du"]
+[ext_resource type="Texture2D" uid="uid://be3y505vqvfuc" path="res://materials/base_scenes/main_scene/screen/screen_anim/screen_anim2.png" id="7_nw1bm"]
+[ext_resource type="Texture2D" uid="uid://buddlt7eb4jyn" path="res://materials/base_scenes/main_scene/screen/screen_anim/screen_anim3.png" id="8_60id1"]
+[ext_resource type="Texture2D" uid="uid://be3d3td8ybxc0" path="res://materials/base_scenes/main_scene/screen/screen_anim/screen_anim4.png" id="9_aabsd"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://something/fonts/minecraft-ten.otf" id="13_c036g"]
-[ext_resource type="Texture2D" uid="uid://cmhqf5asoldai" path="res://materials/base_scenes/agents_generator/Sprite-0003.png" id="13_o8ix8"]
 [ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://something/sounds/buttons_sounds/ButtonSoundController.gd" id="15_npaxp"]
-[ext_resource type="Texture2D" uid="uid://c1digebjx32ek" path="res://materials/base_scenes/agents_generator/Sprite-0001.png" id="18_c036g"]
-[ext_resource type="Texture2D" uid="uid://cxf7mkuuap8ro" path="res://materials/base_scenes/agents_generator/Sprite-007-export.png" id="19_7pq6o"]
-[ext_resource type="Texture2D" uid="uid://duibdlwy1dsff" path="res://materials/base_scenes/agents_generator/Sprite-0003-export.png" id="20_8d7rt"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a2otm"]
+load_path = "res://.godot/imported/5.png-59ffca209aa9dfd9de254fad6bd8d7fe.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aghb3"]
+load_path = "res://.godot/imported/Sprite-0006.png-edf5309a6ca3d9100ff4384a79093a21.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wixy2"]
+load_path = "res://.godot/imported/5.png-59ffca209aa9dfd9de254fad6bd8d7fe.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j68er"]
+load_path = "res://.godot/imported/Sprite-0006.png-edf5309a6ca3d9100ff4384a79093a21.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m74ly"]
+load_path = "res://.godot/imported/5.png-59ffca209aa9dfd9de254fad6bd8d7fe.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cl08l"]
+load_path = "res://.godot/imported/Sprite-0006.png-edf5309a6ca3d9100ff4384a79093a21.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_klda5"]
+load_path = "res://.godot/imported/5.png-59ffca209aa9dfd9de254fad6bd8d7fe.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1td08"]
+load_path = "res://.godot/imported/Sprite-0006.png-edf5309a6ca3d9100ff4384a79093a21.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_e4ifi"]
+load_path = "res://.godot/imported/5.png-59ffca209aa9dfd9de254fad6bd8d7fe.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vq1yo"]
+load_path = "res://.godot/imported/Sprite-0006.png-edf5309a6ca3d9100ff4384a79093a21.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t4gb8"]
+load_path = "res://.godot/imported/1.png-69f39f12c60d4c05c5fb6b9a4786d359.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oaa2f"]
+load_path = "res://.godot/imported/Sprite-0007.png-b8ed8cb1d5ddce5154330fb269773459.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vuh81"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_je3du")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nw1bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_60id1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_aabsd")
+}],
+"loop": true,
+"name": &"screen_animation",
+"speed": 5.0
+}]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4aseg"]
 
@@ -30,6 +77,39 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4b6ty"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e86q2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nj564"]
+load_path = "res://.godot/imported/Sprite-0012-export-export.png-e355502f5ec2a6bd947a29e69061aa1d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_07ywc"]
+load_path = "res://.godot/imported/Sprite-0003.png-67581b1d9360f74d2a5ee96578ea7f34.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1c26i"]
+load_path = "res://.godot/imported/Sprite-0014.png-abb808c2c982464cd2800d0ee0faf3f2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oph2y"]
+load_path = "res://.godot/imported/Sprite-0016.png-28c17869b24fe1bfe334f2f1ad172753.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qtbf4"]
+load_path = "res://.godot/imported/Sprite-0015.png-56116aa968e9e5289b1e788f7fdc2ede.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nibvg"]
+load_path = "res://.godot/imported/Sprite-0001.png-47cfe47c2330844adf25180ee8539c1e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ihpmq"]
+load_path = "res://.godot/imported/Sprite-0003-export.png-6ee7872ac31605a3f06ef39b6d802102.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4j8va"]
+load_path = "res://.godot/imported/Sprite-007-export.png-69495a105574a0740fa1f017f27a2a37.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8hgnu"]
+load_path = "res://.godot/imported/Sprite-0001.png-47cfe47c2330844adf25180ee8539c1e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4v538"]
+load_path = "res://.godot/imported/Sprite-0003-export.png-6ee7872ac31605a3f06ef39b6d802102.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7almm"]
+load_path = "res://.godot/imported/Sprite-007-export.png-69495a105574a0740fa1f017f27a2a37.ctex"
 
 [node name="Control" type="Control" unique_id=1719565061]
 layout_mode = 3
@@ -78,7 +158,7 @@ script = ExtResource("4_npx5s")
 show_behind_parent = true
 position = Vector2(57.619007, 50.01178)
 scale = Vector2(0.21674614, 0.21610023)
-texture = ExtResource("5_aw3uw")
+texture = SubResource("CompressedTexture2D_a2otm")
 region_enabled = true
 region_rect = Rect2(528.122, -4.629, 360, 360)
 
@@ -90,7 +170,7 @@ offset_top = -2.2227783
 offset_right = 436.516
 offset_bottom = 102.24626
 mouse_filter = 2
-texture = ExtResource("8_rqoys")
+texture = SubResource("CompressedTexture2D_aghb3")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel/Agent" unique_id=1382951312]
 show_behind_parent = true
@@ -128,7 +208,7 @@ script = ExtResource("4_npx5s")
 show_behind_parent = true
 position = Vector2(57.619007, 50.01178)
 scale = Vector2(0.21674614, 0.21610023)
-texture = ExtResource("5_aw3uw")
+texture = SubResource("CompressedTexture2D_wixy2")
 region_enabled = true
 region_rect = Rect2(528.122, -4.629, 360, 360)
 
@@ -140,7 +220,7 @@ offset_top = -2.2227783
 offset_right = 436.516
 offset_bottom = 102.24626
 mouse_filter = 2
-texture = ExtResource("8_rqoys")
+texture = SubResource("CompressedTexture2D_j68er")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel2/Agent" unique_id=1082188216]
 show_behind_parent = true
@@ -178,7 +258,7 @@ script = ExtResource("4_npx5s")
 show_behind_parent = true
 position = Vector2(57.619007, 50.01178)
 scale = Vector2(0.21674614, 0.21610023)
-texture = ExtResource("5_aw3uw")
+texture = SubResource("CompressedTexture2D_m74ly")
 region_enabled = true
 region_rect = Rect2(528.122, -4.629, 360, 360)
 
@@ -190,7 +270,7 @@ offset_top = -2.2227783
 offset_right = 436.516
 offset_bottom = 102.24626
 mouse_filter = 2
-texture = ExtResource("8_rqoys")
+texture = SubResource("CompressedTexture2D_cl08l")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel3/Agent" unique_id=550790733]
 show_behind_parent = true
@@ -228,7 +308,7 @@ script = ExtResource("4_npx5s")
 show_behind_parent = true
 position = Vector2(57.619007, 50.01178)
 scale = Vector2(0.21674614, 0.21610023)
-texture = ExtResource("5_aw3uw")
+texture = SubResource("CompressedTexture2D_klda5")
 region_enabled = true
 region_rect = Rect2(528.122, -4.629, 360, 360)
 
@@ -240,7 +320,7 @@ offset_top = -2.2227783
 offset_right = 436.516
 offset_bottom = 102.24626
 mouse_filter = 2
-texture = ExtResource("8_rqoys")
+texture = SubResource("CompressedTexture2D_1td08")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel4/Agent" unique_id=1159964133]
 show_behind_parent = true
@@ -278,7 +358,7 @@ script = ExtResource("4_npx5s")
 show_behind_parent = true
 position = Vector2(57.619007, 50.01178)
 scale = Vector2(0.21674614, 0.21610023)
-texture = ExtResource("5_aw3uw")
+texture = SubResource("CompressedTexture2D_e4ifi")
 region_enabled = true
 region_rect = Rect2(528.122, -4.629, 360, 360)
 
@@ -290,7 +370,7 @@ offset_top = -2.2227783
 offset_right = 436.516
 offset_bottom = 102.24626
 mouse_filter = 2
-texture = ExtResource("8_rqoys")
+texture = SubResource("CompressedTexture2D_vq1yo")
 
 [node name="FillPentagonStats" type="Polygon2D" parent="Agentparty/dragbox/Panel5/Agent" unique_id=1424567346]
 show_behind_parent = true
@@ -320,7 +400,7 @@ script = ExtResource("3_aw3uw")
 [node name="SpriteAgent" type="Sprite2D" parent="Current_agent" unique_id=917593877]
 position = Vector2(669.98584, 323.40964)
 scale = Vector2(0.6012028, 0.7228989)
-texture = ExtResource("4_ye48f")
+texture = SubResource("CompressedTexture2D_t4gb8")
 region_enabled = true
 region_rect = Rect2(545.282, 11.641025, 354.66663, 329.3333)
 
@@ -329,14 +409,14 @@ offset_left = 557.5853
 offset_top = 198.93585
 offset_right = 1305.105
 offset_bottom = 683.49426
-texture = ExtResource("9_rqoys")
+texture = SubResource("CompressedTexture2D_oaa2f")
 
 [node name="AnimScreen" type="AnimatedSprite2D" parent="Current_agent" unique_id=586831948]
 modulate = Color(1, 1, 1, 0.18431373)
 position = Vector2(698.64264, 440.05826)
 rotation = 3.1415925
 scale = Vector2(6.9250164, 4.770567)
-sprite_frames = ExtResource("9_npaxp")
+sprite_frames = SubResource("SpriteFrames_vuh81")
 animation = &"screen_animation"
 
 [node name="StringStats" type="Control" parent="Current_agent" unique_id=1161092974]
@@ -619,7 +699,7 @@ round_precision = 3
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=729880096]
 position = Vector2(709.87274, 399.03854)
 scale = Vector2(4.4429545, 4.444873)
-texture = ExtResource("12_7pq6o")
+texture = SubResource("CompressedTexture2D_nj564")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=2032491643]
 layout_mode = 1
@@ -631,7 +711,7 @@ offset_top = 37.78668
 offset_right = 354.55383
 offset_bottom = 134.48317
 grow_horizontal = 2
-texture = ExtResource("13_o8ix8")
+texture = SubResource("CompressedTexture2D_07ywc")
 expand_mode = 1
 
 [node name="select_saves" type="Label" parent="TextureRect2" unique_id=1608162635]
@@ -661,9 +741,9 @@ offset_top = 37.668236
 offset_right = 313.76697
 offset_bottom = 134.4761
 pivot_offset = Vector2(120, 45)
-texture_normal = ExtResource("10_npaxp")
-texture_pressed = ExtResource("11_rqoys")
-texture_hover = ExtResource("12_jw7mo")
+texture_normal = SubResource("CompressedTexture2D_1c26i")
+texture_pressed = SubResource("CompressedTexture2D_oph2y")
+texture_hover = SubResource("CompressedTexture2D_qtbf4")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -699,9 +779,9 @@ offset_left = 1139.6067
 offset_top = 37.786674
 offset_right = 1352.1473
 offset_bottom = 134.4761
-texture_normal = ExtResource("18_c036g")
-texture_pressed = ExtResource("20_8d7rt")
-texture_hover = ExtResource("19_7pq6o")
+texture_normal = SubResource("CompressedTexture2D_nibvg")
+texture_pressed = SubResource("CompressedTexture2D_ihpmq")
+texture_hover = SubResource("CompressedTexture2D_4j8va")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -735,9 +815,9 @@ offset_top = 696.8312
 offset_right = 1016.17126
 offset_bottom = 786.79645
 action_mode = 0
-texture_normal = ExtResource("18_c036g")
-texture_pressed = ExtResource("20_8d7rt")
-texture_hover = ExtResource("19_7pq6o")
+texture_normal = SubResource("CompressedTexture2D_8hgnu")
+texture_pressed = SubResource("CompressedTexture2D_4v538")
+texture_hover = SubResource("CompressedTexture2D_7almm")
 ignore_texture_size = true
 stretch_mode = 0
 

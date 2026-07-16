@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://d0efh8ojrc5q6"]
 
 [ext_resource type="Script" uid="uid://c2ovnkwvbd1jp" path="res://scripts/base_scenes/start_scene_animation/start_scene_animation.gd" id="1_4wbo0"]
-[ext_resource type="Texture2D" uid="uid://dh8oraxp1j8ln" path="res://materials/base_scenes/start_scene_animation/HSE.png" id="2_b63mu"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://something/fonts/minecraft-ten.otf" id="3_ga30x"]
-[ext_resource type="Texture2D" uid="uid://cyk87n2jsl4bw" path="res://something/shadow_for_screen/Sprite-0001.png" id="4_b63mu"]
 
 [sub_resource type="Animation" id="Animation_3qo6a"]
 length = 3.3
@@ -114,6 +112,12 @@ _data = {
 &"new_animation": SubResource("Animation_lkns6")
 }
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dg802"]
+load_path = "res://.godot/imported/Sprite-0001.png-baef687ecd520d542d0d70b89a45c066.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4wbo0"]
+load_path = "res://.godot/imported/HSE.png-7ca89e107e160f2f2208d54a2652a11f.ctex"
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=77803140 node_paths=PackedStringArray("animation_player")]
 layer = 10
 script = ExtResource("1_4wbo0")
@@ -126,12 +130,12 @@ autoplay = &"new_animation"
 [node name="Sprite0001" type="Sprite2D" parent="." unique_id=768747288]
 position = Vector2(640.00006, 360.00003)
 scale = Vector2(8, 3.4615388)
-texture = ExtResource("4_b63mu")
+texture = SubResource("CompressedTexture2D_dg802")
 
 [node name="Hse" type="Sprite2D" parent="." unique_id=360164995]
 position = Vector2(639.99994, 359)
 scale = Vector2(0.049962074, 0.048754174)
-texture = ExtResource("2_b63mu")
+texture = SubResource("CompressedTexture2D_4wbo0")
 
 [node name="Label2" type="Label" parent="." unique_id=1396687911]
 modulate = Color(0, 0, 0, 0)

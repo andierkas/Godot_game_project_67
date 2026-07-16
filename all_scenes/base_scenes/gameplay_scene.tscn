@@ -1,33 +1,29 @@
 [gd_scene format=3 uid="uid://do3c5x0looprm"]
 
-[ext_resource type="Texture2D" uid="uid://blnovlcwgfplf" path="res://materials/base_scenes/gameplay_scene/1780274087.png" id="1_82jc6"]
 [ext_resource type="Script" uid="uid://8afxic637pb1" path="res://scripts/base_scenes/gameplay_scene/day.gd" id="1_exbrp"]
 [ext_resource type="Script" uid="uid://dd4awjxunja2o" path="res://scripts/another_scripts/Quest.gd" id="2_n8qpb"]
 [ext_resource type="Texture2D" uid="uid://k6e4jaeg1ktt" path="res://materials/base_scenes/gameplay_scene/show_hide_menu/agent_icons/zaglushka.jpeg" id="3_82jc6"]
 [ext_resource type="Script" uid="uid://4wgsk15dvste" path="res://scripts/base_scenes/gameplay_scene/grid_container.gd" id="3_llrwq"]
 [ext_resource type="Script" uid="uid://6vjil0ck5cl4" path="res://scripts/base_scenes/gameplay_scene/QuestMarker.gd" id="6_cpas5"]
 [ext_resource type="Script" uid="uid://bmp6qlkmnlum1" path="res://scripts/base_scenes/gameplay_scene/texture_drag.gd" id="6_gyagd"]
-[ext_resource type="Resource" uid="uid://dao144hv773j" path="res://something/quests/quest images/zaglushka.tres" id="7_gyagd"]
 [ext_resource type="Resource" uid="uid://c5yrl2sr28vdk" path="res://something/quests/test_quest.tres" id="7_lhnp0"]
 [ext_resource type="Script" uid="uid://bnmxgixe3xfb5" path="res://scripts/base_scenes/gameplay_scene/QuestSpawner.gd" id="9_4tlo2"]
 [ext_resource type="Texture2D" uid="uid://b5ypyqlghjhrl" path="res://materials/base_scenes/gameplay_scene/quest_marks/QuestMark.png" id="10_cpas5"]
 [ext_resource type="Resource" uid="uid://jo20ajr46hhc" path="res://something/quests/quest4.tres" id="11_2xd4o"]
 [ext_resource type="PackedScene" uid="uid://mmemw0g772c" path="res://all_scenes/ui_scenes/agent_profile.tscn" id="11_lhnp0"]
-[ext_resource type="SpriteFrames" uid="uid://bpvbjsuve4rsn" path="res://materials/base_scenes/main_scene/screen/screen_anim/new_sprite_frames.tres" id="13_m2vlg"]
-[ext_resource type="Texture2D" uid="uid://df3g8k5gwpxmt" path="res://materials/base_scenes/gameplay_scene/show_hide_menu/Sprite-0006.png" id="13_tmofk"]
+[ext_resource type="Texture2D" uid="uid://craja0wxjpwkk" path="res://materials/base_scenes/main_scene/screen/screen_anim/screen_anim1.png" id="12_qtbky"]
+[ext_resource type="Texture2D" uid="uid://be3y505vqvfuc" path="res://materials/base_scenes/main_scene/screen/screen_anim/screen_anim2.png" id="13_6mwjd"]
 [ext_resource type="Resource" uid="uid://bqpprx3ne63dv" path="res://something/quests/quest3.tres" id="13_u5q0e"]
 [ext_resource type="FontFile" uid="uid://day1htobyvwad" path="res://something/fonts/minecraft-ten.otf" id="14_1dbwb"]
-[ext_resource type="Texture2D" uid="uid://4xnq6p0tx5gl" path="res://materials/base_scenes/gameplay_scene/show_hide_menu/Sprite-000114234.png" id="14_3dfw7"]
 [ext_resource type="Resource" uid="uid://se7gbvsfyxfl" path="res://something/quests/quest5.tres" id="14_cytv4"]
+[ext_resource type="Texture2D" uid="uid://buddlt7eb4jyn" path="res://materials/base_scenes/main_scene/screen/screen_anim/screen_anim3.png" id="14_pf1c2"]
 [ext_resource type="Script" uid="uid://dnadrqgjcbslq" path="res://something/sounds/buttons_sounds/ButtonSoundController.gd" id="15_737c4"]
-[ext_resource type="Texture2D" uid="uid://bcswkawi86s4e" path="res://materials/base_scenes/gameplay_scene/show_hide_menu/Sprite-000114236.png" id="15_sw758"]
+[ext_resource type="Texture2D" uid="uid://be3d3td8ybxc0" path="res://materials/base_scenes/main_scene/screen/screen_anim/screen_anim4.png" id="15_ivmud"]
 [ext_resource type="Resource" uid="uid://cvkqmwutwertg" path="res://something/quests/quest6.tres" id="15_tmofk"]
-[ext_resource type="Texture2D" uid="uid://c8128a742th6h" path="res://materials/base_scenes/gameplay_scene/show_hide_menu/Sprite-000114235.png" id="16_m2vlg"]
-[ext_resource type="Texture2D" uid="uid://d1yh5ninobhg5" path="res://materials/base_scenes/gameplay_scene/Sprite-003454302-export.png" id="18_tmofk"]
-[ext_resource type="Texture2D" uid="uid://crqsa52jx1nue" path="res://materials/base_scenes/gameplay_scene/show_hide_menu/Sprite-0021301.png" id="23_sw758"]
-[ext_resource type="Texture2D" uid="uid://pjwpe1ve4mf8" path="res://materials/base_scenes/main_scene/main_menu_buttons/help_button/Help_button1.png" id="26_8mpvm"]
-[ext_resource type="Texture2D" uid="uid://b16u85g6jah5i" path="res://materials/base_scenes/main_scene/main_menu_buttons/help_button/Help_button2.png" id="27_n18tt"]
-[ext_resource type="Texture2D" uid="uid://84o06wpmou8m" path="res://materials/base_scenes/main_scene/main_menu_buttons/help_button/Help_button3.png" id="28_coxcq"]
+[ext_resource type="Script" uid="uid://7yko554h6sb4" path="res://scripts/another_scripts/agent_stats.gd" id="20_h23d2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_beilg"]
+load_path = "res://.godot/imported/1780274087.png-f36bb316aacf3e201383bff02dd22142.ctex"
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_cytv4"]
 vertices = PackedVector2Array(163.78906, 105.10156, 158.64844, 106.78125, 162.20313, 105.00781, 284.02344, 143.97656, 391.1328, 144, 308.8828, 144, 889, 620, 1066.2266, 623.0625, 803, 621, 820, 620, 574, 619, 728, 621, 280, 621, 414, 619, 389, 619, 305, 619, 1058.1016, 654.96875, 1059.6563, 655.0078, 67.99219, 655, 409, 126, 571, 126, 392.75, 131.13281, 571, 358, 597.02344, 359.0625, 464, 359, 477, 358, 1036.0234, 497.21094, 1038.1797, 547.9219, 1034.9609, 529.6797, 708, 617, 598, 617, 592.02344, 240.82031, 597.89844, 242, 391.1328, 242, 572, 240, 410, 240, 848.9922, 305.71875, 851.0078, 355.27344, 845.0078, 334.2578, 842.9922, 272.5625, 680, 180, 698.02344, 185.02344, 656.97656, 186, 599, 180, 597.02344, 186.97656, 598, 146.00781, 599, 143, 598, 128, 587.97656, 76, 571, 76, 1010.8594, 482.4922, 304, 381, 304, 481, 282, 443.5, 282, 286.5, 965.0469, 367, 972.97656, 357.47656, 974.0078, 381.3203, 1057.0313, 348, 1057.9766, 379.53906, 1050, 371.3672, 1050, 357.46094, 961.97656, 306.6328, 853.46875, 298.9922, 306.5, 253.75, 283, 278, 283, 256, 306.5, 358.25, 841.5625, 340.0078, 1029.0391, 459.32813, 1007.85156, 477.97656, 1008.5, 478.03906, 713.02344, 468.03125, 712.03906, 423.0625, 723.03125, 431.5078, 726.0781, 466, 777, 290.5, 785.0078, 291.5625, 762.5469, 313, 756.14844, 306.14063, 745.4531, 311.65625, 750, 303.6797, 1015.53125, 121.02344, 1026.9219, 135.03125, 968.9297, 136.02344, 970.2031, 123.03906, 818, 58, 889.25, 58, 881.34375, 68.21094, 869.77344, 74, 701.03125, 74, 743.8672, 308.52344, 741.96094, 254.95313, 750, 253.86719, 962.03125, 293.0078, 972.97656, 286, 974.02344, 348, 958.9922, 181.64844, 1009.14844, 477.07813, 1021.2969, 549.0469, 809.0781, 145.99219, 806.5781, 141.71875, 844, 135.00781, 881.6719, 141.00781, 864.1797, 137.02344, 885.3125, 126.953125, 896.71094, 130.99219, 911.1094, 120, 952.4219, 132.00781, 954, 122.046875, 392.75, 70.88281, 409, 76, 988.8672, 435.4922, 1009.7578, 419.72656, 680, 143, 227, 488, 227, 621, 208, 617, 208, 470, 728, 488, 708, 484, 973.03125, 277.0078, 1072.8125, 276.0078, 1071.1484, 286, 969.96875, 179.03125, 775.96094, 212.47656, 823.0625, 170.39063, 823.46094, 171, 410, 142, 1055.8906, 633.96875, 932.0469, 473.8672, 932.9297, 487.95313, 909.1172, 486.96094, 911.89844, 470.85156, 786.03125, 257.04688, 777, 257.10938, 1020.6094, 405.8203, 996.6172, 416.2578, 957.60156, 390.10938, 1093.0625, 621.0703, 1093.9297, 634.96875, 88, 617, 68.86719, 624.90625, 73.03125, 481.03125, 88, 470, 574, 494, 598, 484, 280, 488, 305, 493, 464, 263, 477, 262, 857.40625, 367, 935.1172, 385, 821.46875, 384, 628, 128, 628, 95.92969, 641, 95.07031, 641, 110, 687.03125, 110, 685.96875, 76, 594.97656, 263.04688, 571, 262, 803, 488, 820, 487, 409, 263, 409, 359, 389.5, 358.25, 389.5, 253.75, 5, 479.03906, 5, 443.02344, 77.96094, 445.03125, 910.9219, 470, 911.97656, 470.07813, 385.96875, 57, 385.96875, 7, 408, 7, 408, 57, 570, 57, 570, 7, 594, 7, 594, 57, 672, 57, 672, 7, 689, 7, 689, 57, 801, 57, 801, 7, 818, 7, 307.25, 70.88281, 310.28125, 57, 954, 107, 966.7969, 107, 959, 138.59375, 971.0625, 169, 959, 171, 1048, 169, 1048, 177.02344, 955.5, 177, 829.6172, 177, 786.9531, 214.59375, 772.90625, 244.00781, 790.09375, 244.90625, 414, 494, 389, 493, 286, 60, 286, 7, 310.28125, 7, 308.8828, 242, 281.97656, 241.99219, 845, 355.25, 845, 350.59375, 839.40625, 345, 789.59375, 338.9922, 786.3906, 345, 759.3906, 320, 752.78906, 320, 733.71094, 328.47656, 817, 390.70313, 817, 451.15625, 803.0078, 451.21875, 800.9922, 397.84375, 796.8203, 383.22656, 84.03906, 294.0078, 5, 293.02344, 5, 276.89844, 84.9375, 268.90625, 247, 61.796875, 247.03906, 60, 253.02344, 76, 282.6797, 76, 307.25, 131.13281, 285, 81.82031, 283.97656, 124.99219, 926, 546.09375, 926.97656, 502, 1005.28125, 502, 822.27344, 466.97656, 910.9219, 469.9922, 572, 142, 146.17969, 125.99219, 131.70313, 147.00781, 117.63281, 137.8125, 112.27344, 159.28125, 91.96875, 171.35938, 101.03125, 177.67188, 98, 204.92969, 96.96875, 243.00781, 1046.2969, 355, 976.7031, 355, 923.8594, 558.9531, 906.03125, 560.0625, 889, 487, 905, 521.9531, 574.75, 481, 744.03125, 312.72656, 744, 312.02344, 668.53125, 335.8828, 957.4922, 301.0078, 852.1328, 291.9922, 849.0469, 269.46875, 828.53125, 248.95313, 824.3672, 254.97656, 96, 256, 96, 278, 795.6172, 466, 838.59375, 367, 765.8125, 367, 785.21094, 379.0078, 758.2031, 377, 750.4219, 360.84375, 747.5625, 373.14063, 731.9297, 357.5078, 739.03906, 348.4297, 727.78125, 333.67188, 738.02344, 339.2578, 90, 443.5, 661.5703, 342.85156, 596.9922, 379.28906, 649.3672, 347.9297, 630.28125, 354.96094, 616.1328, 357.9922, 598.0078, 464.96875, 574.75, 381, 90, 286.5)
@@ -116,6 +112,29 @@ radius = 19.026299
 [sub_resource type="CircleShape2D" id="CircleShape2D_gyagd"]
 radius = 3.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_k08so"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_qtbky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6mwjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_pf1c2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ivmud")
+}],
+"loop": true,
+"name": &"screen_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8mpvm"]
+load_path = "res://.godot/imported/Sprite-003454302-export.png-fb52933eb384836a1bcdaa5d447ce36d.ctex"
+
 [sub_resource type="Animation" id="Animation_737c4"]
 length = 0.001
 tracks/0/type = "value"
@@ -201,6 +220,99 @@ _data = {
 &"ahow_agents_menu": SubResource("Animation_3dfw7")
 }
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n18tt"]
+load_path = "res://.godot/imported/Sprite-000114234.png-ff4096f6a30185b764c7032566c637d8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_coxcq"]
+load_path = "res://.godot/imported/Sprite-000114236.png-d36fe8b8a69264da24a7ac5af92864ac.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3mu88"]
+load_path = "res://.godot/imported/Sprite-000114235.png-e1ffd6989486db11631b1396165c718b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qmiy3"]
+load_path = "res://.godot/imported/Sprite-0006.png-205a70e914c40aafbaecfc2b2ef2c3b1.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i0xxb"]
+load_path = "res://.godot/imported/zaglushka.jpeg-efa58cc603eb9445ab717f401c543b43.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_e77tu"]
+load_path = "res://.godot/imported/Sprite-0021301.png-4d6bf07ac3b8a7594d2bb32142ed34bd.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b3rqg"]
+load_path = "res://.godot/imported/zaglushka.jpeg-efa58cc603eb9445ab717f401c543b43.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h2psv"]
+load_path = "res://.godot/imported/Sprite-0021301.png-4d6bf07ac3b8a7594d2bb32142ed34bd.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_abcn4"]
+load_path = "res://.godot/imported/zaglushka.jpeg-efa58cc603eb9445ab717f401c543b43.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f64ae"]
+load_path = "res://.godot/imported/Sprite-0021301.png-4d6bf07ac3b8a7594d2bb32142ed34bd.ctex"
+
+[sub_resource type="Resource" id="Resource_b8ufc"]
+script = ExtResource("20_h23d2")
+is_dummy = true
+strenght = 1
+harisma = 1
+endurance = 1
+intellect = 1
+agility = 1
+agent_first_name = "123"
+agent_second_name = "123"
+agent_last_name = "123"
+age = 33
+sprite = ExtResource("3_82jc6")
+metadata/_custom_type_script = "uid://7yko554h6sb4"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gtadf"]
+load_path = "res://.godot/imported/Sprite-0021301.png-4d6bf07ac3b8a7594d2bb32142ed34bd.ctex"
+
+[sub_resource type="Resource" id="Resource_mffqi"]
+script = ExtResource("20_h23d2")
+is_dummy = true
+strenght = 1
+harisma = 1
+endurance = 1
+intellect = 1
+agility = 1
+agent_first_name = "123"
+agent_second_name = "123"
+agent_last_name = "123"
+age = 33
+sprite = ExtResource("3_82jc6")
+metadata/_custom_type_script = "uid://7yko554h6sb4"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_51qql"]
+load_path = "res://.godot/imported/Sprite-0021301.png-4d6bf07ac3b8a7594d2bb32142ed34bd.ctex"
+
+[sub_resource type="Resource" id="Resource_npcf1"]
+script = ExtResource("20_h23d2")
+is_dummy = true
+strenght = 1
+harisma = 1
+endurance = 1
+intellect = 1
+agility = 1
+agent_first_name = "123"
+agent_second_name = "123"
+agent_last_name = "123"
+age = 33
+sprite = ExtResource("3_82jc6")
+metadata/_custom_type_script = "uid://7yko554h6sb4"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lxvgi"]
+load_path = "res://.godot/imported/Sprite-0021301.png-4d6bf07ac3b8a7594d2bb32142ed34bd.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pjbec"]
+load_path = "res://.godot/imported/Help_button1.png-59b41eb148ccc5174b63c483f4a0936c.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_el5df"]
+load_path = "res://.godot/imported/Help_button2.png-a7eea89fa459a94a9d54b7f77f3492ad.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_43s3u"]
+load_path = "res://.godot/imported/Help_button3.png-75e6e61f7a00dd10e7d5418e12bb85f4.ctex"
+
 [node name="Main" type="Node" unique_id=564995157]
 script = ExtResource("1_exbrp")
 
@@ -210,7 +322,7 @@ offset_top = 30.0
 offset_right = 1217.0
 offset_bottom = 680.0
 mouse_filter = 2
-texture = ExtResource("1_82jc6")
+texture = SubResource("CompressedTexture2D_beilg")
 expand_mode = 2
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1768893345]
@@ -771,14 +883,14 @@ modulate = Color(1, 1, 1, 0.26666668)
 position = Vector2(668.0497, 353.3623)
 rotation = 3.1415925
 scale = Vector2(6.3323393, 5.3019567)
-sprite_frames = ExtResource("13_m2vlg")
+sprite_frames = SubResource("SpriteFrames_k08so")
 animation = &"screen_animation"
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=1404806790]
 offset_right = 1280.0
 offset_bottom = 720.0
 mouse_filter = 2
-texture = ExtResource("18_tmofk")
+texture = SubResource("CompressedTexture2D_8mpvm")
 
 [node name="Show_agents" type="CanvasLayer" parent="." unique_id=2079265685]
 
@@ -791,9 +903,9 @@ offset_left = 295.0
 offset_top = 552.0
 offset_right = 460.0
 offset_bottom = 594.0
-texture_normal = ExtResource("14_3dfw7")
-texture_pressed = ExtResource("15_sw758")
-texture_hover = ExtResource("16_m2vlg")
+texture_normal = SubResource("CompressedTexture2D_n18tt")
+texture_pressed = SubResource("CompressedTexture2D_coxcq")
+texture_hover = SubResource("CompressedTexture2D_3mu88")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -831,7 +943,7 @@ offset_right = 25.199951
 offset_bottom = 108.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = ExtResource("13_tmofk")
+texture = SubResource("CompressedTexture2D_qmiy3")
 
 [node name="GridContainer" type="GridContainer" parent="Show_agents/Panel" unique_id=985532569]
 clip_contents = true
@@ -852,7 +964,7 @@ script = ExtResource("3_llrwq")
 z_index = -5
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture = ExtResource("3_82jc6")
+texture = SubResource("CompressedTexture2D_i0xxb")
 expand_mode = 2
 script = ExtResource("6_gyagd")
 container_type = "source"
@@ -863,14 +975,14 @@ offset_left = -2.0
 offset_top = -2.0
 offset_right = 101.0
 offset_bottom = 102.0
-texture = ExtResource("23_sw758")
+texture = SubResource("CompressedTexture2D_e77tu")
 expand_mode = 1
 
 [node name="TextureRect2" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=828861232]
 z_index = -5
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture = ExtResource("3_82jc6")
+texture = SubResource("CompressedTexture2D_b3rqg")
 expand_mode = 2
 script = ExtResource("6_gyagd")
 container_type = "source"
@@ -881,14 +993,14 @@ offset_left = -2.0
 offset_top = -2.0
 offset_right = 101.0
 offset_bottom = 102.0
-texture = ExtResource("23_sw758")
+texture = SubResource("CompressedTexture2D_h2psv")
 expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=2039864895]
 z_index = -5
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture = ExtResource("3_82jc6")
+texture = SubResource("CompressedTexture2D_abcn4")
 expand_mode = 2
 script = ExtResource("6_gyagd")
 container_type = "source"
@@ -899,7 +1011,7 @@ offset_left = -2.0
 offset_top = -2.0
 offset_right = 102.0
 offset_bottom = 102.0
-texture = ExtResource("23_sw758")
+texture = SubResource("CompressedTexture2D_f64ae")
 expand_mode = 1
 
 [node name="TextureRect4" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=1820570581]
@@ -908,7 +1020,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 expand_mode = 2
 script = ExtResource("6_gyagd")
-agent = ExtResource("7_gyagd")
+agent = SubResource("Resource_b8ufc")
 container_type = "source"
 
 [node name="TextureRect4" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect4" unique_id=1276295409]
@@ -917,7 +1029,7 @@ offset_left = -2.0
 offset_top = -2.0
 offset_right = 102.0
 offset_bottom = 102.0
-texture = ExtResource("23_sw758")
+texture = SubResource("CompressedTexture2D_gtadf")
 expand_mode = 1
 
 [node name="TextureRect5" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=1921087183]
@@ -926,7 +1038,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 expand_mode = 2
 script = ExtResource("6_gyagd")
-agent = ExtResource("7_gyagd")
+agent = SubResource("Resource_mffqi")
 container_type = "source"
 
 [node name="TextureRect5" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect5" unique_id=1092527054]
@@ -935,7 +1047,7 @@ offset_left = -2.0
 offset_top = -2.0
 offset_right = 102.0
 offset_bottom = 102.0
-texture = ExtResource("23_sw758")
+texture = SubResource("CompressedTexture2D_51qql")
 expand_mode = 1
 
 [node name="TextureRect6" type="TextureRect" parent="Show_agents/Panel/GridContainer" unique_id=48114161]
@@ -944,7 +1056,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 expand_mode = 2
 script = ExtResource("6_gyagd")
-agent = ExtResource("7_gyagd")
+agent = SubResource("Resource_npcf1")
 container_type = "source"
 
 [node name="TextureRect6" type="TextureRect" parent="Show_agents/Panel/GridContainer/TextureRect6" unique_id=1257991550]
@@ -953,7 +1065,7 @@ offset_left = -1.0
 offset_top = -2.0
 offset_right = 102.0
 offset_bottom = 102.0
-texture = ExtResource("23_sw758")
+texture = SubResource("CompressedTexture2D_lxvgi")
 expand_mode = 1
 
 [node name="Help_button" type="TextureButton" parent="." unique_id=215100066]
@@ -962,9 +1074,9 @@ offset_top = 509.0
 offset_right = 1266.8572
 offset_bottom = 553.0995
 scale = Vector2(1.1199988, 1.1199988)
-texture_normal = ExtResource("26_8mpvm")
-texture_pressed = ExtResource("27_n18tt")
-texture_hover = ExtResource("28_coxcq")
+texture_normal = SubResource("CompressedTexture2D_pjbec")
+texture_pressed = SubResource("CompressedTexture2D_el5df")
+texture_hover = SubResource("CompressedTexture2D_43s3u")
 stretch_mode = 0
 
 [node name="SoundHelpController" type="Node" parent="Help_button" unique_id=1750567805]
