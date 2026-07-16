@@ -63,7 +63,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_aabsd")
 }],
-"loop": true,
+"loop": 1,
 "name": &"screen_animation",
 "speed": 5.0
 }]
@@ -84,14 +84,14 @@ load_path = "res://.godot/imported/Sprite-0012-export-export.png-e355502f5ec2a6b
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_07ywc"]
 load_path = "res://.godot/imported/Sprite-0003.png-67581b1d9360f74d2a5ee96578ea7f34.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1c26i"]
-load_path = "res://.godot/imported/Sprite-0014.png-abb808c2c982464cd2800d0ee0faf3f2.ctex"
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_je3du"]
+load_path = "res://.godot/imported/Sprite-0014.png-c8fb7d7675e762083125ce9c68f30812.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oph2y"]
-load_path = "res://.godot/imported/Sprite-0016.png-28c17869b24fe1bfe334f2f1ad172753.ctex"
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nw1bm"]
+load_path = "res://.godot/imported/Sprite-0016.png-a4a47c4195084a5ef8cf08d6d7b05f06.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qtbf4"]
-load_path = "res://.godot/imported/Sprite-0015.png-56116aa968e9e5289b1e788f7fdc2ede.ctex"
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_60id1"]
+load_path = "res://.godot/imported/Sprite-0015.png-5c84f3cb56158cdf383eba70d52419ab.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nibvg"]
 load_path = "res://.godot/imported/Sprite-0001.png-47cfe47c2330844adf25180ee8539c1e.ctex"
@@ -128,12 +128,12 @@ script = ExtResource("1_67err")
 metadata/_edit_vertical_guides_ = [1646.0]
 
 [node name="Agentparty" type="Control" parent="." unique_id=116628508]
-layout_direction = 4
 anchors_preset = 0
 offset_left = 22.0
 offset_top = 57.999996
 offset_right = 464.0
 offset_bottom = 660.15546
+layout_direction = 4
 mouse_filter = 2
 
 [node name="dragbox" type="VBoxContainer" parent="Agentparty" unique_id=2036112806]
@@ -145,8 +145,8 @@ offset_bottom = 666.24634
 theme_override_constants/separation = 16
 
 [node name="Panel" type="Panel" parent="Agentparty/dragbox" unique_id=752354621]
-clip_contents = true
 custom_minimum_size = Vector2(400, 100)
+clip_contents = true
 layout_mode = 2
 script = ExtResource("5_65pgp")
 
@@ -195,8 +195,8 @@ editable = false
 [node name="Line2D2" type="Line2D" parent="Agentparty/dragbox/Panel/Agent" unique_id=2061948272]
 
 [node name="Panel2" type="Panel" parent="Agentparty/dragbox" unique_id=1355523729]
-clip_contents = true
 custom_minimum_size = Vector2(400, 100)
+clip_contents = true
 layout_mode = 2
 script = ExtResource("5_65pgp")
 
@@ -245,8 +245,8 @@ editable = false
 [node name="Line2D2" type="Line2D" parent="Agentparty/dragbox/Panel2/Agent" unique_id=1005178543]
 
 [node name="Panel3" type="Panel" parent="Agentparty/dragbox" unique_id=743555538]
-clip_contents = true
 custom_minimum_size = Vector2(400, 100)
+clip_contents = true
 layout_mode = 2
 script = ExtResource("5_65pgp")
 
@@ -295,8 +295,8 @@ editable = false
 [node name="Line2D2" type="Line2D" parent="Agentparty/dragbox/Panel3/Agent" unique_id=405128080]
 
 [node name="Panel4" type="Panel" parent="Agentparty/dragbox" unique_id=1731144651]
-clip_contents = true
 custom_minimum_size = Vector2(400, 100)
+clip_contents = true
 layout_mode = 2
 script = ExtResource("5_65pgp")
 
@@ -345,8 +345,8 @@ editable = false
 [node name="Line2D2" type="Line2D" parent="Agentparty/dragbox/Panel4/Agent" unique_id=1705570863]
 
 [node name="Panel5" type="Panel" parent="Agentparty/dragbox" unique_id=792599067]
-clip_contents = true
 custom_minimum_size = Vector2(400, 100)
+clip_contents = true
 layout_mode = 2
 script = ExtResource("5_65pgp")
 
@@ -741,9 +741,9 @@ offset_top = 37.668236
 offset_right = 313.76697
 offset_bottom = 134.4761
 pivot_offset = Vector2(120, 45)
-texture_normal = SubResource("CompressedTexture2D_1c26i")
-texture_pressed = SubResource("CompressedTexture2D_oph2y")
-texture_hover = SubResource("CompressedTexture2D_qtbf4")
+texture_normal = SubResource("CompressedTexture2D_je3du")
+texture_pressed = SubResource("CompressedTexture2D_nw1bm")
+texture_hover = SubResource("CompressedTexture2D_60id1")
 ignore_texture_size = true
 stretch_mode = 0
 

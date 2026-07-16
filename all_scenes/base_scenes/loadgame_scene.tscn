@@ -44,7 +44,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_2j81h")
 }],
-"loop": false,
+"loop": 0,
 "name": &"shadow_screen_closed_animation",
 "speed": 5.0
 }, {
@@ -73,7 +73,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_fef27")
 }],
-"loop": false,
+"loop": 0,
 "name": &"shadow_screen_opened_animation",
 "speed": 5.0
 }]
@@ -290,7 +290,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jdj5v")
 }],
-"loop": false,
+"loop": 0,
 "name": &"button_menu_off",
 "speed": 5.0
 }, {
@@ -352,7 +352,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3qb3a")
 }],
-"loop": false,
+"loop": 0,
 "name": &"button_menu_on",
 "speed": 5.0
 }]
@@ -417,7 +417,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jdj5v")
 }],
-"loop": false,
+"loop": 0,
 "name": &"button_menu_off",
 "speed": 5.0
 }, {
@@ -479,7 +479,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3qb3a")
 }],
-"loop": false,
+"loop": 0,
 "name": &"button_menu_on",
 "speed": 5.0
 }]
@@ -544,7 +544,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jdj5v")
 }],
-"loop": false,
+"loop": 0,
 "name": &"button_menu_off",
 "speed": 5.0
 }, {
@@ -606,7 +606,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3qb3a")
 }],
-"loop": false,
+"loop": 0,
 "name": &"button_menu_on",
 "speed": 5.0
 }]
@@ -626,7 +626,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("14_rrqfy")
 }],
-"loop": true,
+"loop": 1,
 "name": &"screen_animation",
 "speed": 5.0
 }]
@@ -637,14 +637,14 @@ load_path = "res://.godot/imported/Sprite-0012-export.png-54954dfed9999ace793fe6
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xt41j"]
 load_path = "res://.godot/imported/Sprite-0001.png-6699b7db3c6b3210e6e4481c820871bb.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1vda8"]
-load_path = "res://.godot/imported/Sprite-0014.png-abb808c2c982464cd2800d0ee0faf3f2.ctex"
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fef27"]
+load_path = "res://.godot/imported/Sprite-0014.png-c8fb7d7675e762083125ce9c68f30812.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iq1mf"]
-load_path = "res://.godot/imported/Sprite-0016.png-28c17869b24fe1bfe334f2f1ad172753.ctex"
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qmbkg"]
+load_path = "res://.godot/imported/Sprite-0016.png-a4a47c4195084a5ef8cf08d6d7b05f06.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nicvh"]
-load_path = "res://.godot/imported/Sprite-0015.png-56116aa968e9e5289b1e788f7fdc2ede.ctex"
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s3ma5"]
+load_path = "res://.godot/imported/Sprite-0015.png-5c84f3cb56158cdf383eba70d52419ab.ctex"
 
 [sub_resource type="Animation" id="Animation_wra1n"]
 length = 0.001
@@ -847,9 +847,9 @@ offset_top = 34.0
 offset_right = 283.0
 offset_bottom = 118.0
 pivot_offset = Vector2(120, 45)
-texture_normal = SubResource("CompressedTexture2D_1vda8")
-texture_pressed = SubResource("CompressedTexture2D_iq1mf")
-texture_hover = SubResource("CompressedTexture2D_nicvh")
+texture_normal = SubResource("CompressedTexture2D_fef27")
+texture_pressed = SubResource("CompressedTexture2D_qmbkg")
+texture_hover = SubResource("CompressedTexture2D_s3ma5")
 ignore_texture_size = true
 stretch_mode = 0
 

@@ -14,7 +14,7 @@ config/name="City_in_crysis_proj"
 run/main_scene="uid://d0efh8ojrc5q6"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="aboba"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 
 [autoload]
 
